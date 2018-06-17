@@ -1,3 +1,7 @@
+![Photo with FTDI connected to ⊛](center.jpg)
+
+![Photo of setup](center.jpg)
+
 For a video recording, see the [multitrans-test page][1] on Archive.org.
 
 Notes:
