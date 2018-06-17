@@ -46,6 +46,16 @@ interrupts. Therefore the data rate may need to be reduced when debug mode is
 enabled.
 
 
+Character encoding
+==================
+
+Transmitted are individual characters. Timing diagram:
+
+![WaveDrom timing diagram](character_encoding/wavedrom.svg)
+
+There is no additional protocol.
+
+
 Coding conventions
 ==================
 
