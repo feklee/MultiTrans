@@ -1,0 +1,175 @@
+// Felix E. Klee <felix.klee@inka.de>
+
+#ifndef MultiTransceiver_h
+#define MultiTransceiver_h
+
+#include "Arduino.h"
+#include "CharacterEncoding.h"
+
+template <uint8_t t, uint8_t u, bool v = false>
+class MultiTransceiver {
+private:
+  // Bit duration (in CPU cycles): 2^bitDurationExp
+  //
+  // Baud rate (in bits / time unit): CPU clock speed / bit duration
+  static const uint8_t bitDurationExp = t; // < 18
+
+  static const uint8_t maxNumberOfCharsPerTransmission = u;
+
+  static uint8_t rPrescaleBits();
+  static uint8_t tPrescaleBits();
+  static void configureTimer2();
+  static void enableTimer2Interrupt();
+
+public:
+  static const bool debugDataIsRecorded = v;
+  static const uint32_t bitDuration;
+  static const float baudRate;
+  static const float effectiveDataRate;
+
+  // Prefixes: `t` = transmitter, `r` = receiver
+  static const uint8_t tUnscaledBitDurationExp; // < 8
+  static const uint8_t tPrescaleFactorExp; // 0, 3, 5, 6, 7, 8, or 10
+  static const uint8_t rUnscaledBitDurationExp; // < 16
+  static const uint8_t rPrescaleFactorExp; // 0, 3, 6, 8, or 10
+
+  template <uint8_t> class Transceiver;
+
+  static void startTimer1();
+  static void startTimer2();
+  static void enablePinChangeInterrupts();
+};
+
+template <uint8_t t, uint8_t u, bool v>
+// Transmit prescaling should be as large as possible (to maximize the maximum
+// possible duration):
+const uint8_t MultiTransceiver<t, u, v>::tPrescaleFactorExp =
+  (MultiTransceiver<t, u, v>::bitDurationExp >= 10) ? 10 :
+  (MultiTransceiver<t, u, v>::bitDurationExp >= 8) ? 8 :
+  (MultiTransceiver<t, u, v>::bitDurationExp >= 7) ? 7 :
+  (MultiTransceiver<t, u, v>::bitDurationExp >= 6) ? 6 :
+  (MultiTransceiver<t, u, v>::bitDurationExp >= 5) ? 5 :
+  (MultiTransceiver<t, u, v>::bitDurationExp >= 3) ? 3 : 0;
+
+template <uint8_t t, uint8_t u, bool v>
+const uint8_t MultiTransceiver<t, u, v>::tUnscaledBitDurationExp =
+  MultiTransceiver<t, u, v>::bitDurationExp -
+  MultiTransceiver<t, u, v>::tPrescaleFactorExp;
+
+// Receive prescaling should be as small as possible (for maximum precision):
+template <uint8_t t, uint8_t u, bool v>
+const uint8_t MultiTransceiver<t, u, v>::rPrescaleFactorExp =
+  (MultiTransceiver<t, u, v>::bitDurationExp >= 10 + 15) ? 10 :
+  (MultiTransceiver<t, u, v>::bitDurationExp >= 8 + 15) ? 8 :
+  (MultiTransceiver<t, u, v>::bitDurationExp >= 6 + 15) ? 6 :
+  (MultiTransceiver<t, u, v>::bitDurationExp >= 3 + 15) ? 3 : 0;
+
+template <uint8_t t, uint8_t u, bool v>
+const uint8_t MultiTransceiver<t, u, v>::rUnscaledBitDurationExp =
+  MultiTransceiver<t, u, v>::bitDurationExp -
+  MultiTransceiver<t, u, v>::rPrescaleFactorExp;
+
+template <uint8_t t, uint8_t u, bool v>
+const uint32_t MultiTransceiver<t, u, v>::bitDuration =
+  1ul << MultiTransceiver<t, u, v>::bitDurationExp;
+
+template <uint8_t t, uint8_t u, bool v>
+const float MultiTransceiver<t, u, v>::baudRate =
+  float(F_CPU) / MultiTransceiver<t, u, v>::bitDuration;
+
+template <uint8_t t, uint8_t u, bool v>
+const float MultiTransceiver<t, u, v>::effectiveDataRate =
+  baudRate * CharacterEncoding::payloadLength / CharacterEncoding::totalLength;
+
+template <uint8_t t, uint8_t u, bool v>
+byte MultiTransceiver<t, u, v>::rPrescaleBits() {
+  const uint16_t rPrescaleFactor = 1 << rPrescaleFactorExp;
+
+  switch (rPrescaleFactor) {
+  case 1:
+    return bit(CS10);
+  case 8:
+    return bit(CS11);
+  case 64:
+    return bit(CS11) | bit(CS10);
+  case 256:
+    return bit(CS12);
+  case 1024:
+    return bit(CS12) | bit(CS10);
+  }
+  return 0;
+}
+
+// for receiving
+template <uint8_t t, uint8_t u, bool v>
+void MultiTransceiver<t, u, v>::startTimer1() {
+  TCCR1A = 0; // normal operation
+  TCCR1B = rPrescaleBits();
+  TCCR1C = 0;
+  OCR1A = 0;
+  OCR1B = 0;
+  TIMSK1 = 0; // no interrupts
+}
+
+// for receiving
+template <uint8_t t, uint8_t u, bool v>
+void MultiTransceiver<t, u, v>::enablePinChangeInterrupts() {
+  PCICR |= // Pin Change Interrupt Control Register
+    bit(PCIE2) | // D0 to D7
+    bit(PCIE0); // D8 to D15
+}
+
+template <uint8_t t, uint8_t u, bool v>
+uint8_t MultiTransceiver<t, u, v>::tPrescaleBits() {
+  const uint16_t prescaleFactor = 1 << tPrescaleFactorExp;
+
+  switch (prescaleFactor) {
+  case 1:
+    return bit(CS20);
+  case 8:
+    return bit(CS21);
+  case 32:
+    return bit(CS21) | bit(CS20);
+  case 64:
+    return bit(CS22);
+  case 128:
+    return bit(CS22) | bit(CS20);
+  case 256:
+    return bit(CS22) | bit(CS21);
+  case 1024:
+    return bit(CS22) | bit(CS21) | bit(CS20);
+  }
+
+  return 0;
+}
+
+template <uint8_t t, uint8_t u, bool v>
+void MultiTransceiver<t, u, v>::configureTimer2() {
+  // Timer control registers:
+  TCCR2A = 0;
+  TCCR2B = tPrescaleBits();
+
+  // Output compare registers:
+  const uint16_t unscaledBitDuration =
+    1 << tUnscaledBitDurationExp; // in CPU cycles
+  OCR2A = unscaledBitDuration - 1;
+  OCR2B = 0;
+
+  TCCR2A = bit(WGM21); // CTC - Clear Timer on Compare
+}
+
+template <uint8_t t, uint8_t u, bool v>
+void MultiTransceiver<t, u, v>::enableTimer2Interrupt() {
+  TIMSK2 = bit(OCIE2A); // Output Compare A Match Interrupt Enable
+}
+
+// for transmitting
+template <uint8_t t, uint8_t u, bool v>
+void MultiTransceiver<t, u, v>::startTimer2() {
+  configureTimer2();
+  enableTimer2Interrupt();
+}
+
+#include "Transceiver.h"
+
+#endif
