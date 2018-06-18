@@ -1,6 +1,5 @@
 #include <EEPROM.h>
-#include "Transceiver.h"
-#include "CharacterEncoding.h"
+#include "MultiTrans.h"
 #include "MemoryFree.h"
 
 #include "config.h"
