@@ -1,5 +1,3 @@
-// Felix E. Klee <felix.klee@inka.de>
-
 #include <EEPROM.h>
 #include "Transceiver.h"
 #include "CharacterEncoding.h"

@@ -1,5 +1,3 @@
-// Felix E. Klee <felix.klee@inka.de>
-
 #pragma once
 
 #include "Arduino.h"

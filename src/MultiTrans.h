@@ -1,5 +1,3 @@
-// Felix E. Klee <felix.klee@inka.de>
-
 #ifndef MultiTrans_h
 #define MultiTrans_h
 

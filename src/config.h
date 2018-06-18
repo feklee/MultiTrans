@@ -1,5 +1,3 @@
-// Felix E. Klee <felix.klee@inka.de>
-
 const bool arduinosShouldBeSynchronized = true;
 const uint32_t durationOfMinimumDelay = 1500; // ms
 const bool noiseShouldBeRandomlyInserted = false;
