@@ -1,13 +1,13 @@
 // Felix E. Klee <felix.klee@inka.de>
 
-#ifndef MultiTransceiver_h
-#define MultiTransceiver_h
+#ifndef MultiTrans_h
+#define MultiTrans_h
 
 #include "Arduino.h"
 #include "CharacterEncoding.h"
 
 template <uint8_t t, uint8_t u, bool v = false>
-class MultiTransceiver {
+class MultiTrans {
 private:
   // Bit duration (in CPU cycles): 2^bitDurationExp
   //
@@ -43,46 +43,46 @@ public:
 template <uint8_t t, uint8_t u, bool v>
 // Transmit prescaling should be as large as possible (to maximize the maximum
 // possible duration):
-const uint8_t MultiTransceiver<t, u, v>::tPrescaleFactorExp =
-  (MultiTransceiver<t, u, v>::bitDurationExp >= 10) ? 10 :
-  (MultiTransceiver<t, u, v>::bitDurationExp >= 8) ? 8 :
-  (MultiTransceiver<t, u, v>::bitDurationExp >= 7) ? 7 :
-  (MultiTransceiver<t, u, v>::bitDurationExp >= 6) ? 6 :
-  (MultiTransceiver<t, u, v>::bitDurationExp >= 5) ? 5 :
-  (MultiTransceiver<t, u, v>::bitDurationExp >= 3) ? 3 : 0;
+const uint8_t MultiTrans<t, u, v>::tPrescaleFactorExp =
+  (MultiTrans<t, u, v>::bitDurationExp >= 10) ? 10 :
+  (MultiTrans<t, u, v>::bitDurationExp >= 8) ? 8 :
+  (MultiTrans<t, u, v>::bitDurationExp >= 7) ? 7 :
+  (MultiTrans<t, u, v>::bitDurationExp >= 6) ? 6 :
+  (MultiTrans<t, u, v>::bitDurationExp >= 5) ? 5 :
+  (MultiTrans<t, u, v>::bitDurationExp >= 3) ? 3 : 0;
 
 template <uint8_t t, uint8_t u, bool v>
-const uint8_t MultiTransceiver<t, u, v>::tUnscaledBitDurationExp =
-  MultiTransceiver<t, u, v>::bitDurationExp -
-  MultiTransceiver<t, u, v>::tPrescaleFactorExp;
+const uint8_t MultiTrans<t, u, v>::tUnscaledBitDurationExp =
+  MultiTrans<t, u, v>::bitDurationExp -
+  MultiTrans<t, u, v>::tPrescaleFactorExp;
 
 // Receive prescaling should be as small as possible (for maximum precision):
 template <uint8_t t, uint8_t u, bool v>
-const uint8_t MultiTransceiver<t, u, v>::rPrescaleFactorExp =
-  (MultiTransceiver<t, u, v>::bitDurationExp >= 10 + 15) ? 10 :
-  (MultiTransceiver<t, u, v>::bitDurationExp >= 8 + 15) ? 8 :
-  (MultiTransceiver<t, u, v>::bitDurationExp >= 6 + 15) ? 6 :
-  (MultiTransceiver<t, u, v>::bitDurationExp >= 3 + 15) ? 3 : 0;
+const uint8_t MultiTrans<t, u, v>::rPrescaleFactorExp =
+  (MultiTrans<t, u, v>::bitDurationExp >= 10 + 15) ? 10 :
+  (MultiTrans<t, u, v>::bitDurationExp >= 8 + 15) ? 8 :
+  (MultiTrans<t, u, v>::bitDurationExp >= 6 + 15) ? 6 :
+  (MultiTrans<t, u, v>::bitDurationExp >= 3 + 15) ? 3 : 0;
 
 template <uint8_t t, uint8_t u, bool v>
-const uint8_t MultiTransceiver<t, u, v>::rUnscaledBitDurationExp =
-  MultiTransceiver<t, u, v>::bitDurationExp -
-  MultiTransceiver<t, u, v>::rPrescaleFactorExp;
+const uint8_t MultiTrans<t, u, v>::rUnscaledBitDurationExp =
+  MultiTrans<t, u, v>::bitDurationExp -
+  MultiTrans<t, u, v>::rPrescaleFactorExp;
 
 template <uint8_t t, uint8_t u, bool v>
-const uint32_t MultiTransceiver<t, u, v>::bitDuration =
-  1ul << MultiTransceiver<t, u, v>::bitDurationExp;
+const uint32_t MultiTrans<t, u, v>::bitDuration =
+  1ul << MultiTrans<t, u, v>::bitDurationExp;
 
 template <uint8_t t, uint8_t u, bool v>
-const float MultiTransceiver<t, u, v>::baudRate =
-  float(F_CPU) / MultiTransceiver<t, u, v>::bitDuration;
+const float MultiTrans<t, u, v>::baudRate =
+  float(F_CPU) / MultiTrans<t, u, v>::bitDuration;
 
 template <uint8_t t, uint8_t u, bool v>
-const float MultiTransceiver<t, u, v>::effectiveDataRate =
+const float MultiTrans<t, u, v>::effectiveDataRate =
   baudRate * CharacterEncoding::payloadLength / CharacterEncoding::totalLength;
 
 template <uint8_t t, uint8_t u, bool v>
-byte MultiTransceiver<t, u, v>::rPrescaleBits() {
+byte MultiTrans<t, u, v>::rPrescaleBits() {
   const uint16_t rPrescaleFactor = 1 << rPrescaleFactorExp;
 
   switch (rPrescaleFactor) {
@@ -102,7 +102,7 @@ byte MultiTransceiver<t, u, v>::rPrescaleBits() {
 
 // for receiving
 template <uint8_t t, uint8_t u, bool v>
-void MultiTransceiver<t, u, v>::startTimer1() {
+void MultiTrans<t, u, v>::startTimer1() {
   TCCR1A = 0; // normal operation
   TCCR1B = rPrescaleBits();
   TCCR1C = 0;
@@ -113,14 +113,14 @@ void MultiTransceiver<t, u, v>::startTimer1() {
 
 // for receiving
 template <uint8_t t, uint8_t u, bool v>
-void MultiTransceiver<t, u, v>::enablePinChangeInterrupts() {
+void MultiTrans<t, u, v>::enablePinChangeInterrupts() {
   PCICR |= // Pin Change Interrupt Control Register
     bit(PCIE2) | // D0 to D7
     bit(PCIE0); // D8 to D15
 }
 
 template <uint8_t t, uint8_t u, bool v>
-uint8_t MultiTransceiver<t, u, v>::tPrescaleBits() {
+uint8_t MultiTrans<t, u, v>::tPrescaleBits() {
   const uint16_t prescaleFactor = 1 << tPrescaleFactorExp;
 
   switch (prescaleFactor) {
@@ -144,7 +144,7 @@ uint8_t MultiTransceiver<t, u, v>::tPrescaleBits() {
 }
 
 template <uint8_t t, uint8_t u, bool v>
-void MultiTransceiver<t, u, v>::configureTimer2() {
+void MultiTrans<t, u, v>::configureTimer2() {
   // Timer control registers:
   TCCR2A = 0;
   TCCR2B = tPrescaleBits();
@@ -159,13 +159,13 @@ void MultiTransceiver<t, u, v>::configureTimer2() {
 }
 
 template <uint8_t t, uint8_t u, bool v>
-void MultiTransceiver<t, u, v>::enableTimer2Interrupt() {
+void MultiTrans<t, u, v>::enableTimer2Interrupt() {
   TIMSK2 = bit(OCIE2A); // Output Compare A Match Interrupt Enable
 }
 
 // for transmitting
 template <uint8_t t, uint8_t u, bool v>
-void MultiTransceiver<t, u, v>::startTimer2() {
+void MultiTrans<t, u, v>::startTimer2() {
   configureTimer2();
   enableTimer2Interrupt();
 }

@@ -4,20 +4,20 @@
 
 #include <assert.h>
 #include "Arduino.h"
-#include "MultiTransceiver.h"
+#include "MultiTrans.h"
 #include "Receiver.h"
 #include "Transmitter.h"
 #include "DebugData.h"
 
 template <uint8_t t, uint8_t u, bool v>
 template <uint8_t w>
-class MultiTransceiver<t, u, v>::Transceiver {
+class MultiTrans<t, u, v>::Transceiver {
 public:
   static const uint8_t pinNumber = w; // in [2, 13]
   static const bool debugDataIsRecorded =
-    MultiTransceiver<t, u, v>::debugDataIsRecorded;
+    MultiTrans<t, u, v>::debugDataIsRecorded;
   static const uint8_t maxNumberOfCharsPerTransmission = // < 13 (characters)
-    MultiTransceiver<t, u, v>::maxNumberOfCharsPerTransmission;
+    MultiTrans<t, u, v>::maxNumberOfCharsPerTransmission;
 
 private:
   Transmitter<Transceiver<w>> _transmitter;
@@ -51,18 +51,18 @@ public:
 
 template <uint8_t t, uint8_t u, bool v>
 template <uint8_t w>
-DebugData MultiTransceiver<t, u, v>::Transceiver<w>::debugData = {0, 0, 0, 0};
+DebugData MultiTrans<t, u, v>::Transceiver<w>::debugData = {0, 0, 0, 0};
 
 template <uint8_t t, uint8_t u, bool v>
 template <uint8_t w>
-void MultiTransceiver<t, u, v>::Transceiver<w>::begin() {
+void MultiTrans<t, u, v>::Transceiver<w>::begin() {
   _transmitter.begin();
   _receiver.begin();
 }
 
 template <uint8_t t, uint8_t u, bool v>
 template <uint8_t w>
-void MultiTransceiver<t, u, v>::Transceiver<w>::handleOwnPinChange(
+void MultiTrans<t, u, v>::Transceiver<w>::handleOwnPinChange(
   const uint16_t now, // in CPU cycles / prescale factor
   const bool valueAfterPinChange
 ) {
@@ -77,7 +77,7 @@ void MultiTransceiver<t, u, v>::Transceiver<w>::handleOwnPinChange(
 
 template <uint8_t t, uint8_t u, bool v>
 template <uint8_t w>
-void MultiTransceiver<t, u, v>::Transceiver<w>::handlePinChangeInterrupt() {
+void MultiTrans<t, u, v>::Transceiver<w>::handlePinChangeInterrupt() {
   const uint16_t now = TCNT1; // Read is done with the help of the `TEMP`
                               // register, making it atomic (as long as no
                               // interrupt is using `TEMP` as well).

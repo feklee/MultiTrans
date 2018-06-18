@@ -13,9 +13,9 @@ static const uint8_t communicationPinNumber2 = 3;
 static const uint8_t communicationPinNumber3 = 8;
 static const uint8_t communicationPinNumber4 = 9;
 
-using MT = MultiTransceiver<bitDurationExp,
-                            maxNumberOfCharsPerTransmission,
-                            recordDebugData>;
+using MT = MultiTrans<bitDurationExp,
+                      maxNumberOfCharsPerTransmission,
+                      recordDebugData>;
 MT multiTransceiver;
 MT::Transceiver<communicationPinNumber1> transceiver1;
 MT::Transceiver<communicationPinNumber2> transceiver2;
