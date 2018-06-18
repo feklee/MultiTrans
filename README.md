@@ -134,6 +134,10 @@ synchronization is quite primitive, and it’s a good idea to proceed as follows
     connection as well as the FTDI on the Arduino that should be monitored. The
     green lights should flash in sync at least once at the very beginning.
 
+Synchronization is not strictly necessary for the test to run. It is there to
+test the rare case that all Arduinos are transmitting in exactly the same
+moment.
+
 
 License
 =======

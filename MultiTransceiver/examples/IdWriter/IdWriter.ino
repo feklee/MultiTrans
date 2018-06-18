@@ -1,8 +1,6 @@
-// Writes an ID into an microcontroller. Change the ID for each individual
-// microcontroller!
+// Writes an ID to EEPROM. Change the ID for each Arduino!
 
-#include <EEPROM.h> // Library may need to be copied:
-                    // https://digistump.com/board/index.php?topic=1132.0
+#include <EEPROM.h>
 
 char id = '*';
 
