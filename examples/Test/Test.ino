@@ -1,6 +1,3 @@
-// First initialize the nodes with IDs, using the `IdWriter` example sketch.
-
-#include <EEPROM.h>
 #include "MultiTrans.h"
 #include "MemoryFree.h"
 
@@ -11,6 +8,7 @@ static const uint8_t communicationPinNumber1 = 2;
 static const uint8_t communicationPinNumber2 = 3;
 static const uint8_t communicationPinNumber3 = 8;
 static const uint8_t communicationPinNumber4 = 9;
+static const uint8_t identificationPinNumber = 10;
 
 using MT = MultiTrans<bitDurationExp,
                       maxNumberOfCharsPerTransmission,
@@ -20,8 +18,6 @@ MT::Transceiver<communicationPinNumber1> transceiver1;
 MT::Transceiver<communicationPinNumber2> transceiver2;
 MT::Transceiver<communicationPinNumber3> transceiver3;
 MT::Transceiver<communicationPinNumber4> transceiver4;
-
-static char id;
 
 static const uint32_t timeForOtherArduinoToStartUp = 1000; // ms
 
@@ -55,8 +51,13 @@ void flashLed() {
   digitalWrite(ledPinNumber, LOW);
 }
 
+bool thisIsTheArduinoWithAnAsterisk() {
+  pinMode(identificationPinNumber, INPUT_PULLUP);
+  return digitalRead(identificationPinNumber);
+}
+
 bool thisArduinoHasToWaitForSync() {
-  return id != '*';
+  return !thisIsTheArduinoWithAnAsterisk();
 }
 
 void loadSet(const uint8_t i) {
@@ -178,8 +179,6 @@ void initiateSync() {
 
 void setup() {
   Serial.begin(9600);
-
-  id = EEPROM.read(0);
 
   if (arduinosShouldBeSynchronized) {
     if (thisArduinoHasToWaitForSync()) {
