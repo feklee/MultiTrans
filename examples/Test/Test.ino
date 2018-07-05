@@ -1,3 +1,5 @@
+// First initialize the nodes with IDs, using the `IdWriter` example sketch.
+
 #include <EEPROM.h>
 #include "MultiTrans.h"
 #include "MemoryFree.h"
