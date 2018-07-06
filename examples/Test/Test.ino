@@ -1,7 +1,7 @@
 #include "MultiTrans.h"
 #include "MemoryFree.h"
 
-#include "config.h"
+#include "settings.h"
 
 static const uint8_t ledPinNumber = 13;
 static const uint8_t communicationPinNumber1 = 2;
@@ -53,7 +53,7 @@ void flashLed() {
 
 bool thisIsTheArduinoWithAnAsterisk() {
   pinMode(identificationPinNumber, INPUT_PULLUP);
-  return digitalRead(identificationPinNumber);
+  return !digitalRead(identificationPinNumber);
 }
 
 bool thisArduinoHasToWaitForSync() {
@@ -112,27 +112,38 @@ char nextExpectedCharacter(char characterToStartFrom = 0) {
 }
 
 template <typename T>
-void reportErrorRatio(char character) {
+void updateOrPrintErrorRatio(char character, bool print) {
   static uint32_t errorsCounted = 0;
   static uint32_t charactersCounted = 0;
   static bool lastCharacterWasUnexpected = false;
   static char lastCharacter = 0;
 
-  char expectedCharacter =
-    lastCharacterWasUnexpected ?
-    nextExpectedCharacter<T>(lastCharacter) :
-    nextExpectedCharacter<T>();
+  if (!print) {
+    char expectedCharacter =
+      lastCharacterWasUnexpected ?
+      nextExpectedCharacter<T>(lastCharacter) :
+      nextExpectedCharacter<T>();
 
-  bool characterIsUnexpected = character != expectedCharacter;
-  charactersCounted ++;
-  if (characterIsUnexpected && charactersCounted > 1) {
-    errorsCounted ++;
+    bool characterIsUnexpected = character != expectedCharacter;
+    charactersCounted ++;
+    if (characterIsUnexpected && charactersCounted > 1) {
+      errorsCounted ++;
+    }
+    lastCharacter = character;
+    lastCharacterWasUnexpected = characterIsUnexpected;
+  } else {
+    printErrorRatio(errorsCounted, charactersCounted);
   }
+}
 
-  printErrorRatio(errorsCounted, charactersCounted);
+template <typename T>
+void updateErrorRatio(char character) {
+  updateOrPrintErrorRatio<T>(character, false);
+}
 
-  lastCharacter = character;
-  lastCharacterWasUnexpected = characterIsUnexpected;
+template <typename T>
+void printErrorRatio(T &) {
+  updateOrPrintErrorRatio<T>(0, true);
 }
 
 void pullUpCommunicationPins() {
@@ -201,6 +212,10 @@ void setup() {
 
   uint32_t timeToWaitBeforeInitialTransmit = 10; // ms
   delay(timeToWaitBeforeInitialTransmit);
+
+  Serial.print(F("Test duration: "));
+  Serial.print(durationOfTest);
+  Serial.println(F(" ms"));
 }
 
 template <typename T>
@@ -208,10 +223,12 @@ void transmitNextSet(T &transceiver) {
   static uint8_t i = 0;
 
   loadSet(i);
-  flashLed();
-  printPinNumberPrefix(transceiver);
-  Serial.print(F("Starting transmission of: "));
-  Serial.println(set);
+  if (!quiet) {
+    flashLed();
+    printPinNumberPrefix(transceiver);
+    Serial.print(F("Starting transmission of: "));
+    Serial.println(set);
+  }
   transceiver.startTransmissionOfCharacters(set);
   i = (i + 1) % numberOfSets;
 }
@@ -257,12 +274,16 @@ void printMemoryUsage() {
   Serial.println(freeMemory());
 }
 
+void printGeneralInfo() {
+  printDataRate();
+  printMemoryUsage();
+}
+
 void printGeneralInfoFromTimeToTime() {
   static unsigned long lastTime = millis(); // ms
   unsigned long elapsedTime = millis() - lastTime; // ms
   if (elapsedTime > 2000) {
-    printDataRate();
-    printMemoryUsage();
+    printGeneralInfo();
     lastTime = millis();
   }
 }
@@ -272,7 +293,7 @@ void printInformationAboutCharacter(T &transceiver, char character) {
   Serial.print(character);
   Serial.print(F(" = "));
   Serial.print(stringFromBinary(character));
-  reportErrorRatio<T>(character);
+  printErrorRatio<T>(transceiver);
   Serial.println();
 
   if (multiTransceiver.debugDataIsRecorded) {
@@ -282,7 +303,7 @@ void printInformationAboutCharacter(T &transceiver, char character) {
 }
 
 template <typename T>
-void reportNoise(T &transceiver) {
+void printInfoAboutNoise(T &transceiver) {
   if (transceiver.noiseWhileGettingCharacter()) {
     Serial.print(F("Noise has been detected on pin "));
     Serial.println(transceiver.pinNumber);
@@ -297,21 +318,29 @@ void printPinNumberPrefix(T &transceiver) {
 }
 
 template <typename T>
-bool processNextCharacter(T &transceiver) {
+void printReport(T &transceiver, char character) {
   uint8_t receiveBufferStart = transceiver.debugData.receiveBufferStart;
   uint8_t receiveBufferEnd = transceiver.debugData.receiveBufferEnd;
 
+  printInfoAboutNoise(transceiver);
+  printPinNumberPrefix(transceiver);
+  if (multiTransceiver.debugDataIsRecorded) {
+    Serial.print(stringFromBufferDimensions(receiveBufferStart,
+                                            receiveBufferEnd));
+    Serial.print(F(": "));
+  }
+  printInformationAboutCharacter<T>(transceiver, character);
+}
+
+template <typename T>
+bool processNextCharacter(T &transceiver) {
   char character = transceiver.getNextCharacter();
   bool characterWasFound = character != 0;
   if (characterWasFound) {
-    reportNoise(transceiver);
-    printPinNumberPrefix(transceiver);
-    if (multiTransceiver.debugDataIsRecorded) {
-      Serial.print(stringFromBufferDimensions(receiveBufferStart,
-                                              receiveBufferEnd));
-      Serial.print(F(": "));
+    updateErrorRatio<T>(character);
+    if (!quiet) {
+      printReport<T>(transceiver, character);
     }
-    printInformationAboutCharacter<T>(transceiver, character);
   }
   return characterWasFound;
 }
@@ -393,13 +422,44 @@ void processReceivedCharacters() {
   } while(characterWasFound);
 }
 
+template <typename T>
+void printTestSummary(T &transceiver) {
+  Serial.print(F("Error ratio on pin "));
+  Serial.print(transceiver.pinNumber);
+  Serial.print(F(": "));
+  printErrorRatio(transceiver);
+  Serial.println();
+}
+
+void printTestSummary() {
+  printTestSummary(transceiver1);
+  printTestSummary(transceiver2);
+  printTestSummary(transceiver3);
+  printTestSummary(transceiver4);
+}
+
 void loop() {
-  printGeneralInfoFromTimeToTime();
+  static bool testIsRunning = true;
+
+  if (!testIsRunning) {
+    return;
+  }
+
+  if (millis() > durationOfTest) {
+    Serial.println("Test has ended!");
+    printGeneralInfo();
+    printTestSummary();
+    testIsRunning = false;
+  }
+
+  if (!quiet) {
+    printGeneralInfoFromTimeToTime();
+  }
 
   transmitWherePossible();
 
   uint32_t endOfMinimumDelay = millis() + durationOfMinimumDelay;
-  while (millis() < endOfMinimumDelay) {
+  do {
     processReceivedCharacters();
-  }
+  } while (millis() < endOfMinimumDelay);
 }

@@ -130,7 +130,7 @@ synchronization is quite primitive, and it’s a good idea to proceed as follows
  2. Make sure that the FTDI is connected to the computer and that the serial
     console is started.
 
- 3. Plug in near simultaneously, i.e. within about a second, the power
+ 3. Plug in near simultaneously – i.e. within about a second – the power
     connection as well as the FTDI on the Arduino that should be monitored. The
     green lights should flash in sync at least once at the very beginning.
 

@@ -1,8 +1,18 @@
 const bool arduinosShouldBeSynchronized = true;
-const uint32_t durationOfMinimumDelay = 1500; // ms
+const uint32_t durationOfMinimumDelay = 0; /* TODO: 1500;*/ // ms, to compensate
+                                                            // the overhead for
+                                                            // processing
+                                                            // characters
 const bool noiseShouldBeRandomlyInserted = false;
-const bool recordDebugData = false;
-const uint8_t bitDurationExp = 10; // < 18
+
+const bool recordDebugData = false; // Enabling slows down max. possible
+                                    // communication speed
+
+const uint32_t durationOfTest = 50000; // ms
+
+const bool quiet = true; // Enabling increases max. possible communication speed
+
+const uint8_t bitDurationExp = 13 /* TODO: 10 */; // < 18 <- TODO: why?
 
 const uint8_t maxNumberOfCharsPerTransmission = 8; // characters (< 13)
 

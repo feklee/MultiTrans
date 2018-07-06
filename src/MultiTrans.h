@@ -7,6 +7,8 @@
 template <uint8_t t, uint8_t u, bool v = false>
 class MultiTrans {
 private:
+  static_assert(t <= 18, "Bit duration is too long.");
+
   // Bit duration (in CPU cycles): 2^bitDurationExp
   //
   // Baud rate (in bits / time unit): CPU clock speed / bit duration
@@ -54,13 +56,24 @@ const uint8_t MultiTrans<t, u, v>::tUnscaledBitDurationExp =
   MultiTrans<t, u, v>::bitDurationExp -
   MultiTrans<t, u, v>::tPrescaleFactorExp;
 
-// Receive prescaling should be as small as possible (for maximum precision):
+// Receive prescaling should be as small as possible (for maximum precision),
+// but long enough to count a break (see character encoding):
 template <uint8_t t, uint8_t u, bool v>
 const uint8_t MultiTrans<t, u, v>::rPrescaleFactorExp =
-  (MultiTrans<t, u, v>::bitDurationExp >= 10 + 15) ? 10 :
-  (MultiTrans<t, u, v>::bitDurationExp >= 8 + 15) ? 8 :
-  (MultiTrans<t, u, v>::bitDurationExp >= 6 + 15) ? 6 :
-  (MultiTrans<t, u, v>::bitDurationExp >= 3 + 15) ? 3 : 0;
+  (MultiTrans<t, u, v>::bitDurationExp >=
+   8 // previous prescale factor, which may not be sufficient (see next section)
+   + 16 // >= 2^16 would not fit in an `uint16_t`
+   - CharacterEncoding::ceilOfBreakLengthExp // divides by number of character
+                                             // bits needed to count break,
+                                             // rounded up
+  ) ? 10 :
+  (MultiTrans<t, u, v>::bitDurationExp >=
+   6 + 16 - CharacterEncoding::ceilOfBreakLengthExp) ? 8 :
+  (MultiTrans<t, u, v>::bitDurationExp >=
+   3 + 16 - CharacterEncoding::ceilOfBreakLengthExp) ? 6 :
+  (MultiTrans<t, u, v>::bitDurationExp >=
+   0 + 16 - CharacterEncoding::ceilOfBreakLengthExp) ? 3 :
+  0;
 
 template <uint8_t t, uint8_t u, bool v>
 const uint8_t MultiTrans<t, u, v>::rUnscaledBitDurationExp =

@@ -4,6 +4,7 @@
 
 namespace CharacterEncoding {
   static const uint8_t breakLength = 10; // in number of bits
+  static const uint8_t ceilOfBreakLengthExp = 4; // ceil(log2(breakLength))
   static const uint8_t payloadLength = 8; // in number of bits
   static const uint8_t totalLength =
     breakLength +
