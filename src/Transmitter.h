@@ -3,9 +3,9 @@
 #include <assert.h>
 #include <util/atomic.h>
 #include "Arduino.h"
-#include "TransmitBuffer.h"
-#include "CommunicationPin.h"
-#include "CharacterEncoding.h"
+#include "./TransmitBuffer.h"
+#include "./CommunicationPin.h"
+#include "./CharacterEncoding.h"
 
 template <typename T>
 class Transmitter {

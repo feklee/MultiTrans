@@ -3,6 +3,8 @@
 
 #include "settings.h"
 
+#include <Key.h> // TODO
+
 static const uint8_t ledPinNumber = 13;
 static const uint8_t communicationPinNumber1 = 2;
 static const uint8_t communicationPinNumber2 = 3;

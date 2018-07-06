@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Arduino.h"
-#include "CharacterEncoding.h"
+#include "./CharacterEncoding.h"
 #include <util/atomic.h>
 
 template <typename T>

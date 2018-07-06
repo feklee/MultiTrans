@@ -2,10 +2,10 @@
 
 #include <assert.h>
 #include "Arduino.h"
-#include "MultiTrans.h"
-#include "Receiver.h"
-#include "Transmitter.h"
-#include "DebugData.h"
+#include "./MultiTrans.h"
+#include "./Receiver.h"
+#include "./Transmitter.h"
+#include "./DebugData.h"
 
 template <uint8_t t, uint8_t u, bool v>
 template <uint8_t w>

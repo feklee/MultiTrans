@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Arduino.h"
-#include "CharacterEncoding.h"
+#include "./CharacterEncoding.h"
 
 template <uint8_t t>
 class TransmitBuffer {

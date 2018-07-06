@@ -2,7 +2,7 @@
 #define MultiTrans_h
 
 #include "Arduino.h"
-#include "CharacterEncoding.h"
+#include "./CharacterEncoding.h"
 
 template <uint8_t t, uint8_t u, bool v = false>
 class MultiTrans {

@@ -1,8 +1,8 @@
 #pragma once
 
 #include "Arduino.h"
-#include "ReceiveBuffer.h"
-#include "CommunicationPin.h"
+#include "./ReceiveBuffer.h"
+#include "./CommunicationPin.h"
 
 template <typename T, uint8_t t>
 class Receiver {

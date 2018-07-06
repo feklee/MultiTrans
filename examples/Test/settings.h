@@ -1,5 +1,5 @@
 const bool arduinosShouldBeSynchronized = true;
-const uint32_t durationOfMinimumDelay = 0; /* TODO: 1500;*/ // ms, to compensate
+const uint32_t durationOfMinimumDelay = 500; /* TODO: 1500;*/ // ms, to compensate
                                                             // the overhead for
                                                             // processing
                                                             // characters
