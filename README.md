@@ -117,8 +117,6 @@ Five Arduinos are connected, each of them being a multi-channel transceiver:
 
   * Ⓓ, connected to ⊛ (pin 8)
 
-The ID of the Arduinos is written to their EEPROM using the provided sketch.
-
 For testing, the Arduinos are first synchronized after starting up. Ⓐ, Ⓑ, Ⓒ, and
 Ⓓ wait for signals from ⊛. Then all five start sending and receiving. To
 estimate if the Arduinos are in sync, look at the LEDs blinking. If they’re
