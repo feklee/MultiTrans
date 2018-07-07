@@ -70,7 +70,8 @@ void loadSet(const uint8_t i) {
   strcpy_P(set, (char*)pgm_read_word(&(setsOfCharacters[i])));
 }
 
-void printErrorRatio(uint32_t errorsCounted, uint32_t charactersCounted) {
+void printErrorRatioFromCounts(uint32_t errorsCounted,
+                               uint32_t charactersCounted) {
   float ratio = charactersCounted == 0
     ? 0
     : float(errorsCounted) / charactersCounted;
@@ -138,7 +139,7 @@ void updateOrPrintErrorRatio(char character, bool print) {
     lastCharacter = character;
     lastCharacterWasUnexpected = characterIsUnexpected;
   } else {
-    printErrorRatio(errorsCounted, charactersCounted);
+    printErrorRatioFromCounts(errorsCounted, charactersCounted);
   }
 }
 
@@ -148,7 +149,7 @@ void updateErrorRatio(char character) {
 }
 
 template <typename T>
-void printErrorRatio(T &) {
+void printErrorRatio() {
   updateOrPrintErrorRatio<T>(0, true);
 }
 
@@ -299,7 +300,7 @@ void printInformationAboutCharacter(T &transceiver, char character) {
   Serial.print(character);
   Serial.print(F(" = "));
   Serial.print(stringFromBinary(character));
-  printErrorRatio<T>(transceiver);
+  printErrorRatio<T>();
   Serial.println();
 
   if (multiTransceiver.debugDataIsRecorded) {
@@ -433,7 +434,7 @@ void printTestSummary(T &transceiver) {
   Serial.print(F("Error ratio on pin "));
   Serial.print(transceiver.pinNumber);
   Serial.print(F(": "));
-  printErrorRatio(transceiver);
+  printErrorRatio<T>();
   Serial.println();
 }
 
