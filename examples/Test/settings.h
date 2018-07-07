@@ -5,14 +5,14 @@ const uint32_t durationOfMinimumDelay = 500; /* TODO: 1500;*/ // ms, to compensa
                                                             // characters
 const bool noiseShouldBeRandomlyInserted = false;
 
-const bool recordDebugData = false; // Enabling slows down max. possible
-                                    // communication speed
+const bool recordDebugData = true; // Enabling slows down max. possible
+                                   // communication speed
 
-const uint32_t durationOfTest = 50000; // ms
+const uint32_t durationOfTest = 20000; // ms
 
 const bool quiet = true; // Enabling increases max. possible communication speed
 
-const uint8_t bitDurationExp = 13 /* TODO: 10 */; // < 18 <- TODO: why?
+const uint8_t bitDurationExp = 18; // <= 18
 
 const uint8_t maxNumberOfCharsPerTransmission = 8; // characters (< 13)
 

@@ -271,9 +271,13 @@ void ReceiveBuffer<T>::push(const byte element) {
   }
 
   _indexOfNextElement = cachedIndexOfNextElement;
+
   if (Transceiver::debugDataIsRecorded) {
     Transceiver::debugData.receiveBufferEnd =
       precedingIndex(cachedIndexOfNextElement);
+    Transceiver::debugData.numberOfElementsInReceiveBuffer =
+      (uint16_t(cachedIndexOfNextElement) + maxNumberOfElements -
+       cachedIndexOfStart) % maxNumberOfElements;
   }
 }
 

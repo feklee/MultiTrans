@@ -49,7 +49,7 @@ public:
 
 template <uint8_t t, uint8_t u, bool v>
 template <uint8_t w>
-DebugData MultiTrans<t, u, v>::Transceiver<w>::debugData = {0, 0, 0, 0};
+DebugData MultiTrans<t, u, v>::Transceiver<w>::debugData = {0, 0, 0, 0, 0};
 
 template <uint8_t t, uint8_t u, bool v>
 template <uint8_t w>

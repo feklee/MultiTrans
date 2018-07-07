@@ -31,14 +31,20 @@ ISR(TIMER2_COMPA_vect) {
   transceiver4.handleTimer2Interrupt();
 }
 
+static uint32_t pinChangeInterrupts1 = 0; // TODO
+static uint32_t pinChangeInterrupts2 = 0; // TODO
+
 ISR(PCINT2_vect) { // D0-D7
-  transceiver1.handlePinChangeInterrupt();
+  pinChangeInterrupts1 ++;
+/* TODO  transceiver1.handlePinChangeInterrupt();
   transceiver2.handlePinChangeInterrupt();
+*/
 }
 
 ISR(PCINT0_vect) { // D8-D13
+  pinChangeInterrupts2 ++;
   transceiver3.handlePinChangeInterrupt();
-  transceiver4.handlePinChangeInterrupt();
+// TODO:  transceiver4.handlePinChangeInterrupt();
 }
 
 void enablePinChangeInterrupts() {
@@ -76,7 +82,7 @@ void printErrorRatioFromCounts(uint32_t errorsCounted,
     ? 0
     : float(errorsCounted) / charactersCounted;
 
-  Serial.print(F(" Error ratio w/o noise: "));
+  Serial.print(F("Error ratio w/o noise: "));
   Serial.print(ratio);
   Serial.print(F(" = "));
   Serial.print(errorsCounted);
@@ -226,16 +232,26 @@ void setup() {
 }
 
 template <typename T>
+uint32_t countTransmittedCharacters(uint8_t numberOfNewCharacters = 0) {
+  static uint32_t numberOfCharacters = 0;
+  numberOfCharacters += numberOfNewCharacters;
+  return numberOfCharacters;
+}
+
+template <typename T>
 void transmitNextSet(T &transceiver) {
   static uint8_t i = 0;
 
   loadSet(i);
-  if (!quiet) {
-    flashLed();
+  if (true/*TODO: !quiet*/) {
+/*TODO:    flashLed();
     printPinNumberPrefix(transceiver);
     Serial.print(F("Starting transmission of: "));
     Serial.println(set);
+*/
+//    delay(100); // TODO: remove (without delay: 0 / 12, transmitted: 33, number of collisions: 183)
   }
+  countTransmittedCharacters<T>(strlen(set));
   transceiver.startTransmissionOfCharacters(set);
   i = (i + 1) % numberOfSets;
 }
@@ -300,6 +316,7 @@ void printInformationAboutCharacter(T &transceiver, char character) {
   Serial.print(character);
   Serial.print(F(" = "));
   Serial.print(stringFromBinary(character));
+  Serial.print(F(" "));
   printErrorRatio<T>();
   Serial.println();
 
@@ -339,6 +356,8 @@ void printReport(T &transceiver, char character) {
   printInformationAboutCharacter<T>(transceiver, character);
 }
 
+static uint16_t numberOfZeroCharacters = 0; // TODO
+
 template <typename T>
 bool processNextCharacter(T &transceiver) {
   char character = transceiver.getNextCharacter();
@@ -348,6 +367,8 @@ bool processNextCharacter(T &transceiver) {
     if (!quiet) {
       printReport<T>(transceiver, character);
     }
+  } else {
+    numberOfZeroCharacters ++;
   }
   return characterWasFound;
 }
@@ -431,10 +452,35 @@ void processReceivedCharacters() {
 
 template <typename T>
 void printTestSummary(T &transceiver) {
-  Serial.print(F("Error ratio on pin "));
+  Serial.print(F("Pin "));
   Serial.print(transceiver.pinNumber);
-  Serial.print(F(": "));
+  Serial.println(":");
+
+  Serial.print("  ");
   printErrorRatio<T>();
+  Serial.println();
+
+  Serial.print(F("  Number of transmitted characters: "));
+  Serial.print(countTransmittedCharacters<T>());
+  Serial.println();
+
+  Serial.print(F("  Number of collisions: "));
+  Serial.print(transceiver.debugData.numberOfCollisions);
+  Serial.println();
+
+  Serial.print(F("  Number of receive buffer overflows: "));
+  Serial.print(transceiver.debugData.receiveBufferOverflowCount);
+  Serial.println();
+
+  Serial.print(F("  Number of elements in receive buffer: "));
+  Serial.print(transceiver.debugData.numberOfElementsInReceiveBuffer);
+  Serial.println();
+
+  Serial.print(F("  Number of pin change interrupts: "));
+  Serial.print((transceiver.pinNumber == communicationPinNumber1 ||
+                transceiver.pinNumber == communicationPinNumber2) ? 
+               pinChangeInterrupts1 :
+               pinChangeInterrupts2);
   Serial.println();
 }
 
@@ -443,6 +489,9 @@ void printTestSummary() {
   printTestSummary(transceiver2);
   printTestSummary(transceiver3);
   printTestSummary(transceiver4);
+
+  Serial.print(F("Total number of zero characters: "));
+  Serial.println(numberOfZeroCharacters);
 }
 
 void loop() {
@@ -452,11 +501,13 @@ void loop() {
     return;
   }
 
-  if (millis() > durationOfTest) {
+  bool testHasEnded = millis() > durationOfTest;
+  if (testHasEnded) {
     Serial.println("Test has ended!");
     printGeneralInfo();
     printTestSummary();
     testIsRunning = false;
+    return;
   }
 
   if (!quiet) {
