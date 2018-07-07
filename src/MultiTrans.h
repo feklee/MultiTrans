@@ -37,7 +37,6 @@ public:
 
   static void startTimer1();
   static void startTimer2();
-  static void enablePinChangeInterrupts();
 };
 
 template <uint8_t t, uint8_t u, bool v>
@@ -120,14 +119,6 @@ void MultiTrans<t, u, v>::startTimer1() {
   OCR1A = 0;
   OCR1B = 0;
   TIMSK1 = 0; // no interrupts
-}
-
-// for receiving
-template <uint8_t t, uint8_t u, bool v>
-void MultiTrans<t, u, v>::enablePinChangeInterrupts() {
-  PCICR |= // Pin Change Interrupt Control Register
-    bit(PCIE2) | // D0 to D7
-    bit(PCIE0); // D8 to D15
 }
 
 template <uint8_t t, uint8_t u, bool v>

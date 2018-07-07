@@ -41,6 +41,12 @@ ISR(PCINT0_vect) { // D8-D13
   transceiver4.handlePinChangeInterrupt();
 }
 
+void enablePinChangeInterrupts() {
+  PCICR |= // Pin Change Interrupt Control Register
+    bit(PCIE2) | // D0 to D7
+    bit(PCIE0); // D8 to D15
+}
+
 bool randomBool() {
   return rand() % 2;
 }
@@ -203,7 +209,7 @@ void setup() {
 
   multiTransceiver.startTimer1();
   multiTransceiver.startTimer2();
-  multiTransceiver.enablePinChangeInterrupts();
+  enablePinChangeInterrupts();
 
   transceiver1.begin();
   transceiver2.begin();
