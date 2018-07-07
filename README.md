@@ -1,7 +1,8 @@
 Introduction
 ============
 
-*MultiTrans* is a multi channel transceiver.
+*MultiTrans* is a multi channel transceiver, for AVR based Arduinos.
+
 
 Features
 --------
@@ -34,11 +35,18 @@ Limitations
   * On rare occasions, i.e. if timing is just *right*, collision detection may
     fail. For that reason it is suggested to use higher level error correction.
     
-  * Code so far has only been tested with the Arduino Pro Mini (AVR).
+  * It only works with AVR based Arduinos. In fact, code so far has only been
+    tested with the Arduino Pro Mini.
+
+  * Timers are occupied:
+  
+      + 8-bit Timer/Counter2 (TC2), for transmitting
+      
+      + 16-bit Timer/Counter1 (TC1), for receiving
 
 
 Debug mode
-----------
+==========
 
 Debug mode is enabled by passing a template parameter to `MultiTransceiver`. In
 this mode additional information is collected, which slows down processing of
