@@ -8,7 +8,7 @@ const bool noiseShouldBeRandomlyInserted = false;
 const bool recordDebugData = true; // Enabling slows down max. possible
                                    // communication speed
 
-const uint32_t durationOfTest = 20000; // ms
+const uint32_t durationOfTest = 40000; // ms
 
 const bool quiet = true; // Enabling increases max. possible communication speed
 

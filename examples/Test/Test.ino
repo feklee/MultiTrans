@@ -36,15 +36,14 @@ static uint32_t pinChangeInterrupts2 = 0; // TODO
 
 ISR(PCINT2_vect) { // D0-D7
   pinChangeInterrupts1 ++;
-/* TODO  transceiver1.handlePinChangeInterrupt();
+  transceiver1.handlePinChangeInterrupt();
   transceiver2.handlePinChangeInterrupt();
-*/
 }
 
 ISR(PCINT0_vect) { // D8-D13
   pinChangeInterrupts2 ++;
   transceiver3.handlePinChangeInterrupt();
-// TODO:  transceiver4.handlePinChangeInterrupt();
+  transceiver4.handlePinChangeInterrupt();
 }
 
 void enablePinChangeInterrupts() {

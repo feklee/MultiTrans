@@ -96,10 +96,19 @@ void Transmitter<T>::handleTimer2Interrupt() {
 
   if (_isWaitingForFreeLine) {
     checkForCollision();
-    return;
+
+    // Don't return! When the line becomes free, the first bit is transmitted
+    // right away. The first bit draws the line low for the break. This also
+    // indicates the other side that there is a transmission in progress. If
+    // both sides want to start sending at almost the same time , then a delay
+    // of one bit duration could be too long for the other side to notice the
+    // start of transmission.
   }
 
-  transmitBit();
+  bool lineIsFree = !_isWaitingForFreeLine; // may have changed above
+  if (lineIsFree) {
+    transmitBit();
+  }
 }
 
 template <typename T>
