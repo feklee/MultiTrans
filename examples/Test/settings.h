@@ -12,7 +12,7 @@ const uint32_t durationOfTest = 40000; // ms
 
 const bool quiet = true; // Enabling increases max. possible communication speed
 
-const uint8_t bitDurationExp = 9; // <= 18
+const uint8_t bitDurationExp = 10; // <= 18
 
 const uint8_t maxNumberOfCharsPerTransmission = 8; // characters (< 13)
 

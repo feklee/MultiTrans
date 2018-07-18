@@ -19,6 +19,8 @@ MT::Transceiver<communicationPinNumber2> transceiver2;
 MT::Transceiver<communicationPinNumber3> transceiver3;
 MT::Transceiver<communicationPinNumber4> transceiver4;
 
+char firstReceivedCharacter = 0, lastReceivedCharacter = 0;
+
 static const uint32_t timeForOtherArduinoToStartUp = 1000; // ms
 
 static char set[maxNumberOfCharsPerTransmission + 1]; // set of characters to
@@ -31,17 +33,12 @@ ISR(TIMER2_COMPA_vect) {
   transceiver4.handleTimer2Interrupt();
 }
 
-static uint32_t pinChangeInterrupts1 = 0; // TODO
-static uint32_t pinChangeInterrupts2 = 0; // TODO
-
 ISR(PCINT2_vect) { // D0-D7
-  pinChangeInterrupts1 ++;
   transceiver1.handlePinChangeInterrupt();
   transceiver2.handlePinChangeInterrupt();
 }
 
 ISR(PCINT0_vect) { // D8-D13
-  pinChangeInterrupts2 ++;
   transceiver3.handlePinChangeInterrupt();
   transceiver4.handlePinChangeInterrupt();
 }
@@ -56,9 +53,9 @@ bool randomBool() {
   return rand() % 2;
 }
 
-void flashLed() {
+void flashLed(uint16_t duration = 100) {
   digitalWrite(ledPinNumber, HIGH);
-  delay(100);
+  delay(duration);
   digitalWrite(ledPinNumber, LOW);
 }
 
@@ -210,8 +207,7 @@ void initiateSync() {
 }
 
 // E.g. in over current situations, the Arduino may restart. Flashing the LED
-// shows when a restart is happening, without the need to look at serial console
-// output.
+// shows when a restart is happening.
 void indicateStartup() {
   flashLed();
   delay(100);
@@ -480,27 +476,26 @@ void printTestSummary(T &transceiver) {
   Serial.println();
 
   Serial.print(F("  Number of transmitted characters: "));
-  Serial.print(countTransmittedCharacters<T>());
-  Serial.println();
+  Serial.println(countTransmittedCharacters<T>());
 
   Serial.print(F("  Number of collisions: "));
-  Serial.print(transceiver.debugData.numberOfCollisions);
-  Serial.println();
+  Serial.println(transceiver.debugData.numberOfCollisions);
 
   Serial.print(F("  Number of receive buffer overflows: "));
-  Serial.print(transceiver.debugData.receiveBufferOverflowCount);
-  Serial.println();
+  Serial.println(transceiver.debugData.receiveBufferOverflowCount);
 
   Serial.print(F("  Number of elements in receive buffer: "));
-  Serial.print(transceiver.debugData.numberOfElementsInReceiveBuffer);
-  Serial.println();
+  Serial.println(transceiver.debugData.numberOfElementsInReceiveBuffer);
 
-  Serial.print(F("  Number of pin change interrupts: "));
-  Serial.print((transceiver.pinNumber == communicationPinNumber1 ||
-                transceiver.pinNumber == communicationPinNumber2) ? 
-               pinChangeInterrupts1 :
-               pinChangeInterrupts2);
-  Serial.println();
+  if (firstReceivedCharacter) {
+    Serial.print(F("  First received character: "));
+    Serial.println(firstReceivedCharacter);
+  }
+
+  if (lastReceivedCharacter) {
+    Serial.print(F("  Last received character: "));
+    Serial.println(lastReceivedCharacter);
+  }
 }
 
 void printTestSummary() {
