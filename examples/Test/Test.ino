@@ -165,6 +165,15 @@ void pullUpCommunicationPins() {
   pinMode(communicationPinNumber4, INPUT_PULLUP);
 }
 
+void indicateSyncDone() {
+  Serial.println(F("done"));
+  flashLed(50);
+  delay(50);
+  flashLed(50);
+  delay(50);
+  flashLed(50);
+}
+
 void waitForSync() {
   pullUpCommunicationPins();
   delay(timeForOtherArduinoToStartUp);
@@ -180,7 +189,7 @@ void waitForSync() {
     digitalRead(communicationPinNumber3) == HIGH &&
     digitalRead(communicationPinNumber4) == HIGH
   ) {}
-  Serial.println(F("done"));
+  indicateSyncDone();
 }
 
 void initiateSync() {
@@ -197,10 +206,21 @@ void initiateSync() {
   digitalWrite(communicationPinNumber3, LOW);
   pinMode(communicationPinNumber4, OUTPUT);
   digitalWrite(communicationPinNumber4, LOW);
-  Serial.println(F("done"));
+  indicateSyncDone();
+}
+
+// E.g. in over current situations, the Arduino may restart. Flashing the LED
+// shows when a restart is happening, without the need to look at serial console
+// output.
+void indicateStartup() {
+  flashLed();
+  delay(100);
+  flashLed();
 }
 
 void setup() {
+  indicateStartup();
+
   Serial.begin(9600);
 
   if (arduinosShouldBeSynchronized) {

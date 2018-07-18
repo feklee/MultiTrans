@@ -126,9 +126,7 @@ Five Arduinos are connected, each of them being a multi-channel transceiver:
   * Ⓓ, connected to ⊛ (pin 8)
 
 For testing, the Arduinos are first synchronized after starting up. Ⓐ, Ⓑ, Ⓒ, and
-Ⓓ wait for signals from ⊛. Then all five start sending and receiving. To
-estimate if the Arduinos are in sync, look at the LEDs blinking. If they’re
-powered up in the wrong order, then one of them may never start sending! The
+Ⓓ wait for signals from ⊛. Then all five start sending and receiving. The
 synchronization is quite primitive, and it’s a good idea to proceed as follows:
 
  1. Remove the FTDI and any power from all Arduinos.
@@ -136,9 +134,12 @@ synchronization is quite primitive, and it’s a good idea to proceed as follows
  2. Make sure that the FTDI is connected to the computer and that the serial
     console is started.
 
- 3. Plug in near simultaneously – i.e. within about a second – the power
-    connection as well as the FTDI on the Arduino that should be monitored. The
-    green lights should flash in sync at least once at the very beginning.
+ 3. Plug in the power connection. Eventually – possibly after step 4 – the LEDs
+    on all Arduinos should emit a fast triple-flash to indicate sync.
+ 
+ 4. Quickly thereafter – in order not to miss any messages – plug the FTDI into
+    the Arduino that should be monitored. (If the Arduino resets, then repeat the
+    procedure, possibly after fixing the electronic setup.)
 
 Synchronization is not strictly necessary for the test to run. It is there to
 test the rare case that all Arduinos are transmitting in exactly the same
