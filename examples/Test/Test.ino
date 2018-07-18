@@ -214,10 +214,20 @@ void indicateStartup() {
   flashLed();
 }
 
+void printStartupInformation() {
+  printMemoryUsage(); // Initial use interesting in case of crash
+
+  Serial.print(F("Test duration after initial sync: "));
+  Serial.print(durationOfTest);
+  Serial.println(F(" ms"));
+}
+
 void setup() {
+  pinMode(ledPinNumber, OUTPUT);
   indicateStartup();
 
   Serial.begin(9600);
+  printStartupInformation();
 
   if (arduinosShouldBeSynchronized) {
     if (thisArduinoHasToWaitForSync()) {
@@ -226,8 +236,6 @@ void setup() {
       initiateSync();
     }
   }
-
-  pinMode(ledPinNumber, OUTPUT);
 
   multiTransceiver.startTimer1();
   multiTransceiver.startTimer2();
@@ -240,10 +248,6 @@ void setup() {
 
   uint32_t timeToWaitBeforeInitialTransmit = 10; // ms
   delay(timeToWaitBeforeInitialTransmit);
-
-  Serial.print(F("Test duration: "));
-  Serial.print(durationOfTest);
-  Serial.println(F(" ms"));
 }
 
 template <typename T>
