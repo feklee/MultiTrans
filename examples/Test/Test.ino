@@ -19,8 +19,6 @@ MT::Transceiver<communicationPinNumber2> transceiver2;
 MT::Transceiver<communicationPinNumber3> transceiver3;
 MT::Transceiver<communicationPinNumber4> transceiver4;
 
-char firstReceivedCharacter = 0, lastReceivedCharacter = 0;
-
 static const uint32_t timeForOtherArduinoToStartUp = 1000; // ms
 
 static char set[maxNumberOfCharsPerTransmission + 1]; // set of characters to
@@ -72,8 +70,27 @@ void loadSet(const uint8_t i) {
   strcpy_P(set, (char*)pgm_read_word(&(setsOfCharacters[i])));
 }
 
-void printErrorRatioFromCounts(uint32_t errorsCounted,
-                               uint32_t charactersCounted) {
+template <typename T>
+char firstReceivedCharacter(char character = 0) {
+  static char recordedCharacter = 0;
+  if (character != 0) {
+    recordedCharacter = character;
+  }
+  return recordedCharacter;
+}
+
+template <typename T>
+char lastReceivedCharacter(char character = 0) {
+  static char recordedCharacter = 0;
+  if (character != 0) {
+    recordedCharacter = character;
+  }
+  return recordedCharacter;
+}
+
+template <typename T>
+void errorRatioRecorderPrint(uint32_t errorsCounted,
+                             uint32_t charactersCounted) {
   float ratio = charactersCounted == 0
     ? 0
     : float(errorsCounted) / charactersCounted;
@@ -86,7 +103,7 @@ void printErrorRatioFromCounts(uint32_t errorsCounted,
   Serial.print(charactersCounted);
 }
 
-void getCharacterPosition(const char character, 
+bool getCharacterPosition(const char character,
                           uint8_t &setNumber,
                           uint8_t &positionInSet) {
   for (setNumber = 0; setNumber < numberOfSets; setNumber ++) {
@@ -94,65 +111,82 @@ void getCharacterPosition(const char character,
     const char *characterLocation = strchr(set, character);
     if (characterLocation != NULL) {
       positionInSet = (uint8_t)(characterLocation - set);
-      return;
+      return true;
     }
   }
+  setNumber = 0;
+  positionInSet = 0;
+  return false;
 }
 
+// Returns the next expected character, or the specified optional character,
+// which also syncs the position.
 template <typename T>
-char nextExpectedCharacter(char characterToStartFrom = 0) {
+char nextExpectedCharacter(char characterToSyncTo = 0) {
   static uint8_t setNumber = 0;
   static uint8_t positionInSet = 0;
 
-  if (characterToStartFrom != 0) {
-    getCharacterPosition(characterToStartFrom,
-                         setNumber, positionInSet);
-  }
-
-  loadSet(setNumber);
-  positionInSet ++;
-  if (positionInSet >= strlen(set)) {
-    setNumber = (setNumber + 1) % numberOfSets;
-    positionInSet = 0;
+  bool positionNeedsToBeSynced = characterToSyncTo != 0;
+  if (positionNeedsToBeSynced) {
+    bool gotCharacterPosition = getCharacterPosition(characterToSyncTo,
+                                                     setNumber, positionInSet);
+    if (!gotCharacterPosition) {
+      return 0;
+    }
+  } else {
     loadSet(setNumber);
+    positionInSet ++;
+    if (positionInSet >= strlen(set)) {
+      setNumber = (setNumber + 1) % numberOfSets;
+      positionInSet = 0;
+      loadSet(setNumber);
+    }
   }
 
   return set[positionInSet];
 }
 
 template <typename T>
-void updateOrPrintErrorRatio(char character, bool print) {
+void errorRatioRecorderUpdate(uint32_t &errorsCounted,
+                              uint32_t &charactersCounted,
+                              char character) {
+  static bool initialSyncIsNeeded = true;
+
+  charactersCounted ++;
+
+  if (initialSyncIsNeeded) {
+    nextExpectedCharacter<T>(character);
+    initialSyncIsNeeded = false;
+    return;
+  }
+
+  bool characterIsUnexpected = character != nextExpectedCharacter<T>();
+  if (characterIsUnexpected && charactersCounted > 1) {
+    errorsCounted ++;
+    nextExpectedCharacter<T>(character);
+  }
+}
+
+template <typename T>
+void errorRatioRecorder(char character, bool print) {
   static uint32_t errorsCounted = 0;
   static uint32_t charactersCounted = 0;
-  static bool lastCharacterWasUnexpected = false;
-  static char lastCharacter = 0;
 
-  if (!print) {
-    char expectedCharacter =
-      lastCharacterWasUnexpected ?
-      nextExpectedCharacter<T>(lastCharacter) :
-      nextExpectedCharacter<T>();
-
-    bool characterIsUnexpected = character != expectedCharacter;
-    charactersCounted ++;
-    if (characterIsUnexpected && charactersCounted > 1) {
-      errorsCounted ++;
-    }
-    lastCharacter = character;
-    lastCharacterWasUnexpected = characterIsUnexpected;
+  if (print) {
+    errorRatioRecorderPrint<T>(errorsCounted, charactersCounted);
   } else {
-    printErrorRatioFromCounts(errorsCounted, charactersCounted);
+    errorRatioRecorderUpdate<T>(errorsCounted, charactersCounted, character);
   }
 }
 
 template <typename T>
 void updateErrorRatio(char character) {
-  updateOrPrintErrorRatio<T>(character, false);
+  errorRatioRecorder<T>(character, false);
 }
 
 template <typename T>
 void printErrorRatio() {
-  updateOrPrintErrorRatio<T>(0, true);
+  errorRatioRecorder<T>(0, true);
 }
 
 void pullUpCommunicationPins() {
@@ -375,20 +409,27 @@ void printReport(T &transceiver, char character) {
   printInformationAboutCharacter<T>(transceiver, character);
 }
 
-static uint16_t numberOfZeroCharacters = 0; // TODO
-
 template <typename T>
 bool processNextCharacter(T &transceiver) {
+  static bool firstReceivedCharacterRecorded = false;
   char character = transceiver.getNextCharacter();
   bool characterWasFound = character != 0;
-  if (characterWasFound) {
-    updateErrorRatio<T>(character);
-    if (!quiet) {
-      printReport<T>(transceiver, character);
-    }
-  } else {
-    numberOfZeroCharacters ++;
+
+  if (!characterWasFound) {
+    return characterWasFound;
   }
+
+  if (!firstReceivedCharacterRecorded) {
+    firstReceivedCharacter<T>(character);
+    firstReceivedCharacterRecorded = true;
+  }
+  lastReceivedCharacter<T>(character);
+
+  updateErrorRatio<T>(character);
+  if (!quiet) {
+    printReport<T>(transceiver, character);
+  }
+
   return characterWasFound;
 }
 
@@ -491,15 +532,15 @@ void printTestSummary(T &transceiver) {
   Serial.print(F("  Number of elements in receive buffer: "));
   Serial.println(transceiver.debugData.numberOfElementsInReceiveBuffer);
 
-  if (firstReceivedCharacter) {
-    Serial.print(F("  First received character: "));
-    Serial.println(firstReceivedCharacter);
-  }
+  Serial.print(F("  First received character: "));
+  Serial.print(firstReceivedCharacter<T>());
+  Serial.print(F(" = "));
+  Serial.println(stringFromBinary(firstReceivedCharacter<T>()));
 
-  if (lastReceivedCharacter) {
-    Serial.print(F("  Last received character: "));
-    Serial.println(lastReceivedCharacter);
-  }
+  Serial.print(F("  Last received character: "));
+  Serial.print(lastReceivedCharacter<T>());
+  Serial.print(F(" = "));
+  Serial.println(stringFromBinary(lastReceivedCharacter<T>()));
 }
 
 void printTestSummary() {
@@ -507,9 +548,6 @@ void printTestSummary() {
   printTestSummary(transceiver2);
   printTestSummary(transceiver3);
   printTestSummary(transceiver4);
-
-  Serial.print(F("Total number of zero characters: "));
-  Serial.println(numberOfZeroCharacters);
 }
 
 void loop() {
