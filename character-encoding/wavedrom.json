@@ -1,0 +1,19 @@
+{
+    signal: [{
+        name: "Data",
+        wave: "1..0.........13.......01..",
+        node: "a..b.........cd.......ef..g"
+    }],
+    edge: [
+        'a-b idle',
+        'b-c break',
+        'c-d start bit',
+        'd-e payload',
+        'e-f stop bit',
+        'f-g idle',
+    ],
+    config: {skin: 'default'},
+    head:{
+        tick: -3,
+    },
+}

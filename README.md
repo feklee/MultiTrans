@@ -59,7 +59,7 @@ Character encoding
 
 Transmitted are individual characters. Timing diagram:
 
-![WaveDrom timing diagram](character_encoding/wavedrom.svg)
+![WaveDrom timing diagram](character-encoding/wavedrom.svg)
 
 There is no additional protocol.
 
