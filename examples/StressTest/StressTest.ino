@@ -294,15 +294,13 @@ uint32_t countTransmittedCharacters(uint8_t numberOfNewCharacters = 0) {
 template <typename T>
 void transmitNextSet(T &transceiver) {
   static uint8_t i = 0;
-
+ 
   loadSet(i);
-  if (true/*TODO: !quiet*/) {
-/*TODO:    flashLed();
+  if (!quiet) {
+    flashLed();
     printPinNumberPrefix(transceiver);
     Serial.print(F("Starting transmission of: "));
     Serial.println(set);
-*/
-//    delay(100); // TODO: remove (without delay: 0 / 12, transmitted: 33, number of collisions: 183)
   }
   countTransmittedCharacters<T>(strlen(set));
   transceiver.startTransmissionOfCharacters(set);
