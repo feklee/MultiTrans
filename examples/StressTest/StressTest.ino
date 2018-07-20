@@ -48,17 +48,24 @@ void enablePinChangeInterrupts() {
 }
 
 template <typename T>
-uint32_t countReceivedCharacters(uint8_t numberOfNewCharacters = 0) {
-  static uint32_t numberOfCharacters = 0;
-  numberOfCharacters += numberOfNewCharacters;
-  return numberOfCharacters;
+uint32_t countReceivedCharacters(uint8_t more = 0) {
+  static uint32_t count = 0;
+  count += more;
+  return count;
 }
 
 template <typename T>
-uint32_t countTransmittedCharacters(uint8_t numberOfNewCharacters = 0) {
-  static uint32_t numberOfCharacters = 0;
-  numberOfCharacters += numberOfNewCharacters;
-  return numberOfCharacters;
+uint32_t countTransmittedCharacters(uint8_t more = 0) {
+  static uint32_t count = 0;
+  count += more;
+  return count;
+}
+
+template <typename T>
+uint32_t countNoise(uint8_t more = 0) {
+  static uint32_t count = 0;
+  count += more;
+  return count;
 }
 
 bool randomBool() {
@@ -109,7 +116,7 @@ void errorRatioRecorderPrint(uint32_t errorsCounted) {
     ? 0
     : float(errorsCounted) / charactersCounted;
 
-  Serial.print(F("Error ratio without noise: "));
+  Serial.print(F("Error ratio (error = unexpected character): "));
   Serial.print(ratio);
   Serial.print(F(" = "));
   Serial.print(errorsCounted);
@@ -299,7 +306,7 @@ void transmitNextSet(T &transceiver) {
   static uint8_t i = 0;
  
   loadSet(i);
-  if (!quiet) {
+  if (verbose) {
     flashLed();
     printPinNumberPrefix(transceiver);
     Serial.print(F("Starting transmission of: "));
@@ -351,22 +358,8 @@ void printMemoryUsage() {
   Serial.println(freeMemory());
 }
 
-void printGeneralInfo() {
-  printDataRate();
-  printMemoryUsage();
-}
-
-void printGeneralInfoFromTimeToTime() {
-  static unsigned long lastTime = millis(); // ms
-  unsigned long elapsedTime = millis() - lastTime; // ms
-  if (elapsedTime > 2000) {
-    printGeneralInfo();
-    lastTime = millis();
-  }
-}
-
 template <typename T>
-void printInformationAboutCharacter(T &transceiver, char character) {
+void printInfoAboutCharacter(T &transceiver, char character) {
   Serial.print(character);
   Serial.print(F(" = "));
   Serial.print(stringFromBinary(character));
@@ -407,7 +400,7 @@ void printReport(T &transceiver, char character) {
                                             receiveBufferEnd));
     Serial.print(F(": "));
   }
-  printInformationAboutCharacter<T>(transceiver, character);
+  printInfoAboutCharacter<T>(transceiver, character);
 }
 
 template <typename T>
@@ -427,8 +420,9 @@ bool processNextCharacter(T &transceiver) {
   lastReceivedCharacter<T>(character);
 
   countReceivedCharacters<T>(1);
+  countNoise<T>(transceiver.noiseWhileGettingCharacter() ? 1 : 0);
   updateErrorRatio<T>(character);
-  if (!quiet) {
+  if (verbose) {
     printReport<T>(transceiver, character);
   }
 
@@ -437,8 +431,10 @@ bool processNextCharacter(T &transceiver) {
 
 template <typename T>
 void transmitNoise(T &transceiver) {
-  printPinNumberPrefix(transceiver);
-  Serial.print(F("Starting transmission of noise."));
+  if (verbose) {
+    printPinNumberPrefix(transceiver);
+    Serial.println(F("Starting transmission of noise."));
+  }
   transceiver.startTransmissionOfNoise();
 }
 
@@ -554,20 +550,26 @@ void printTestSummary(T &transceiver) {
   Serial.print(F("  Number of elements currently in receive buffer: "));
   Serial.println(transceiver.debugData.numberOfElementsInReceiveBuffer);
 
-  Serial.print(F("  First received character: "));
+  Serial.print(F("  First / Last received character: "));
   Serial.print(firstReceivedCharacter<T>());
   Serial.print(F(" = "));
-  Serial.println(stringFromBinary(firstReceivedCharacter<T>()));
-
-  Serial.print(F("  Last received character: "));
+  Serial.print(stringFromBinary(firstReceivedCharacter<T>()));
+  Serial.print(F(" / "));
   Serial.print(lastReceivedCharacter<T>());
   Serial.print(F(" = "));
   Serial.println(stringFromBinary(lastReceivedCharacter<T>()));
+
+  Serial.print(
+    F("  Number of times noise was detected when reading a character: ")
+  );
+  Serial.println(countNoise<T>());
 
   printMeasuredRate<T>();
 }
 
 void printTestSummary() {
+  printDataRate();
+  printMemoryUsage();
   printTestSummary(transceiver1);
   printTestSummary(transceiver2);
   printTestSummary(transceiver3);
@@ -584,14 +586,9 @@ void loop() {
   bool testHasEnded = millis() > durationOfTest;
   if (testHasEnded) {
     Serial.println("Test has ended!");
-    printGeneralInfo();
     printTestSummary();
     testIsRunning = false;
     return;
-  }
-
-  if (!quiet) {
-    printGeneralInfoFromTimeToTime();
   }
 
   transmitWherePossible();

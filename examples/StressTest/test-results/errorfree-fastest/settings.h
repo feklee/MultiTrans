@@ -1,21 +1,11 @@
-// Find settings and results in a sub directory in this directory.
-
 const bool arduinosShouldBeSynchronized = true;
-const uint32_t durationOfMinimumDelay = 0; // ms, to compensate the overhead for
-                                           // processing characters, printing
-                                           // information, etc.
-const bool noiseShouldBeRandomlyInserted = true;
-const uint32_t durationOfTest = 300000; // ms
-
-// Enabling the following settings slows down max. possible communication speed:
-const bool verbose = false;
+const uint32_t durationOfMinimumDelay = 0;
+const uint32_t durationOfTest = 300000;
+const bool noiseShouldBeRandomlyInserted = false;
 const bool recordDebugData = false;
-
-const uint8_t bitDurationExp = 11; // <= 18
-
-const uint8_t maxNumberOfCharsPerTransmission = 8; // characters (< 13)
-
-// Sets of characters with max. set size 8:
+const bool verbose = false;
+const uint8_t bitDurationExp = 11;
+const uint8_t maxNumberOfCharsPerTransmission = 8;
 static const uint8_t numberOfSets = 17;
 static const char set_0[] PROGMEM = "} ^Y54\"~";
 static const char set_1[] PROGMEM = "FB{T";
