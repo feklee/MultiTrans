@@ -47,6 +47,20 @@ void enablePinChangeInterrupts() {
     bit(PCIE0); // D8 to D15
 }
 
+template <typename T>
+uint32_t countReceivedCharacters(uint8_t numberOfNewCharacters = 0) {
+  static uint32_t numberOfCharacters = 0;
+  numberOfCharacters += numberOfNewCharacters;
+  return numberOfCharacters;
+}
+
+template <typename T>
+uint32_t countTransmittedCharacters(uint8_t numberOfNewCharacters = 0) {
+  static uint32_t numberOfCharacters = 0;
+  numberOfCharacters += numberOfNewCharacters;
+  return numberOfCharacters;
+}
+
 bool randomBool() {
   return rand() % 2;
 }
@@ -89,13 +103,13 @@ char lastReceivedCharacter(char character = 0) {
 }
 
 template <typename T>
-void errorRatioRecorderPrint(uint32_t errorsCounted,
-                             uint32_t charactersCounted) {
+void errorRatioRecorderPrint(uint32_t errorsCounted) {
+  uint32_t charactersCounted = countReceivedCharacters<T>();
   float ratio = charactersCounted == 0
     ? 0
     : float(errorsCounted) / charactersCounted;
 
-  Serial.print(F("Error ratio w/o noise: "));
+  Serial.print(F("Error ratio without noise: "));
   Serial.print(ratio);
   Serial.print(F(" = "));
   Serial.print(errorsCounted);
@@ -148,11 +162,8 @@ char nextExpectedCharacter(char characterToSyncTo = 0) {
 
 template <typename T>
 void errorRatioRecorderUpdate(uint32_t &errorsCounted,
-                              uint32_t &charactersCounted,
                               char character) {
   static bool initialSyncIsNeeded = true;
-
-  charactersCounted ++;
 
   if (initialSyncIsNeeded) {
     nextExpectedCharacter<T>(character);
@@ -161,7 +172,7 @@ void errorRatioRecorderUpdate(uint32_t &errorsCounted,
   }
 
   bool characterIsUnexpected = character != nextExpectedCharacter<T>();
-  if (characterIsUnexpected && charactersCounted > 1) {
+  if (characterIsUnexpected && countReceivedCharacters<T>() > 1) {
     errorsCounted ++;
     nextExpectedCharacter<T>(character);
   }
@@ -170,12 +181,11 @@ void errorRatioRecorderUpdate(uint32_t &errorsCounted,
 template <typename T>
 void errorRatioRecorder(char character, bool print) {
   static uint32_t errorsCounted = 0;
-  static uint32_t charactersCounted = 0;
 
   if (print) {
-    errorRatioRecorderPrint<T>(errorsCounted, charactersCounted);
+    errorRatioRecorderPrint<T>(errorsCounted);
   } else {
-    errorRatioRecorderUpdate<T>(errorsCounted, charactersCounted, character);
+    errorRatioRecorderUpdate<T>(errorsCounted, character);
   }
 }
 
@@ -285,13 +295,6 @@ void setup() {
 }
 
 template <typename T>
-uint32_t countTransmittedCharacters(uint8_t numberOfNewCharacters = 0) {
-  static uint32_t numberOfCharacters = 0;
-  numberOfCharacters += numberOfNewCharacters;
-  return numberOfCharacters;
-}
-
-template <typename T>
 void transmitNextSet(T &transceiver) {
   static uint8_t i = 0;
  
@@ -328,9 +331,9 @@ const char *stringFromBufferDimensions(
 }
 
 void printDataRate() {
-  Serial.print(F("Data rate: "));
+  Serial.print(F("Data rate / Effective data rate: "));
   Serial.print(multiTransceiver.baudRate);
-  Serial.print(F(" baud, effective data rate: "));
+  Serial.print(F(" baud / "));
   Serial.print(multiTransceiver.effectiveDataRate);
   Serial.println(F(" bit/s"));
   Serial.print(F("Bit duration exponent for transmitter: "));
@@ -423,6 +426,7 @@ bool processNextCharacter(T &transceiver) {
   }
   lastReceivedCharacter<T>(character);
 
+  countReceivedCharacters<T>(1);
   updateErrorRatio<T>(character);
   if (!quiet) {
     printReport<T>(transceiver, character);
@@ -509,6 +513,24 @@ void processReceivedCharacters() {
 }
 
 template <typename T>
+void printMeasuredRate() {
+  float duration = float(durationOfTest) / 1000; // s
+  uint8_t bitsPerCharacter = 8;
+  float dRate = bitsPerCharacter *
+    float(countReceivedCharacters<T>()) / duration;
+  float uRate = bitsPerCharacter *
+    float(countTransmittedCharacters<T>()) / duration;
+
+  Serial.print(F("  Measured data rate (downstream + upstream): "));
+  Serial.print(dRate);
+  Serial.print(" bit/s + ");
+  Serial.print(uRate);
+  Serial.print(" bit/s = ");
+  Serial.print(dRate + uRate);
+  Serial.println(" bit/s");
+}
+
+template <typename T>
 void printTestSummary(T &transceiver) {
   Serial.print(F("Pin "));
   Serial.print(transceiver.pinNumber);
@@ -518,16 +540,18 @@ void printTestSummary(T &transceiver) {
   printErrorRatio<T>();
   Serial.println();
 
-  Serial.print(F("  Number of transmitted characters: "));
+  Serial.print(F("  Number of received / transmitted characters: "));
+  Serial.print(countReceivedCharacters<T>());
+  Serial.print(F(" / "));
   Serial.println(countTransmittedCharacters<T>());
 
-  Serial.print(F("  Number of collisions: "));
+  Serial.print(F("  Number of bit collisions: "));
   Serial.println(transceiver.debugData.numberOfCollisions);
 
   Serial.print(F("  Number of receive buffer overflows: "));
   Serial.println(transceiver.debugData.receiveBufferOverflowCount);
 
-  Serial.print(F("  Number of elements in receive buffer: "));
+  Serial.print(F("  Number of elements currently in receive buffer: "));
   Serial.println(transceiver.debugData.numberOfElementsInReceiveBuffer);
 
   Serial.print(F("  First received character: "));
@@ -539,6 +563,8 @@ void printTestSummary(T &transceiver) {
   Serial.print(lastReceivedCharacter<T>());
   Serial.print(F(" = "));
   Serial.println(stringFromBinary(lastReceivedCharacter<T>()));
+
+  printMeasuredRate<T>();
 }
 
 void printTestSummary() {
