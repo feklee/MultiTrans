@@ -1,17 +1,17 @@
 // Find settings and results in a sub directory in this directory.
 
 const bool arduinosShouldBeSynchronized = true;
-const uint32_t durationOfMinimumDelay = 0; // ms, to compensate the overhead for
+const uint32_t durationOfMinimumDelay = 1500; // ms, to compensate the overhead for
                                            // processing characters, printing
                                            // information, etc.
-const bool noiseShouldBeRandomlyInserted = true;
-const uint32_t durationOfTest = 300000; // ms
+const bool noiseShouldBeRandomlyInserted = false;
+const uint32_t durationOfTest = 60000; // ms
 
 // Enabling the following settings slows down max. possible communication speed:
-const bool verbose = false;
+const bool verbose = true;
 const bool recordDebugData = false;
 
-const uint8_t bitDurationExp = 11; // <= 18
+const uint8_t bitDurationExp = 8; // <= 18
 
 const uint8_t maxNumberOfCharsPerTransmission = 8; // characters (< 13)
 
