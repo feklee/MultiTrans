@@ -1,3 +1,57 @@
+// See image of board for testing: 
+//
+// Components for testing:
+//
+//   * Arduino Pro Mini, ATmega328P, 5V, 16Mhz (on some of them, I desoldered the
+//     power LED)
+//
+//   * breadboard
+//
+//   * FTDI adapter
+//
+//   * cable to power Arduinos from USB with 5V
+//
+//   * jumper cables
+//
+//   * 470 Ω resistors (to prevent shorting in case of programming errors)
+//
+// Note: There is a bug with templates in Arduino IDE 1.8.5's compiler. So, use a
+// compiler that comes with a newer version of the IDE.
+//
+// Five Arduinos are connected, each of them being a multi-channel transceiver:
+//
+//   * (*), the center Arduino, connected to (A) / pin 8 and (B) / pin 2, (C) /
+//     pin 2, (D) / pin 3
+//
+//   * Ⓐ, connected to ⊛ (pin 2)
+//
+//   * Ⓑ, connected to ⊛ (pin 3)
+//
+//   * Ⓒ, connected to ⊛ (pin 9)
+//
+//   * Ⓓ, connected to ⊛ (pin 8)
+//
+// For testing, the Arduinos are first synchronized after starting up. Ⓐ, Ⓑ, Ⓒ,
+// and Ⓓ wait for signals from ⊛. Then all five start sending and receiving. The
+// synchronization is quite primitive, and it's a good idea to proceed as
+// follows:
+//
+//  1. Remove the FTDI and any power from all Arduinos.
+//
+//  2. Make sure that the FTDI is connected to the computer and that the serial
+//     console is started.
+//
+//  3. Plug in the power connection. Eventually – possibly after step 4 – the LEDs
+//     on all Arduinos should emit a fast triple-flash to indicate sync.
+// 
+//  4. Quickly thereafter – in order not to miss any messages – plug the FTDI into
+//     the Arduino that should be monitored. (If the Arduino resets, then repeat the
+//     procedure, possibly after fixing the electronic setup.)
+//
+// Synchronization is not strictly necessary for the test to run. It is there to
+// test the rare case that all Arduinos are transmitting in exactly the same
+// moment.
+
 #include "MultiTrans.h"
 #include "MemoryFree.h"
 
