@@ -1,3 +1,4 @@
+#define TEST_ALL
 const bool arduinosShouldBeSynchronized = true;
 const uint32_t durationOfMinimumDelay = 0;
 const bool noiseShouldBeRandomlyInserted = false;

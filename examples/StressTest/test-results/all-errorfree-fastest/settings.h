@@ -1,9 +1,10 @@
+#define TEST_ALL
 const bool arduinosShouldBeSynchronized = true;
 const uint32_t durationOfMinimumDelay = 0;
-const bool noiseShouldBeRandomlyInserted = false;
 const uint32_t durationOfTest = 300000;
-const bool recordDebugData = true;
-const bool verbose = true;
+const bool noiseShouldBeRandomlyInserted = false;
+const bool recordDebugData = false;
+const bool verbose = false;
 const uint8_t bitDurationExp = 11;
 const uint8_t maxNumberOfCharsPerTransmission = 8;
 static const uint8_t numberOfSets = 17;

@@ -1,11 +1,12 @@
+#define TEST_ALL
 const bool arduinosShouldBeSynchronized = true;
 const uint32_t durationOfMinimumDelay = 0;
-const bool noiseShouldBeRandomlyInserted = true;
+const bool noiseShouldBeRandomlyInserted = false;
 const uint32_t durationOfTest = 300000;
-const bool verbose = false;
-const bool recordDebugData = false;
+const bool recordDebugData = true;
+const bool verbose = true;
 const uint8_t bitDurationExp = 11;
-const uint8_t maxNumberOfCharsPerTransmission = 8; // characters (< 13)
+const uint8_t maxNumberOfCharsPerTransmission = 8;
 static const uint8_t numberOfSets = 17;
 static const char set_0[] PROGMEM = "} ^Y54\"~";
 static const char set_1[] PROGMEM = "FB{T";

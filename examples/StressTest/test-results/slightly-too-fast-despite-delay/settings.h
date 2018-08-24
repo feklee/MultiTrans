@@ -1,14 +1,13 @@
-// Communication just between (*) and (B) via pin 2:
-//
-// needs less memory, can be faster
+// The delay improves error rate somewhat as it frees time for processing
+// results. But still there are errors. This is slightly too fast.
 
 const bool arduinosShouldBeSynchronized = true;
-const uint32_t durationOfMinimumDelay = 0;
+const uint32_t durationOfMinimumDelay = 50;
 const bool noiseShouldBeRandomlyInserted = false;
 const uint32_t durationOfTest = 300000;
 const bool verbose = false;
 const bool recordDebugData = false;
-const uint8_t bitDurationExp = 9;
+const uint8_t bitDurationExp = 8;
 const uint8_t maxNumberOfCharsPerTransmission = 12;
 static const uint8_t numberOfSets = 13;
 static const char set_0[] PROGMEM = "} ^Y54\"~FB{T";
