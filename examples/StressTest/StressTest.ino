@@ -5,9 +5,12 @@
 
 static const uint8_t ledPinNumber = 13;
 static const uint8_t communicationPinNumber1 = 2;
+#ifdef TEST_ALL
 static const uint8_t communicationPinNumber2 = 3;
 static const uint8_t communicationPinNumber3 = 8;
 static const uint8_t communicationPinNumber4 = 9;
+#endif
+
 static const uint8_t identificationPinNumber = 10;
 
 using MT = MultiTrans<bitDurationExp,
@@ -15,9 +18,11 @@ using MT = MultiTrans<bitDurationExp,
                       recordDebugData>;
 MT multiTransceiver;
 MT::Transceiver<communicationPinNumber1> transceiver1;
+#ifdef TEST_ALL
 MT::Transceiver<communicationPinNumber2> transceiver2;
 MT::Transceiver<communicationPinNumber3> transceiver3;
 MT::Transceiver<communicationPinNumber4> transceiver4;
+#endif
 
 static const uint32_t timeForOtherArduinoToStartUp = 1000; // ms
 
@@ -26,20 +31,26 @@ static char set[maxNumberOfCharsPerTransmission + 1]; // set of characters to
 
 ISR(TIMER2_COMPA_vect) {
   transceiver1.handleTimer2Interrupt();
+#ifdef TEST_ALL
   transceiver2.handleTimer2Interrupt();
   transceiver3.handleTimer2Interrupt();
   transceiver4.handleTimer2Interrupt();
+#endif
 }
 
 ISR(PCINT2_vect) { // D0-D7
   transceiver1.handlePinChangeInterrupt();
+#ifdef TEST_ALL
   transceiver2.handlePinChangeInterrupt();
+#endif
 }
 
+#ifdef TEST_ALL
 ISR(PCINT0_vect) { // D8-D13
   transceiver3.handlePinChangeInterrupt();
   transceiver4.handlePinChangeInterrupt();
 }
+#endif
 
 void enablePinChangeInterrupts() {
   PCICR |= // Pin Change Interrupt Control Register
@@ -208,9 +219,11 @@ void printErrorRatio() {
 
 void pullUpCommunicationPins() {
   pinMode(communicationPinNumber1, INPUT_PULLUP);
+#ifdef TEST_ALL
   pinMode(communicationPinNumber2, INPUT_PULLUP);
   pinMode(communicationPinNumber3, INPUT_PULLUP);
   pinMode(communicationPinNumber4, INPUT_PULLUP);
+#endif
 }
 
 void indicateSyncDone() {
@@ -228,14 +241,18 @@ void waitForSync() {
 
   Serial.print(F("Waiting for sync..."));
   pinMode(communicationPinNumber1, INPUT_PULLUP);
+#ifdef TEST_ALL
   pinMode(communicationPinNumber2, INPUT_PULLUP);
   pinMode(communicationPinNumber3, INPUT_PULLUP);
   pinMode(communicationPinNumber4, INPUT_PULLUP);
+#endif
   while (
-    digitalRead(communicationPinNumber1) == HIGH &&
-    digitalRead(communicationPinNumber2) == HIGH &&
-    digitalRead(communicationPinNumber3) == HIGH &&
-    digitalRead(communicationPinNumber4) == HIGH
+    digitalRead(communicationPinNumber1) == HIGH
+#ifdef TEST_ALL
+    && digitalRead(communicationPinNumber2) == HIGH
+    && digitalRead(communicationPinNumber3) == HIGH
+    && digitalRead(communicationPinNumber4) == HIGH
+#endif
   ) {}
   indicateSyncDone();
 }
@@ -248,12 +265,14 @@ void initiateSync() {
   Serial.print(F("Initiating sync..."));
   pinMode(communicationPinNumber1, OUTPUT);
   digitalWrite(communicationPinNumber1, LOW);
+#ifdef TEST_ALL
   pinMode(communicationPinNumber2, OUTPUT);
   digitalWrite(communicationPinNumber2, LOW);
   pinMode(communicationPinNumber3, OUTPUT);
   digitalWrite(communicationPinNumber3, LOW);
   pinMode(communicationPinNumber4, OUTPUT);
   digitalWrite(communicationPinNumber4, LOW);
+#endif
   indicateSyncDone();
 }
 
@@ -268,7 +287,8 @@ void indicateStartup() {
 void printStartupInformation() {
   printMemoryUsage(); // Initial use interesting in case of crash
 
-  Serial.print(F("Test duration after initial sync: "));
+  Serial.print(
+    F("Test duration after initial sync (indicated by tripple flash): "));
   Serial.print(durationOfTest);
   Serial.println(F(" ms"));
 }
@@ -293,9 +313,11 @@ void setup() {
   enablePinChangeInterrupts();
 
   transceiver1.begin();
+#ifdef TEST_ALL
   transceiver2.begin();
   transceiver3.begin();
   transceiver4.begin();
+#endif
 
   uint32_t timeToWaitBeforeInitialTransmit = 10; // ms
   delay(timeToWaitBeforeInitialTransmit);
@@ -459,9 +481,11 @@ void transmitIfPossible(T &transceiver) {
 
 void transmitWherePossible() {
   transmitIfPossible(transceiver1);
+#ifdef TEST_ALL
   transmitIfPossible(transceiver2);
   transmitIfPossible(transceiver3);
   transmitIfPossible(transceiver4);
+#endif
 }
 
 template <typename T>
@@ -498,13 +522,18 @@ void processReceivedCharacters() {
   bool characterWasFound;
   do {
     bool characterWasFound1 = processNextCharacter(transceiver1);
+#ifdef TEST_ALL
     bool characterWasFound2 = processNextCharacter(transceiver2);
     bool characterWasFound3 = processNextCharacter(transceiver3);
     bool characterWasFound4 = processNextCharacter(transceiver4);
-    characterWasFound = (characterWasFound1 ||
-                         characterWasFound2 ||
-                         characterWasFound3 ||
-                         characterWasFound4);
+#endif
+    characterWasFound = (characterWasFound1
+#ifdef TEST_ALL
+                         || characterWasFound2
+                         || characterWasFound3
+                         || characterWasFound4
+#endif
+    );
   } while(characterWasFound);
 }
 
@@ -571,9 +600,11 @@ void printTestSummary() {
   printDataRate();
   printMemoryUsage();
   printTestSummary(transceiver1);
+#ifdef TEST_ALL
   printTestSummary(transceiver2);
   printTestSummary(transceiver3);
   printTestSummary(transceiver4);
+#endif
 }
 
 void loop() {
