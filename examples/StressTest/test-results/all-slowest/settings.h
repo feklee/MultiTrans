@@ -1,3 +1,7 @@
+// Verbose output is enabled, just because there is enough time for it. With
+// fast communication, verbose output can interfere with the processing of
+// incoming data and can cause buffer overflows.
+
 #define TEST_ALL
 const bool arduinosShouldBeSynchronized = true;
 const uint32_t durationOfMinimumDelay = 0;
@@ -5,7 +9,7 @@ const bool noiseShouldBeRandomlyInserted = false;
 const uint32_t durationOfTest = 300000;
 const bool recordDebugData = true;
 const bool verbose = true;
-const uint8_t bitDurationExp = 11;
+const uint8_t bitDurationExp = 18;
 const uint8_t maxNumberOfCharsPerTransmission = 8;
 static const uint8_t numberOfSets = 17;
 static const char set_0[] PROGMEM = "} ^Y54\"~";

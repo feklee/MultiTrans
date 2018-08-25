@@ -1,0 +1,43 @@
+Free memory: 494
+Test duration after initial sync (indicated by tripple flash): 300000 ms
+Waiting for sync...done
+Test has ended!
+Data rate / Effective data rate: 7812.50 baud / 2976.19 bit/s
+Bit duration exponent for transmitter: 10 + 1, for receiver: 0 + 11
+Free memory: 494
+Pin 2:
+  Error ratio (error = unexpected character): 0.00 = 0 / 38450
+  Number of received / transmitted characters: 38450 / 38073
+  Number of bit collisions: 0
+  Number of receive buffer overflows: 0
+  Number of elements currently in receive buffer: 0
+  First / Last received character: } = 0111110 / N = 0100111
+  Number of times noise was detected when reading a character: 3398
+  Measured data rate (downstream + upstream): 1025.33 bit/s + 1015.28 bit/s = 2040.61 bit/s
+Pin 3:
+  Error ratio (error = unexpected character): 0.00 = 0 / 0
+  Number of received / transmitted characters: 0 / 71915
+  Number of bit collisions: 0
+  Number of receive buffer overflows: 0
+  Number of elements currently in receive buffer: 0
+  First / Last received character: 0000000 / 0000000
+  Number of times noise was detected when reading a character: 0
+  Measured data rate (downstream + upstream): 0.00 bit/s + 1917.73 bit/s = 1917.73 bit/s
+Pin 8:
+  Error ratio (error = unexpected character): 0.00 = 0 / 0
+  Number of received / transmitted characters: 0 / 71708
+  Number of bit collisions: 0
+  Number of receive buffer overflows: 0
+  Number of elements currently in receive buffer: 0
+  First / Last received character: 0000000 / 0000000
+  Number of times noise was detected when reading a character: 0
+  Measured data rate (downstream + upstream): 0.00 bit/s + 1912.21 bit/s = 1912.21 bit/s
+Pin 9:
+  Error ratio (error = unexpected character): 0.00 = 0 / 0
+  Number of received / transmitted characters: 0 / 71733
+  Number of bit collisions: 0
+  Number of receive buffer overflows: 0
+  Number of elements currently in receive buffer: 0
+  First / Last received character: 0000000 / 0000000
+  Number of times noise was detected when reading a character: 0
+  Measured data rate (downstream + upstream): 0.00 bit/s + 1912.88 bit/s = 1912.88 bit/s

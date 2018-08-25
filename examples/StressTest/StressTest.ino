@@ -613,6 +613,8 @@ void printMeasuredRate() {
 
 template <typename T>
 void printTestSummary(T &transceiver) {
+  char c;
+
   Serial.print(F("Pin "));
   Serial.print(transceiver.pinNumber);
   Serial.println(":");
@@ -636,12 +638,18 @@ void printTestSummary(T &transceiver) {
   Serial.println(transceiver.debugData.numberOfElementsInReceiveBuffer);
 
   Serial.print(F("  First / Last received character: "));
-  Serial.print(firstReceivedCharacter<T>());
-  Serial.print(F(" = "));
+  c = firstReceivedCharacter<T>();
+  if (c) {
+    Serial.print(c);
+    Serial.print(F(" = "));
+  }
   Serial.print(stringFromBinary(firstReceivedCharacter<T>()));
   Serial.print(F(" / "));
-  Serial.print(lastReceivedCharacter<T>());
-  Serial.print(F(" = "));
+  c = lastReceivedCharacter<T>();
+  if (c) {
+    Serial.print(c);
+    Serial.print(F(" = "));
+  }
   Serial.println(stringFromBinary(lastReceivedCharacter<T>()));
 
   Serial.print(

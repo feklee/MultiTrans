@@ -1,6 +1,7 @@
-// The delay improves error rate somewhat as it frees time for processing
-// results. But still there are errors. This is slightly too fast.
+// There is a delay that improves error rate somewhat as it frees time for
+// processing results. But still there are errors. This is slightly too fast.
 
+#undef TEST_ALL
 const bool arduinosShouldBeSynchronized = true;
 const uint32_t durationOfMinimumDelay = 50;
 const bool noiseShouldBeRandomlyInserted = false;
