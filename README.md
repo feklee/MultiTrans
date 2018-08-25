@@ -21,8 +21,10 @@ Features
       
       + Communication with four peers: 3 kbit/s
       
-    Bi-directional data rates are a little less than half of the above rates.
-    See the stress test example.
+    Bi-directional data rates are a little less than half of the above rates in
+    each direction. See the *stress test* example:
+    
+    ![Photo of board for testing][2]
 
 
 Limitations
@@ -110,3 +112,4 @@ the Do What The Fuck You Want To Public License, Version 2, as published by Sam
 Hocevar. See the COPYING file for more details.
 
 [1]: https://www.arduino.cc/en/Reference/APIStyleGuide
+[2]: examples/StressTest/board.jpg

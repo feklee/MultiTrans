@@ -18,7 +18,8 @@
 // Note: There is a bug with templates in Arduino IDE 1.8.5's compiler. So, use a
 // compiler that comes with a newer version of the IDE.
 //
-// Five Arduinos are connected, each of them being a multi-channel transceiver:
+// Five Arduinos are connected, each of them being a multi-channel transceiver
+// (see photo of board):
 //
 //   * (*), the center Arduino, connected to (A) / pin 8 and (B) / pin 2, (C) /
 //     pin 9, (D) / pin 3
