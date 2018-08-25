@@ -22,7 +22,8 @@ Features
       + Communication with four peers: 3 kbit/s
       
     Bi-directional data rates are a little less than half of the above rates in
-    each direction. See the *stress test* example:
+    each direction. See the *stress test* example, which is runs on a setup of
+    five Arduino Pro Mini’s:
     
     ![Photo of board for testing][2]
 
