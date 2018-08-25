@@ -2,8 +2,9 @@
 //
 // Components for testing:
 //
-//   * Arduino Pro Mini, ATmega328P, 5V, 16Mhz (on some of them, I desoldered the
-//     power LED)
+//   * Arduino Pro Mini, ATmega328P, 5V, 16Mhz (for reasons not related to this
+//     test, I desoldered the power LED on some of the boards - just in case you
+//     notice that)
 //
 //   * breadboard
 //
