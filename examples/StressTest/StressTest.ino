@@ -21,20 +21,20 @@
 // Five Arduinos are connected, each of them being a multi-channel transceiver:
 //
 //   * (*), the center Arduino, connected to (A) / pin 8 and (B) / pin 2, (C) /
-//     pin 2, (D) / pin 3
+//     pin 9, (D) / pin 3
 //
-//   * Ⓐ, connected to ⊛ (pin 2)
+//   * (A), connected to (*) / pin 3
 //
-//   * Ⓑ, connected to ⊛ (pin 3)
+//   * (B), connected to (*) / pin 2
 //
-//   * Ⓒ, connected to ⊛ (pin 9)
+//   * (C), connected to (*) / pin 9
 //
-//   * Ⓓ, connected to ⊛ (pin 8)
+//   * (D), connected to (*) / pin 8
 //
-// For testing, the Arduinos are first synchronized after starting up. Ⓐ, Ⓑ, Ⓒ,
-// and Ⓓ wait for signals from ⊛. Then all five start sending and receiving. The
-// synchronization is quite primitive, and it's a good idea to proceed as
-// follows:
+// For testing, the Arduinos are first synchronized after starting up. (A), (B),
+// (C), and (D) wait for signals from (*). Then all five start sending and
+// receiving. The synchronization is quite primitive, and it's a good idea to
+// proceed as follows:
 //
 //  1. Remove the FTDI and any power from all Arduinos.
 //
@@ -49,8 +49,8 @@
 //     procedure, possibly after fixing the electronic setup.)
 //
 // Synchronization is not strictly necessary for the test to run. It is there to
-// test the rare case that all Arduinos are transmitting in exactly the same
-// moment.
+// test the rare case that all Arduinos are transmitting the exact same data in
+// the exact same moment.
 
 #include "MultiTrans.h"
 #include "MemoryFree.h"
