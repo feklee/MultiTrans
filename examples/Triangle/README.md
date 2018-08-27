@@ -1,4 +1,4 @@
-![Annotated photo of board](setup.jpg)
+![Photo of setup](setup.jpg)
 
 Pictured components:
 
