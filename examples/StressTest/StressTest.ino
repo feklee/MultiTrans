@@ -1,58 +1,12 @@
-// See image of board for testing: 
+// Stress test
 //
-// Components for testing:
+// This sketch is for stress testing the library, i.e. to see how fast and how
+// slow communication can go without errors.
 //
-//   * Arduino Pro Mini, ATmega328P, 5V, 16Mhz (for reasons not related to this
-//     test, I desoldered the power LED on some of the boards - just in case you
-//     notice that)
+// See `README.md` in the current directory for a detailed explanation.
 //
-//   * breadboard
-//
-//   * FTDI adapter
-//
-//   * cable to power Arduinos from USB with 5V
-//
-//   * jumper cables
-//
-//   * 470 Ω resistors (to prevent shorting in case of programming errors)
-//
-// Note: There is a bug with templates in Arduino IDE 1.8.5's compiler. So, use a
-// compiler that comes with a newer version of the IDE.
-//
-// Five Arduinos are connected, each of them being a multi-channel transceiver
-// (see photo of board):
-//
-//   * (*), the center Arduino, connected to (A) / pin 8 and (B) / pin 2, (C) /
-//     pin 9, (D) / pin 3
-//
-//   * (A), connected to (*) / pin 3
-//
-//   * (B), connected to (*) / pin 2
-//
-//   * (C), connected to (*) / pin 9
-//
-//   * (D), connected to (*) / pin 8
-//
-// For testing, the Arduinos are first synchronized after starting up. (A), (B),
-// (C), and (D) wait for signals from (*). Then all five start sending and
-// receiving. The synchronization is quite primitive, and it's a good idea to
-// proceed as follows:
-//
-//  1. Remove the FTDI and any power from all Arduinos.
-//
-//  2. Make sure that the FTDI is connected to the computer and that the serial
-//     console is started.
-//
-//  3. Plug in the power connection. Eventually – possibly after step 4 – the LEDs
-//     on all Arduinos should emit a fast triple-flash to indicate sync.
-// 
-//  4. Quickly thereafter – in order not to miss any messages – plug the FTDI into
-//     the Arduino that should be monitored. (If the Arduino resets, then repeat the
-//     procedure, possibly after fixing the electronic setup.)
-//
-// Synchronization is not strictly necessary for the test to run. It is there to
-// test the rare case that all Arduinos are transmitting the exact same data in
-// the exact same moment.
+// Written by Felix E. Klee <felix.klee@inka.de>, released into the public
+// domain.
 
 #include "MultiTrans.h"
 #include "MemoryFree.h"
