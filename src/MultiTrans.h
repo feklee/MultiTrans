@@ -8,7 +8,8 @@ template <uint8_t t, uint8_t u, bool v = false>
 class MultiTrans {
 private:
   static_assert(t <= 18, "Bit duration is too long.");
-  static_assert(u <= 13, "Too high maximum number characters per transmission.");
+  static_assert(u <= 13,
+                "Too high maximum number characters per transmission.");
 
   // Bit duration (in CPU cycles): 2^bitDurationExp
   //
