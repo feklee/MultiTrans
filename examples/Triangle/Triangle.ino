@@ -56,7 +56,7 @@ ISR(PCINT0_vect) {
 void setup() {
   Serial.begin(9600);
 
-  // Start timers for sending bits:
+  // Start timer interrupts:
   multiTransceiver.startTimer1();
   multiTransceiver.startTimer2();
 
