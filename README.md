@@ -22,10 +22,7 @@ Features
       + Communication with four peers: 3 kbit/s
       
     Bi-directional data rates are a little less than half of the above rates in
-    each direction. See the *stress test* example, which runs on a setup of five
-    Arduino Pro Mini’s:
-    
-    ![Photo of board for testing][2]
+    each direction.
 
 
 Limitations
@@ -55,6 +52,20 @@ Limitations
       + 8-bit Timer/Counter2 (TC2), for transmitting
       
       + 16-bit Timer/Counter1 (TC1), for receiving
+
+
+Examples
+========
+
+  * [Simple](examples/Simple/README.md): bi directional communication between
+    two Arduinos
+  
+  * [Triangle](examples/Triangle/README.md): Arduinos communicating in a triangle
+  
+  * [Stress test](examples/StressTest/README.md) (advanced): for testing maximum
+    and minimum data rates with five Arduinos all communicating simultaneously
+    
+    ![Photo of board for stress testing](examples/StressTest/board.jpg)
 
 
 Debug mode
@@ -115,4 +126,3 @@ the Do What The Fuck You Want To Public License, Version 2, as published by Sam
 Hocevar. See the COPYING file for more details.
 
 [1]: https://www.arduino.cc/en/Reference/APIStyleGuide
-[2]: examples/StressTest/board.jpg
