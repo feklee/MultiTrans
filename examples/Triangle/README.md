@@ -8,8 +8,8 @@ Pictured components:
 
   * USB cable
 
-The Arduinos are connected in a triangle. For each Arduino: Pin 2 is connected
-to pin 8 of the neighboring Arduino.
+Connect pins 2 and 8 so that all Arduinos form a triangle. Connect Gnd of all
+Arduinos.
 
 To run the example, power all Arduinos and monitor the serial console of one of
 them.
