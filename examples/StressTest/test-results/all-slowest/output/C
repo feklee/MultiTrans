@@ -1,0 +1,1251 @@
+Free memory: 435
+Test duration after initial sync (indicated by tripple flash): 300000 ms
+Waiting for sync...done
+Pin 2: Starting transmission of: } ^Y54"~
+Pin 3: Starting transmission of: } ^Y54"~
+Pin 8: Starting transmission of: } ^Y54"~
+Pin 9: Starting transmission of: } ^Y54"~
+Pin 2: Starting transmission of: FB{T
+Pin 3: Starting transmission of: FB{T
+Pin 8: Starting transmission of: FB{T
+Pin 9: Starting transmission of: FB{T
+Pin 9: [  6,   5]: } = 0111110 Error ratio (error = unexpected character): 0.00 = 0 / 1
+Pin 9: Number of collisions increased to: 13
+Pin 9: [ 12,  11]:   = 0010000 Error ratio (error = unexpected character): 0.00 = 0 / 2
+Pin 9: Number of collisions increased to: 31
+Pin 9: [ 20,  19]: ^ = 0101111 Error ratio (error = unexpected character): 0.00 = 0 / 3
+Pin 9: Number of collisions increased to: 45
+Pin 2: Starting transmission of: c
+Pin 3: Starting transmission of: c
+Pin 8: Starting transmission of: c
+Pin 9: [ 28,  28]: Y = 0101100 Error ratio (error = unexpected character): 0.00 = 0 / 4
+Pin 9: Number of collisions increased to: 70
+Pin 9: [ 36,  35]: 5 = 0011010 Error ratio (error = unexpected character): 0.00 = 0 / 5
+Pin 9: Number of collisions increased to: 75
+Pin 2: Starting transmission of: O)z_<*W@
+Pin 3: Starting transmission of: O)z_<*W@
+Pin 8: Starting transmission of: O)z_<*W@
+Pin 9: [ 44,  46]: 4 = 0011010 Error ratio (error = unexpected character): 0.00 = 0 / 6
+Pin 9: Number of collisions increased to: 104
+Pin 9: [ 52,  51]: " = 0010001 Error ratio (error = unexpected character): 0.00 = 0 / 7
+Pin 9: Number of collisions increased to: 111
+Pin 9: [ 58,  57]: ~ = 0111111 Error ratio (error = unexpected character): 0.00 = 0 / 8
+Pin 9: Number of collisions increased to: 121
+Pin 9: Starting transmission of: c
+Pin 9: [ 66,  65]: F = 0100011 Error ratio (error = unexpected character): 0.00 = 0 / 9
+Pin 9: Number of collisions increased to: 137
+Pin 2: Starting transmission of: QJ>G
+Pin 3: Starting transmission of: QJ>G
+Pin 8: Starting transmission of: QJ>G
+Pin 9: [ 74,  74]: B = 0100001 Error ratio (error = unexpected character): 0.00 = 0 / 10
+Pin 9: Number of collisions increased to: 160
+Pin 9: [ 80,  79]: { = 0111101 Error ratio (error = unexpected character): 0.00 = 0 / 11
+Pin 9: Number of collisions increased to: 167
+Pin 9: [ 90,  89]: T = 0101010 Error ratio (error = unexpected character): 0.00 = 0 / 12
+Pin 9: Number of collisions increased to: 183
+Pin 9: Starting transmission of: O)z_<*W@
+Pin 2: Starting transmission of: =An+btD|
+Pin 3: Starting transmission of: =An+btD|
+Pin 8: Starting transmission of: =An+btD|
+Pin 9: [ 96,  95]: c = 0110001 Error ratio (error = unexpected character): 0.00 = 0 / 13
+Pin 9: Number of collisions increased to: 198
+Pin 2: Starting transmission of: o%
+Pin 3: Starting transmission of: o%
+Pin 8: Starting transmission of: o%
+Pin 9: Starting transmission of: QJ>G
+Pin 9: [102, 101]: O = 0100111 Error ratio (error = unexpected character): 0.00 = 0 / 14
+Pin 9: Number of collisions increased to: 213
+Pin 2: Starting transmission of: 6RE
+Pin 3: Starting transmission of: 6RE
+Pin 8: Starting transmission of: 6RE
+Pin 9: [  6,   6]: ) = 0010100 Error ratio (error = unexpected character): 0.00 = 0 / 15
+Pin 9: Number of collisions increased to: 239
+Pin 9: [ 14,  13]: z = 0111101 Error ratio (error = unexpected character): 0.00 = 0 / 16
+Pin 9: Number of collisions increased to: 243
+Pin 9: [ 20,  19]: _ = 0101111 Error ratio (error = unexpected character): 0.00 = 0 / 17
+Pin 9: Number of collisions increased to: 256
+Pin 9: [ 26,  25]: < = 0011110 Error ratio (error = unexpected character): 0.00 = 0 / 18
+Pin 9: Number of collisions increased to: 271
+Pin 2: Starting transmission of: '2?p!&Z$
+Pin 3: Starting transmission of: '2?p!&Z$
+Pin 8: Starting transmission of: '2?p!&Z$
+Pin 9: [ 36,  37]: * = 0010101 Error ratio (error = unexpected character): 0.00 = 0 / 19
+Pin 9: Number of collisions increased to: 297
+Pin 9: [ 44,  43]: W = 0101011 Error ratio (error = unexpected character): 0.00 = 0 / 20
+Pin 9: Number of collisions increased to: 303
+Pin 9: [ 50,  49]: @ = 0100000 Error ratio (error = unexpected character): 0.00 = 0 / 21
+Pin 9: Number of collisions increased to: 318
+Pin 9: Starting transmission of: =An+btD|
+Pin 9: [ 58,  57]: Q = 0101000 Error ratio (error = unexpected character): 0.00 = 0 / 22
+Pin 9: Number of collisions increased to: 335
+Pin 2: Starting transmission of: 7iqx0adM
+Pin 3: Starting transmission of: 7iqx0adM
+Pin 8: Starting transmission of: 7iqx0adM
+Pin 9: [ 68,  68]: J = 0100101 Error ratio (error = unexpected character): 0.00 = 0 / 23
+Pin 9: Number of collisions increased to: 356
+Pin 9: [ 74,  73]: > = 0011111 Error ratio (error = unexpected character): 0.00 = 0 / 24
+Pin 9: Number of collisions increased to: 365
+Pin 9: [ 80,  79]: G = 0100011 Error ratio (error = unexpected character): 0.00 = 0 / 25
+Pin 9: Number of collisions increased to: 379
+Pin 2: Starting transmission of: HL`wkVS1
+Pin 3: Starting transmission of: HL`wkVS1
+Pin 8: Starting transmission of: HL`wkVS1
+Pin 9: Starting transmission of: o%
+Pin 9: [ 86,  85]: = = 0011110 Error ratio (error = unexpected character): 0.00 = 0 / 26
+Pin 9: Number of collisions increased to: 394
+Pin 9: [ 92,  91]: A = 0100000 Error ratio (error = unexpected character): 0.00 = 0 / 27
+Pin 9: Number of collisions increased to: 411
+Pin 9: [100,  99]: n = 0110111 Error ratio (error = unexpected character): 0.00 = 0 / 28
+Pin 9: Number of collisions increased to: 425
+Pin 9: [  4,   3]: + = 0010101 Error ratio (error = unexpected character): 0.00 = 0 / 29
+Pin 9: Number of collisions increased to: 440
+Pin 9: [ 12,  11]: b = 0110001 Error ratio (error = unexpected character): 0.00 = 0 / 30
+Pin 9: Number of collisions increased to: 456
+Pin 2: Starting transmission of: Km[h9P-N
+Pin 9: [ 20,  20]: t = 0111010 Error ratio (error = unexpected character): 0.00 = 0 / 31
+Pin 9: Number of collisions increased to: 478
+Pin 3: Starting transmission of: Km[h9P-N
+Pin 8: Starting transmission of: Km[h9P-N
+Pin 9: [ 28,  28]: D = 0100010 Error ratio (error = unexpected character): 0.00 = 0 / 32
+Pin 9: Number of collisions increased to: 493
+Pin 9: [ 34,  33]: | = 0111110 Error ratio (error = unexpected character): 0.00 = 0 / 33
+Pin 9: Number of collisions increased to: 501
+Pin 9: Starting transmission of: 6RE
+Pin 9: [ 40,  39]: o = 0110111 Error ratio (error = unexpected character): 0.00 = 0 / 34
+Pin 9: Number of collisions increased to: 515
+Pin 9: [ 48,  47]: % = 0010010 Error ratio (error = unexpected character): 0.00 = 0 / 35
+Pin 9: Number of collisions increased to: 530
+Pin 2: Starting transmission of: 8;C
+Pin 3: Starting transmission of: 8;C
+Pin 8: Starting transmission of: 8;C
+Pin 9: Starting transmission of: '2?p!&Z$
+Pin 9: [ 56,  55]: 6 = 0011011 Error ratio (error = unexpected character): 0.00 = 0 / 36
+Pin 9: Number of collisions increased to: 545
+Pin 2: Starting transmission of: ,Igl\
+Pin 3: Starting transmission of: ,Igl\
+Pin 8: Starting transmission of: ,Igl\
+Pin 9: [ 66,  66]: R = 0101001 Error ratio (error = unexpected character): 0.00 = 0 / 37
+Pin 9: Number of collisions increased to: 569
+Pin 9: [ 74,  73]: E = 0100010 Error ratio (error = unexpected character): 0.00 = 0 / 38
+Pin 9: Number of collisions increased to: 577
+Pin 2: Starting transmission of: uUr3j
+Pin 3: Starting transmission of: uUr3j
+Pin 8: Starting transmission of: uUr3j
+Pin 9: Starting transmission of: 7iqx0adM
+Pin 2: Starting transmission of: Xsy(
+Pin 9: [ 80,  80]: ' = 0010011 Error ratio (error = unexpected character): 0.00 = 0 / 39
+Pin 9: Number of collisions increased to: 599
+Pin 3: Starting transmission of: Xsy(
+Pin 8: Starting transmission of: Xsy(
+Pin 9: [ 88,  88]: 2 = 0011001 Error ratio (error = unexpected character): 0.00 = 0 / 40
+Pin 9: Number of collisions increased to: 613
+Pin 9: [ 92,  91]: ? = 0011111 Error ratio (error = unexpected character): 0.00 = 0 / 41
+Pin 9: Number of collisions increased to: 621
+Pin 9: [ 98,  97]: p = 0111000 Error ratio (error = unexpected character): 0.00 = 0 / 42
+Pin 9: Number of collisions increased to: 637
+Pin 9: [  0, 103]: ! = 0010000 Error ratio (error = unexpected character): 0.00 = 0 / 43
+Pin 9: Number of collisions increased to: 654
+Pin 9: [  8,   7]: & = 0010011 Error ratio (error = unexpected character): 0.00 = 0 / 44
+Pin 9: Number of collisions increased to: 670
+Pin 2: Starting transmission of: /:.#ve]f
+Pin 3: Starting transmission of: /:.#ve]f
+Pin 8: Starting transmission of: /:.#ve]f
+Pin 9: [ 18,  18]: Z = 0101101 Error ratio (error = unexpected character): 0.00 = 0 / 45
+Pin 9: Number of collisions increased to: 693
+Pin 9: [ 26,  25]: $ = 0010010 Error ratio (error = unexpected character): 0.00 = 0 / 46
+Pin 9: Number of collisions increased to: 702
+Pin 2: Starting transmission of: } ^Y54"~
+Pin 3: Starting transmission of: } ^Y54"~
+Pin 8: Starting transmission of: } ^Y54"~
+Pin 9: Starting transmission of: HL`wkVS1
+Pin 9: [ 32,  31]: 7 = 0011011 Error ratio (error = unexpected character): 0.00 = 0 / 47
+Pin 9: Number of collisions increased to: 716
+Pin 9: [ 40,  39]: i = 0110100 Error ratio (error = unexpected character): 0.00 = 0 / 48
+Pin 9: Number of collisions increased to: 731
+Pin 9: [ 46,  45]: q = 0111000 Error ratio (error = unexpected character): 0.00 = 0 / 49
+Pin 9: Number of collisions increased to: 746
+Pin 9: [ 52,  51]: x = 0111100 Error ratio (error = unexpected character): 0.00 = 0 / 50
+Pin 9: Number of collisions increased to: 761
+Pin 9: [ 58,  57]: 0 = 0011000 Error ratio (error = unexpected character): 0.00 = 0 / 51
+Pin 9: Number of collisions increased to: 778
+Pin 9: [ 64,  63]: a = 0110000 Error ratio (error = unexpected character): 0.00 = 0 / 52
+Pin 9: Number of collisions increased to: 794
+Pin 2: Starting transmission of: FB{T
+Pin 9: [ 72,  72]: d = 0110010 Error ratio (error = unexpected character): 0.00 = 0 / 53
+Pin 9: Number of collisions increased to: 817
+Pin 3: Starting transmission of: FB{T
+Pin 8: Starting transmission of: FB{T
+Pin 9: [ 80,  79]: M = 0100110 Error ratio (error = unexpected character): 0.00 = 0 / 54
+Pin 9: Number of collisions increased to: 825
+Pin 2: Starting transmission of: c
+Pin 3: Starting transmission of: c
+Pin 8: Starting transmission of: c
+Pin 2: Starting transmission of: O)z_<*W@
+Pin 3: Starting transmission of: O)z_<*W@
+Pin 8: Starting transmission of: O)z_<*W@
+Pin 9: Starting transmission of: Km[h9P-N
+Pin 9: [ 88,  87]: H = 0100100 Error ratio (error = unexpected character): 0.00 = 0 / 55
+Pin 9: Number of collisions increased to: 843
+Pin 9: [ 96,  95]: L = 0100110 Error ratio (error = unexpected character): 0.00 = 0 / 56
+Pin 9: Number of collisions increased to: 859
+Pin 9: [102, 101]: ` = 0110000 Error ratio (error = unexpected character): 0.00 = 0 / 57
+Pin 9: Number of collisions increased to: 876
+Pin 9: [  4,   3]: w = 0111011 Error ratio (error = unexpected character): 0.00 = 0 / 58
+Pin 9: Number of collisions increased to: 889
+Pin 9: [ 12,  11]: k = 0110101 Error ratio (error = unexpected character): 0.00 = 0 / 59
+Pin 9: Number of collisions increased to: 903
+Pin 2: Starting transmission of: QJ>G
+Pin 9: [ 22,  21]: V = 0101011 Error ratio (error = unexpected character): 0.00 = 0 / 60
+Pin 9: Number of collisions increased to: 921
+Pin 3: Starting transmission of: QJ>G
+Pin 8: Starting transmission of: QJ>G
+Pin 9: [ 30,  29]: S = 0101001 Error ratio (error = unexpected character): 0.00 = 0 / 61
+Pin 9: Number of collisions increased to: 934
+Pin 9: [ 36,  35]: 1 = 0011000 Error ratio (error = unexpected character): 0.00 = 0 / 62
+Pin 9: Number of collisions increased to: 948
+Pin 2: Starting transmission of: =An+btD|
+Pin 3: Starting transmission of: =An+btD|
+Pin 8: Starting transmission of: =An+btD|
+Pin 9: Starting transmission of: 8;C
+Pin 9: [ 44,  43]: K = 0100101 Error ratio (error = unexpected character): 0.00 = 0 / 63
+Pin 9: Number of collisions increased to: 964
+Pin 9: [ 52,  51]: m = 0110110 Error ratio (error = unexpected character): 0.00 = 0 / 64
+Pin 9: Number of collisions increased to: 978
+Pin 2: Starting transmission of: o%
+Pin 9: [ 60,  59]: [ = 0101101 Error ratio (error = unexpected character): 0.00 = 0 / 65
+Pin 9: Number of collisions increased to: 992
+Pin 3: Starting transmission of: o%
+Pin 8: Starting transmission of: o%
+Pin 9: [ 68,  67]: h = 0110100 Error ratio (error = unexpected character): 0.00 = 0 / 66
+Pin 9: Number of collisions increased to: 1008
+Pin 9: [ 74,  73]: 9 = 0011100 Error ratio (error = unexpected character): 0.00 = 0 / 67
+Pin 9: Number of collisions increased to: 1023
+Pin 2: Starting transmission of: 6RE
+Pin 9: [ 82,  81]: P = 0101000 Error ratio (error = unexpected character): 0.00 = 0 / 68
+Pin 9: Number of collisions increased to: 1040
+Pin 3: Starting transmission of: 6RE
+Pin 8: Starting transmission of: 6RE
+Pin 9: [ 90,  89]: - = 0010110 Error ratio (error = unexpected character): 0.00 = 0 / 69
+Pin 9: Number of collisions increased to: 1056
+Pin 9: [ 98,  97]: N = 0100111 Error ratio (error = unexpected character): 0.00 = 0 / 70
+Pin 9: Number of collisions increased to: 1069
+Pin 2: Starting transmission of: '2?p!&Z$
+Pin 3: Starting transmission of: '2?p!&Z$
+Pin 8: Starting transmission of: '2?p!&Z$
+Pin 9: Starting transmission of: ,Igl\
+Pin 9: [  0, 103]: 8 = 0011100 Error ratio (error = unexpected character): 0.00 = 0 / 71
+Pin 9: Number of collisions increased to: 1086
+Pin 9: [  6,   5]: ; = 0011101 Error ratio (error = unexpected character): 0.00 = 0 / 72
+Pin 9: Number of collisions increased to: 1100
+Pin 9: [ 12,  11]: C = 0100001 Error ratio (error = unexpected character): 0.00 = 0 / 73
+Pin 9: Number of collisions increased to: 1115
+Pin 2: Starting transmission of: 7iqx0adM
+Pin 3: Starting transmission of: 7iqx0adM
+Pin 8: Starting transmission of: 7iqx0adM
+Pin 9: Starting transmission of: uUr3j
+Pin 9: [ 20,  19]: , = 0010110 Error ratio (error = unexpected character): 0.00 = 0 / 74
+Pin 9: Number of collisions increased to: 1132
+Pin 9: [ 28,  27]: I = 0100100 Error ratio (error = unexpected character): 0.00 = 0 / 75
+Pin 9: Number of collisions increased to: 1148
+Pin 9: [ 34,  33]: g = 0110011 Error ratio (error = unexpected character): 0.00 = 0 / 76
+Pin 9: Number of collisions increased to: 1162
+Pin 9: [ 42,  41]: l = 0110110 Error ratio (error = unexpected character): 0.00 = 0 / 77
+Pin 9: Number of collisions increased to: 1177
+Pin 9: [ 50,  49]: \ = 0101110 Error ratio (error = unexpected character): 0.00 = 0 / 78
+Pin 9: Number of collisions increased to: 1191
+Pin 2: Starting transmission of: HL`wkVS1
+Pin 3: Starting transmission of: HL`wkVS1
+Pin 8: Starting transmission of: HL`wkVS1
+Pin 9: Starting transmission of: Xsy(
+Pin 9: [ 58,  57]: u = 0111010 Error ratio (error = unexpected character): 0.00 = 0 / 79
+Pin 9: Number of collisions increased to: 1205
+Pin 9: [ 68,  67]: U = 0101010 Error ratio (error = unexpected character): 0.00 = 0 / 80
+Pin 9: Number of collisions increased to: 1220
+Pin 9: [ 76,  75]: r = 0111001 Error ratio (error = unexpected character): 0.00 = 0 / 81
+Pin 9: Number of collisions increased to: 1235
+Pin 2: Starting transmission of: Km[h9P-N
+Pin 9: [ 82,  81]: 3 = 0011001 Error ratio (error = unexpected character): 0.00 = 0 / 82
+Pin 9: Number of collisions increased to: 1250
+Pin 3: Starting transmission of: Km[h9P-N
+Pin 8: Starting transmission of: Km[h9P-N
+Pin 9: [ 92,  91]: j = 0110101 Error ratio (error = unexpected character): 0.00 = 0 / 83
+Pin 9: Number of collisions increased to: 1265
+Pin 9: Starting transmission of: /:.#ve]f
+Pin 9: [100,  99]: X = 0101100 Error ratio (error = unexpected character): 0.00 = 0 / 84
+Pin 9: Number of collisions increased to: 1281
+Pin 9: [  2,   1]: s = 0111001 Error ratio (error = unexpected character): 0.00 = 0 / 85
+Pin 9: Number of collisions increased to: 1295
+Pin 2: Starting transmission of: 8;C
+Pin 3: Starting transmission of: 8;C
+Pin 8: Starting transmission of: 8;C
+Pin 9: [  8,   8]: y = 0111100 Error ratio (error = unexpected character): 0.00 = 0 / 86
+Pin 9: Number of collisions increased to: 1319
+Pin 9: [ 16,  15]: ( = 0010100 Error ratio (error = unexpected character): 0.00 = 0 / 87
+Pin 9: Number of collisions increased to: 1326
+Pin 2: Starting transmission of: ,Igl\
+Pin 3: Starting transmission of: ,Igl\
+Pin 8: Starting transmission of: ,Igl\
+Pin 2: Starting transmission of: uUr3j
+Pin 9: Starting transmission of: } ^Y54"~
+Pin 3: Starting transmission of: uUr3j
+Pin 8: Starting transmission of: uUr3j
+Pin 9: [ 22,  21]: / = 0010111 Error ratio (error = unexpected character): 0.00 = 0 / 88
+Pin 9: Number of collisions increased to: 1340
+Pin 9: [ 30,  29]: : = 0011101 Error ratio (error = unexpected character): 0.00 = 0 / 89
+Pin 9: Number of collisions increased to: 1355
+Pin 9: [ 38,  37]: . = 0010111 Error ratio (error = unexpected character): 0.00 = 0 / 90
+Pin 9: Number of collisions increased to: 1370
+Pin 9: [ 44,  43]: # = 0010001 Error ratio (error = unexpected character): 0.00 = 0 / 91
+Pin 9: Number of collisions increased to: 1386
+Pin 9: [ 52,  51]: v = 0111011 Error ratio (error = unexpected character): 0.00 = 0 / 92
+Pin 9: Number of collisions increased to: 1400
+Pin 2: Starting transmission of: Xsy(
+Pin 3: Starting transmission of: Xsy(
+Pin 8: Starting transmission of: Xsy(
+Pin 9: [ 60,  60]: e = 0110010 Error ratio (error = unexpected character): 0.00 = 0 / 93
+Pin 9: Number of collisions increased to: 1424
+Pin 9: [ 68,  67]: ] = 0101110 Error ratio (error = unexpected character): 0.00 = 0 / 94
+Pin 9: Number of collisions increased to: 1429
+Pin 9: [ 76,  75]: f = 0110011 Error ratio (error = unexpected character): 0.00 = 0 / 95
+Pin 9: Number of collisions increased to: 1444
+Pin 2: Starting transmission of: /:.#ve]f
+Pin 3: Starting transmission of: /:.#ve]f
+Pin 8: Starting transmission of: /:.#ve]f
+Pin 9: Starting transmission of: FB{T
+Pin 9: [ 82,  81]: } = 0111110 Error ratio (error = unexpected character): 0.00 = 0 / 96
+Pin 9: Number of collisions increased to: 1458
+Pin 2: Starting transmission of: } ^Y54"~
+Pin 9: [ 88,  88]:   = 0010000 Error ratio (error = unexpected character): 0.00 = 0 / 97
+Pin 9: Number of collisions increased to: 1483
+Pin 3: Starting transmission of: } ^Y54"~
+Pin 8: Starting transmission of: } ^Y54"~
+Pin 9: [ 96,  96]: ^ = 0101111 Error ratio (error = unexpected character): 0.00 = 0 / 98
+Pin 9: Number of collisions increased to: 1496
+Pin 9: [  0, 103]: Y = 0101100 Error ratio (error = unexpected character): 0.00 = 0 / 99
+Pin 9: Number of collisions increased to: 1505
+Pin 9: [  8,   7]: 5 = 0011010 Error ratio (error = unexpected character): 0.00 = 0 / 100
+Pin 9: Number of collisions increased to: 1520
+Pin 9: [ 16,  15]: 4 = 0011010 Error ratio (error = unexpected character): 0.00 = 0 / 101
+Pin 9: Number of collisions increased to: 1536
+Pin 9: [ 24,  23]: " = 0010001 Error ratio (error = unexpected character): 0.00 = 0 / 102
+Pin 9: Number of collisions increased to: 1553
+Pin 9: [ 30,  29]: ~ = 0111111 Error ratio (error = unexpected character): 0.00 = 0 / 103
+Pin 9: Number of collisions increased to: 1565
+Pin 2: Starting transmission of: FB{T
+Pin 3: Starting transmission of: FB{T
+Pin 8: Starting transmission of: FB{T
+Pin 9: Starting transmission of: c
+Pin 9: [ 38,  37]: F = 0100011 Error ratio (error = unexpected character): 0.00 = 0 / 104
+Pin 9: Number of collisions increased to: 1582
+Pin 9: [ 46,  45]: B = 0100001 Error ratio (error = unexpected character): 0.00 = 0 / 105
+Pin 9: Number of collisions increased to: 1599
+Pin 2: Starting transmission of: c
+Pin 9: [ 52,  51]: { = 0111101 Error ratio (error = unexpected character): 0.00 = 0 / 106
+Pin 9: Number of collisions increased to: 1613
+Pin 3: Starting transmission of: c
+Pin 8: Starting transmission of: c
+Pin 9: [ 62,  61]: T = 0101010 Error ratio (error = unexpected character): 0.00 = 0 / 107
+Pin 9: Number of collisions increased to: 1627
+Pin 2: Starting transmission of: O)z_<*W@
+Pin 3: Starting transmission of: O)z_<*W@
+Pin 8: Starting transmission of: O)z_<*W@
+Pin 9: Starting transmission of: O)z_<*W@
+Pin 9: [ 68,  67]: c = 0110001 Error ratio (error = unexpected character): 0.00 = 0 / 108
+Pin 9: Number of collisions increased to: 1642
+Pin 2: Starting transmission of: QJ>G
+Pin 3: Starting transmission of: QJ>G
+Pin 8: Starting transmission of: QJ>G
+Pin 9: Starting transmission of: QJ>G
+Pin 9: [ 74,  73]: O = 0100111 Error ratio (error = unexpected character): 0.00 = 0 / 109
+Pin 9: Number of collisions increased to: 1657
+Pin 2: Starting transmission of: =An+btD|
+Pin 9: [ 82,  82]: ) = 0010100 Error ratio (error = unexpected character): 0.00 = 0 / 110
+Pin 9: Number of collisions increased to: 1680
+Pin 3: Starting transmission of: =An+btD|
+Pin 8: Starting transmission of: =An+btD|
+Pin 9: [ 90,  90]: z = 0111101 Error ratio (error = unexpected character): 0.00 = 0 / 111
+Pin 9: Number of collisions increased to: 1693
+Pin 9: [ 96,  95]: _ = 0101111 Error ratio (error = unexpected character): 0.00 = 0 / 112
+Pin 9: Number of collisions increased to: 1700
+Pin 9: [102, 101]: < = 0011110 Error ratio (error = unexpected character): 0.00 = 0 / 113
+Pin 9: Number of collisions increased to: 1715
+Pin 9: [  8,   7]: * = 0010101 Error ratio (error = unexpected character): 0.00 = 0 / 114
+Pin 9: Number of collisions increased to: 1731
+Pin 9: [ 16,  15]: W = 0101011 Error ratio (error = unexpected character): 0.00 = 0 / 115
+Pin 9: Number of collisions increased to: 1745
+Pin 9: [ 22,  21]: @ = 0100000 Error ratio (error = unexpected character): 0.00 = 0 / 116
+Pin 9: Number of collisions increased to: 1762
+Pin 2: Starting transmission of: o%
+Pin 3: Starting transmission of: o%
+Pin 8: Starting transmission of: o%
+Pin 9: Starting transmission of: =An+btD|
+Pin 2: Starting transmission of: 6RE
+Pin 9: [ 30,  29]: Q = 0101000 Error ratio (error = unexpected character): 0.00 = 0 / 117
+Pin 9: Number of collisions increased to: 1780
+Pin 3: Starting transmission of: 6RE
+Pin 8: Starting transmission of: 6RE
+Pin 9: [ 40,  39]: J = 0100101 Error ratio (error = unexpected character): 0.00 = 0 / 118
+Pin 9: Number of collisions increased to: 1795
+Pin 9: [ 46,  45]: > = 0011111 Error ratio (error = unexpected character): 0.00 = 0 / 119
+Pin 9: Number of collisions increased to: 1809
+Pin 9: [ 52,  51]: G = 0100011 Error ratio (error = unexpected character): 0.00 = 0 / 120
+Pin 9: Number of collisions increased to: 1824
+Pin 2: Starting transmission of: '2?p!&Z$
+Pin 3: Starting transmission of: '2?p!&Z$
+Pin 8: Starting transmission of: '2?p!&Z$
+Pin 9: Starting transmission of: o%
+Pin 2: Starting transmission of: 7iqx0adM
+Pin 3: Starting transmission of: 7iqx0adM
+Pin 8: Starting transmission of: 7iqx0adM
+Pin 9: [ 58,  59]: = = 0011110 Error ratio (error = unexpected character): 0.00 = 0 / 121
+Pin 9: Number of collisions increased to: 1850
+Pin 9: [ 64,  63]: A = 0100000 Error ratio (error = unexpected character): 0.00 = 0 / 122
+Pin 9: Number of collisions increased to: 1857
+Pin 9: [ 72,  71]: n = 0110111 Error ratio (error = unexpected character): 0.00 = 0 / 123
+Pin 9: Number of collisions increased to: 1869
+Pin 9: [ 80,  79]: + = 0010101 Error ratio (error = unexpected character): 0.00 = 0 / 124
+Pin 9: Number of collisions increased to: 1884
+Pin 9: [ 88,  87]: b = 0110001 Error ratio (error = unexpected character): 0.00 = 0 / 125
+Pin 9: Number of collisions increased to: 1900
+Pin 9: [ 96,  95]: t = 0111010 Error ratio (error = unexpected character): 0.00 = 0 / 126
+Pin 9: Number of collisions increased to: 1915
+Pin 9: [  0, 103]: D = 0100010 Error ratio (error = unexpected character): 0.00 = 0 / 127
+Pin 9: Number of collisions increased to: 1932
+Pin 9: [  6,   5]: | = 0111110 Error ratio (error = unexpected character): 0.00 = 0 / 128
+Pin 9: Number of collisions increased to: 1946
+Pin 2: Starting transmission of: HL`wkVS1
+Pin 3: Starting transmission of: HL`wkVS1
+Pin 8: Starting transmission of: HL`wkVS1
+Pin 9: Starting transmission of: 6RE
+Pin 9: [ 12,  11]: o = 0110111 Error ratio (error = unexpected character): 0.00 = 0 / 129
+Pin 9: Number of collisions increased to: 1959
+Pin 9: [ 20,  19]: % = 0010010 Error ratio (error = unexpected character): 0.00 = 0 / 130
+Pin 9: Number of collisions increased to: 1975
+Pin 9: Starting transmission of: '2?p!&Z$
+Pin 2: Starting transmission of: Km[h9P-N
+Pin 9: [ 28,  27]: 6 = 0011011 Error ratio (error = unexpected character): 0.00 = 0 / 131
+Pin 9: Number of collisions increased to: 1990
+Pin 3: Starting transmission of: Km[h9P-N
+Pin 8: Starting transmission of: Km[h9P-N
+Pin 9: [ 38,  37]: R = 0101001 Error ratio (error = unexpected character): 0.00 = 0 / 132
+Pin 9: Number of collisions increased to: 2006
+Pin 9: [ 46,  45]: E = 0100010 Error ratio (error = unexpected character): 0.00 = 0 / 133
+Pin 9: Number of collisions increased to: 2022
+Pin 2: Starting transmission of: 8;C
+Pin 3: Starting transmission of: 8;C
+Pin 8: Starting transmission of: 8;C
+Pin 9: Starting transmission of: 7iqx0adM
+Pin 9: [ 52,  51]: ' = 0010011 Error ratio (error = unexpected character): 0.00 = 0 / 134
+Pin 9: Number of collisions increased to: 2038
+Pin 2: Starting transmission of: ,Igl\
+Pin 3: Starting transmission of: ,Igl\
+Pin 8: Starting transmission of: ,Igl\
+Pin 9: [ 60,  60]: 2 = 0011001 Error ratio (error = unexpected character): 0.00 = 0 / 135
+Pin 9: Number of collisions increased to: 2063
+Pin 9: [ 64,  63]: ? = 0011111 Error ratio (error = unexpected character): 0.00 = 0 / 136
+Pin 9: Number of collisions increased to: 2068
+Pin 9: [ 70,  69]: p = 0111000 Error ratio (error = unexpected character): 0.00 = 0 / 137
+Pin 9: Number of collisions increased to: 2083
+Pin 9: [ 76,  75]: ! = 0010000 Error ratio (error = unexpected character): 0.00 = 0 / 138
+Pin 9: Number of collisions increased to: 2100
+Pin 9: [ 84,  83]: & = 0010011 Error ratio (error = unexpected character): 0.00 = 0 / 139
+Pin 9: Number of collisions increased to: 2116
+Pin 9: [ 94,  93]: Z = 0101101 Error ratio (error = unexpected character): 0.00 = 0 / 140
+Pin 9: Number of collisions increased to: 2131
+Pin 2: Starting transmission of: uUr3j
+Pin 9: [102, 101]: $ = 0010010 Error ratio (error = unexpected character): 0.00 = 0 / 141
+Pin 9: Number of collisions increased to: 2147
+Pin 3: Starting transmission of: uUr3j
+Pin 8: Starting transmission of: uUr3j
+Pin 2: Starting transmission of: Xsy(
+Pin 3: Starting transmission of: Xsy(
+Pin 8: Starting transmission of: Xsy(
+Pin 9: Starting transmission of: HL`wkVS1
+Pin 9: [  4,   3]: 7 = 0011011 Error ratio (error = unexpected character): 0.00 = 0 / 142
+Pin 9: Number of collisions increased to: 2162
+Pin 2: Starting transmission of: /:.#ve]f
+Pin 3: Starting transmission of: /:.#ve]f
+Pin 8: Starting transmission of: /:.#ve]f
+Pin 9: [ 12,  12]: i = 0110100 Error ratio (error = unexpected character): 0.00 = 0 / 143
+Pin 9: Number of collisions increased to: 2188
+Pin 9: [ 18,  17]: q = 0111000 Error ratio (error = unexpected character): 0.00 = 0 / 144
+Pin 9: Number of collisions increased to: 2193
+Pin 9: [ 24,  23]: x = 0111100 Error ratio (error = unexpected character): 0.00 = 0 / 145
+Pin 9: Number of collisions increased to: 2207
+Pin 9: [ 30,  29]: 0 = 0011000 Error ratio (error = unexpected character): 0.00 = 0 / 146
+Pin 9: Number of collisions increased to: 2224
+Pin 9: [ 36,  35]: a = 0110000 Error ratio (error = unexpected character): 0.00 = 0 / 147
+Pin 9: Number of collisions increased to: 2240
+Pin 9: [ 44,  43]: d = 0110010 Error ratio (error = unexpected character): 0.00 = 0 / 148
+Pin 9: Number of collisions increased to: 2256
+Pin 9: [ 52,  51]: M = 0100110 Error ratio (error = unexpected character): 0.00 = 0 / 149
+Pin 9: Number of collisions increased to: 2270
+Pin 2: Starting transmission of: } ^Y54"~
+Pin 3: Starting transmission of: } ^Y54"~
+Pin 8: Starting transmission of: } ^Y54"~
+Pin 9: Starting transmission of: Km[h9P-N
+Pin 9: [ 60,  59]: H = 0100100 Error ratio (error = unexpected character): 0.00 = 0 / 150
+Pin 9: Number of collisions increased to: 2288
+Pin 2: Starting transmission of: FB{T
+Pin 9: [ 68,  68]: L = 0100110 Error ratio (error = unexpected character): 0.00 = 0 / 151
+Pin 9: Number of collisions increased to: 2311
+Pin 3: Starting transmission of: FB{T
+Pin 8: Starting transmission of: FB{T
+Pin 9: [ 74,  74]: ` = 0110000 Error ratio (error = unexpected character): 0.00 = 0 / 152
+Pin 9: Number of collisions increased to: 2328
+Pin 9: [ 80,  79]: w = 0111011 Error ratio (error = unexpected character): 0.00 = 0 / 153
+Pin 9: Number of collisions increased to: 2334
+Pin 9: [ 88,  87]: k = 0110101 Error ratio (error = unexpected character): 0.00 = 0 / 154
+Pin 9: Number of collisions increased to: 2348
+Pin 9: [ 98,  97]: V = 0101011 Error ratio (error = unexpected character): 0.00 = 0 / 155
+Pin 9: Number of collisions increased to: 2363
+Pin 9: [  2,   1]: S = 0101001 Error ratio (error = unexpected character): 0.00 = 0 / 156
+Pin 9: Number of collisions increased to: 2378
+Pin 2: Starting transmission of: c
+Pin 3: Starting transmission of: c
+Pin 8: Starting transmission of: c
+Pin 9: [  8,   7]: 1 = 0011000 Error ratio (error = unexpected character): 0.00 = 0 / 157
+Pin 9: Number of collisions increased to: 2393
+Pin 2: Starting transmission of: O)z_<*W@
+Pin 3: Starting transmission of: O)z_<*W@
+Pin 8: Starting transmission of: O)z_<*W@
+Pin 9: Starting transmission of: 8;C
+Pin 2: Starting transmission of: QJ>G
+Pin 9: [ 16,  16]: K = 0100101 Error ratio (error = unexpected character): 0.00 = 0 / 158
+Pin 9: Number of collisions increased to: 2416
+Pin 3: Starting transmission of: QJ>G
+Pin 8: Starting transmission of: QJ>G
+Pin 9: [ 24,  24]: m = 0110110 Error ratio (error = unexpected character): 0.00 = 0 / 159
+Pin 9: Number of collisions increased to: 2428
+Pin 9: [ 32,  31]: [ = 0101101 Error ratio (error = unexpected character): 0.00 = 0 / 160
+Pin 9: Number of collisions increased to: 2437
+Pin 9: [ 40,  39]: h = 0110100 Error ratio (error = unexpected character): 0.00 = 0 / 161
+Pin 9: Number of collisions increased to: 2453
+Pin 9: [ 46,  45]: 9 = 0011100 Error ratio (error = unexpected character): 0.00 = 0 / 162
+Pin 9: Number of collisions increased to: 2468
+Pin 9: [ 54,  53]: P = 0101000 Error ratio (error = unexpected character): 0.00 = 0 / 163
+Pin 9: Number of collisions increased to: 2485
+Pin 2: Starting transmission of: =An+btD|
+Pin 3: Starting transmission of: =An+btD|
+Pin 8: Starting transmission of: =An+btD|
+Pin 9: [ 62,  62]: - = 0010110 Error ratio (error = unexpected character): 0.00 = 0 / 164
+Pin 9: Number of collisions increased to: 2508
+Pin 9: [ 70,  69]: N = 0100111 Error ratio (error = unexpected character): 0.00 = 0 / 165
+Pin 9: Number of collisions increased to: 2515
+Pin 9: Starting transmission of: ,Igl\
+Pin 9: [ 76,  75]: 8 = 0011100 Error ratio (error = unexpected character): 0.00 = 0 / 166
+Pin 9: Number of collisions increased to: 2531
+Pin 9: [ 82,  81]: ; = 0011101 Error ratio (error = unexpected character): 0.00 = 0 / 167
+Pin 9: Number of collisions increased to: 2545
+Pin 2: Starting transmission of: o%
+Pin 9: [ 88,  87]: C = 0100001 Error ratio (error = unexpected character): 0.00 = 0 / 168
+Pin 9: Number of collisions increased to: 2561
+Pin 3: Starting transmission of: o%
+Pin 8: Starting transmission of: o%
+Pin 2: Starting transmission of: 6RE
+Pin 3: Starting transmission of: 6RE
+Pin 8: Starting transmission of: 6RE
+Pin 9: Starting transmission of: uUr3j
+Pin 2: Starting transmission of: '2?p!&Z$
+Pin 9: [ 96,  95]: , = 0010110 Error ratio (error = unexpected character): 0.00 = 0 / 169
+Pin 9: Number of collisions increased to: 2577
+Pin 3: Starting transmission of: '2?p!&Z$
+Pin 8: Starting transmission of: '2?p!&Z$
+Pin 9: [  0, 103]: I = 0100100 Error ratio (error = unexpected character): 0.00 = 0 / 170
+Pin 9: Number of collisions increased to: 2593
+Pin 9: [  6,   5]: g = 0110011 Error ratio (error = unexpected character): 0.00 = 0 / 171
+Pin 9: Number of collisions increased to: 2607
+Pin 9: [ 14,  13]: l = 0110110 Error ratio (error = unexpected character): 0.00 = 0 / 172
+Pin 9: Number of collisions increased to: 2622
+Pin 9: [ 22,  21]: \ = 0101110 Error ratio (error = unexpected character): 0.00 = 0 / 173
+Pin 9: Number of collisions increased to: 2637
+Pin 2: Starting transmission of: 7iqx0adM
+Pin 3: Starting transmission of: 7iqx0adM
+Pin 8: Starting transmission of: 7iqx0adM
+Pin 9: Starting transmission of: Xsy(
+Pin 9: [ 30,  29]: u = 0111010 Error ratio (error = unexpected character): 0.00 = 0 / 174
+Pin 9: Number of collisions increased to: 2652
+Pin 9: [ 40,  39]: U = 0101010 Error ratio (error = unexpected character): 0.00 = 0 / 175
+Pin 9: Number of collisions increased to: 2667
+Pin 9: [ 48,  47]: r = 0111001 Error ratio (error = unexpected character): 0.00 = 0 / 176
+Pin 9: Number of collisions increased to: 2682
+Pin 9: [ 54,  53]: 3 = 0011001 Error ratio (error = unexpected character): 0.00 = 0 / 177
+Pin 9: Number of collisions increased to: 2697
+Pin 9: [ 64,  63]: j = 0110101 Error ratio (error = unexpected character): 0.00 = 0 / 178
+Pin 9: Number of collisions increased to: 2711
+Pin 2: Starting transmission of: HL`wkVS1
+Pin 3: Starting transmission of: HL`wkVS1
+Pin 8: Starting transmission of: HL`wkVS1
+Pin 9: Starting transmission of: /:.#ve]f
+Pin 9: [ 72,  71]: X = 0101100 Error ratio (error = unexpected character): 0.00 = 0 / 179
+Pin 9: Number of collisions increased to: 2728
+Pin 9: [ 78,  77]: s = 0111001 Error ratio (error = unexpected character): 0.00 = 0 / 180
+Pin 9: Number of collisions increased to: 2742
+Pin 9: [ 84,  83]: y = 0111100 Error ratio (error = unexpected character): 0.00 = 0 / 181
+Pin 9: Number of collisions increased to: 2756
+Pin 9: [ 92,  91]: ( = 0010100 Error ratio (error = unexpected character): 0.00 = 0 / 182
+Pin 9: Number of collisions increased to: 2772
+Pin 2: Starting transmission of: Km[h9P-N
+Pin 3: Starting transmission of: Km[h9P-N
+Pin 8: Starting transmission of: Km[h9P-N
+Pin 9: Starting transmission of: } ^Y54"~
+Pin 9: [ 98,  97]: / = 0010111 Error ratio (error = unexpected character): 0.00 = 0 / 183
+Pin 9: Number of collisions increased to: 2787
+Pin 2: Starting transmission of: 8;C
+Pin 9: [  2,   1]: : = 0011101 Error ratio (error = unexpected character): 0.00 = 0 / 184
+Pin 9: Number of collisions increased to: 2802
+Pin 3: Starting transmission of: 8;C
+Pin 8: Starting transmission of: 8;C
+Pin 9: [ 10,   9]: . = 0010111 Error ratio (error = unexpected character): 0.00 = 0 / 185
+Pin 9: Number of collisions increased to: 2817
+Pin 9: [ 16,  15]: # = 0010001 Error ratio (error = unexpected character): 0.00 = 0 / 186
+Pin 9: Number of collisions increased to: 2833
+Pin 9: [ 24,  23]: v = 0111011 Error ratio (error = unexpected character): 0.00 = 0 / 187
+Pin 9: Number of collisions increased to: 2847
+Pin 2: Starting transmission of: ,Igl\
+Pin 9: [ 32,  31]: e = 0110010 Error ratio (error = unexpected character): 0.00 = 0 / 188
+Pin 9: Number of collisions increased to: 2862
+Pin 3: Starting transmission of: ,Igl\
+Pin 8: Starting transmission of: ,Igl\
+Pin 9: [ 40,  39]: ] = 0101110 Error ratio (error = unexpected character): 0.00 = 0 / 189
+Pin 9: Number of collisions increased to: 2877
+Pin 9: [ 48,  47]: f = 0110011 Error ratio (error = unexpected character): 0.00 = 0 / 190
+Pin 9: Number of collisions increased to: 2890
+Pin 2: Starting transmission of: uUr3j
+Pin 3: Starting transmission of: uUr3j
+Pin 8: Starting transmission of: uUr3j
+Pin 9: Starting transmission of: FB{T
+Pin 2: Starting transmission of: Xsy(
+Pin 9: [ 54,  53]: } = 0111110 Error ratio (error = unexpected character): 0.00 = 0 / 191
+Pin 9: Number of collisions increased to: 2904
+Pin 3: Starting transmission of: Xsy(
+Pin 8: Starting transmission of: Xsy(
+Pin 9: [ 60,  59]:   = 0010000 Error ratio (error = unexpected character): 0.00 = 0 / 192
+Pin 9: Number of collisions increased to: 2922
+Pin 9: [ 68,  67]: ^ = 0101111 Error ratio (error = unexpected character): 0.00 = 0 / 193
+Pin 9: Number of collisions increased to: 2936
+Pin 9: [ 76,  75]: Y = 0101100 Error ratio (error = unexpected character): 0.00 = 0 / 194
+Pin 9: Number of collisions increased to: 2951
+Pin 9: [ 84,  83]: 5 = 0011010 Error ratio (error = unexpected character): 0.00 = 0 / 195
+Pin 9: Number of collisions increased to: 2966
+Pin 2: Starting transmission of: /:.#ve]f
+Pin 9: [ 92,  91]: 4 = 0011010 Error ratio (error = unexpected character): 0.00 = 0 / 196
+Pin 9: Number of collisions increased to: 2982
+Pin 3: Starting transmission of: /:.#ve]f
+Pin 8: Starting transmission of: /:.#ve]f
+Pin 9: [100,  99]: " = 0010001 Error ratio (error = unexpected character): 0.00 = 0 / 197
+Pin 9: Number of collisions increased to: 3000
+Pin 9: [  2,   1]: ~ = 0111111 Error ratio (error = unexpected character): 0.00 = 0 / 198
+Pin 9: Number of collisions increased to: 3011
+Pin 9: Starting transmission of: c
+Pin 2: Starting transmission of: } ^Y54"~
+Pin 9: [ 10,  10]: F = 0100011 Error ratio (error = unexpected character): 0.00 = 0 / 199
+Pin 9: Number of collisions increased to: 3034
+Pin 3: Starting transmission of: } ^Y54"~
+Pin 8: Starting transmission of: } ^Y54"~
+Pin 9: [ 18,  18]: B = 0100001 Error ratio (error = unexpected character): 0.00 = 0 / 200
+Pin 9: Number of collisions increased to: 3055
+Pin 9: [ 24,  23]: { = 0111101 Error ratio (error = unexpected character): 0.00 = 0 / 201
+Pin 9: Number of collisions increased to: 3059
+Pin 9: [ 34,  33]: T = 0101010 Error ratio (error = unexpected character): 0.00 = 0 / 202
+Pin 9: Number of collisions increased to: 3073
+Pin 9: Starting transmission of: O)z_<*W@
+Pin 9: [ 40,  39]: c = 0110001 Error ratio (error = unexpected character): 0.00 = 0 / 203
+Pin 9: Number of collisions increased to: 3089
+Pin 2: Starting transmission of: FB{T
+Pin 3: Starting transmission of: FB{T
+Pin 8: Starting transmission of: FB{T
+Pin 2: Starting transmission of: c
+Pin 3: Starting transmission of: c
+Pin 8: Starting transmission of: c
+Pin 9: Starting transmission of: QJ>G
+Pin 2: Starting transmission of: O)z_<*W@
+Pin 9: [ 46,  45]: O = 0100111 Error ratio (error = unexpected character): 0.00 = 0 / 204
+Pin 9: Number of collisions increased to: 3103
+Pin 3: Starting transmission of: O)z_<*W@
+Pin 8: Starting transmission of: O)z_<*W@
+Pin 9: [ 54,  53]: ) = 0010100 Error ratio (error = unexpected character): 0.00 = 0 / 205
+Pin 9: Number of collisions increased to: 3119
+Pin 9: [ 62,  61]: z = 0111101 Error ratio (error = unexpected character): 0.00 = 0 / 206
+Pin 9: Number of collisions increased to: 3133
+Pin 9: [ 68,  67]: _ = 0101111 Error ratio (error = unexpected character): 0.00 = 0 / 207
+Pin 9: Number of collisions increased to: 3146
+Pin 9: [ 74,  73]: < = 0011110 Error ratio (error = unexpected character): 0.00 = 0 / 208
+Pin 9: Number of collisions increased to: 3161
+Pin 9: [ 84,  83]: * = 0010101 Error ratio (error = unexpected character): 0.00 = 0 / 209
+Pin 9: Number of collisions increased to: 3177
+Pin 9: [ 92,  91]: W = 0101011 Error ratio (error = unexpected character): 0.00 = 0 / 210
+Pin 9: Number of collisions increased to: 3191
+Pin 9: [ 98,  97]: @ = 0100000 Error ratio (error = unexpected character): 0.00 = 0 / 211
+Pin 9: Number of collisions increased to: 3209
+Pin 2: Starting transmission of: QJ>G
+Pin 3: Starting transmission of: QJ>G
+Pin 8: Starting transmission of: QJ>G
+Pin 9: Starting transmission of: =An+btD|
+Pin 2: Starting transmission of: =An+btD|
+Pin 9: [  2,   2]: Q = 0101000 Error ratio (error = unexpected character): 0.00 = 0 / 212
+Pin 9: Number of collisions increased to: 3231
+Pin 3: Starting transmission of: =An+btD|
+Pin 9: [ 12,  12]: J = 0100101 Error ratio (error = unexpected character): 0.00 = 0 / 213
+Pin 9: Number of collisions increased to: 3248
+Pin 8: Starting transmission of: =An+btD|
+Pin 9: [ 18,  17]: > = 0011111 Error ratio (error = unexpected character): 0.00 = 0 / 214
+Pin 9: Number of collisions increased to: 3255
+Pin 9: [ 24,  23]: G = 0100011 Error ratio (error = unexpected character): 0.00 = 0 / 215
+Pin 9: Number of collisions increased to: 3270
+Pin 2: Starting transmission of: o%
+Pin 3: Starting transmission of: o%
+Pin 8: Starting transmission of: o%
+Pin 9: Starting transmission of: o%
+Pin 2: Starting transmission of: 6RE
+Pin 3: Starting transmission of: 6RE
+Pin 9: [ 30,  29]: = = 0011110 Error ratio (error = unexpected character): 0.00 = 0 / 216
+Pin 9: Number of collisions increased to: 3285
+Pin 8: Starting transmission of: 6RE
+Pin 9: [ 36,  35]: A = 0100000 Error ratio (error = unexpected character): 0.00 = 0 / 217
+Pin 9: Number of collisions increased to: 3302
+Pin 9: [ 44,  43]: n = 0110111 Error ratio (error = unexpected character): 0.00 = 0 / 218
+Pin 9: Number of collisions increased to: 3316
+Pin 2: Starting transmission of: '2?p!&Z$
+Pin 9: [ 52,  51]: + = 0010101 Error ratio (error = unexpected character): 0.00 = 0 / 219
+Pin 9: Number of collisions increased to: 3333
+Pin 3: Starting transmission of: '2?p!&Z$
+Pin 9: [ 60,  59]: b = 0110001 Error ratio (error = unexpected character): 0.00 = 0 / 220
+Pin 9: Number of collisions increased to: 3350
+Pin 8: Starting transmission of: '2?p!&Z$
+Pin 9: [ 68,  67]: t = 0111010 Error ratio (error = unexpected character): 0.00 = 0 / 221
+Pin 9: Number of collisions increased to: 3362
+Pin 9: [ 76,  75]: D = 0100010 Error ratio (error = unexpected character): 0.00 = 0 / 222
+Pin 9: Number of collisions increased to: 3379
+Pin 9: [ 82,  81]: | = 0111110 Error ratio (error = unexpected character): 0.00 = 0 / 223
+Pin 9: Number of collisions increased to: 3392
+Pin 9: Starting transmission of: 6RE
+Pin 9: [ 88,  87]: o = 0110111 Error ratio (error = unexpected character): 0.00 = 0 / 224
+Pin 9: Number of collisions increased to: 3406
+Pin 2: Starting transmission of: 7iqx0adM
+Pin 9: [ 96,  95]: % = 0010010 Error ratio (error = unexpected character): 0.00 = 0 / 225
+Pin 9: Number of collisions increased to: 3421
+Pin 3: Starting transmission of: 7iqx0adM
+Pin 8: Starting transmission of: 7iqx0adM
+Pin 9: Starting transmission of: '2?p!&Z$
+Pin 9: [  0, 103]: 6 = 0011011 Error ratio (error = unexpected character): 0.00 = 0 / 226
+Pin 9: Number of collisions increased to: 3437
+Pin 9: [ 10,   9]: R = 0101001 Error ratio (error = unexpected character): 0.00 = 0 / 227
+Pin 9: Number of collisions increased to: 3453
+Pin 9: [ 18,  17]: E = 0100010 Error ratio (error = unexpected character): 0.00 = 0 / 228
+Pin 9: Number of collisions increased to: 3468
+Pin 2: Starting transmission of: HL`wkVS1
+Pin 3: Starting transmission of: HL`wkVS1
+Pin 8: Starting transmission of: HL`wkVS1
+Pin 9: Starting transmission of: 7iqx0adM
+Pin 2: Starting transmission of: Km[h9P-N
+Pin 9: [ 24,  23]: ' = 0010011 Error ratio (error = unexpected character): 0.00 = 0 / 229
+Pin 9: Number of collisions increased to: 3484
+Pin 3: Starting transmission of: Km[h9P-N
+Pin 9: [ 32,  31]: 2 = 0011001 Error ratio (error = unexpected character): 0.00 = 0 / 230
+Pin 9: Number of collisions increased to: 3500
+Pin 8: Starting transmission of: Km[h9P-N
+Pin 9: [ 36,  35]: ? = 0011111 Error ratio (error = unexpected character): 0.00 = 0 / 231
+Pin 9: Number of collisions increased to: 3513
+Pin 9: [ 42,  41]: p = 0111000 Error ratio (error = unexpected character): 0.00 = 0 / 232
+Pin 9: Number of collisions increased to: 3529
+Pin 9: [ 48,  47]: ! = 0010000 Error ratio (error = unexpected character): 0.00 = 0 / 233
+Pin 9: Number of collisions increased to: 3546
+Pin 9: [ 56,  55]: & = 0010011 Error ratio (error = unexpected character): 0.00 = 0 / 234
+Pin 9: Number of collisions increased to: 3562
+Pin 9: [ 66,  65]: Z = 0101101 Error ratio (error = unexpected character): 0.00 = 0 / 235
+Pin 9: Number of collisions increased to: 3577
+Pin 9: [ 74,  73]: $ = 0010010 Error ratio (error = unexpected character): 0.00 = 0 / 236
+Pin 9: Number of collisions increased to: 3593
+Pin 2: Starting transmission of: 8;C
+Pin 3: Starting transmission of: 8;C
+Pin 8: Starting transmission of: 8;C
+Pin 2: Starting transmission of: ,Igl\
+Pin 3: Starting transmission of: ,Igl\
+Pin 8: Starting transmission of: ,Igl\
+Pin 9: Starting transmission of: HL`wkVS1
+Pin 9: [ 80,  79]: 7 = 0011011 Error ratio (error = unexpected character): 0.00 = 0 / 237
+Pin 9: Number of collisions increased to: 3608
+Pin 9: [ 88,  87]: i = 0110100 Error ratio (error = unexpected character): 0.00 = 0 / 238
+Pin 9: Number of collisions increased to: 3623
+Pin 2: Starting transmission of: uUr3j
+Pin 9: [ 94,  93]: q = 0111000 Error ratio (error = unexpected character): 0.00 = 0 / 239
+Pin 9: Number of collisions increased to: 3638
+Pin 3: Starting transmission of: uUr3j
+Pin 9: [100,  99]: x = 0111100 Error ratio (error = unexpected character): 0.00 = 0 / 240
+Pin 9: Number of collisions increased to: 3653
+Pin 8: Starting transmission of: uUr3j
+Pin 9: [  2,   1]: 0 = 0011000 Error ratio (error = unexpected character): 0.00 = 0 / 241
+Pin 9: Number of collisions increased to: 3670
+Pin 9: [  8,   7]: a = 0110000 Error ratio (error = unexpected character): 0.00 = 0 / 242
+Pin 9: Number of collisions increased to: 3686
+Pin 9: [ 16,  15]: d = 0110010 Error ratio (error = unexpected character): 0.00 = 0 / 243
+Pin 9: Number of collisions increased to: 3702
+Pin 9: [ 24,  23]: M = 0100110 Error ratio (error = unexpected character): 0.00 = 0 / 244
+Pin 9: Number of collisions increased to: 3716
+Pin 2: Starting transmission of: Xsy(
+Pin 3: Starting transmission of: Xsy(
+Pin 8: Starting transmission of: Xsy(
+Pin 2: Starting transmission of: /:.#ve]f
+Pin 3: Starting transmission of: /:.#ve]f
+Pin 8: Starting transmission of: /:.#ve]f
+Pin 9: Starting transmission of: Km[h9P-N
+Pin 9: [ 32,  31]: H = 0100100 Error ratio (error = unexpected character): 0.00 = 0 / 245
+Pin 9: Number of collisions increased to: 3733
+Pin 9: [ 40,  39]: L = 0100110 Error ratio (error = unexpected character): 0.00 = 0 / 246
+Pin 9: Number of collisions increased to: 3749
+Pin 9: [ 46,  45]: ` = 0110000 Error ratio (error = unexpected character): 0.00 = 0 / 247
+Pin 9: Number of collisions increased to: 3766
+Pin 9: [ 52,  51]: w = 0111011 Error ratio (error = unexpected character): 0.00 = 0 / 248
+Pin 9: Number of collisions increased to: 3779
+Pin 9: [ 60,  59]: k = 0110101 Error ratio (error = unexpected character): 0.00 = 0 / 249
+Pin 9: Number of collisions increased to: 3793
+Pin 2: Starting transmission of: } ^Y54"~
+Pin 9: [ 70,  69]: V = 0101011 Error ratio (error = unexpected character): 0.00 = 0 / 250
+Pin 9: Number of collisions increased to: 3808
+Pin 3: Starting transmission of: } ^Y54"~
+Pin 9: [ 78,  77]: S = 0101001 Error ratio (error = unexpected character): 0.00 = 0 / 251
+Pin 9: Number of collisions increased to: 3823
+Pin 8: Starting transmission of: } ^Y54"~
+Pin 9: [ 84,  83]: 1 = 0011000 Error ratio (error = unexpected character): 0.00 = 0 / 252
+Pin 9: Number of collisions increased to: 3839
+Pin 2: Starting transmission of: FB{T
+Pin 3: Starting transmission of: FB{T
+Pin 8: Starting transmission of: FB{T
+Pin 9: Starting transmission of: 8;C
+Pin 9: [ 92,  91]: K = 0100101 Error ratio (error = unexpected character): 0.00 = 0 / 253
+Pin 9: Number of collisions increased to: 3854
+Pin 2: Starting transmission of: c
+Pin 9: [100, 100]: m = 0110110 Error ratio (error = unexpected character): 0.00 = 0 / 254
+Pin 9: Number of collisions increased to: 3875
+Pin 3: Starting transmission of: c
+Pin 9: [  4,   4]: [ = 0101101 Error ratio (error = unexpected character): 0.00 = 0 / 255
+Pin 9: Number of collisions increased to: 3889
+Pin 8: Starting transmission of: c
+Pin 9: [ 12,  12]: h = 0110100 Error ratio (error = unexpected character): 0.00 = 0 / 256
+Pin 9: Number of collisions increased to: 3906
+Pin 2: Starting transmission of: O)z_<*W@
+Pin 9: [ 18,  17]: 9 = 0011100 Error ratio (error = unexpected character): 0.00 = 0 / 257
+Pin 9: Number of collisions increased to: 3913
+Pin 3: Starting transmission of: O)z_<*W@
+Pin 9: [ 26,  25]: P = 0101000 Error ratio (error = unexpected character): 0.00 = 0 / 258
+Pin 9: Number of collisions increased to: 3930
+Pin 8: Starting transmission of: O)z_<*W@
+Pin 9: [ 34,  33]: - = 0010110 Error ratio (error = unexpected character): 0.00 = 0 / 259
+Pin 9: Number of collisions increased to: 3946
+Pin 9: [ 42,  41]: N = 0100111 Error ratio (error = unexpected character): 0.00 = 0 / 260
+Pin 9: Number of collisions increased to: 3960
+Pin 9: Starting transmission of: ,Igl\
+Pin 9: [ 48,  47]: 8 = 0011100 Error ratio (error = unexpected character): 0.00 = 0 / 261
+Pin 9: Number of collisions increased to: 3977
+Pin 2: Starting transmission of: QJ>G
+Pin 3: Starting transmission of: QJ>G
+Pin 9: [ 54,  54]: ; = 0011101 Error ratio (error = unexpected character): 0.00 = 0 / 262
+Pin 9: Number of collisions increased to: 3995
+Pin 8: Starting transmission of: QJ>G
+Pin 9: [ 60,  59]: C = 0100001 Error ratio (error = unexpected character): 0.00 = 0 / 263
+Pin 9: Number of collisions increased to: 4006
+Pin 2: Starting transmission of: =An+btD|
+Pin 3: Starting transmission of: =An+btD|
+Pin 8: Starting transmission of: =An+btD|
+Pin 9: Starting transmission of: uUr3j
+Pin 9: [ 68,  67]: , = 0010110 Error ratio (error = unexpected character): 0.00 = 0 / 264
+Pin 9: Number of collisions increased to: 4023
+Pin 9: [ 76,  75]: I = 0100100 Error ratio (error = unexpected character): 0.00 = 0 / 265
+Pin 9: Number of collisions increased to: 4039
+Pin 9: [ 82,  81]: g = 0110011 Error ratio (error = unexpected character): 0.00 = 0 / 266
+Pin 9: Number of collisions increased to: 4053
+Pin 9: [ 90,  89]: l = 0110110 Error ratio (error = unexpected character): 0.00 = 0 / 267
+Pin 9: Number of collisions increased to: 4068
+Pin 9: [ 98,  97]: \ = 0101110 Error ratio (error = unexpected character): 0.00 = 0 / 268
+Pin 9: Number of collisions increased to: 4082
+Pin 2: Starting transmission of: o%
+Pin 3: Starting transmission of: o%
+Pin 8: Starting transmission of: o%
+Pin 2: Starting transmission of: 6RE
+Pin 3: Starting transmission of: 6RE
+Pin 8: Starting transmission of: 6RE
+Pin 9: Starting transmission of: Xsy(
+Pin 9: [  2,   1]: u = 0111010 Error ratio (error = unexpected character): 0.00 = 0 / 269
+Pin 9: Number of collisions increased to: 4097
+Pin 2: Starting transmission of: '2?p!&Z$
+Pin 9: [ 12,  11]: U = 0101010 Error ratio (error = unexpected character): 0.00 = 0 / 270
+Pin 9: Number of collisions increased to: 4113
+Pin 3: Starting transmission of: '2?p!&Z$
+Pin 9: [ 20,  19]: r = 0111001 Error ratio (error = unexpected character): 0.00 = 0 / 271
+Pin 9: Number of collisions increased to: 4127
+Pin 8: Starting transmission of: '2?p!&Z$
+Pin 9: [ 26,  25]: 3 = 0011001 Error ratio (error = unexpected character): 0.00 = 0 / 272
+Pin 9: Number of collisions increased to: 4142
+Pin 9: [ 36,  35]: j = 0110101 Error ratio (error = unexpected character): 0.00 = 0 / 273
+Pin 9: Number of collisions increased to: 4156
+Pin 9: Starting transmission of: /:.#ve]f
+Pin 2: Starting transmission of: 7iqx0adM
+Pin 3: Starting transmission of: 7iqx0adM
+Pin 9: [ 44,  44]: X = 0101100 Error ratio (error = unexpected character): 0.00 = 0 / 274
+Pin 9: Number of collisions increased to: 4178
+Pin 8: Starting transmission of: 7iqx0adM
+Pin 9: [ 50,  50]: s = 0111001 Error ratio (error = unexpected character): 0.00 = 0 / 275
+Pin 9: Number of collisions increased to: 4191
+Pin 9: [ 56,  55]: y = 0111100 Error ratio (error = unexpected character): 0.00 = 0 / 276
+Pin 9: Number of collisions increased to: 4201
+Pin 9: [ 64,  63]: ( = 0010100 Error ratio (error = unexpected character): 0.00 = 0 / 277
+Pin 9: Number of collisions increased to: 4217
+Pin 2: Starting transmission of: HL`wkVS1
+Pin 3: Starting transmission of: HL`wkVS1
+Pin 8: Starting transmission of: HL`wkVS1
+Pin 9: Starting transmission of: } ^Y54"~
+Pin 9: [ 70,  69]: / = 0010111 Error ratio (error = unexpected character): 0.00 = 0 / 278
+Pin 9: Number of collisions increased to: 4232
+Pin 9: [ 78,  77]: : = 0011101 Error ratio (error = unexpected character): 0.00 = 0 / 279
+Pin 9: Number of collisions increased to: 4247
+Pin 9: [ 86,  85]: . = 0010111 Error ratio (error = unexpected character): 0.00 = 0 / 280
+Pin 9: Number of collisions increased to: 4262
+Pin 9: [ 92,  91]: # = 0010001 Error ratio (error = unexpected character): 0.00 = 0 / 281
+Pin 9: Number of collisions increased to: 4278
+Pin 2: Starting transmission of: Km[h9P-N
+Pin 9: [100, 100]: v = 0111011 Error ratio (error = unexpected character): 0.00 = 0 / 282
+Pin 9: Number of collisions increased to: 4299
+Pin 3: Starting transmission of: Km[h9P-N
+Pin 9: [  4,   3]: e = 0110010 Error ratio (error = unexpected character): 0.00 = 0 / 283
+Pin 9: Number of collisions increased to: 4307
+Pin 8: Starting transmission of: Km[h9P-N
+Pin 9: [ 12,  11]: ] = 0101110 Error ratio (error = unexpected character): 0.00 = 0 / 284
+Pin 9: Number of collisions increased to: 4321
+Pin 9: [ 20,  19]: f = 0110011 Error ratio (error = unexpected character): 0.00 = 0 / 285
+Pin 9: Number of collisions increased to: 4335
+Pin 2: Starting transmission of: 8;C
+Pin 3: Starting transmission of: 8;C
+Pin 8: Starting transmission of: 8;C
+Pin 9: Starting transmission of: FB{T
+Pin 2: Starting transmission of: ,Igl\
+Pin 9: [ 26,  25]: } = 0111110 Error ratio (error = unexpected character): 0.00 = 0 / 286
+Pin 9: Number of collisions increased to: 4350
+Pin 3: Starting transmission of: ,Igl\
+Pin 9: [ 32,  31]:   = 0010000 Error ratio (error = unexpected character): 0.00 = 0 / 287
+Pin 9: Number of collisions increased to: 4366
+Pin 8: Starting transmission of: ,Igl\
+Pin 9: [ 40,  39]: ^ = 0101111 Error ratio (error = unexpected character): 0.00 = 0 / 288
+Pin 9: Number of collisions increased to: 4380
+Pin 9: [ 48,  47]: Y = 0101100 Error ratio (error = unexpected character): 0.00 = 0 / 289
+Pin 9: Number of collisions increased to: 4395
+Pin 9: [ 56,  55]: 5 = 0011010 Error ratio (error = unexpected character): 0.00 = 0 / 290
+Pin 9: Number of collisions increased to: 4410
+Pin 9: [ 64,  63]: 4 = 0011010 Error ratio (error = unexpected character): 0.00 = 0 / 291
+Pin 9: Number of collisions increased to: 4426
+Pin 2: Starting transmission of: uUr3j
+Pin 9: [ 72,  72]: " = 0010001 Error ratio (error = unexpected character): 0.00 = 0 / 292
+Pin 9: Number of collisions increased to: 4448
+Pin 3: Starting transmission of: uUr3j
+Pin 9: [ 78,  77]: ~ = 0111111 Error ratio (error = unexpected character): 0.00 = 0 / 293
+Pin 9: Number of collisions increased to: 4456
+Pin 8: Starting transmission of: uUr3j
+Pin 9: Starting transmission of: c
+Pin 2: Starting transmission of: Xsy(
+Pin 3: Starting transmission of: Xsy(
+Pin 8: Starting transmission of: Xsy(
+Pin 9: [ 86,  86]: F = 0100011 Error ratio (error = unexpected character): 0.00 = 0 / 294
+Pin 9: Number of collisions increased to: 4480
+Pin 9: [ 94,  93]: B = 0100001 Error ratio (error = unexpected character): 0.00 = 0 / 295
+Pin 9: Number of collisions increased to: 4489
+Pin 9: [100,  99]: { = 0111101 Error ratio (error = unexpected character): 0.00 = 0 / 296
+Pin 9: Number of collisions increased to: 4502
+Pin 9: [  6,   5]: T = 0101010 Error ratio (error = unexpected character): 0.00 = 0 / 297
+Pin 9: Number of collisions increased to: 4518
+Pin 2: Starting transmission of: /:.#ve]f
+Pin 3: Starting transmission of: /:.#ve]f
+Pin 9: Starting transmission of: O)z_<*W@
+Pin 8: Starting transmission of: /:.#ve]f
+Pin 9: [ 12,  11]: c = 0110001 Error ratio (error = unexpected character): 0.00 = 0 / 298
+Pin 9: Number of collisions increased to: 4533
+Pin 2: Starting transmission of: } ^Y54"~
+Pin 3: Starting transmission of: } ^Y54"~
+Pin 8: Starting transmission of: } ^Y54"~
+Pin 9: Starting transmission of: QJ>G
+Pin 9: [ 18,  17]: O = 0100111 Error ratio (error = unexpected character): 0.00 = 0 / 299
+Pin 9: Number of collisions increased to: 4548
+Pin 9: [ 26,  25]: ) = 0010100 Error ratio (error = unexpected character): 0.00 = 0 / 300
+Pin 9: Number of collisions increased to: 4564
+Pin 9: [ 34,  33]: z = 0111101 Error ratio (error = unexpected character): 0.00 = 0 / 301
+Pin 9: Number of collisions increased to: 4578
+Pin 9: [ 40,  39]: _ = 0101111 Error ratio (error = unexpected character): 0.00 = 0 / 302
+Pin 9: Number of collisions increased to: 4591
+Pin 9: [ 46,  45]: < = 0011110 Error ratio (error = unexpected character): 0.00 = 0 / 303
+Pin 9: Number of collisions increased to: 4606
+Pin 2: Starting transmission of: FB{T
+Pin 9: [ 56,  56]: * = 0010101 Error ratio (error = unexpected character): 0.00 = 0 / 304
+Pin 9: Number of collisions increased to: 4627
+Pin 3: Starting transmission of: FB{T
+Pin 9: [ 64,  63]: W = 0101011 Error ratio (error = unexpected character): 0.00 = 0 / 305
+Pin 9: Number of collisions increased to: 4636
+Pin 8: Starting transmission of: FB{T
+Pin 9: [ 70,  69]: @ = 0100000 Error ratio (error = unexpected character): 0.00 = 0 / 306
+Pin 9: Number of collisions increased to: 4653
+Pin 2: Starting transmission of: c
+Pin 3: Starting transmission of: c
+Pin 8: Starting transmission of: c
+Pin 9: Starting transmission of: =An+btD|
+Pin 2: Starting transmission of: O)z_<*W@
+Pin 3: Starting transmission of: O)z_<*W@
+Pin 8: Starting transmission of: O)z_<*W@
+Pin 9: [ 78,  78]: Q = 0101000 Error ratio (error = unexpected character): 0.00 = 0 / 307
+Pin 9: Number of collisions increased to: 4678
+Pin 9: [ 88,  87]: J = 0100101 Error ratio (error = unexpected character): 0.00 = 0 / 308
+Pin 9: Number of collisions increased to: 4686
+Pin 9: [ 94,  93]: > = 0011111 Error ratio (error = unexpected character): 0.00 = 0 / 309
+Pin 9: Number of collisions increased to: 4700
+Pin 9: [100,  99]: G = 0100011 Error ratio (error = unexpected character): 0.00 = 0 / 310
+Pin 9: Number of collisions increased to: 4714
+Pin 2: Starting transmission of: QJ>G
+Pin 3: Starting transmission of: QJ>G
+Pin 8: Starting transmission of: QJ>G
+Pin 9: Starting transmission of: o%
+Pin 2: Starting transmission of: =An+btD|
+Pin 3: Starting transmission of: =An+btD|
+Pin 9: [  2,   2]: = = 0011110 Error ratio (error = unexpected character): 0.00 = 0 / 311
+Pin 9: Number of collisions increased to: 4735
+Pin 8: Starting transmission of: =An+btD|
+Pin 9: [  8,   7]: A = 0100000 Error ratio (error = unexpected character): 0.00 = 0 / 312
+Pin 9: Number of collisions increased to: 4748
+Pin 9: [ 16,  15]: n = 0110111 Error ratio (error = unexpected character): 0.00 = 0 / 313
+Pin 9: Number of collisions increased to: 4760
+Pin 9: [ 24,  23]: + = 0010101 Error ratio (error = unexpected character): 0.00 = 0 / 314
+Pin 9: Number of collisions increased to: 4775
+Pin 9: [ 32,  31]: b = 0110001 Error ratio (error = unexpected character): 0.00 = 0 / 315
+Pin 9: Number of collisions increased to: 4791
+Pin 9: [ 40,  39]: t = 0111010 Error ratio (error = unexpected character): 0.00 = 0 / 316
+Pin 9: Number of collisions increased to: 4806
+Pin 9: [ 48,  47]: D = 0100010 Error ratio (error = unexpected character): 0.00 = 0 / 317
+Pin 9: Number of collisions increased to: 4823
+Pin 9: [ 54,  53]: | = 0111110 Error ratio (error = unexpected character): 0.00 = 0 / 318
+Pin 9: Number of collisions increased to: 4836
+Pin 2: Starting transmission of: o%
+Pin 3: Starting transmission of: o%
+Pin 8: Starting transmission of: o%
+Pin 9: Starting transmission of: 6RE
+Pin 2: Starting transmission of: 6RE
+Pin 9: [ 60,  60]: o = 0110111 Error ratio (error = unexpected character): 0.00 = 0 / 319
+Pin 9: Number of collisions increased to: 4858
+Pin 3: Starting transmission of: 6RE
+Pin 9: [ 68,  67]: % = 0010010 Error ratio (error = unexpected character): 0.00 = 0 / 320
+Pin 9: Number of collisions increased to: 4865
+Pin 8: Starting transmission of: 6RE
+Pin 2: Starting transmission of: '2?p!&Z$
+Pin 3: Starting transmission of: '2?p!&Z$
+Pin 9: Starting transmission of: '2?p!&Z$
+Pin 8: Starting transmission of: '2?p!&Z$
+Pin 9: [ 76,  75]: 6 = 0011011 Error ratio (error = unexpected character): 0.00 = 0 / 321
+Pin 9: Number of collisions increased to: 4881
+Pin 9: [ 86,  85]: R = 0101001 Error ratio (error = unexpected character): 0.00 = 0 / 322
+Pin 9: Number of collisions increased to: 4897
+Pin 9: [ 94,  93]: E = 0100010 Error ratio (error = unexpected character): 0.00 = 0 / 323
+Pin 9: Number of collisions increased to: 4912
+Pin 2: Starting transmission of: 7iqx0adM
+Pin 3: Starting transmission of: 7iqx0adM
+Pin 8: Starting transmission of: 7iqx0adM
+Pin 9: Starting transmission of: 7iqx0adM
+Pin 9: [100,  99]: ' = 0010011 Error ratio (error = unexpected character): 0.00 = 0 / 324
+Pin 9: Number of collisions increased to: 4927
+Pin 9: [  4,   3]: 2 = 0011001 Error ratio (error = unexpected character): 0.00 = 0 / 325
+Pin 9: Number of collisions increased to: 4943
+Pin 9: [  8,   7]: ? = 0011111 Error ratio (error = unexpected character): 0.00 = 0 / 326
+Pin 9: Number of collisions increased to: 4956
+Pin 9: [ 14,  13]: p = 0111000 Error ratio (error = unexpected character): 0.00 = 0 / 327
+Pin 9: Number of collisions increased to: 4972
+Pin 2: Starting transmission of: HL`wkVS1
+Pin 3: Starting transmission of: HL`wkVS1
+Pin 9: [ 20,  20]: ! = 0010000 Error ratio (error = unexpected character): 0.00 = 0 / 328
+Pin 9: Number of collisions increased to: 4996
+Pin 8: Starting transmission of: HL`wkVS1
+Pin 9: [ 28,  27]: & = 0010011 Error ratio (error = unexpected character): 0.00 = 0 / 329
+Pin 9: Number of collisions increased to: 5008
+Pin 9: [ 38,  37]: Z = 0101101 Error ratio (error = unexpected character): 0.00 = 0 / 330
+Pin 9: Number of collisions increased to: 5020
+Pin 9: [ 46,  45]: $ = 0010010 Error ratio (error = unexpected character): 0.00 = 0 / 331
+Pin 9: Number of collisions increased to: 5037
+Pin 2: Starting transmission of: Km[h9P-N
+Pin 3: Starting transmission of: Km[h9P-N
+Pin 8: Starting transmission of: Km[h9P-N
+Pin 9: Starting transmission of: HL`wkVS1
+Pin 9: [ 52,  51]: 7 = 0011011 Error ratio (error = unexpected character): 0.00 = 0 / 332
+Pin 9: Number of collisions increased to: 5051
+Pin 9: [ 60,  59]: i = 0110100 Error ratio (error = unexpected character): 0.00 = 0 / 333
+Pin 9: Number of collisions increased to: 5066
+Pin 9: [ 66,  65]: q = 0111000 Error ratio (error = unexpected character): 0.00 = 0 / 334
+Pin 9: Number of collisions increased to: 5081
+Pin 9: [ 72,  71]: x = 0111100 Error ratio (error = unexpected character): 0.00 = 0 / 335
+Pin 9: Number of collisions increased to: 5096
+Pin 2: Starting transmission of: 8;C
+Pin 9: [ 78,  78]: 0 = 0011000 Error ratio (error = unexpected character): 0.00 = 0 / 336
+Pin 9: Number of collisions increased to: 5122
+Pin 3: Starting transmission of: 8;C
+Pin 9: [ 84,  83]: a = 0110000 Error ratio (error = unexpected character): 0.00 = 0 / 337
+Pin 9: Number of collisions increased to: 5130
+Pin 8: Starting transmission of: 8;C
+Pin 9: [ 92,  91]: d = 0110010 Error ratio (error = unexpected character): 0.00 = 0 / 338
+Pin 9: Number of collisions increased to: 5145
+Pin 9: [100,  99]: M = 0100110 Error ratio (error = unexpected character): 0.00 = 0 / 339
+Pin 9: Number of collisions increased to: 5160
+Pin 2: Starting transmission of: ,Igl\
+Pin 3: Starting transmission of: ,Igl\
+Pin 8: Starting transmission of: ,Igl\
+Pin 2: Starting transmission of: uUr3j
+Pin 3: Starting transmission of: uUr3j
+Pin 8: Starting transmission of: uUr3j
+Pin 9: Starting transmission of: Km[h9P-N
+Pin 9: [  4,   3]: H = 0100100 Error ratio (error = unexpected character): 0.00 = 0 / 340
+Pin 9: Number of collisions increased to: 5178
+Pin 9: [ 12,  11]: L = 0100110 Error ratio (error = unexpected character): 0.00 = 0 / 341
+Pin 9: Number of collisions increased to: 5194
+Pin 9: [ 18,  17]: ` = 0110000 Error ratio (error = unexpected character): 0.00 = 0 / 342
+Pin 9: Number of collisions increased to: 5211
+Pin 2: Starting transmission of: Xsy(
+Pin 9: [ 24,  24]: w = 0111011 Error ratio (error = unexpected character): 0.00 = 0 / 343
+Pin 9: Number of collisions increased to: 5229
+Pin 3: Starting transmission of: Xsy(
+Pin 9: [ 32,  31]: k = 0110101 Error ratio (error = unexpected character): 0.00 = 0 / 344
+Pin 9: Number of collisions increased to: 5238
+Pin 8: Starting transmission of: Xsy(
+Pin 9: [ 42,  41]: V = 0101011 Error ratio (error = unexpected character): 0.00 = 0 / 345
+Pin 9: Number of collisions increased to: 5253
+Pin 9: [ 50,  49]: S = 0101001 Error ratio (error = unexpected character): 0.00 = 0 / 346
+Pin 9: Number of collisions increased to: 5268
+Pin 9: [ 56,  55]: 1 = 0011000 Error ratio (error = unexpected character): 0.00 = 0 / 347
+Pin 9: Number of collisions increased to: 5283
+Pin 2: Starting transmission of: /:.#ve]f
+Pin 3: Starting transmission of: /:.#ve]f
+Pin 8: Starting transmission of: /:.#ve]f
+Pin 9: Starting transmission of: 8;C
+Pin 2: Starting transmission of: } ^Y54"~
+Pin 9: [ 64,  63]: K = 0100101 Error ratio (error = unexpected character): 0.00 = 0 / 348
+Pin 9: Number of collisions increased to: 5299
+Pin 3: Starting transmission of: } ^Y54"~
+Pin 8: Starting transmission of: } ^Y54"~
+Pin 9: [ 72,  72]: m = 0110110 Error ratio (error = unexpected character): 0.00 = 0 / 349
+Pin 9: Number of collisions increased to: 5321
+Pin 9: [ 80,  79]: [ = 0101101 Error ratio (error = unexpected character): 0.00 = 0 / 350
+Pin 9: Number of collisions increased to: 5327
+Pin 9: [ 88,  87]: h = 0110100 Error ratio (error = unexpected character): 0.00 = 0 / 351
+Pin 9: Number of collisions increased to: 5343
+Pin 9: [ 94,  93]: 9 = 0011100 Error ratio (error = unexpected character): 0.00 = 0 / 352
+Pin 9: Number of collisions increased to: 5358
+Pin 9: [102, 101]: P = 0101000 Error ratio (error = unexpected character): 0.00 = 0 / 353
+Pin 9: Number of collisions increased to: 5375
+Pin 9: [  6,   5]: - = 0010110 Error ratio (error = unexpected character): 0.00 = 0 / 354
+Pin 9: Number of collisions increased to: 5390
+Pin 9: [ 14,  13]: N = 0100111 Error ratio (error = unexpected character): 0.00 = 0 / 355
+Pin 9: Number of collisions increased to: 5404
+Pin 2: Starting transmission of: FB{T
+Pin 3: Starting transmission of: FB{T
+Pin 8: Starting transmission of: FB{T
+Pin 9: Starting transmission of: ,Igl\
+Pin 9: [ 20,  19]: 8 = 0011100 Error ratio (error = unexpected character): 0.00 = 0 / 356
+Pin 9: Number of collisions increased to: 5421
+Pin 9: [ 26,  25]: ; = 0011101 Error ratio (error = unexpected character): 0.00 = 0 / 357
+Pin 9: Number of collisions increased to: 5435
+Pin 2: Starting transmission of: c
+Pin 3: Starting transmission of: c
+Pin 9: [ 32,  31]: C = 0100001 Error ratio (error = unexpected character): 0.00 = 0 / 358
+Pin 9: Number of collisions increased to: 5450
+Pin 8: Starting transmission of: c
+Pin 2: Starting transmission of: O)z_<*W@
+Pin 3: Starting transmission of: O)z_<*W@
+Pin 8: Starting transmission of: O)z_<*W@
+Pin 9: Starting transmission of: uUr3j
+Pin 9: [ 40,  39]: , = 0010110 Error ratio (error = unexpected character): 0.00 = 0 / 359
+Pin 9: Number of collisions increased to: 5467
+Pin 9: [ 48,  47]: I = 0100100 Error ratio (error = unexpected character): 0.00 = 0 / 360
+Pin 9: Number of collisions increased to: 5483
+Pin 9: [ 54,  53]: g = 0110011 Error ratio (error = unexpected character): 0.00 = 0 / 361
+Pin 9: Number of collisions increased to: 5497
+Pin 2: Starting transmission of: QJ>G
+Pin 9: [ 62,  62]: l = 0110110 Error ratio (error = unexpected character): 0.00 = 0 / 362
+Pin 9: Number of collisions increased to: 5520
+Pin 3: Starting transmission of: QJ>G
+Pin 9: [ 70,  69]: \ = 0101110 Error ratio (error = unexpected character): 0.00 = 0 / 363
+Pin 9: Number of collisions increased to: 5526
+Pin 8: Starting transmission of: QJ>G
+Pin 2: Starting transmission of: =An+btD|
+Pin 3: Starting transmission of: =An+btD|
+Pin 8: Starting transmission of: =An+btD|
+Pin 9: Starting transmission of: Xsy(
+Pin 9: [ 78,  77]: u = 0111010 Error ratio (error = unexpected character): 0.00 = 0 / 364
+Pin 9: Number of collisions increased to: 5541
+Pin 9: [ 88,  87]: U = 0101010 Error ratio (error = unexpected character): 0.00 = 0 / 365
+Pin 9: Number of collisions increased to: 5556
+Pin 9: [ 96,  95]: r = 0111001 Error ratio (error = unexpected character): 0.00 = 0 / 366
+Pin 9: Number of collisions increased to: 5571
+Pin 9: [102, 101]: 3 = 0011001 Error ratio (error = unexpected character): 0.00 = 0 / 367
+Pin 9: Number of collisions increased to: 5586
+Pin 9: [  8,   7]: j = 0110101 Error ratio (error = unexpected character): 0.00 = 0 / 368
+Pin 9: Number of collisions increased to: 5600
+Pin 2: Starting transmission of: o%
+Pin 3: Starting transmission of: o%
+Pin 8: Starting transmission of: o%
+Pin 2: Starting transmission of: 6RE
+Pin 9: Starting transmission of: /:.#ve]f
+Pin 3: Starting transmission of: 6RE
+Pin 8: Starting transmission of: 6RE
+Pin 9: [ 16,  15]: X = 0101100 Error ratio (error = unexpected character): 0.00 = 0 / 369
+Pin 9: Number of collisions increased to: 5619
+Pin 9: [ 22,  21]: s = 0111001 Error ratio (error = unexpected character): 0.00 = 0 / 370
+Pin 9: Number of collisions increased to: 5630
+Pin 9: [ 28,  27]: y = 0111100 Error ratio (error = unexpected character): 0.00 = 0 / 371
+Pin 9: Number of collisions increased to: 5644
+Pin 2: Starting transmission of: '2?p!&Z$
+Pin 9: [ 36,  35]: ( = 0010100 Error ratio (error = unexpected character): 0.00 = 0 / 372
+Pin 9: Number of collisions increased to: 5661
+Pin 3: Starting transmission of: '2?p!&Z$
+Pin 8: Starting transmission of: '2?p!&Z$
+Pin 2: Starting transmission of: 7iqx0adM
+Pin 9: Starting transmission of: } ^Y54"~
+Pin 3: Starting transmission of: 7iqx0adM
+Pin 8: Starting transmission of: 7iqx0adM
+Pin 9: [ 42,  41]: / = 0010111 Error ratio (error = unexpected character): 0.00 = 0 / 373
+Pin 9: Number of collisions increased to: 5675
+Pin 9: [ 50,  49]: : = 0011101 Error ratio (error = unexpected character): 0.00 = 0 / 374
+Pin 9: Number of collisions increased to: 5690
+Pin 9: [ 58,  57]: . = 0010111 Error ratio (error = unexpected character): 0.00 = 0 / 375
+Pin 9: Number of collisions increased to: 5705
+Pin 9: [ 64,  63]: # = 0010001 Error ratio (error = unexpected character): 0.00 = 0 / 376
+Pin 9: Number of collisions increased to: 5721
+Test has ended!
+Data rate / Effective data rate: 61.04 baud / 23.25 bit/s
+Bit duration exponent for transmitter: 10 + 8, for receiver: 8 + 10
+Free memory: 435
+Pin 2:
+  Error ratio (error = unexpected character): 0.00 = 0 / 0
+  Number of received / transmitted characters: 0 / 719
+  Number of bit collisions: 0
+  Number of receive buffer overflows: 0
+  Number of elements currently in receive buffer: 0
+  First / Last received character: 0000000 / 0000000
+  Number of times noise was detected when reading a character: 0
+  Measured data rate (downstream + upstream): 0.00 bit/s + 19.17 bit/s = 19.17 bit/s
+Pin 3:
+  Error ratio (error = unexpected character): 0.00 = 0 / 0
+  Number of received / transmitted characters: 0 / 719
+  Number of bit collisions: 0
+  Number of receive buffer overflows: 0
+  Number of elements currently in receive buffer: 0
+  First / Last received character: 0000000 / 0000000
+  Number of times noise was detected when reading a character: 0
+  Measured data rate (downstream + upstream): 0.00 bit/s + 19.17 bit/s = 19.17 bit/s
+Pin 8:
+  Error ratio (error = unexpected character): 0.00 = 0 / 0
+  Number of received / transmitted characters: 0 / 719
+  Number of bit collisions: 0
+  Number of receive buffer overflows: 0
+  Number of elements currently in receive buffer: 0
+  First / Last received character: 0000000 / 0000000
+  Number of times noise was detected when reading a character: 0
+  Measured data rate (downstream + upstream): 0.00 bit/s + 19.17 bit/s = 19.17 bit/s
+Pin 9:
+  Error ratio (error = unexpected character): 0.00 = 0 / 376
+  Number of received / transmitted characters: 376 / 388
+  Number of bit collisions: 5779
+  Number of receive buffer overflows: 0
+  Number of elements currently in receive buffer: 31
+  First / Last received character: } = 0111110 / # = 0010001
+  Number of times noise was detected when reading a character: 0
+  Measured data rate (downstream + upstream): 10.03 bit/s + 10.35 bit/s = 20.37 bit/s

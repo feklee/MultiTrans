@@ -1,0 +1,16 @@
+Free memory: 1304
+Test duration after initial sync (indicated by tripple flash): 300000 ms
+Waiting for sync...done
+Test has ended!
+Data rate / Effective data rate: 62500.00 baud / 23809.52 bit/s
+Bit duration exponent for transmitter: 8 + 0, for receiver: 0 + 8
+Free memory: 1304
+Pin 2:
+  Error ratio (error = unexpected character): 0.01 = 3645 / 396636
+  Number of received / transmitted characters: 396636 / 398897
+  Number of bit collisions: 0
+  Number of receive buffer overflows: 0
+  Number of elements currently in receive buffer: 0
+  First / Last received character: } = 0111110 / j = 0110101
+  Number of times noise was detected when reading a character: 1624
+  Measured data rate (downstream + upstream): 10576.96 bit/s + 10637.25 bit/s = 21214.21 bit/s
