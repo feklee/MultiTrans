@@ -1,4 +1,4 @@
-// Triangle
+// Triangle communication example
 //
 // Three Arduinos are connected in a triangle. All are sending and receiving
 // simultaneously.
