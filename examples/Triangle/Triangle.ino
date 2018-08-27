@@ -56,10 +56,16 @@ ISR(PCINT0_vect) {
 void setup() {
   Serial.begin(9600);
 
-  // Start of communication:
+  // Start timers for sending bits:
   multiTransceiver.startTimer1();
   multiTransceiver.startTimer2();
-  enablePinChangeInterrupts();
+
+  // Start interrupt handler for receiving bits:
+  PCICR |= // Pin Change Interrupt Control Register
+    bit(PCIE2) | // D0 to D7
+    bit(PCIE0); // D8 to D15
+
+  // Everything has been set up, now start transceivers:
   transceiver1.begin();
   transceiver2.begin();
 }
@@ -101,11 +107,4 @@ void printCharacter(char character) {
   } else {
     Serial.print(" ");
   }
-}
-
-// Enabling of the interrupt handler for receiving data.
-void enablePinChangeInterrupts() {
-  PCICR |= // Pin Change Interrupt Control Register
-    bit(PCIE2) | // D0 to D7
-    bit(PCIE0); // D8 to D15
 }
