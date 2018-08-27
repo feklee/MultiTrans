@@ -45,7 +45,7 @@ Limitations
     fail. For that reason it is suggested to use higher level error correction.
     
   * It only works with AVR based Arduinos. In fact, code so far has only been
-    tested with the Arduino Pro Mini.
+    tested with the Arduino Pro Mini and the Arduino Uno.
 
   * Timers are occupied:
   
