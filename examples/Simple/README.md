@@ -8,5 +8,7 @@ Pictured components:
 
   * USB cable
 
-The Arduinos are connected via pin 2. To run the example, power the Arduinos and
-monitor the serial console of one of them.
+Connect pin 2 to pin 2 and Gnd to Gnd.
+
+To run the example, power the Arduinos and monitor the serial console of one of
+them.
