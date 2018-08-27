@@ -99,6 +99,8 @@ Libaries][1] with additions:
 
   * To avoid naming conflicts with other Arduino libraries, `#pragma once`
     instead of include guards is used, except for the top level include file.
+    
+  * Comments are written in Markdown.
 
 
 License
