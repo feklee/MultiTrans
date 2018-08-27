@@ -1,6 +1,6 @@
 ![Annotated photo of board](setup.jpg)
 
-Components for testing:
+Pictured components:
 
   * 3 × Arduino Uno Rev3
 
