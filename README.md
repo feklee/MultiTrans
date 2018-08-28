@@ -73,15 +73,6 @@ Examples
     ![Photo of board for stress testing](examples/StressTest/board.jpg)
 
 
-Debug mode
-==========
-
-Debug mode is enabled by passing a template parameter to `MultiTransceiver`. In
-this mode additional information is collected, which slows down processing of
-interrupts. Therefore the data rate may need to be reduced when debug mode is
-enabled.
-
-
 Character encoding
 ==================
 
