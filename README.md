@@ -7,8 +7,8 @@ Introduction
 Features
 --------
 
-  * *Transceiver:* Each pin can receive and transmit *at the same time*. No
-    clock line needed.
+  * *Transceiver:* Transmit and receive *simultaneously* via a *single pin*. (No
+    clock line needed.)
 
   * *Multi channel:* Multiple pins can transceive simultaneously.
 
