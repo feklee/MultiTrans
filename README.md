@@ -60,8 +60,12 @@ Examples
 
   * [Simple](examples/Simple/README.md): bi directional communication between
     two Arduinos
+    
+    ![Photo of setup for simple example](examples/Simple/setup.jpg)
   
   * [Triangle](examples/Triangle/README.md): Arduinos communicating in a triangle
+    
+    ![Photo of setup for triangle example](examples/Triangle/setup.jpg)
   
   * [Stress test](examples/StressTest/README.md) (advanced): for testing maximum
     and minimum data rates with five Arduinos all communicating simultaneously
