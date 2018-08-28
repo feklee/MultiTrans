@@ -7,7 +7,8 @@ Introduction
 Features
 --------
 
-  * *Transceiver:* Each pin can receive and transmit *at the same time*.
+  * *Transceiver:* Each pin can receive and transmit *at the same time*. No
+    clock line needed.
 
   * *Multi channel:* Multiple pins can transceive simultaneously.
 
@@ -23,7 +24,7 @@ Features
       
     Bi-directional data rates are a little less than half of the above rates in
     each direction.
-
+    
 
 Limitations
 -----------
