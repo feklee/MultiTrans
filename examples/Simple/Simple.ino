@@ -66,9 +66,9 @@ void loop() {
   const char message[] = "Hello world!";
 
   if (!transceiver.transmissionIsInProgress()) {
-    Serial.print("Sending: ");
-    Serial.println(message);
     transceiver.startTransmissionOfCharacters(message);
+    Serial.print("Started sending: ");
+    Serial.println(message);
   }
 
   printReceivedCharacters();

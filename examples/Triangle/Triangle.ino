@@ -74,11 +74,17 @@ void loop() {
   printReceivedCharacters();
 
   if (!transceiver1.transmissionIsInProgress()) {
-    transceiver1.startTransmissionOfCharacters("Hello world!");
+    char message[] = "Hello world!";
+    transceiver1.startTransmissionOfCharacters(message);
+    Serial.print("Started transmitting with transceiver1: ");
+    Serial.println(message);
   }
 
   if (!transceiver2.transmissionIsInProgress()) {
-    transceiver2.startTransmissionOfCharacters("foo");
+    char message[] = "foo";
+    transceiver2.startTransmissionOfCharacters(message);
+    Serial.print("Started transmitting with transceiver2: ");
+    Serial.println(message);
   }
 
   delay(500);
@@ -92,8 +98,9 @@ void printReceivedCharacters() {
 
     if (character1 == 0 && character2 == 0) {
       return; // no character was received
-    }
+     }
 
+    Serial.print("Received (transceiver1, transceiver2): ");
     printCharacter(character1);
     Serial.print(", ");
     printCharacter(character2);
