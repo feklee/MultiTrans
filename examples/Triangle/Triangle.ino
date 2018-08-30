@@ -28,7 +28,7 @@ const int bitDurationExp = 16;
 
 // The maximum number of characters per transmission can be configured. It
 // should not be more than 12. Lower values reduce memory consumption.
-const uint8_t maxNumberOfCharsPerTransmission = 12;
+const int maxNumberOfCharsPerTransmission = 12;
 
 // Here the transceivers are created, one for each communication pin.
 using MT = MultiTrans<bitDurationExp, maxNumberOfCharsPerTransmission>;
