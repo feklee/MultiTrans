@@ -27,7 +27,7 @@ const int bitDurationExp = 16;
 // The maximum number of characters per transmission can be configured. For the
 // Arduino Uno, it cannot be more than 12. Lower values reduce memory
 // consumption.
-const uint8_t maxNumberOfCharsPerTransmission = 12;
+const int maxNumberOfCharsPerTransmission = 12;
 
 // Here the transceiver is created.
 using MT = MultiTrans<bitDurationExp, maxNumberOfCharsPerTransmission>;
