@@ -42,9 +42,17 @@ Limitations
     The system is thus best used for short bursts of data with sufficient idle
     time in between.
 
-  * On rare occasions, i.e. if timing is just *right*, collision detection may
-    fail. For that reason it is suggested to use higher level error correction.
-    
+  * No built-in error checking. You may want to implement your own
+    error checking, to take care of:
+
+      + If you have a flaky connection between the Arduinos, for
+        example due to bad electrical contacts, then bits may get
+        lost.
+
+      + Theoretically, i.e. if timing is perfectly *right*, the
+        collision detection built into MultiTrans may fail resulting
+        in bit loss.
+
   * It only works with AVR based Arduinos. In fact, code so far has only been
     tested with the Arduino Pro Mini and the Arduino Uno.
 
