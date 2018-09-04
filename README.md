@@ -38,6 +38,12 @@ Limitations
         events.
 
       + Flushing the buffer on the receiving end takes some time.
+      
+      + The size of the buffers is calculated automatically, depending
+        on the chosen maximum number of characters per
+        transmission. Allowing the user to manually specify the size
+        of the buffers could be added as a feature in a future
+        *MultiTrans* version.
 
     The system is thus best used for short bursts of data with sufficient idle
     time in between.
@@ -50,7 +56,7 @@ Limitations
         lost.
 
       + Theoretically, i.e. if timing is perfectly *right*, the
-        collision detection built into MultiTrans may fail resulting
+        collision detection built into *MultiTrans* may fail resulting
         in bit loss.
 
   * It only works with AVR based Arduinos. In fact, code so far has only been
