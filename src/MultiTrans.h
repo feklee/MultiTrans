@@ -4,6 +4,10 @@
 #include "Arduino.h"
 #include "./CharacterEncoding.h"
 
+#ifndef __AVR__
+#warning "This library has not been tested with your board."
+#endif
+
 template <uint8_t t, uint8_t u, bool v = false>
 class MultiTrans {
 private:
