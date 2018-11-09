@@ -139,6 +139,23 @@ void Transmitter<T>::startTransmissionOfCharacters(
   startTransmission();
 }
 
+template <typename T>
+void Transmitter<T>::startTransmissionOfCharacters(
+  const char * const s,
+  const uint8_t numberOfCharacters
+) {
+  _buffer.clear();
+
+  const char *character = s;
+  while (numberOfCharacters) {
+    _buffer.addCharacter(*character);
+    character ++;
+    numberOfCharacters --;
+  }
+
+  startTransmission();
+}
+
 // Noise is for testing. Noise is generated in a way so that it cannot be
 // confused with a character transmitted.
 template <typename T>
