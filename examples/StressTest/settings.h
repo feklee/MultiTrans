@@ -8,7 +8,7 @@ const uint32_t durationOfMinimumDelay = 0; // ms, to compensate the overhead for
                                            // processing characters, printing
                                            // information, etc.
 const bool noiseShouldBeRandomlyInserted = true;
-const uint32_t durationOfTest = 10000; // ms
+const uint32_t durationOfTest = 300000; // ms
 
 // Enabling the following settings slows down max. possible communication speed:
 const bool verbose = false;
@@ -25,7 +25,7 @@ const uint8_t bitDurationExp = 11; // <= 18
 
 const uint8_t maxNumberOfCharsPerTransmission = 8; // characters (< 13)
 
-const uint8_t customReceiveBufferSize = 5; // 0: compute automatically
+const uint8_t customReceiveBufferSize = 20; // 0: compute automatically
 
 // Sets of characters with a maximum size according to
 // `maxNumberOfCharsPerTransmission`:

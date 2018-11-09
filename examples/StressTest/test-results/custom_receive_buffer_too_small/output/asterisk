@@ -1,0 +1,43 @@
+Free memory: 890
+Test duration after initial sync (indicated by tripple flash): 300000 ms
+Initiating sync...done
+Test has ended!
+Data rate / Effective data rate: 7812.50 baud / 2976.19 bit/s
+Bit duration exponent for transmitter: 10 + 1, for receiver: 0 + 11
+Free memory: 890
+Pin 2:
+  Error ratio (error = unexpected character): 0.04 = 1470 / 36591
+  Number of received / transmitted characters: 36591 / 38657
+  Number of bit collisions: 0
+  Number of receive buffer overflows: 0
+  Number of elements currently in receive buffer: 0
+  First / Last received character: } = 0111110 / M = 0100110
+  Number of times noise was detected when reading a character: 4087
+  Measured data rate (downstream + upstream): 975.76 bit/s + 1030.85 bit/s = 2006.61 bit/s
+Pin 3:
+  Error ratio (error = unexpected character): 0.04 = 1331 / 36655
+  Number of received / transmitted characters: 36655 / 38434
+  Number of bit collisions: 0
+  Number of receive buffer overflows: 0
+  Number of elements currently in receive buffer: 0
+  First / Last received character: } = 0111110 / ( = 0010100
+  Number of times noise was detected when reading a character: 4100
+  Measured data rate (downstream + upstream): 977.47 bit/s + 1024.91 bit/s = 2002.37 bit/s
+Pin 8:
+  Error ratio (error = unexpected character): 0.04 = 1426 / 37055
+  Number of received / transmitted characters: 37055 / 38263
+  Number of bit collisions: 0
+  Number of receive buffer overflows: 0
+  Number of elements currently in receive buffer: 0
+  First / Last received character: } = 0111110 / j = 0110101
+  Number of times noise was detected when reading a character: 4160
+  Measured data rate (downstream + upstream): 988.13 bit/s + 1020.35 bit/s = 2008.48 bit/s
+Pin 9:
+  Error ratio (error = unexpected character): 0.04 = 1350 / 37145
+  Number of received / transmitted characters: 37145 / 38198
+  Number of bit collisions: 0
+  Number of receive buffer overflows: 0
+  Number of elements currently in receive buffer: 0
+  First / Last received character: } = 0111110 / c = 0110001
+  Number of times noise was detected when reading a character: 4049
+  Measured data rate (downstream + upstream): 990.53 bit/s + 1018.61 bit/s = 2009.15 bit/s
