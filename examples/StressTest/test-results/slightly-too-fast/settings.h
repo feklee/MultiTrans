@@ -10,6 +10,7 @@ const bool verbose = false;
 const bool recordDebugData = false;
 const uint8_t bitDurationExp = 8;
 const uint8_t maxNumberOfCharsPerTransmission = 12;
+const uint8_t customReceiveBufferSize = 0;
 static const uint8_t numberOfSets = 13;
 static const char set_0[] PROGMEM = "} ^Y54\"~FB{T";
 static const char set_1[] PROGMEM = "c";

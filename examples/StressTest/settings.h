@@ -1,18 +1,18 @@
 // Find more settings and results (screenshots) in a sub directory in this
 // directory.
 
-#define TEST_ALL
+#define TEST_ALL // if undefined: test communication only b/w Arduinos B and *
 
 const bool arduinosShouldBeSynchronized = true;
 const uint32_t durationOfMinimumDelay = 0; // ms, to compensate the overhead for
                                            // processing characters, printing
                                            // information, etc.
-const bool noiseShouldBeRandomlyInserted = false;
-const uint32_t durationOfTest = 300000; // ms
+const bool noiseShouldBeRandomlyInserted = true;
+const uint32_t durationOfTest = 10000; // ms
 
 // Enabling the following settings slows down max. possible communication speed:
-const bool verbose = true;
-const bool recordDebugData = true;
+const bool verbose = false;
+const bool recordDebugData = false;
 
 // The duration for the transmission of one bit is (in CPU cycles):
 //
@@ -21,9 +21,11 @@ const bool recordDebugData = true;
 // Bits being transmitted include an overhead necessary for communication.
 // Therefore, the effective data rate is less than `1 / bitDuration`. See also
 // the console output of the test.
-const uint8_t bitDurationExp = 18; // <= 18
+const uint8_t bitDurationExp = 11; // <= 18
 
 const uint8_t maxNumberOfCharsPerTransmission = 8; // characters (< 13)
+
+const uint8_t customReceiveBufferSize = 5; // 0: compute automatically
 
 // Sets of characters with a maximum size according to
 // `maxNumberOfCharsPerTransmission`:

@@ -7,19 +7,21 @@
 #include "./Transmitter.h"
 #include "./DebugData.h"
 
-template <uint8_t t, uint8_t u, bool v>
-template <uint8_t w>
-class MultiTrans<t, u, v>::Transceiver {
+template <uint8_t t, uint8_t u, bool v, uint8_t w>
+template <uint8_t x>
+class MultiTrans<t, u, v, w>::Transceiver {
 public:
-  static const uint8_t pinNumber = w; // in [2, 13]
+  static const uint8_t pinNumber = x; // in [2, 13]
   static const bool debugDataIsRecorded =
-    MultiTrans<t, u, v>::debugDataIsRecorded;
+    MultiTrans<t, u, v, w>::debugDataIsRecorded;
   static const uint8_t maxNumberOfCharsPerTransmission = // < 13 (characters)
-    MultiTrans<t, u, v>::maxNumberOfCharsPerTransmission;
+    MultiTrans<t, u, v, w>::maxNumberOfCharsPerTransmission;
+  static const uint8_t customReceiveBufferSize =
+    MultiTrans<t, u, v, w>::customReceiveBufferSize;
 
 private:
-  Transmitter<Transceiver<w>> _transmitter;
-  Receiver<Transceiver<w>, rUnscaledBitDurationExp> _receiver;
+  Transmitter<Transceiver<x>> _transmitter;
+  Receiver<Transceiver<x>, rUnscaledBitDurationExp> _receiver;
 
 public:
   static DebugData debugData;
@@ -47,20 +49,20 @@ public:
   }
 };
 
-template <uint8_t t, uint8_t u, bool v>
-template <uint8_t w>
-DebugData MultiTrans<t, u, v>::Transceiver<w>::debugData = {0, 0, 0, 0, 0};
+template <uint8_t t, uint8_t u, bool v, uint8_t w>
+template <uint8_t x>
+DebugData MultiTrans<t, u, v, w>::Transceiver<x>::debugData = {0, 0, 0, 0, 0};
 
-template <uint8_t t, uint8_t u, bool v>
-template <uint8_t w>
-void MultiTrans<t, u, v>::Transceiver<w>::begin() {
+template <uint8_t t, uint8_t u, bool v, uint8_t w>
+template <uint8_t x>
+void MultiTrans<t, u, v, w>::Transceiver<x>::begin() {
   _transmitter.begin();
   _receiver.begin();
 }
 
-template <uint8_t t, uint8_t u, bool v>
-template <uint8_t w>
-void MultiTrans<t, u, v>::Transceiver<w>::handleOwnPinChange(
+template <uint8_t t, uint8_t u, bool v, uint8_t w>
+template <uint8_t x>
+void MultiTrans<t, u, v, w>::Transceiver<x>::handleOwnPinChange(
   const uint16_t now, // in CPU cycles / prescale factor
   const bool valueAfterPinChange
 ) {
@@ -73,9 +75,9 @@ void MultiTrans<t, u, v>::Transceiver<w>::handleOwnPinChange(
   }
 }
 
-template <uint8_t t, uint8_t u, bool v>
-template <uint8_t w>
-void MultiTrans<t, u, v>::Transceiver<w>::handlePinChangeInterrupt() {
+template <uint8_t t, uint8_t u, bool v, uint8_t w>
+template <uint8_t x>
+void MultiTrans<t, u, v, w>::Transceiver<x>::handlePinChangeInterrupt() {
   const uint16_t now = TCNT1; // Read is done with the help of the `TEMP`
                               // register, making it atomic (as long as no
                               // interrupt is using `TEMP` as well).

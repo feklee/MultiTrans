@@ -11,11 +11,11 @@ class ReceiveBuffer {
   static const uint8_t paddingForNoise =
     1; // arbitrary, just to be on the safe side
 
-  // It may be interesting to allow the user to specify a larger maximum buffer
-  // size in order to be able to receive characters from multiple transmissions.
-  static const uint8_t maxNumberOfElements = // <= 256
-    Transceiver::maxNumberOfCharsPerTransmission *
-    (CharacterEncoding::maxNumberOfValueChanges + paddingForNoise);
+  static const uint8_t maxNumberOfElements = // <= 255
+    (Transceiver::customReceiveBufferSize > 0)
+    ? Transceiver::customReceiveBufferSize
+    : (Transceiver::maxNumberOfCharsPerTransmission *
+       (CharacterEncoding::maxNumberOfValueChanges + paddingForNoise));
 
   byte _elements[maxNumberOfElements];
   bool _bufferWasEmptyOnLastAtomicShift = false;

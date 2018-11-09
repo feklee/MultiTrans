@@ -25,7 +25,8 @@ static const uint8_t identificationPinNumber = 10;
 
 using MT = MultiTrans<bitDurationExp,
                       maxNumberOfCharsPerTransmission,
-                      recordDebugData>;
+                      recordDebugData,
+                      customReceiveBufferSize>;
 MT multiTransceiver;
 MT::Transceiver<communicationPinNumber1> transceiver1;
 #ifdef TEST_ALL
