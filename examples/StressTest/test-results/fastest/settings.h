@@ -3,6 +3,7 @@
 // needs less memory, can be faster
 
 #undef TEST_ALL
+#undef BINARY_TRANSMISSION
 const bool arduinosShouldBeSynchronized = true;
 const uint32_t durationOfMinimumDelay = 0;
 const bool noiseShouldBeRandomlyInserted = false;

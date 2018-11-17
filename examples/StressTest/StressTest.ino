@@ -13,6 +13,15 @@
 
 #include "settings.h"
 
+#if BINARY_TRANSMISSION
+#define ITEM_NAME "byte" // human readable name
+typedef byte item_t;
+#define ITEM_TYPE "byte"
+#else
+#define ITEM_NAME "character"
+typedef char item_t;
+#endif
+
 static const uint8_t ledPinNumber = 13;
 static const uint8_t communicationPinNumber1 = 2;
 #ifdef TEST_ALL
@@ -437,29 +446,29 @@ void printReport(T &transceiver, char character) {
 }
 
 template <typename T>
-bool processNextCharacter(T &transceiver) {
-  static bool firstReceivedCharacterRecorded = false;
-  char character = transceiver.getNextCharacter();
-  bool characterWasFound = character != 0;
+bool processNextItem(T &transceiver) {
+  static bool firstReceivedItemWasRecorded = false;
+  item_t item = transceiver.getNextCharacter();
+  bool itemWasFound = item != 0;
 
-  if (!characterWasFound) {
-    return characterWasFound;
+  if (!itemWasFound) {
+    return itemWasFound;
   }
 
-  if (!firstReceivedCharacterRecorded) {
-    firstReceivedCharacter<T>(character);
-    firstReceivedCharacterRecorded = true;
+  if (!firstReceivedItemWasRecorded) {
+    firstReceivedCharacter<T>(item);
+    firstReceivedItemWasRecorded = true;
   }
-  lastReceivedCharacter<T>(character);
+  lastReceivedCharacter<T>(item);
 
   countReceivedCharacters<T>(1);
   countNoise<T>(transceiver.noiseWhileGettingCharacter() ? 1 : 0);
-  updateErrorRatio<T>(character);
+  updateErrorRatio<T>(item);
   if (verbose) {
-    printReport<T>(transceiver, character);
+    printReport<T>(transceiver, item);
   }
 
-  return characterWasFound;
+  return itemWasFound;
 }
 
 template <typename T>
@@ -529,23 +538,23 @@ void reportReceiveBufferOverflows(T &transceiver) {
   oldReceiveBufferOverflowCount = receiveBufferOverflowCount;
 }
 
-void processReceivedCharacters() {
-  bool characterWasFound;
+void processReceivedItems() {
+  bool itemWasFound;
   do {
-    bool characterWasFound1 = processNextCharacter(transceiver1);
+    bool itemWasFound1 = processNextItem(transceiver1);
 #ifdef TEST_ALL
-    bool characterWasFound2 = processNextCharacter(transceiver2);
-    bool characterWasFound3 = processNextCharacter(transceiver3);
-    bool characterWasFound4 = processNextCharacter(transceiver4);
+    bool itemWasFound2 = processNextItem(transceiver2);
+    bool itemWasFound3 = processNextItem(transceiver3);
+    bool itemWasFound4 = processNextItem(transceiver4);
 #endif
-    characterWasFound = (characterWasFound1
+    itemWasFound = (itemWasFound1
 #ifdef TEST_ALL
-                         || characterWasFound2
-                         || characterWasFound3
-                         || characterWasFound4
+                    || itemWasFound2
+                    || itemWasFound3
+                    || itemWasFound4
 #endif
     );
-  } while(characterWasFound);
+  } while(itemWasFound);
 }
 
 template <typename T>
@@ -578,7 +587,7 @@ void printTestSummary(T &transceiver) {
   printErrorRatio<T>();
   Serial.println();
 
-  Serial.print(F("  Number of received / transmitted characters: "));
+  Serial.print(F("  Number of received / transmitted " ITEM_NAME "s: "));
   Serial.print(countReceivedCharacters<T>());
   Serial.print(F(" / "));
   Serial.println(countTransmittedCharacters<T>());
@@ -592,7 +601,7 @@ void printTestSummary(T &transceiver) {
   Serial.print(F("  Number of elements currently in receive buffer: "));
   Serial.println(transceiver.debugData.numberOfElementsInReceiveBuffer);
 
-  Serial.print(F("  First / Last received character: "));
+  Serial.print(F("  First / Last received " ITEM_NAME ": "));
   c = firstReceivedCharacter<T>();
   if (c) {
     Serial.print(c);
@@ -605,10 +614,10 @@ void printTestSummary(T &transceiver) {
     Serial.print(c);
     Serial.print(F(" = "));
   }
-  Serial.println(stringFromBinary(lastReceivedCharacter<T>()));
+  Serial.println(stringFromBinary(lastReceivedCharacter<T>())); // TODO: rename to lastReceivedItem, and others as well
 
   Serial.print(
-    F("  Number of times noise was detected when reading a character: ")
+    F("  Number of times noise was detected when reading a " ITEM_NAME ": ")
   );
   Serial.println(countNoise<T>());
 
@@ -645,6 +654,6 @@ void loop() {
 
   uint32_t endOfMinimumDelay = millis() + durationOfMinimumDelay;
   do {
-    processReceivedCharacters();
+    processReceivedItems();
   } while (millis() < endOfMinimumDelay);
 }

@@ -28,6 +28,7 @@ class Transmitter {
 public:
   inline void handleTimer2Interrupt() __attribute__((always_inline));
   void startTransmissionOfCharacters(const char * const);
+  void startTransmissionOfBytes(const byte * const, const uint8_t);
   void startTransmissionOfNoise();
   void begin();
   bool transmissionIsInProgress() const { return _transmissionIsInProgress; }
@@ -140,17 +141,18 @@ void Transmitter<T>::startTransmissionOfCharacters(
 }
 
 template <typename T>
-void Transmitter<T>::startTransmissionOfCharacters(
-  const char * const s,
-  const uint8_t numberOfCharacters
+void Transmitter<T>::startTransmissionOfBytes(
+  const byte * const bytes,
+  const uint8_t numberOfBytes
 ) {
   _buffer.clear();
 
-  const char *character = s;
-  while (numberOfCharacters) {
-    _buffer.addCharacter(*character);
-    character ++;
-    numberOfCharacters --;
+  const char *b = bytes;
+  uint8_t i = numberOfBytes;
+  while (i) {
+    _buffer.addCharacter((char) *b);
+    b ++;
+    i --;
   }
 
   startTransmission();
