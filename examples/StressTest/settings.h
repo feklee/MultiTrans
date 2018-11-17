@@ -8,7 +8,7 @@ const bool arduinosShouldBeSynchronized = true;
 const uint32_t durationOfMinimumDelay = 0; // ms, to compensate the overhead for
                                            // processing characters, printing
                                            // information, etc.
-const bool noiseShouldBeRandomlyInserted = true;
+const bool noiseShouldBeRandomlyInserted = false;
 const uint32_t durationOfTest = 5000; // ms
 
 // Enabling the following settings slows down max. possible communication speed:
