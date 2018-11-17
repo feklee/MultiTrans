@@ -45,8 +45,10 @@ MT::Transceiver<communicationPinNumber4> transceiver4;
 
 static const uint32_t timeForOtherArduinoToStartUp = 1000; // ms
 
+// TODO: different for binary:
 static char set[maxNumberOfCharsPerTransmission + 1]; // set of characters to
                                                       // transmit
+static uint8_t setSize;
 
 ISR(TIMER2_COMPA_vect) {
   transceiver1.handleTimer2Interrupt();
@@ -119,6 +121,11 @@ bool thisArduinoHasToWaitForSync() {
 
 void loadSet(const uint8_t i) {
   strcpy_P(set, (char*)pgm_read_word(&(setsOfCharacters[i])));
+#if BINARY_TRANSMISSION
+  setSize = setSizes[i];
+#else
+  setSize = strlen(set);
+#endif
 }
 
 template <typename T>
@@ -190,12 +197,6 @@ item_t nextExpectedItem(bool positionNeedsToBeSynced = false,
   } else {
     loadSet(setNumber);
     positionInSet ++;
-
-#if BINARY_TRANSMISSION
-    const uint8_t setSize = setSizes[setNumber];
-#else
-    const uint8_t setSize = strlen(set);
-#endif
 
     if (positionInSet >= setSize) {
       // go to next set
@@ -368,7 +369,8 @@ void transmitNextSet(T &transceiver) {
     Serial.print(F("Starting transmission of: "));
     Serial.println(set);
   }
-  countTransmittedItems<T>(strlen(set)); // TODO: won't work with binary
+
+  countTransmittedItems<T>(setSize);
   transceiver.startTransmissionOfCharacters(set);
   i = (i + 1) % numberOfSets;
 }
