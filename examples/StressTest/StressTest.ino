@@ -46,8 +46,11 @@ MT::Transceiver<communicationPinNumber4> transceiver4;
 static const uint32_t timeForOtherArduinoToStartUp = 1000; // ms
 
 // TODO: different for binary:
-static char set[maxNumberOfCharsPerTransmission + 1]; // set of characters to
-                                                      // transmit
+#if BINARY_TRANSMISSION
+static item_t set[maxNumberOfCharsPerTransmission]; // set of items to transmit
+#else
+static item_t set[maxNumberOfCharsPerTransmission + 1]; // incl. 0 at the end
+#endif
 static uint8_t setSize;
 
 ISR(TIMER2_COMPA_vect) {
@@ -120,10 +123,11 @@ bool thisArduinoHasToWaitForSync() {
 }
 
 void loadSet(const uint8_t i) {
-  strcpy_P(set, (char*)pgm_read_word(&(setsOfCharacters[i])));
 #if BINARY_TRANSMISSION
   setSize = setSizes[i];
+  strncpy_P(set, (byte*)pgm_read_word(&(setsOfCharacters[i])), setSize);
 #else
+  strcpy_P(set, (char*)pgm_read_word(&(setsOfCharacters[i])));
   setSize = strlen(set);
 #endif
 }
@@ -139,7 +143,7 @@ char firstReceivedItem(char item = 0) {
 
 template <typename T>
 item_t lastReceivedItem(item_t item = 0) {
-  static char recordedItem = 0;
+  static item_t recordedItem = 0;
   if (item != 0) {
     recordedItem = item;
   }
