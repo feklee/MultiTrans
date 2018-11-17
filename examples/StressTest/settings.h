@@ -27,7 +27,8 @@ const uint8_t maxNumberOfCharsPerTransmission = 8; // characters (< 13)
 
 const uint8_t customReceiveBufferSize = 20; // 0: compute automatically
 
-const bool dataIsBinary = true; // if not binary, then data is in text strings
+const bool testBinaryTransmission = true; // if not binary, then test data is in
+                                          // text strings
 
 // Sets of characters with a maximum size according to
 // `maxNumberOfCharsPerTransmission`:
@@ -187,7 +188,7 @@ static const byte set49[sizeOfSet49] PROGMEM =
 static const byte set50[sizeOfSet50] PROGMEM =
   {159, 119, 116, 118, 110, 190, 66};
 static const byte * const
-setsOfBinaryData[numberOfSets] PROGMEM =
+setsOfBytes[numberOfSets] PROGMEM =
   {
    set0, set1, set2, set3, set4, set5, set6, set7, set8, set9, set10, set11,
    set12, set13, set14, set15, set16, set17, set18, set19, set20, set21, set22,
