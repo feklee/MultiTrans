@@ -154,40 +154,51 @@ void errorRatioRecorderPrint(uint32_t errorsCounted) {
   Serial.print(itemsCounted);
 }
 
-bool getCharacterPosition(const char character,
-                          uint8_t &setNumber,
-                          uint8_t &positionInSet) {
+// if item position is not found, goes to the beginning
+void getItemPosition(const item_t item,
+                     uint8_t &setNumber,
+                     uint8_t &positionInSet) {
   for (setNumber = 0; setNumber < numberOfSets; setNumber ++) {
     loadSet(setNumber);
-    const char *characterLocation = strchr(set, character);
-    if (characterLocation != NULL) {
-      positionInSet = (uint8_t)(characterLocation - set);
-      return true;
+    
+#if BINARY_TRANSMISSION
+    const uint8_t setSize = setSizes[setNumber];
+    const item_t *itemLocation = memchr(set, item, setSize);
+#else
+    const item_t *itemLocation = strchr(set, item);
+#endif
+
+    if (itemLocation != NULL) {
+      positionInSet = (uint8_t)(itemLocation - set);
     }
   }
   setNumber = 0;
   positionInSet = 0;
-  return false;
 }
 
-// Returns the next expected character, or the specified optional character,
-// which also syncs the position.
+// Returns the next item following the order of transmitted items, or returns
+// the specified optional item in case the position should be synced.
 template <typename T>
-char nextExpectedCharacter(char characterToSyncTo = 0) {
+item_t nextExpectedItem(bool positionNeedsToBeSynced = false,
+                        item_t itemToSyncTo = 0) {
   static uint8_t setNumber = 0;
   static uint8_t positionInSet = 0;
 
-  bool positionNeedsToBeSynced = characterToSyncTo != 0;
   if (positionNeedsToBeSynced) {
-    bool gotCharacterPosition = getCharacterPosition(characterToSyncTo,
-                                                     setNumber, positionInSet);
-    if (!gotCharacterPosition) {
-      return 0;
-    }
+    getItemPosition(itemToSyncTo, setNumber, positionInSet);
+    return itemToSyncTo;
   } else {
     loadSet(setNumber);
     positionInSet ++;
-    if (positionInSet >= strlen(set)) {
+
+#if BINARY_TRANSMISSION
+    const uint8_t setSize = setSizes[setNumber];
+#else
+    const uint8_t setSize = strlen(set);
+#endif
+
+    if (positionInSet >= setSize) {
+      // go to next set
       setNumber = (setNumber + 1) % numberOfSets;
       positionInSet = 0;
       loadSet(setNumber);
@@ -198,20 +209,24 @@ char nextExpectedCharacter(char characterToSyncTo = 0) {
 }
 
 template <typename T>
-void errorRatioRecorderUpdate(uint32_t &errorsCounted,
-                              item_t item) {
+void syncToItem(item_t item) {
+  nextExpectedItem<T>(true, item);
+}
+
+template <typename T>
+void errorRatioRecorderUpdate(uint32_t &errorsCounted, item_t item) {
   static bool initialSyncIsNeeded = true;
 
   if (initialSyncIsNeeded) {
-    nextExpectedCharacter<T>(item);
+    syncToItem<T>(item);
     initialSyncIsNeeded = false;
     return;
   }
 
-  bool itemIsUnexpected = item != nextExpectedCharacter<T>();
+  bool itemIsUnexpected = item != nextExpectedItem<T>();
   if (itemIsUnexpected && countReceivedItems<T>() > 1) {
     errorsCounted ++;
-    nextExpectedCharacter<T>(item);
+    syncToItem<T>(item);
   }
 }
 
@@ -353,7 +368,7 @@ void transmitNextSet(T &transceiver) {
     Serial.print(F("Starting transmission of: "));
     Serial.println(set);
   }
-  countTransmittedItems<T>(strlen(set));
+  countTransmittedItems<T>(strlen(set)); // TODO: won't work with binary
   transceiver.startTransmissionOfCharacters(set);
   i = (i + 1) % numberOfSets;
 }
@@ -559,10 +574,10 @@ void processReceivedItems() {
 template <typename T>
 void printMeasuredRate() {
   float duration = float(durationOfTest) / 1000; // s
-  uint8_t bitsPerCharacter = 8;
-  float dRate = bitsPerCharacter *
+  uint8_t bitsPerItem = 8;
+  float dRate = bitsPerItem *
     float(countReceivedItems<T>()) / duration;
-  float uRate = bitsPerCharacter *
+  float uRate = bitsPerItem *
     float(countTransmittedItems<T>()) / duration;
 
   Serial.print(F("  Measured data rate (downstream + upstream): "));
