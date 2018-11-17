@@ -32,7 +32,7 @@ static const uint8_t communicationPinNumber4 = 9;
 static const uint8_t identificationPinNumber = 10;
 
 using MT = MultiTrans<bitDurationExp,
-                      maxNumberOfCharsPerTransmission,
+                      maxNumberOfItemsPerTransmission,
                       recordDebugData,
                       customReceiveBufferSize>;
 MT multiTransceiver;
@@ -45,11 +45,10 @@ MT::Transceiver<communicationPinNumber4> transceiver4;
 
 static const uint32_t timeForOtherArduinoToStartUp = 1000; // ms
 
-// TODO: different for binary:
 #if BINARY_TRANSMISSION
-static item_t set[maxNumberOfCharsPerTransmission]; // set of items to transmit
+static item_t set[maxNumberOfItemsPerTransmission]; // set of items to transmit
 #else
-static item_t set[maxNumberOfCharsPerTransmission + 1]; // incl. 0 at the end
+static item_t set[maxNumberOfItemsPerTransmission + 1]; // incl. 0 at the end
 #endif
 static uint8_t setSize;
 
@@ -133,8 +132,8 @@ void loadSet(const uint8_t setNumber) {
 }
 
 template <typename T>
-char firstReceivedItem(char item = 0) {
-  static char recordedItem = 0;
+item_t firstReceivedItem(item_t item = 0) {
+  static item_t recordedItem = 0;
   if (item != 0) {
     recordedItem = item;
   }
@@ -436,8 +435,17 @@ void printInfoAboutItem(T &transceiver, item_t item) {
 }
 
 template <typename T>
+bool noiseWhileGettingItem(T &transceiver) {
+#if BINARY_TRANSMISSION
+  return transceiver.noiseWhileGettingByte();
+#else
+  return transceiver.noiseWhileGettingCharacter();
+#endif  
+}
+
+template <typename T>
 void printInfoAboutNoise(T &transceiver) {
-  if (transceiver.noiseWhileGettingCharacter()) {
+  if (noiseWhileGettingItem(transceiver)) {
     Serial.print(F("Noise has been detected on pin "));
     Serial.println(transceiver.pinNumber);
   }
@@ -468,8 +476,13 @@ void printReport(T &transceiver, item_t item) {
 template <typename T>
 bool processNextItem(T &transceiver) {
   static bool firstReceivedItemWasRecorded = false;
+
+#if BINARY_TRANSMISSION
+  item_t item = transceiver.getNextByte(itemWasFound);
+#else
   item_t item = transceiver.getNextCharacter();
   bool itemWasFound = item != 0;
+#endif
 
   if (!itemWasFound) {
     return itemWasFound;
@@ -482,7 +495,7 @@ bool processNextItem(T &transceiver) {
   lastReceivedItem<T>(item);
 
   countReceivedItems<T>(1);
-  countNoise<T>(transceiver.noiseWhileGettingCharacter() ? 1 : 0);
+  countNoise<T>(noiseWhileGettingItem(transceiver) ? 1 : 0);
   updateErrorRatio<T>(item);
   if (verbose) {
     printReport<T>(transceiver, item);
@@ -634,7 +647,7 @@ void printTestSummary(T &transceiver) {
     Serial.print(item);
     Serial.print(F(" = "));
   }
-  Serial.println(stringFromBinary(lastReceivedItem<T>())); // TODO: rename to lastReceivedItem, and others as well
+  Serial.println(stringFromBinary(lastReceivedItem<T>()));
 
   Serial.print(
     F("  Number of times noise was detected when reading a " ITEM_NAME ": ")

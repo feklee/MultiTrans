@@ -24,12 +24,12 @@ const bool recordDebugData = false;
 // the console output of the test.
 const uint8_t bitDurationExp = 9; // <= 18
 
-const uint8_t maxNumberOfCharsPerTransmission = 12; // characters (< 13)
+const uint8_t maxNumberOfItemsPerTransmission = 12; // characters (< 13)
 
 const uint8_t customReceiveBufferSize = 0; // 0: compute automatically
 
 // Sets of characters with a maximum size according to
-// `maxNumberOfCharsPerTransmission`:
+// `maxNumberOfItemsPerTransmission`:
 static const uint8_t numberOfSets = 13;
 static const char set_0[] PROGMEM = "} ^Y54\"~FB{T";
 static const char set_1[] PROGMEM = "c";
