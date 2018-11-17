@@ -122,12 +122,12 @@ bool thisArduinoHasToWaitForSync() {
   return !thisIsTheArduinoWithAnAsterisk();
 }
 
-void loadSet(const uint8_t i) {
+void loadSet(const uint8_t setNumber) {
 #if BINARY_TRANSMISSION
   setSize = setSizes[i];
-  strncpy_P(set, (byte*)pgm_read_word(setsOfBytes + i), setSize);
+  strncpy_P(set, (char *)pgm_read_word(setsOfBytes + setNumber), setSize);
 #else
-  strcpy_P(set, (char*)pgm_read_word(setsOfCharacters + i));
+  strcpy_P(set, (char *)pgm_read_word(setsOfCharacters + setNumber));
   setSize = strlen(set);
 #endif
 }
