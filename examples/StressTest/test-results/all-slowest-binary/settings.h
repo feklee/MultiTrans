@@ -1,39 +1,14 @@
-// Find more settings and results (screenshots) in a sub directory in this
-// directory.
-
-#define TEST_ALL // if undefined: test communication only b/w Arduinos B and *
-#define BINARY_TRANSMISSION // if undefined: test character transmission
-
+#define TEST_ALL
+#define BINARY_TRANSMISSION
 const bool arduinosShouldBeSynchronized = true;
-const uint32_t durationOfMinimumDelay = 0; // ms, to compensate the overhead for
-                                           // processing characters, printing
-                                           // information, etc.
-const uint32_t durationOfTest = 300000; // ms
+const uint32_t durationOfMinimumDelay = 0;
 const bool noiseShouldBeRandomlyInserted = false;
-
-// Enabling the following settings slows down max. possible communication speed:
+const uint32_t durationOfTest = 300000;
 const bool recordDebugData = true;
 const bool verbose = true;
-
-// The duration for the transmission of one bit is (in CPU cycles):
-//
-//     bitDuration = 2 ^ bitDurationExp
-//
-// Bits being transmitted include an overhead necessary for communication.
-// Therefore, the effective data rate is less than `1 / bitDuration`. See also
-// the console output of the test.
-const uint8_t bitDurationExp = 18; // <= 18
-
-const uint8_t maxNumberOfItemsPerTransmission = 8; // characters (< 13)
-
-const uint8_t customReceiveBufferSize = 0; // 0: compute automatically
-
-// Sets of characters/bytes:
-//
-//   * Each set cannot be longer than `maxNumberOfItemsPerTransmission`.
-//
-//   * Each character/byte has to be unique, i.e. it is not allowed to appear
-//     more than once!
+const uint8_t bitDurationExp = 18;
+const uint8_t maxNumberOfCharsPerTransmission = 8;
+const uint8_t customReceiveBufferSize = 0;
 static const uint8_t numberOfSets = 57;
 static const uint8_t sizeOfSet0 = 7;
 static const uint8_t sizeOfSet1 = 4;

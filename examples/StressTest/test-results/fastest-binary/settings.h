@@ -1,4 +1,4 @@
-#define TEST_ALL
+#undef TEST_ALL
 #define BINARY_TRANSMISSION
 const bool arduinosShouldBeSynchronized = true;
 const uint32_t durationOfMinimumDelay = 0;
@@ -9,7 +9,6 @@ const bool verbose = false;
 const uint8_t bitDurationExp = 9;
 const uint8_t maxNumberOfItemsPerTransmission = 12;
 const uint8_t customReceiveBufferSize = 0;
-const bool dataIsBinary = true;
 static const uint8_t numberOfSets = 36;
 static const uint8_t sizeOfSet0 = 12;
 static const uint8_t sizeOfSet1 = 12;
