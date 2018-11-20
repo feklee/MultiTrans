@@ -87,11 +87,11 @@ static const byte set16[sizeOfSet16] PROGMEM =
   {249, 150, 29, 96};
 static const byte set17[sizeOfSet17] PROGMEM =
   {120, 144, 148, 47, 245, 237, 98, 216, 205, 38, 215, 1, 165};
-static const byte set18[sizeOfSet20] PROGMEM =
+static const byte set18[sizeOfSet18] PROGMEM =
   {80, 132, 44, 172, 234, 43, 143, 169, 115, 139, 247, 189, 209};
 static const byte set19[sizeOfSet19] PROGMEM =
   {62};
-static const byte set20[sizeOfSet18] PROGMEM =
+static const byte set20[sizeOfSet20] PROGMEM =
   {146, 236, 56};
 static const byte set21[sizeOfSet21] PROGMEM =
   {212};

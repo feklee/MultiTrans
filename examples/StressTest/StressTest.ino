@@ -13,7 +13,7 @@
 
 #include "settings.h"
 
-#if BINARY_TRANSMISSION
+#ifdef BINARY_TRANSMISSION
 #define ITEM_NAME "byte" // human readable name
 typedef byte item_t;
 #else
@@ -45,7 +45,7 @@ MT::Transceiver<communicationPinNumber4> transceiver4;
 
 static const uint32_t timeForOtherArduinoToStartUp = 1000; // ms
 
-#if BINARY_TRANSMISSION
+#ifdef BINARY_TRANSMISSION
 static item_t set[maxNumberOfItemsPerTransmission]; // set of items to transmit
 #else
 static item_t set[maxNumberOfItemsPerTransmission + 1]; // incl. 0 at the end
@@ -122,11 +122,11 @@ bool thisArduinoHasToWaitForSync() {
 }
 
 void loadSet(const uint8_t setNumber) {
-#if BINARY_TRANSMISSION
-  sizeOfSet = sizesOfSets[i];
-  strncpy_P(set, (byte *)pgm_read_word(sets + setNumber), sizeOfSet);
+#ifdef BINARY_TRANSMISSION
+  sizeOfSet = sizesOfSets[setNumber];
+  strncpy_P((char *) set, (char *) pgm_read_word(sets + setNumber), sizeOfSet);
 #else
-  strcpy_P(set, (char *)pgm_read_word(sets + setNumber));
+  strcpy_P(set, (char *) pgm_read_word(sets + setNumber));
   sizeOfSet = strlen(set);
 #endif
 }
@@ -171,8 +171,8 @@ void getItemPosition(const item_t item,
   for (setNumber = 0; setNumber < numberOfSets; setNumber ++) {
     loadSet(setNumber);
     
-#if BINARY_TRANSMISSION
-    const item_t *itemLocation = memchr(set, item, sizeOfSet);
+#ifdef BINARY_TRANSMISSION
+    const item_t *itemLocation = (item_t *) memchr(set, item, sizeOfSet);
 #else
     const item_t *itemLocation = strchr(set, item);
 #endif
@@ -360,6 +360,17 @@ void setup() {
   delay(timeToWaitBeforeInitialTransmit);
 }
 
+void printlnBinarySet() {
+  Serial.print("{");
+  for (uint8_t i = 0; i < sizeOfSet; i ++) {
+    Serial.print(set[i]);
+    if (i < sizeOfSet - 1) {
+      Serial.print(", ");
+    }
+  }
+  Serial.println("}");
+}
+
 template <typename T>
 void transmitNextSet(T &transceiver) {
   static uint8_t i = 0;
@@ -369,11 +380,15 @@ void transmitNextSet(T &transceiver) {
     flashLed();
     printPinNumberPrefix(transceiver);
     Serial.print(F("Starting transmission of: "));
+#ifdef BINARY_TRANSMISSION
+    printlnBinarySet();
+#else
     Serial.println(set);
+#endif
   }
 
   countTransmittedItems<T>(sizeOfSet);
-#if BINARY_TRANSMISSION
+#ifdef BINARY_TRANSMISSION
   transceiver.startTransmissionOfBytes(set, sizeOfSet);
 #else
   transceiver.startTransmissionOfCharacters(set);
@@ -439,7 +454,7 @@ void printInfoAboutItem(T &transceiver, item_t item) {
 
 template <typename T>
 bool noiseWhileGettingItem(T &transceiver) {
-#if BINARY_TRANSMISSION
+#ifdef BINARY_TRANSMISSION
   return transceiver.noiseWhileGettingByte();
 #else
   return transceiver.noiseWhileGettingCharacter();
@@ -480,7 +495,7 @@ template <typename T>
 bool processNextItem(T &transceiver) {
   static bool firstReceivedItemWasRecorded = false;
 
-#if BINARY_TRANSMISSION
+#ifdef BINARY_TRANSMISSION
   bool itemWasFound;
   item_t item = transceiver.getNextByte(itemWasFound);
 #else

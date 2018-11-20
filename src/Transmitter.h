@@ -147,7 +147,7 @@ void Transmitter<T>::startTransmissionOfBytes(
 ) {
   _buffer.clear();
 
-  const char *b = bytes;
+  const byte *b = bytes;
   uint8_t i = numberOfBytes;
   while (i) {
     _buffer.addCharacter((char) *b);
