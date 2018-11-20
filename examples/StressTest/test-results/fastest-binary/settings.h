@@ -142,7 +142,7 @@ static const byte sizesOfSets[numberOfSets] =
    sizeOfSet36, sizeOfSet37, sizeOfSet38, sizeOfSet39
   };
 static const byte * const
-setsOfBytes[numberOfSets] PROGMEM =
+sets[numberOfSets] PROGMEM =
   {
    set0, set1, set2, set3, set4, set5, set6, set7, set8, set9, set10, set11,
    set12, set13, set14, set15, set16, set17, set18, set19, set20, set21, set22,
