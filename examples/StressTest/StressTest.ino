@@ -50,7 +50,7 @@ static item_t set[maxNumberOfItemsPerTransmission]; // set of items to transmit
 #else
 static item_t set[maxNumberOfItemsPerTransmission + 1]; // incl. 0 at the end
 #endif
-static uint8_t setSize;
+static uint8_t sizeOfSet;
 
 ISR(TIMER2_COMPA_vect) {
   transceiver1.handleTimer2Interrupt();
@@ -123,11 +123,11 @@ bool thisArduinoHasToWaitForSync() {
 
 void loadSet(const uint8_t setNumber) {
 #if BINARY_TRANSMISSION
-  setSize = setSizes[i];
-  strncpy_P(set, (char *)pgm_read_word(setsOfBytes + setNumber), setSize);
+  sizeOfSet = sizesOfSets[i];
+  strncpy_P(set, (byte *)pgm_read_word(setsOfBytes + setNumber), sizeOfSet);
 #else
   strcpy_P(set, (char *)pgm_read_word(setsOfCharacters + setNumber));
-  setSize = strlen(set);
+  sizeOfSet = strlen(set);
 #endif
 }
 
@@ -172,8 +172,8 @@ void getItemPosition(const item_t item,
     loadSet(setNumber);
     
 #if BINARY_TRANSMISSION
-    const uint8_t setSize = setSizes[setNumber];
-    const item_t *itemLocation = memchr(set, item, setSize);
+    const uint8_t sizeOfSet = sizesOfSets[setNumber];
+    const item_t *itemLocation = memchr(set, item, sizeOfSet);
 #else
     const item_t *itemLocation = strchr(set, item);
 #endif
@@ -201,7 +201,7 @@ item_t nextExpectedItem(bool positionNeedsToBeSynced = false,
     loadSet(setNumber);
     positionInSet ++;
 
-    if (positionInSet >= setSize) {
+    if (positionInSet >= sizeOfSet) {
       // go to next set
       setNumber = (setNumber + 1) % numberOfSets;
       positionInSet = 0;
@@ -373,8 +373,12 @@ void transmitNextSet(T &transceiver) {
     Serial.println(set);
   }
 
-  countTransmittedItems<T>(setSize);
+  countTransmittedItems<T>(sizeOfSet);
+#if BINARY_TRANSMISSION
+  transceiver.startTransmissionOfBytes(set, sizeOfSet);
+#else
   transceiver.startTransmissionOfCharacters(set);
+#endif
   i = (i + 1) % numberOfSets;
 }
 
@@ -478,6 +482,7 @@ bool processNextItem(T &transceiver) {
   static bool firstReceivedItemWasRecorded = false;
 
 #if BINARY_TRANSMISSION
+  bool itemWasFound;
   item_t item = transceiver.getNextByte(itemWasFound);
 #else
   item_t item = transceiver.getNextCharacter();

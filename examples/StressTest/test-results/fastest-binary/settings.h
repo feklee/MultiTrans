@@ -165,7 +165,7 @@ static const byte set49[sizeOfSet49] PROGMEM =
   {47, 230, 215, 61, 105, 57, 161, 177};
 static const byte set50[sizeOfSet50] PROGMEM =
   {159, 119, 116, 118, 110, 190, 66};
-static const byte sizeOfSets[numberOfSets] =
+static const byte sizesOfSets[numberOfSets] =
   {
    sizeOfSet0, sizeOfSet1, sizeOfSet2, sizeOfSet3, sizeOfSet4, sizeOfSet5,
    sizeOfSet6, sizeOfSet7, sizeOfSet8, sizeOfSet9, sizeOfSet10, sizeOfSet11,
