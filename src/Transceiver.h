@@ -30,22 +30,30 @@ public:
   void startTransmissionOfCharacters(const char * const s) {
     _transmitter.startTransmissionOfCharacters(s);
   }
+  void startTransmissionOfBytes(const byte * const bytes,
+                                const uint8_t numberOfBytes) {
+    _transmitter.startTransmissionOfBytes(bytes, numberOfBytes);
+  }
   void startTransmissionOfNoise() { _transmitter.startTransmissionOfNoise(); }
   inline void handleTimer2Interrupt() __attribute__((always_inline)) {
     _transmitter.handleTimer2Interrupt();
   }
   void handleOwnPinChange(const uint16_t, const bool);
   void handlePinChangeInterrupt();
-
   char getNextCharacter() {
     return _receiver.shiftCharacterFromBuffer(); // 0 if there is no character
   }
-
+  byte getNextByte(bool &byteWasFound) {
+    return _receiver.shiftByteFromBuffer(byteWasFound);
+  }
   bool transmissionIsInProgress() const {
     return _transmitter.transmissionIsInProgress();
   }
   bool noiseWhileGettingCharacter() const {
     return _receiver.noiseWhileGettingCharacter();
+  }
+  bool noiseWhileGettingByte() const {
+    return _receiver.noiseWhileGettingByte();
   }
 };
 

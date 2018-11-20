@@ -172,7 +172,6 @@ void getItemPosition(const item_t item,
     loadSet(setNumber);
     
 #if BINARY_TRANSMISSION
-    const uint8_t sizeOfSet = sizesOfSets[setNumber];
     const item_t *itemLocation = memchr(set, item, sizeOfSet);
 #else
     const item_t *itemLocation = strchr(set, item);

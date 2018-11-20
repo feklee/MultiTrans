@@ -26,9 +26,14 @@ public:
   void begin();
   char shiftCharacterFromBuffer() {
     return _buffer.shiftCharacter(); // 0 if there is no character
-  };
-
+  }
+  byte shiftByteFromBuffer(bool &byteWasFound) {
+    return _buffer.shiftCharacter(&byteWasFound);
+  }
   bool noiseWhileGettingCharacter() const  {
+    return _buffer.noiseHasBeenDetected();
+  }
+  bool noiseWhileGettingByte() const  {
     return _buffer.noiseHasBeenDetected();
   }
 };
