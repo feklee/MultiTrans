@@ -124,9 +124,9 @@ bool thisArduinoHasToWaitForSync() {
 void loadSet(const uint8_t setNumber) {
 #if BINARY_TRANSMISSION
   sizeOfSet = sizesOfSets[i];
-  strncpy_P(set, (byte *)pgm_read_word(setsOfBytes + setNumber), sizeOfSet);
+  strncpy_P(set, (byte *)pgm_read_word(sets + setNumber), sizeOfSet);
 #else
-  strcpy_P(set, (char *)pgm_read_word(setsOfCharacters + setNumber));
+  strcpy_P(set, (char *)pgm_read_word(sets + setNumber));
   sizeOfSet = strlen(set);
 #endif
 }

@@ -48,7 +48,7 @@ static const char set_9[] PROGMEM = ",Igl\\";
 static const char set_10[] PROGMEM = "uUr3j";
 static const char set_11[] PROGMEM = "Xsy(";
 static const char set_12[] PROGMEM = "/:.#ve]f";
-static const char * const setsOfCharacters[numberOfSets] PROGMEM = {
+static const char * const sets[numberOfSets] PROGMEM = {
   set_0, set_1, set_2, set_3, set_4, set_5, set_6,
   set_7, set_8, set_9, set_10, set_11, set_12
 };
