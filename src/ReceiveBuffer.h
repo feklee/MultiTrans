@@ -50,7 +50,7 @@ class ReceiveBuffer {
 public:
   ReceiveBuffer();
   inline void push(byte) __attribute__((always_inline));
-  char shiftCharacter(bool * = 0);
+  char shiftCharacter(bool * const = 0);
   bool noiseHasBeenDetected() const  { return _noiseHasBeenDetected; }
 };
 
@@ -228,7 +228,7 @@ void ReceiveBuffer<T>::resetShiftingOfCharacter() {
 
 // Returns 0 if no character is found.
 template <typename T>
-char ReceiveBuffer<T>::shiftCharacter(bool *byteWasFound) {
+char ReceiveBuffer<T>::shiftCharacter(bool * const byteWasFound) {
   bool startAgain = _shiftingCharacterIsFinished;
   bool byteWasFoundNeedsToBeSet = byteWasFound != 0;
   if (startAgain) {
