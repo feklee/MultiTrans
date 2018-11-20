@@ -7,164 +7,130 @@ const bool noiseShouldBeRandomlyInserted = false;
 const bool recordDebugData = false;
 const bool verbose = false;
 const uint8_t bitDurationExp = 11;
-const uint8_t maxNumberOfItemsPerTransmission = 8; // TODO: increase!
+const uint8_t maxNumberOfItemsPerTransmission = 13;
 const uint8_t customReceiveBufferSize = 0;
 const bool dataIsBinary = true;
-static const uint8_t numberOfSets = 51;
-static const char * const setsOfCharacters[0] PROGMEM = {};
-static const uint8_t sizeOfSet0 = 3;
+static const uint8_t numberOfSets = 40;
+static const uint8_t sizeOfSet0 = 1;
 static const uint8_t sizeOfSet1 = 8;
-static const uint8_t sizeOfSet2 = 5;
-static const uint8_t sizeOfSet3 = 1;
+static const uint8_t sizeOfSet2 = 7;
+static const uint8_t sizeOfSet3 = 4;
 static const uint8_t sizeOfSet4 = 7;
-static const uint8_t sizeOfSet5 = 3;
-static const uint8_t sizeOfSet6 = 4;
-static const uint8_t sizeOfSet7 = 1;
-static const uint8_t sizeOfSet8 = 7;
-static const uint8_t sizeOfSet9 = 6;
-static const uint8_t sizeOfSet10 = 6;
-static const uint8_t sizeOfSet11 = 8;
-static const uint8_t sizeOfSet12 = 4;
-static const uint8_t sizeOfSet13 = 2;
-static const uint8_t sizeOfSet14 = 6;
+static const uint8_t sizeOfSet5 = 12;
+static const uint8_t sizeOfSet6 = 3;
+static const uint8_t sizeOfSet7 = 9;
+static const uint8_t sizeOfSet8 = 10;
+static const uint8_t sizeOfSet9 = 2;
+static const uint8_t sizeOfSet10 = 12;
+static const uint8_t sizeOfSet11 = 7;
+static const uint8_t sizeOfSet12 = 3;
+static const uint8_t sizeOfSet13 = 12;
+static const uint8_t sizeOfSet14 = 13;
 static const uint8_t sizeOfSet15 = 8;
-static const uint8_t sizeOfSet16 = 8;
-static const uint8_t sizeOfSet17 = 4;
-static const uint8_t sizeOfSet18 = 1;
+static const uint8_t sizeOfSet16 = 4;
+static const uint8_t sizeOfSet17 = 13;
+static const uint8_t sizeOfSet18 = 13;
 static const uint8_t sizeOfSet19 = 1;
-static const uint8_t sizeOfSet20 = 8;
-static const uint8_t sizeOfSet21 = 8;
-static const uint8_t sizeOfSet22 = 4;
-static const uint8_t sizeOfSet23 = 2;
-static const uint8_t sizeOfSet24 = 7;
-static const uint8_t sizeOfSet25 = 3;
-static const uint8_t sizeOfSet26 = 8;
-static const uint8_t sizeOfSet27 = 5;
-static const uint8_t sizeOfSet28 = 7;
-static const uint8_t sizeOfSet29 = 3;
-static const uint8_t sizeOfSet30 = 8;
-static const uint8_t sizeOfSet31 = 5;
-static const uint8_t sizeOfSet32 = 2;
-static const uint8_t sizeOfSet33 = 3;
-static const uint8_t sizeOfSet34 = 6;
-static const uint8_t sizeOfSet35 = 8;
-static const uint8_t sizeOfSet36 = 8;
-static const uint8_t sizeOfSet37 = 8;
-static const uint8_t sizeOfSet38 = 3;
-static const uint8_t sizeOfSet39 = 3;
-static const uint8_t sizeOfSet40 = 1;
-static const uint8_t sizeOfSet41 = 1;
-static const uint8_t sizeOfSet42 = 7;
-static const uint8_t sizeOfSet43 = 3;
-static const uint8_t sizeOfSet44 = 4;
-static const uint8_t sizeOfSet45 = 5;
-static const uint8_t sizeOfSet46 = 2;
-static const uint8_t sizeOfSet47 = 8;
-static const uint8_t sizeOfSet48 = 8;
-static const uint8_t sizeOfSet49 = 8;
-static const uint8_t sizeOfSet50 = 7;
+static const uint8_t sizeOfSet20 = 3;
+static const uint8_t sizeOfSet21 = 1;
+static const uint8_t sizeOfSet22 = 7;
+static const uint8_t sizeOfSet23 = 12;
+static const uint8_t sizeOfSet24 = 6;
+static const uint8_t sizeOfSet25 = 10;
+static const uint8_t sizeOfSet26 = 3;
+static const uint8_t sizeOfSet27 = 3;
+static const uint8_t sizeOfSet28 = 3;
+static const uint8_t sizeOfSet29 = 2;
+static const uint8_t sizeOfSet30 = 10;
+static const uint8_t sizeOfSet31 = 9;
+static const uint8_t sizeOfSet32 = 3;
+static const uint8_t sizeOfSet33 = 4;
+static const uint8_t sizeOfSet34 = 3;
+static const uint8_t sizeOfSet35 = 12;
+static const uint8_t sizeOfSet36 = 3;
+static const uint8_t sizeOfSet37 = 3;
+static const uint8_t sizeOfSet38 = 8;
+static const uint8_t sizeOfSet39 = 2;
 static const byte set0[sizeOfSet0] PROGMEM =
-  {250, 182, 224};
+  {68};
 static const byte set1[sizeOfSet1] PROGMEM =
-  {76, 164, 37, 184, 197, 209, 75, 114};
+  {195, 243, 24, 79, 242, 167, 89, 7};
 static const byte set2[sizeOfSet2] PROGMEM =
-  {8, 189, 6, 103, 253};
+  {170, 94, 142, 32, 14, 188, 66};
 static const byte set3[sizeOfSet3] PROGMEM =
-  {87};
+  {184, 190, 88, 145};
 static const byte set4[sizeOfSet4] PROGMEM =
-  {134, 70, 199, 223, 22, 147, 246};
+  {70, 13, 173, 73, 92, 103, 250};
 static const byte set5[sizeOfSet5] PROGMEM =
-  {200, 193, 82};
+  {217, 178, 141, 129, 156, 26, 95, 177, 17, 60, 107, 228};
 static const byte set6[sizeOfSet6] PROGMEM =
-  {38, 137, 44, 216};
+  {226, 185, 121};
 static const byte set7[sizeOfSet7] PROGMEM =
-  {150};
+  {238, 211, 18, 48, 176, 253, 199, 186, 179};
 static const byte set8[sizeOfSet8] PROGMEM =
-  {252, 251, 168, 213, 108, 206, 79};
+  {194, 182, 137, 58, 219, 127, 46, 54, 240, 4};
 static const byte set9[sizeOfSet9] PROGMEM =
-  {24, 81, 235, 176, 174, 226};
+  {36, 161};
 static const byte set10[sizeOfSet10] PROGMEM =
-  {39, 104, 48, 145, 51, 67};
+  {187, 152, 123, 154, 25, 49, 147, 183, 112, 191, 81, 133};
 static const byte set11[sizeOfSet11] PROGMEM =
-  {191, 0, 121, 29, 222, 83, 63, 249};
+  {168, 106, 9, 252, 254, 207, 40};
 static const byte set12[sizeOfSet12] PROGMEM =
-  {202, 77, 80, 240};
+  {128, 83, 85};
 static const byte set13[sizeOfSet13] PROGMEM =
-  {17, 247};
+  {126, 224, 198, 67, 87, 225, 153, 16, 45, 192, 97, 158};
 static const byte set14[sizeOfSet14] PROGMEM =
-  {155, 52, 20, 54, 89, 205};
+  {71, 23, 11, 233, 193, 164, 160, 93, 21, 222, 113, 6, 218};
 static const byte set15[sizeOfSet15] PROGMEM =
-  {229, 204, 43, 178, 109, 210, 33, 255};
+  {78, 31, 51, 2, 28, 210, 255, 239};
 static const byte set16[sizeOfSet16] PROGMEM =
-  {59, 46, 111, 133, 212, 92, 23, 175};
+  {249, 150, 29, 96};
 static const byte set17[sizeOfSet17] PROGMEM =
-  {65, 232, 154, 151};
-static const byte set18[sizeOfSet18] PROGMEM =
-  {115};
+  {120, 144, 148, 47, 245, 237, 98, 216, 205, 38, 215, 1, 165};
+static const byte set18[sizeOfSet20] PROGMEM =
+  {80, 132, 44, 172, 234, 43, 143, 169, 115, 139, 247, 189, 209};
 static const byte set19[sizeOfSet19] PROGMEM =
-  {136};
-static const byte set20[sizeOfSet20] PROGMEM =
-  {125, 5, 113, 2, 128, 112, 217, 169};
+  {62};
+static const byte set20[sizeOfSet18] PROGMEM =
+  {146, 236, 56};
 static const byte set21[sizeOfSet21] PROGMEM =
-  {41, 203, 231, 3, 172, 194, 21, 144};
+  {212};
 static const byte set22[sizeOfSet22] PROGMEM =
-  {227, 12, 19, 62};
+  {214, 117, 163, 90, 208, 15, 108};
 static const byte set23[sizeOfSet23] PROGMEM =
-  {42, 96};
+  {35, 102, 119, 138, 197, 174, 20, 30, 116, 100, 151, 33};
 static const byte set24[sizeOfSet24] PROGMEM =
-  {50, 198, 237, 208, 124, 93, 170};
+  {86, 180, 109, 37, 77, 251};
 static const byte set25[sizeOfSet25] PROGMEM =
-  {156, 245, 196};
+  {0, 114, 52, 235, 213, 159, 140, 39, 91, 131};
 static const byte set26[sizeOfSet26] PROGMEM =
-  {242, 185, 142, 58, 90, 36, 234, 131};
+  {84, 166, 155};
 static const byte set27[sizeOfSet27] PROGMEM =
-  {141, 11, 219, 165, 99};
+  {232, 5, 8};
 static const byte set28[sizeOfSet28] PROGMEM =
-  {45, 149, 218, 180, 74, 158, 148};
+  {3, 241, 229};
 static const byte set29[sizeOfSet29] PROGMEM =
-  {7, 132, 166};
+  {99, 206};
 static const byte set30[sizeOfSet30] PROGMEM =
-  {34, 14, 220, 18, 140, 68, 88, 233};
+  {231, 125, 203, 55, 105, 27, 134, 104, 246, 111};
 static const byte set31[sizeOfSet31] PROGMEM =
-  {244, 40, 123, 221, 102};
+  {53, 122, 65, 244, 59, 41, 64, 118, 130};
 static const byte set32[sizeOfSet32] PROGMEM =
-  {78, 120};
+  {196, 101, 181};
 static const byte set33[sizeOfSet33] PROGMEM =
-  {152, 26, 138};
+  {136, 227, 223, 200};
 static const byte set34[sizeOfSet34] PROGMEM =
-  {181, 71, 73, 214, 201, 107};
+  {202, 19, 157};
 static const byte set35[sizeOfSet35] PROGMEM =
-  {25, 207, 183, 10, 254, 95, 97, 167};
+  {248, 162, 61, 72, 135, 42, 221, 204, 12, 75, 124, 82};
 static const byte set36[sizeOfSet36] PROGMEM =
-  {228, 195, 55, 15, 101, 1, 187, 163};
+  {76, 220, 149};
 static const byte set37[sizeOfSet37] PROGMEM =
-  {30, 16, 32, 157, 186, 122, 135, 27};
+  {34, 22, 74};
 static const byte set38[sizeOfSet38] PROGMEM =
-  {127, 179, 64};
+  {110, 69, 50, 57, 230, 175, 201, 63};
 static const byte set39[sizeOfSet39] PROGMEM =
-  {13, 153, 84};
-static const byte set40[sizeOfSet40] PROGMEM =
-  {69};
-static const byte set41[sizeOfSet41] PROGMEM =
-  {60};
-static const byte set42[sizeOfSet42] PROGMEM =
-  {86, 146, 31, 94, 192, 173, 239};
-static const byte set43[sizeOfSet43] PROGMEM =
-  {241, 35, 85};
-static const byte set44[sizeOfSet44] PROGMEM =
-  {211, 129, 98, 72};
-static const byte set45[sizeOfSet45] PROGMEM =
-  {143, 188, 139, 91, 130};
-static const byte set46[sizeOfSet46] PROGMEM =
-  {126, 225};
-static const byte set47[sizeOfSet47] PROGMEM =
-  {236, 106, 56, 162, 117, 171, 28, 160};
-static const byte set48[sizeOfSet48] PROGMEM =
-  {49, 238, 248, 9, 4, 100, 243, 53};
-static const byte set49[sizeOfSet49] PROGMEM =
-  {47, 230, 215, 61, 105, 57, 161, 177};
-static const byte set50[sizeOfSet50] PROGMEM =
-  {159, 119, 116, 118, 110, 190, 66};
+  {10, 171};
 static const byte sizesOfSets[numberOfSets] =
   {
    sizeOfSet0, sizeOfSet1, sizeOfSet2, sizeOfSet3, sizeOfSet4, sizeOfSet5,
@@ -173,9 +139,7 @@ static const byte sizesOfSets[numberOfSets] =
    sizeOfSet18, sizeOfSet19, sizeOfSet20, sizeOfSet21, sizeOfSet22, sizeOfSet23,
    sizeOfSet24, sizeOfSet25, sizeOfSet26, sizeOfSet27, sizeOfSet28, sizeOfSet29,
    sizeOfSet30, sizeOfSet31, sizeOfSet32, sizeOfSet33, sizeOfSet34, sizeOfSet35,
-   sizeOfSet36, sizeOfSet37, sizeOfSet38, sizeOfSet39, sizeOfSet40, sizeOfSet41,
-   sizeOfSet42, sizeOfSet43, sizeOfSet44, sizeOfSet45, sizeOfSet46, sizeOfSet47,
-   sizeOfSet48, sizeOfSet49, sizeOfSet50
+   sizeOfSet36, sizeOfSet37, sizeOfSet38, sizeOfSet39
   };
 static const byte * const
 setsOfBytes[numberOfSets] PROGMEM =
@@ -183,6 +147,5 @@ setsOfBytes[numberOfSets] PROGMEM =
    set0, set1, set2, set3, set4, set5, set6, set7, set8, set9, set10, set11,
    set12, set13, set14, set15, set16, set17, set18, set19, set20, set21, set22,
    set23, set24, set25, set26, set27, set28, set29, set30, set31, set32, set33,
-   set34, set35, set36, set37, set38, set39, set40, set41, set42, set43, set44,
-   set45, set46, set47, set48, set49, set50
+   set34, set35, set36, set37, set38, set39
   };
