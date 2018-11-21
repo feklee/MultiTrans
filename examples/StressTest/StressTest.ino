@@ -496,15 +496,15 @@ bool processNextItem(T &transceiver) {
   static bool firstReceivedItemWasRecorded = false;
 
 #ifdef BINARY_TRANSMISSION
-  bool itemWasFound;
-  item_t item = transceiver.getNextByte(itemWasFound);
+  bool itemWasReceived;
+  item_t item = transceiver.getNextByte(itemWasReceived);
 #else
   item_t item = transceiver.getNextCharacter();
-  bool itemWasFound = item != 0;
+  bool itemWasReceived = item != 0;
 #endif
 
-  if (!itemWasFound) {
-    return itemWasFound;
+  if (!itemWasReceived) {
+    return itemWasReceived;
   }
 
   if (!firstReceivedItemWasRecorded) {
@@ -520,7 +520,7 @@ bool processNextItem(T &transceiver) {
     printReport<T>(transceiver, item);
   }
 
-  return itemWasFound;
+  return itemWasReceived;
 }
 
 template <typename T>
@@ -591,22 +591,22 @@ void reportReceiveBufferOverflows(T &transceiver) {
 }
 
 void processReceivedItems() {
-  bool itemWasFound;
+  bool itemWasReceived;
   do {
-    bool itemWasFound1 = processNextItem(transceiver1);
+    bool itemWasReceived1 = processNextItem(transceiver1);
 #ifdef TEST_ALL
-    bool itemWasFound2 = processNextItem(transceiver2);
-    bool itemWasFound3 = processNextItem(transceiver3);
-    bool itemWasFound4 = processNextItem(transceiver4);
+    bool itemWasReceived2 = processNextItem(transceiver2);
+    bool itemWasReceived3 = processNextItem(transceiver3);
+    bool itemWasReceived4 = processNextItem(transceiver4);
 #endif
-    itemWasFound = (itemWasFound1
+    itemWasReceived = (itemWasReceived1
 #ifdef TEST_ALL
-                    || itemWasFound2
-                    || itemWasFound3
-                    || itemWasFound4
+                    || itemWasReceived2
+                    || itemWasReceived3
+                    || itemWasReceived4
 #endif
     );
-  } while(itemWasFound);
+  } while(itemWasReceived);
 }
 
 template <typename T>
