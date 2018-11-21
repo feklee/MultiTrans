@@ -1,0 +1,1321 @@
+Free memory: 379
+Test duration after initial sync (indicated by tripple flash): 300000 ms
+Waiting for sync...done
+Pin 2: Starting transmission of: {3, 188, 21, 225, 138, 251, 197}
+Pin 3: Starting transmission of: {3, 188, 21, 225, 138, 251, 197}
+Pin 8: Starting transmission of: {3, 188, 21, 225, 138, 251, 197}
+Pin 9: Starting transmission of: {3, 188, 21, 225, 138, 251, 197}
+Pin 8: [  4,   3]: 3 = 0000001 Error ratio (error = unexpected byte): 0.00 = 0 / 1
+Pin 8: Number of collisions increased to: 17
+Pin 8: [ 12,  11]: 188 = 1011110 Error ratio (error = unexpected byte): 0.00 = 0 / 2
+Pin 8: Number of collisions increased to: 31
+Pin 8: [ 20,  19]: 21 = 0001010 Error ratio (error = unexpected byte): 0.00 = 0 / 3
+Pin 8: Number of collisions increased to: 47
+Pin 8: [ 26,  25]: 225 = 1110000 Error ratio (error = unexpected byte): 0.00 = 0 / 4
+Pin 8: Number of collisions increased to: 62
+Pin 8: [ 36,  35]: 138 = 1000101 Error ratio (error = unexpected byte): 0.00 = 0 / 5
+Pin 8: Number of collisions increased to: 78
+Pin 8: [ 42,  41]: 251 = 1111101 Error ratio (error = unexpected byte): 0.00 = 0 / 6
+Pin 8: Number of collisions increased to: 90
+Pin 2: Starting transmission of: {236, 34, 106, 80}
+Pin 3: Starting transmission of: {236, 34, 106, 80}
+Pin 8: [ 50,  49]: 197 = 1100010 Error ratio (error = unexpected byte): 0.00 = 0 / 7
+Pin 8: Number of collisions increased to: 105
+Pin 9: Starting transmission of: {236, 34, 106, 80}
+Pin 2: Starting transmission of: {56, 17, 244, 166}
+Pin 3: Starting transmission of: {56, 17, 244, 166}
+Pin 9: Starting transmission of: {56, 17, 244, 166}
+Pin 8: Starting transmission of: {236, 34, 106, 80}
+Pin 8: [ 58,  57]: 236 = 1110110 Error ratio (error = unexpected byte): 0.00 = 0 / 8
+Pin 8: Number of collisions increased to: 119
+Pin 2: Starting transmission of: {219, 145}
+Pin 3: Starting transmission of: {219, 145}
+Pin 8: [ 66,  65]: 34 = 0010001 Error ratio (error = unexpected byte): 0.00 = 0 / 9
+Pin 8: Number of collisions increased to: 140
+Pin 9: Starting transmission of: {219, 145}
+Pin 8: [ 76,  75]: 106 = 0110101 Error ratio (error = unexpected byte): 0.00 = 0 / 10
+Pin 8: Number of collisions increased to: 152
+Pin 8: [ 84,  83]: 80 = 0101000 Error ratio (error = unexpected byte): 0.00 = 0 / 11
+Pin 8: Number of collisions increased to: 168
+Pin 2: Starting transmission of: {70, 57, 37, 231, 110}
+Pin 3: Starting transmission of: {70, 57, 37, 231, 110}
+Pin 9: Starting transmission of: {70, 57, 37, 231, 110}
+Pin 8: Starting transmission of: {56, 17, 244, 166}
+Pin 8: [ 90,  89]: 56 = 0011100 Error ratio (error = unexpected byte): 0.00 = 0 / 12
+Pin 8: Number of collisions increased to: 185
+Pin 2: Starting transmission of: {66, 160, 1, 46, 189, 32}
+Pin 3: Starting transmission of: {66, 160, 1, 46, 189, 32}
+Pin 8: [ 96,  95]: 17 = 0001000 Error ratio (error = unexpected byte): 0.00 = 0 / 13
+Pin 8: Number of collisions increased to: 202
+Pin 9: Starting transmission of: {66, 160, 1, 46, 189, 32}
+Pin 8: [  0, 103]: 244 = 1111010 Error ratio (error = unexpected byte): 0.00 = 0 / 14
+Pin 8: Number of collisions increased to: 216
+Pin 8: [ 10,   9]: 166 = 1010011 Error ratio (error = unexpected byte): 0.00 = 0 / 15
+Pin 8: Number of collisions increased to: 230
+Pin 2: Starting transmission of: {146, 132, 67, 0, 0, 0, 0}
+Pin 3: Starting transmission of: {146, 132, 67, 0, 0, 0, 0}
+Pin 8: Starting transmission of: {219, 145}
+Pin 9: Starting transmission of: {146, 132, 67, 0, 0, 0, 0}
+Pin 8: [ 18,  17]: 219 = 1101101 Error ratio (error = unexpected byte): 0.00 = 0 / 16
+Pin 8: Number of collisions increased to: 244
+Pin 8: [ 26,  25]: 145 = 1001000 Error ratio (error = unexpected byte): 0.00 = 0 / 17
+Pin 8: Number of collisions increased to: 259
+Pin 8: Starting transmission of: {70, 57, 37, 231, 110}
+Pin 8: [ 34,  33]: 70 = 0100011 Error ratio (error = unexpected byte): 0.00 = 0 / 18
+Pin 8: Number of collisions increased to: 276
+Pin 2: Starting transmission of: {142, 151, 87, 113, 199}
+Pin 3: Starting transmission of: {142, 151, 87, 113, 199}
+Pin 8: [ 40,  39]: 57 = 0011100 Error ratio (error = unexpected byte): 0.00 = 0 / 19
+Pin 8: Number of collisions increased to: 293
+Pin 9: Starting transmission of: {142, 151, 87, 113, 199}
+Pin 8: [ 48,  47]: 37 = 0010010 Error ratio (error = unexpected byte): 0.00 = 0 / 20
+Pin 8: Number of collisions increased to: 307
+Pin 8: [ 54,  53]: 231 = 1110011 Error ratio (error = unexpected byte): 0.00 = 0 / 21
+Pin 8: Number of collisions increased to: 320
+Pin 8: [ 62,  61]: 110 = 0110111 Error ratio (error = unexpected byte): 0.00 = 0 / 22
+Pin 8: Number of collisions increased to: 333
+Pin 2: Starting transmission of: {111, 92, 182}
+Pin 3: Starting transmission of: {111, 92, 182}
+Pin 9: Starting transmission of: {111, 92, 182}
+Pin 8: Starting transmission of: {66, 160, 1, 46, 189, 32}
+Pin 2: Starting transmission of: {204, 25}
+Pin 3: Starting transmission of: {204, 25}
+Pin 8: [ 70,  69]: 66 = 0100001 Error ratio (error = unexpected byte): 0.00 = 0 / 23
+Pin 8: Number of collisions increased to: 351
+Pin 9: Starting transmission of: {204, 25}
+Pin 8: [ 78,  77]: 160 = 1010000 Error ratio (error = unexpected byte): 0.00 = 0 / 24
+Pin 8: Number of collisions increased to: 368
+Pin 8: [ 82,  81]: 1 = 0000000 Error ratio (error = unexpected byte): 0.00 = 0 / 25
+Pin 8: Number of collisions increased to: 386
+Pin 2: Starting transmission of: {217, 242, 147, 155, 161}
+Pin 3: Starting transmission of: {217, 242, 147, 155, 161}
+Pin 8: [ 90,  89]: 46 = 0010111 Error ratio (error = unexpected byte): 0.00 = 0 / 26
+Pin 8: Number of collisions increased to: 401
+Pin 9: Starting transmission of: {217, 242, 147, 155, 161}
+Pin 8: [ 98,  97]: 189 = 1011110 Error ratio (error = unexpected byte): 0.00 = 0 / 27
+Pin 8: Number of collisions increased to: 414
+Pin 8: [  0, 103]: 32 = 0010000 Error ratio (error = unexpected byte): 0.00 = 0 / 28
+Pin 8: Number of collisions increased to: 432
+Pin 2: Starting transmission of: {172, 10, 86}
+Pin 3: Starting transmission of: {172, 10, 86}
+Pin 9: Starting transmission of: {172, 10, 86}
+Pin 8: Starting transmission of: {146, 132, 67, 0, 0, 0, 0}
+Pin 2: Starting transmission of: {114, 133}
+Pin 3: Starting transmission of: {114, 133}
+Pin 8: [ 10,   9]: 146 = 1001001 Error ratio (error = unexpected byte): 0.00 = 0 / 29
+Pin 8: Number of collisions increased to: 448
+Pin 9: Starting transmission of: {114, 133}
+Pin 8: [ 18,  17]: 132 = 1000010 Error ratio (error = unexpected byte): 0.00 = 0 / 30
+Pin 8: Number of collisions increased to: 465
+Pin 8: [ 24,  23]: 67 = 0100001 Error ratio (error = unexpected byte): 0.00 = 0 / 31
+Pin 8: Number of collisions increased to: 481
+Pin 2: Starting transmission of: {60, 164, 227, 224, 48}
+Pin 3: Starting transmission of: {60, 164, 227, 224, 48}
+Pin 8: [ 28,  27]: 0 = 0000000 Error ratio (error = unexpected byte): 0.00 = 0 / 32
+Pin 8: Number of collisions increased to: 500
+Pin 9: Starting transmission of: {60, 164, 227, 224, 48}
+Pin 8: [ 32,  31]: 0 = 0000000 Error ratio (error = unexpected byte): 0.00 = 0 / 33
+Pin 8: Number of collisions increased to: 519
+Pin 8: [ 36,  35]: 0 = 0000000 Error ratio (error = unexpected byte): 0.00 = 0 / 34
+Pin 8: Number of collisions increased to: 538
+Pin 8: [ 40,  39]: 0 = 0000000 Error ratio (error = unexpected byte): 0.00 = 0 / 35
+Pin 8: Number of collisions increased to: 557
+Pin 2: Starting transmission of: {192}
+Pin 3: Starting transmission of: {192}
+Pin 9: Starting transmission of: {192}
+Pin 2: Starting transmission of: {165}
+Pin 3: Starting transmission of: {165}
+Pin 9: Starting transmission of: {165}
+Pin 2: Starting transmission of: {120, 62}
+Pin 3: Starting transmission of: {120, 62}
+Pin 9: Starting transmission of: {120, 62}
+Pin 8: Starting transmission of: {142, 151, 87, 113, 199}
+Pin 8: [ 48,  47]: 142 = 1000111 Error ratio (error = unexpected byte): 0.00 = 0 / 36
+Pin 8: Number of collisions increased to: 572
+Pin 2: Starting transmission of: {193, 254, 28}
+Pin 3: Starting transmission of: {193, 254, 28}
+Pin 8: [ 56,  55]: 151 = 1001011 Error ratio (error = unexpected byte): 0.00 = 0 / 37
+Pin 8: Number of collisions increased to: 586
+Pin 9: Starting transmission of: {193, 254, 28}
+Pin 8: [ 64,  63]: 87 = 0101011 Error ratio (error = unexpected byte): 0.00 = 0 / 38
+Pin 8: Number of collisions increased to: 600
+Pin 8: [ 70,  69]: 113 = 0111000 Error ratio (error = unexpected byte): 0.00 = 0 / 39
+Pin 8: Number of collisions increased to: 615
+Pin 8: [ 76,  75]: 199 = 1100011 Error ratio (error = unexpected byte): 0.00 = 0 / 40
+Pin 8: Number of collisions increased to: 629
+Pin 2: Starting transmission of: {178, 246, 45, 239, 232, 30, 241, 39}
+Pin 3: Starting transmission of: {178, 246, 45, 239, 232, 30, 241, 39}
+Pin 9: Starting transmission of: {178, 246, 45, 239, 232, 30, 241, 39}
+Pin 8: Starting transmission of: {111, 92, 182}
+Pin 8: [ 82,  81]: 111 = 0110111 Error ratio (error = unexpected byte): 0.00 = 0 / 41
+Pin 8: Number of collisions increased to: 642
+Pin 8: [ 90,  89]: 92 = 0101110 Error ratio (error = unexpected byte): 0.00 = 0 / 42
+Pin 8: Number of collisions increased to: 657
+Pin 2: Starting transmission of: {240, 154}
+Pin 8: [100,  99]: 182 = 1011011 Error ratio (error = unexpected byte): 0.00 = 0 / 43
+Pin 8: Number of collisions increased to: 671
+Pin 3: Starting transmission of: {240, 154}
+Pin 9: Starting transmission of: {240, 154}
+Pin 2: Starting transmission of: {41, 13, 29, 15, 209, 184, 14}
+Pin 3: Starting transmission of: {41, 13, 29, 15, 209, 184, 14}
+Pin 8: Starting transmission of: {204, 25}
+Pin 9: Starting transmission of: {41, 13, 29, 15, 209, 184, 14}
+Pin 8: [  4,   3]: 204 = 1100110 Error ratio (error = unexpected byte): 0.00 = 0 / 44
+Pin 8: Number of collisions increased to: 686
+Pin 8: [ 10,   9]: 25 = 0001100 Error ratio (error = unexpected byte): 0.00 = 0 / 45
+Pin 8: Number of collisions increased to: 702
+Pin 8: Starting transmission of: {217, 242, 147, 155, 161}
+Pin 8: [ 18,  17]: 217 = 1101100 Error ratio (error = unexpected byte): 0.00 = 0 / 46
+Pin 8: Number of collisions increased to: 716
+Pin 2: Starting transmission of: {213, 218, 90, 99, 158, 171, 112, 247}
+Pin 3: Starting transmission of: {213, 218, 90, 99, 158, 171, 112, 247}
+Pin 8: [ 26,  25]: 242 = 1111001 Error ratio (error = unexpected byte): 0.00 = 0 / 47
+Pin 8: Number of collisions increased to: 734
+Pin 9: Starting transmission of: {213, 218, 90, 99, 158, 171, 112, 247}
+Pin 8: [ 34,  33]: 147 = 1001001 Error ratio (error = unexpected byte): 0.00 = 0 / 48
+Pin 8: Number of collisions increased to: 745
+Pin 8: [ 42,  41]: 155 = 1001101 Error ratio (error = unexpected byte): 0.00 = 0 / 49
+Pin 8: Number of collisions increased to: 759
+Pin 8: [ 50,  49]: 161 = 1010000 Error ratio (error = unexpected byte): 0.00 = 0 / 50
+Pin 8: Number of collisions increased to: 775
+Pin 2: Starting transmission of: {134, 222}
+Pin 3: Starting transmission of: {134, 222}
+Pin 8: Starting transmission of: {172, 10, 86}
+Pin 9: Starting transmission of: {134, 222}
+Pin 8: [ 60,  59]: 172 = 1010110 Error ratio (error = unexpected byte): 0.00 = 0 / 51
+Pin 8: Number of collisions increased to: 791
+Pin 2: Starting transmission of: {170, 102, 235, 186, 200}
+Pin 8: [ 68,  68]: 10 = 0000101 Error ratio (error = unexpected byte): 0.00 = 0 / 52
+Pin 8: Number of collisions increased to: 816
+Pin 3: Starting transmission of: {170, 102, 235, 186, 200}
+Pin 8: [ 78,  77]: 86 = 0101011 Error ratio (error = unexpected byte): 0.00 = 0 / 53
+Pin 8: Number of collisions increased to: 822
+Pin 9: Starting transmission of: {170, 102, 235, 186, 200}
+Pin 8: Starting transmission of: {114, 133}
+Pin 2: Starting transmission of: {75, 47, 81, 234, 252, 98, 44}
+Pin 8: [ 86,  85]: 114 = 0111001 Error ratio (error = unexpected byte): 0.00 = 0 / 54
+Pin 8: Number of collisions increased to: 838
+Pin 3: Starting transmission of: {75, 47, 81, 234, 252, 98, 44}
+Pin 9: Starting transmission of: {75, 47, 81, 234, 252, 98, 44}
+Pin 8: [ 94,  93]: 133 = 1000010 Error ratio (error = unexpected byte): 0.00 = 0 / 55
+Pin 8: Number of collisions increased to: 853
+Pin 8: Starting transmission of: {60, 164, 227, 224, 48}
+Pin 8: [100,  99]: 60 = 0011110 Error ratio (error = unexpected byte): 0.00 = 0 / 56
+Pin 8: Number of collisions increased to: 869
+Pin 8: [  6,   5]: 164 = 1010010 Error ratio (error = unexpected byte): 0.00 = 0 / 57
+Pin 8: Number of collisions increased to: 885
+Pin 8: [ 12,  11]: 227 = 1110001 Error ratio (error = unexpected byte): 0.00 = 0 / 58
+Pin 8: Number of collisions increased to: 899
+Pin 2: Starting transmission of: {237, 201, 212, 122}
+Pin 3: Starting transmission of: {237, 201, 212, 122}
+Pin 8: [ 18,  18]: 224 = 1110000 Error ratio (error = unexpected byte): 0.00 = 0 / 59
+Pin 8: Number of collisions increased to: 919
+Pin 9: Starting transmission of: {237, 201, 212, 122}
+Pin 8: [ 24,  23]: 48 = 0011000 Error ratio (error = unexpected byte): 0.00 = 0 / 60
+Pin 8: Number of collisions increased to: 931
+Pin 2: Starting transmission of: {149, 89, 183, 126}
+Pin 3: Starting transmission of: {149, 89, 183, 126}
+Pin 9: Starting transmission of: {149, 89, 183, 126}
+Pin 8: Starting transmission of: {192}
+Pin 8: [ 30,  29]: 192 = 1100000 Error ratio (error = unexpected byte): 0.00 = 0 / 61
+Pin 8: Number of collisions increased to: 948
+Pin 2: Starting transmission of: {54, 216}
+Pin 3: Starting transmission of: {54, 216}
+Pin 8: Starting transmission of: {165}
+Pin 9: Starting transmission of: {54, 216}
+Pin 8: [ 40,  39]: 165 = 1010010 Error ratio (error = unexpected byte): 0.00 = 0 / 62
+Pin 8: Number of collisions increased to: 963
+Pin 2: Starting transmission of: {16, 245}
+Pin 3: Starting transmission of: {16, 245}
+Pin 9: Starting transmission of: {16, 245}
+Pin 8: Starting transmission of: {120, 62}
+Pin 8: [ 46,  45]: 120 = 0111100 Error ratio (error = unexpected byte): 0.00 = 0 / 63
+Pin 8: Number of collisions increased to: 979
+Pin 2: Starting transmission of: {107, 68, 153, 42, 26, 148, 65}
+Pin 3: Starting transmission of: {107, 68, 153, 42, 26, 148, 65}
+Pin 8: [ 52,  51]: 62 = 0011111 Error ratio (error = unexpected byte): 0.00 = 0 / 64
+Pin 8: Number of collisions increased to: 992
+Pin 9: Starting transmission of: {107, 68, 153, 42, 26, 148, 65}
+Pin 8: Starting transmission of: {193, 254, 28}
+Pin 8: [ 58,  57]: 193 = 1100000 Error ratio (error = unexpected byte): 0.00 = 0 / 65
+Pin 8: Number of collisions increased to: 1009
+Pin 8: [ 64,  63]: 254 = 1111111 Error ratio (error = unexpected byte): 0.00 = 0 / 66
+Pin 8: Number of collisions increased to: 1021
+Pin 8: [ 70,  69]: 28 = 0001110 Error ratio (error = unexpected byte): 0.00 = 0 / 67
+Pin 8: Number of collisions increased to: 1036
+Pin 2: Starting transmission of: {121, 6, 221, 2, 12, 40, 117, 93}
+Pin 3: Starting transmission of: {121, 6, 221, 2, 12, 40, 117, 93}
+Pin 9: Starting transmission of: {121, 6, 221, 2, 12, 40, 117, 93}
+Pin 8: Starting transmission of: {178, 246, 45, 239, 232, 30, 241, 39}
+Pin 8: [ 80,  79]: 178 = 1011001 Error ratio (error = unexpected byte): 0.00 = 0 / 68
+Pin 8: Number of collisions increased to: 1051
+Pin 8: [ 88,  87]: 246 = 1111011 Error ratio (error = unexpected byte): 0.00 = 0 / 69
+Pin 8: Number of collisions increased to: 1064
+Pin 8: [ 96,  95]: 45 = 0010110 Error ratio (error = unexpected byte): 0.00 = 0 / 70
+Pin 8: Number of collisions increased to: 1079
+Pin 8: [102, 101]: 239 = 1110111 Error ratio (error = unexpected byte): 0.00 = 0 / 71
+Pin 8: Number of collisions increased to: 1091
+Pin 8: [  6,   5]: 232 = 1110100 Error ratio (error = unexpected byte): 0.00 = 0 / 72
+Pin 8: Number of collisions increased to: 1106
+Pin 2: Starting transmission of: {195, 50, 179, 83, 228, 187}
+Pin 3: Starting transmission of: {195, 50, 179, 83, 228, 187}
+Pin 8: [ 12,  12]: 30 = 0001111 Error ratio (error = unexpected byte): 0.00 = 0 / 73
+Pin 8: Number of collisions increased to: 1127
+Pin 9: Starting transmission of: {195, 50, 179, 83, 228, 187}
+Pin 8: [ 18,  17]: 241 = 1111000 Error ratio (error = unexpected byte): 0.00 = 0 / 74
+Pin 8: Number of collisions increased to: 1135
+Pin 8: [ 24,  23]: 39 = 0010011 Error ratio (error = unexpected byte): 0.00 = 0 / 75
+Pin 8: Number of collisions increased to: 1150
+Pin 2: Starting transmission of: {97, 198, 4, 211, 88, 69}
+Pin 3: Starting transmission of: {97, 198, 4, 211, 88, 69}
+Pin 9: Starting transmission of: {97, 198, 4, 211, 88, 69}
+Pin 8: Starting transmission of: {240, 154}
+Pin 8: [ 30,  29]: 240 = 1111000 Error ratio (error = unexpected byte): 0.00 = 0 / 76
+Pin 8: Number of collisions increased to: 1165
+Pin 8: [ 40,  39]: 154 = 1001101 Error ratio (error = unexpected byte): 0.00 = 0 / 77
+Pin 8: Number of collisions increased to: 1180
+Pin 2: Starting transmission of: {101, 249, 128, 51, 55, 214, 124, 159}
+Pin 3: Starting transmission of: {101, 249, 128, 51, 55, 214, 124, 159}
+Pin 9: Starting transmission of: {101, 249, 128, 51, 55, 214, 124, 159}
+Pin 8: Starting transmission of: {41, 13, 29, 15, 209, 184, 14}
+Pin 8: [ 48,  47]: 41 = 0010100 Error ratio (error = unexpected byte): 0.00 = 0 / 78
+Pin 8: Number of collisions increased to: 1196
+Pin 8: [ 54,  53]: 13 = 0000110 Error ratio (error = unexpected byte): 0.00 = 0 / 79
+Pin 8: Number of collisions increased to: 1212
+Pin 8: [ 60,  59]: 29 = 0001110 Error ratio (error = unexpected byte): 0.00 = 0 / 80
+Pin 8: Number of collisions increased to: 1227
+Pin 8: [ 64,  63]: 15 = 0000111 Error ratio (error = unexpected byte): 0.00 = 0 / 81
+Pin 8: Number of collisions increased to: 1242
+Pin 8: [ 72,  71]: 209 = 1101000 Error ratio (error = unexpected byte): 0.00 = 0 / 82
+Pin 8: Number of collisions increased to: 1257
+Pin 2: Starting transmission of: {82, 131, 19, 194, 85, 125, 202}
+Pin 3: Starting transmission of: {82, 131, 19, 194, 85, 125, 202}
+Pin 8: [ 80,  80]: 184 = 1011100 Error ratio (error = unexpected byte): 0.00 = 0 / 83
+Pin 8: Number of collisions increased to: 1283
+Pin 9: Starting transmission of: {82, 131, 19, 194, 85, 125, 202}
+Pin 8: [ 86,  85]: 14 = 0000111 Error ratio (error = unexpected byte): 0.00 = 0 / 84
+Pin 8: Number of collisions increased to: 1288
+Pin 2: Starting transmission of: {162, 109, 115, 11, 167, 205, 176}
+Pin 3: Starting transmission of: {162, 109, 115, 11, 167, 205, 176}
+Pin 8: Starting transmission of: {213, 218, 90, 99, 158, 171, 112, 247}
+Pin 9: Starting transmission of: {162, 109, 115, 11, 167, 205, 176}
+Pin 8: [ 96,  95]: 213 = 1101010 Error ratio (error = unexpected byte): 0.00 = 0 / 85
+Pin 8: Number of collisions increased to: 1302
+Pin 8: [  2,   1]: 218 = 1101101 Error ratio (error = unexpected byte): 0.00 = 0 / 86
+Pin 8: Number of collisions increased to: 1316
+Pin 8: [ 12,  11]: 90 = 0101101 Error ratio (error = unexpected byte): 0.00 = 0 / 87
+Pin 8: Number of collisions increased to: 1331
+Pin 8: [ 18,  17]: 99 = 0110001 Error ratio (error = unexpected byte): 0.00 = 0 / 88
+Pin 8: Number of collisions increased to: 1346
+Pin 8: [ 26,  25]: 158 = 1001111 Error ratio (error = unexpected byte): 0.00 = 0 / 89
+Pin 8: Number of collisions increased to: 1360
+Pin 8: [ 36,  35]: 171 = 1010101 Error ratio (error = unexpected byte): 0.00 = 0 / 90
+Pin 8: Number of collisions increased to: 1374
+Pin 2: Starting transmission of: {137, 43, 74, 119, 77, 238, 229}
+Pin 3: Starting transmission of: {137, 43, 74, 119, 77, 238, 229}
+Pin 8: [ 42,  42]: 112 = 0111000 Error ratio (error = unexpected byte): 0.00 = 0 / 91
+Pin 8: Number of collisions increased to: 1396
+Pin 9: Starting transmission of: {137, 43, 74, 119, 77, 238, 229}
+Pin 8: [ 48,  47]: 247 = 1111011 Error ratio (error = unexpected byte): 0.00 = 0 / 92
+Pin 8: Number of collisions increased to: 1402
+Pin 2: Starting transmission of: {23, 72, 243}
+Pin 3: Starting transmission of: {23, 72, 243}
+Pin 9: Starting transmission of: {23, 72, 243}
+Pin 8: Starting transmission of: {134, 222}
+Pin 8: [ 56,  55]: 134 = 1000011 Error ratio (error = unexpected byte): 0.00 = 0 / 93
+Pin 8: Number of collisions increased to: 1418
+Pin 2: Starting transmission of: {118, 223, 35, 127, 174}
+Pin 3: Starting transmission of: {118, 223, 35, 127, 174}
+Pin 8: [ 64,  63]: 222 = 1101111 Error ratio (error = unexpected byte): 0.00 = 0 / 94
+Pin 8: Number of collisions increased to: 1431
+Pin 9: Starting transmission of: {118, 223, 35, 127, 174}
+Pin 8: Starting transmission of: {170, 102, 235, 186, 200}
+Pin 8: [ 76,  75]: 170 = 1010101 Error ratio (error = unexpected byte): 0.00 = 0 / 95
+Pin 8: Number of collisions increased to: 1447
+Pin 2: Starting transmission of: {180}
+Pin 3: Starting transmission of: {180}
+Pin 8: [ 84,  84]: 102 = 0110011 Error ratio (error = unexpected byte): 0.00 = 0 / 96
+Pin 8: Number of collisions increased to: 1471
+Pin 9: Starting transmission of: {180}
+Pin 8: [ 92,  92]: 235 = 1110101 Error ratio (error = unexpected byte): 0.00 = 0 / 97
+Pin 8: Number of collisions increased to: 1483
+Pin 2: Starting transmission of: {58}
+Pin 3: Starting transmission of: {58}
+Pin 8: [102, 102]: 186 = 1011101 Error ratio (error = unexpected byte): 0.00 = 0 / 98
+Pin 8: Number of collisions increased to: 1501
+Pin 8: [  6,   5]: 200 = 1100100 Error ratio (error = unexpected byte): 0.00 = 0 / 99
+Pin 8: Number of collisions increased to: 1504
+Pin 9: Starting transmission of: {58}
+Pin 2: Starting transmission of: {49, 253, 24, 52}
+Pin 3: Starting transmission of: {49, 253, 24, 52}
+Pin 9: Starting transmission of: {49, 253, 24, 52}
+Pin 8: Starting transmission of: {75, 47, 81, 234, 252, 98, 44}
+Pin 2: Starting transmission of: {36, 108}
+Pin 3: Starting transmission of: {36, 108}
+Pin 9: Starting transmission of: {36, 108}
+Pin 8: [ 14,  14]: 75 = 0100101 Error ratio (error = unexpected byte): 0.00 = 0 / 100
+Pin 8: Number of collisions increased to: 1527
+Pin 8: [ 20,  19]: 47 = 0010111 Error ratio (error = unexpected byte): 0.00 = 0 / 101
+Pin 8: Number of collisions increased to: 1534
+Pin 2: Starting transmission of: {91, 255, 103, 136, 168, 22}
+Pin 3: Starting transmission of: {91, 255, 103, 136, 168, 22}
+Pin 8: [ 28,  28]: 81 = 0101000 Error ratio (error = unexpected byte): 0.00 = 0 / 102
+Pin 8: Number of collisions increased to: 1560
+Pin 8: [ 38,  37]: 234 = 1110101 Error ratio (error = unexpected byte): 0.00 = 0 / 103
+Pin 8: Number of collisions increased to: 1564
+Pin 9: Starting transmission of: {91, 255, 103, 136, 168, 22}
+Pin 8: [ 44,  43]: 252 = 1111110 Error ratio (error = unexpected byte): 0.00 = 0 / 104
+Pin 8: Number of collisions increased to: 1577
+Pin 8: [ 52,  51]: 98 = 0110001 Error ratio (error = unexpected byte): 0.00 = 0 / 105
+Pin 8: Number of collisions increased to: 1593
+Pin 8: [ 60,  59]: 44 = 0010110 Error ratio (error = unexpected byte): 0.00 = 0 / 106
+Pin 8: Number of collisions increased to: 1608
+Pin 2: Starting transmission of: {104, 73, 203, 220, 169, 64}
+Pin 3: Starting transmission of: {104, 73, 203, 220, 169, 64}
+Pin 9: Starting transmission of: {104, 73, 203, 220, 169, 64}
+Pin 8: Starting transmission of: {237, 201, 212, 122}
+Pin 8: [ 68,  67]: 237 = 1110110 Error ratio (error = unexpected byte): 0.00 = 0 / 107
+Pin 8: Number of collisions increased to: 1622
+Pin 2: Starting transmission of: {141, 230, 71, 210, 181, 140, 163}
+Pin 3: Starting transmission of: {141, 230, 71, 210, 181, 140, 163}
+Pin 8: [ 76,  76]: 201 = 1100100 Error ratio (error = unexpected byte): 0.00 = 0 / 108
+Pin 8: Number of collisions increased to: 1643
+Pin 9: Starting transmission of: {141, 230, 71, 210, 181, 140, 163}
+Pin 8: [ 86,  86]: 212 = 1101010 Error ratio (error = unexpected byte): 0.00 = 0 / 109
+Pin 8: Number of collisions increased to: 1660
+Pin 8: [ 94,  93]: 122 = 0111101 Error ratio (error = unexpected byte): 0.00 = 0 / 110
+Pin 8: Number of collisions increased to: 1665
+Pin 8: Starting transmission of: {149, 89, 183, 126}
+Pin 2: Starting transmission of: {61, 5}
+Pin 3: Starting transmission of: {61, 5}
+Pin 8: [  0, 103]: 149 = 1001010 Error ratio (error = unexpected byte): 0.00 = 0 / 111
+Pin 8: Number of collisions increased to: 1681
+Pin 9: Starting transmission of: {61, 5}
+Pin 8: [  8,   7]: 89 = 0101100 Error ratio (error = unexpected byte): 0.00 = 0 / 112
+Pin 8: Number of collisions increased to: 1696
+Pin 8: [ 16,  15]: 183 = 1011011 Error ratio (error = unexpected byte): 0.00 = 0 / 113
+Pin 8: Number of collisions increased to: 1708
+Pin 2: Starting transmission of: {191, 248, 177, 84, 59}
+Pin 3: Starting transmission of: {191, 248, 177, 84, 59}
+Pin 8: [ 22,  21]: 126 = 0111111 Error ratio (error = unexpected byte): 0.00 = 0 / 114
+Pin 8: Number of collisions increased to: 1721
+Pin 9: Starting transmission of: {191, 248, 177, 84, 59}
+Pin 8: Starting transmission of: {54, 216}
+Pin 2: Starting transmission of: {135, 53, 215, 9, 116, 18, 105, 123}
+Pin 3: Starting transmission of: {135, 53, 215, 9, 116, 18, 105, 123}
+Pin 8: [ 30,  29]: 54 = 0011011 Error ratio (error = unexpected byte): 0.00 = 0 / 115
+Pin 8: Number of collisions increased to: 1736
+Pin 9: Starting transmission of: {135, 53, 215, 9, 116, 18, 105, 123}
+Pin 8: [ 38,  37]: 216 = 1101100 Error ratio (error = unexpected byte): 0.00 = 0 / 116
+Pin 8: Number of collisions increased to: 1751
+Pin 8: Starting transmission of: {16, 245}
+Pin 8: [ 44,  43]: 16 = 0001000 Error ratio (error = unexpected byte): 0.00 = 0 / 117
+Pin 8: Number of collisions increased to: 1769
+Pin 8: [ 52,  51]: 245 = 1111010 Error ratio (error = unexpected byte): 0.00 = 0 / 118
+Pin 8: Number of collisions increased to: 1782
+Pin 2: Starting transmission of: {144, 7, 208, 250, 96, 100}
+Pin 3: Starting transmission of: {144, 7, 208, 250, 96, 100}
+Pin 9: Starting transmission of: {144, 7, 208, 250, 96, 100}
+Pin 8: Starting transmission of: {107, 68, 153, 42, 26, 148, 65}
+Pin 8: [ 60,  59]: 107 = 0110101 Error ratio (error = unexpected byte): 0.00 = 0 / 119
+Pin 8: Number of collisions increased to: 1796
+Pin 8: [ 68,  67]: 68 = 0100010 Error ratio (error = unexpected byte): 0.00 = 0 / 120
+Pin 8: Number of collisions increased to: 1813
+Pin 8: [ 76,  75]: 153 = 1001100 Error ratio (error = unexpected byte): 0.00 = 0 / 121
+Pin 8: Number of collisions increased to: 1828
+Pin 8: [ 86,  85]: 42 = 0010101 Error ratio (error = unexpected byte): 0.00 = 0 / 122
+Pin 8: Number of collisions increased to: 1844
+Pin 2: Starting transmission of: {207, 31, 226, 33}
+Pin 3: Starting transmission of: {207, 31, 226, 33}
+Pin 8: [ 94,  94]: 26 = 0001101 Error ratio (error = unexpected byte): 0.00 = 0 / 123
+Pin 8: Number of collisions increased to: 1872
+Pin 8: [  0, 103]: 148 = 1001010 Error ratio (error = unexpected byte): 0.00 = 0 / 124
+Pin 8: Number of collisions increased to: 1877
+Pin 9: Starting transmission of: {207, 31, 226, 33}
+Pin 8: [  6,   5]: 65 = 0100000 Error ratio (error = unexpected byte): 0.00 = 0 / 125
+Pin 8: Number of collisions increased to: 1893
+Pin 2: Starting transmission of: {20, 150, 94, 152}
+Pin 3: Starting transmission of: {20, 150, 94, 152}
+Pin 9: Starting transmission of: {20, 150, 94, 152}
+Pin 8: Starting transmission of: {121, 6, 221, 2, 12, 40, 117, 93}
+Pin 2: Starting transmission of: {156, 63, 130, 78, 173, 206, 8}
+Pin 3: Starting transmission of: {156, 63, 130, 78, 173, 206, 8}
+Pin 8: [ 12,  11]: 121 = 0111100 Error ratio (error = unexpected byte): 0.00 = 0 / 126
+Pin 8: Number of collisions increased to: 1907
+Pin 9: Starting transmission of: {156, 63, 130, 78, 173, 206, 8}
+Pin 8: [ 18,  17]: 6 = 0000011 Error ratio (error = unexpected byte): 0.00 = 0 / 127
+Pin 8: Number of collisions increased to: 1924
+Pin 8: [ 26,  25]: 221 = 1101110 Error ratio (error = unexpected byte): 0.00 = 0 / 128
+Pin 8: Number of collisions increased to: 1937
+Pin 8: [ 32,  31]: 2 = 0000001 Error ratio (error = unexpected byte): 0.00 = 0 / 129
+Pin 8: Number of collisions increased to: 1955
+Pin 8: [ 38,  37]: 12 = 0000110 Error ratio (error = unexpected byte): 0.00 = 0 / 130
+Pin 8: Number of collisions increased to: 1972
+Pin 8: [ 46,  45]: 40 = 0010100 Error ratio (error = unexpected byte): 0.00 = 0 / 131
+Pin 8: Number of collisions increased to: 1989
+Pin 8: [ 54,  53]: 117 = 0111010 Error ratio (error = unexpected byte): 0.00 = 0 / 132
+Pin 8: Number of collisions increased to: 2003
+Pin 2: Starting transmission of: {79, 143, 95}
+Pin 3: Starting transmission of: {79, 143, 95}
+Pin 8: [ 62,  61]: 93 = 0101110 Error ratio (error = unexpected byte): 0.00 = 0 / 133
+Pin 8: Number of collisions increased to: 2017
+Pin 9: Starting transmission of: {79, 143, 95}
+Pin 2: Starting transmission of: {157, 129, 190, 185}
+Pin 3: Starting transmission of: {157, 129, 190, 185}
+Pin 9: Starting transmission of: {157, 129, 190, 185}
+Pin 8: Starting transmission of: {195, 50, 179, 83, 228, 187}
+Pin 2: Starting transmission of: {139, 38}
+Pin 3: Starting transmission of: {139, 38}
+Pin 8: [ 68,  67]: 195 = 1100001 Error ratio (error = unexpected byte): 0.00 = 0 / 134
+Pin 8: Number of collisions increased to: 2032
+Pin 9: Starting transmission of: {139, 38}
+Pin 8: [ 76,  75]: 50 = 0011001 Error ratio (error = unexpected byte): 0.00 = 0 / 135
+Pin 8: Number of collisions increased to: 2048
+Pin 2: Starting transmission of: {175, 233}
+Pin 3: Starting transmission of: {175, 233}
+Pin 8: [ 84,  84]: 179 = 1011001 Error ratio (error = unexpected byte): 0.00 = 0 / 136
+Pin 8: Number of collisions increased to: 2071
+Pin 8: [ 92,  91]: 83 = 0101001 Error ratio (error = unexpected byte): 0.00 = 0 / 137
+Pin 8: Number of collisions increased to: 2077
+Pin 9: Starting transmission of: {175, 233}
+Pin 8: [100,  99]: 228 = 1110010 Error ratio (error = unexpected byte): 0.00 = 0 / 138
+Pin 8: Number of collisions increased to: 2093
+Pin 2: Starting transmission of: {3, 188, 21, 225, 138, 251, 197}
+Pin 3: Starting transmission of: {3, 188, 21, 225, 138, 251, 197}
+Pin 8: [  4,   3]: 187 = 1011101 Error ratio (error = unexpected byte): 0.00 = 0 / 139
+Pin 8: Number of collisions increased to: 2105
+Pin 9: Starting transmission of: {3, 188, 21, 225, 138, 251, 197}
+Pin 8: Starting transmission of: {97, 198, 4, 211, 88, 69}
+Pin 2: Starting transmission of: {236, 34, 106, 80}
+Pin 3: Starting transmission of: {236, 34, 106, 80}
+Pin 8: [ 10,   9]: 97 = 0110000 Error ratio (error = unexpected byte): 0.00 = 0 / 140
+Pin 8: Number of collisions increased to: 2125
+Pin 8: [ 18,  17]: 198 = 1100011 Error ratio (error = unexpected byte): 0.00 = 0 / 141
+Pin 8: Number of collisions increased to: 2137
+Pin 9: Starting transmission of: {236, 34, 106, 80}
+Pin 8: [ 24,  23]: 4 = 0000010 Error ratio (error = unexpected byte): 0.00 = 0 / 142
+Pin 8: Number of collisions increased to: 2154
+Pin 8: [ 32,  31]: 211 = 1101001 Error ratio (error = unexpected byte): 0.00 = 0 / 143
+Pin 8: Number of collisions increased to: 2169
+Pin 8: [ 40,  39]: 88 = 0101100 Error ratio (error = unexpected byte): 0.00 = 0 / 144
+Pin 8: Number of collisions increased to: 2185
+Pin 2: Starting transmission of: {56, 17, 244, 166}
+Pin 3: Starting transmission of: {56, 17, 244, 166}
+Pin 8: [ 48,  47]: 69 = 0100010 Error ratio (error = unexpected byte): 0.00 = 0 / 145
+Pin 8: Number of collisions increased to: 2200
+Pin 9: Starting transmission of: {56, 17, 244, 166}
+Pin 2: Starting transmission of: {219, 145}
+Pin 3: Starting transmission of: {219, 145}
+Pin 9: Starting transmission of: {219, 145}
+Pin 8: Starting transmission of: {101, 249, 128, 51, 55, 214, 124, 159}
+Pin 2: Starting transmission of: {70, 57, 37, 231, 110}
+Pin 3: Starting transmission of: {70, 57, 37, 231, 110}
+Pin 8: [ 56,  55]: 101 = 0110010 Error ratio (error = unexpected byte): 0.00 = 0 / 146
+Pin 8: Number of collisions increased to: 2216
+Pin 8: [ 62,  61]: 249 = 1111100 Error ratio (error = unexpected byte): 0.00 = 0 / 147
+Pin 8: Number of collisions increased to: 2229
+Pin 9: Starting transmission of: {70, 57, 37, 231, 110}
+Pin 8: [ 68,  67]: 128 = 1000000 Error ratio (error = unexpected byte): 0.00 = 0 / 148
+Pin 8: Number of collisions increased to: 2247
+Pin 8: [ 74,  73]: 51 = 0011001 Error ratio (error = unexpected byte): 0.00 = 0 / 149
+Pin 8: Number of collisions increased to: 2262
+Pin 8: [ 80,  79]: 55 = 0011011 Error ratio (error = unexpected byte): 0.00 = 0 / 150
+Pin 8: Number of collisions increased to: 2276
+Pin 8: [ 90,  89]: 214 = 1101011 Error ratio (error = unexpected byte): 0.00 = 0 / 151
+Pin 8: Number of collisions increased to: 2290
+Pin 2: Starting transmission of: {66, 160, 1, 46, 189, 32}
+Pin 3: Starting transmission of: {66, 160, 1, 46, 189, 32}
+Pin 8: [ 96,  95]: 124 = 0111110 Error ratio (error = unexpected byte): 0.00 = 0 / 152
+Pin 8: Number of collisions increased to: 2307
+Pin 8: [102, 101]: 159 = 1001111 Error ratio (error = unexpected byte): 0.00 = 0 / 153
+Pin 8: Number of collisions increased to: 2316
+Pin 9: Starting transmission of: {66, 160, 1, 46, 189, 32}
+Pin 2: Starting transmission of: {146, 132, 67, 0, 0, 0, 0}
+Pin 3: Starting transmission of: {146, 132, 67, 0, 0, 0, 0}
+Pin 9: Starting transmission of: {146, 132, 67, 0, 0, 0, 0}
+Pin 8: Starting transmission of: {82, 131, 19, 194, 85, 125, 202}
+Pin 8: [  8,   7]: 82 = 0101001 Error ratio (error = unexpected byte): 0.00 = 0 / 154
+Pin 8: Number of collisions increased to: 2333
+Pin 8: [ 14,  13]: 131 = 1000001 Error ratio (error = unexpected byte): 0.00 = 0 / 155
+Pin 8: Number of collisions increased to: 2349
+Pin 8: [ 20,  19]: 19 = 0001001 Error ratio (error = unexpected byte): 0.00 = 0 / 156
+Pin 8: Number of collisions increased to: 2365
+Pin 8: [ 28,  27]: 194 = 1100001 Error ratio (error = unexpected byte): 0.00 = 0 / 157
+Pin 8: Number of collisions increased to: 2381
+Pin 2: Starting transmission of: {142, 151, 87, 113, 199}
+Pin 3: Starting transmission of: {142, 151, 87, 113, 199}
+Pin 8: [ 38,  37]: 85 = 0101010 Error ratio (error = unexpected byte): 0.00 = 0 / 158
+Pin 8: Number of collisions increased to: 2396
+Pin 8: [ 44,  43]: 125 = 0111110 Error ratio (error = unexpected byte): 0.00 = 0 / 159
+Pin 8: Number of collisions increased to: 2409
+Pin 9: Starting transmission of: {142, 151, 87, 113, 199}
+Pin 8: [ 54,  53]: 202 = 1100101 Error ratio (error = unexpected byte): 0.00 = 0 / 160
+Pin 8: Number of collisions increased to: 2423
+Pin 2: Starting transmission of: {111, 92, 182}
+Pin 3: Starting transmission of: {111, 92, 182}
+Pin 9: Starting transmission of: {111, 92, 182}
+Pin 2: Starting transmission of: {204, 25}
+Pin 3: Starting transmission of: {204, 25}
+Pin 8: Starting transmission of: {162, 109, 115, 11, 167, 205, 176}
+Pin 9: Starting transmission of: {204, 25}
+Pin 8: [ 64,  64]: 162 = 1010001 Error ratio (error = unexpected byte): 0.00 = 0 / 161
+Pin 8: Number of collisions increased to: 2447
+Pin 8: [ 72,  71]: 109 = 0110110 Error ratio (error = unexpected byte): 0.00 = 0 / 162
+Pin 8: Number of collisions increased to: 2453
+Pin 2: Starting transmission of: {217, 242, 147, 155, 161}
+Pin 3: Starting transmission of: {217, 242, 147, 155, 161}
+Pin 8: [ 78,  77]: 115 = 0111001 Error ratio (error = unexpected byte): 0.00 = 0 / 163
+Pin 8: Number of collisions increased to: 2467
+Pin 8: [ 84,  83]: 11 = 0000101 Error ratio (error = unexpected byte): 0.00 = 0 / 164
+Pin 8: Number of collisions increased to: 2483
+Pin 9: Starting transmission of: {217, 242, 147, 155, 161}
+Pin 8: [ 92,  91]: 167 = 1010011 Error ratio (error = unexpected byte): 0.00 = 0 / 165
+Pin 8: Number of collisions increased to: 2497
+Pin 8: [100,  99]: 205 = 1100110 Error ratio (error = unexpected byte): 0.00 = 0 / 166
+Pin 8: Number of collisions increased to: 2511
+Pin 8: [  4,   3]: 176 = 1011000 Error ratio (error = unexpected byte): 0.00 = 0 / 167
+Pin 8: Number of collisions increased to: 2527
+Pin 2: Starting transmission of: {172, 10, 86}
+Pin 3: Starting transmission of: {172, 10, 86}
+Pin 9: Starting transmission of: {172, 10, 86}
+Pin 2: Starting transmission of: {114, 133}
+Pin 3: Starting transmission of: {114, 133}
+Pin 9: Starting transmission of: {114, 133}
+Pin 8: Starting transmission of: {137, 43, 74, 119, 77, 238, 229}
+Pin 2: Starting transmission of: {60, 164, 227, 224, 48}
+Pin 3: Starting transmission of: {60, 164, 227, 224, 48}
+Pin 8: [ 12,  11]: 137 = 1000100 Error ratio (error = unexpected byte): 0.00 = 0 / 168
+Pin 8: Number of collisions increased to: 2543
+Pin 8: [ 20,  19]: 43 = 0010101 Error ratio (error = unexpected byte): 0.00 = 0 / 169
+Pin 8: Number of collisions increased to: 2558
+Pin 9: Starting transmission of: {60, 164, 227, 224, 48}
+Pin 8: [ 30,  29]: 74 = 0100101 Error ratio (error = unexpected byte): 0.00 = 0 / 170
+Pin 8: Number of collisions increased to: 2574
+Pin 8: [ 36,  35]: 119 = 0111011 Error ratio (error = unexpected byte): 0.00 = 0 / 171
+Pin 8: Number of collisions increased to: 2587
+Pin 8: [ 44,  43]: 77 = 0100110 Error ratio (error = unexpected byte): 0.00 = 0 / 172
+Pin 8: Number of collisions increased to: 2602
+Pin 8: [ 52,  51]: 238 = 1110111 Error ratio (error = unexpected byte): 0.00 = 0 / 173
+Pin 8: Number of collisions increased to: 2615
+Pin 2: Starting transmission of: {192}
+Pin 3: Starting transmission of: {192}
+Pin 8: [ 60,  59]: 229 = 1110010 Error ratio (error = unexpected byte): 0.00 = 0 / 174
+Pin 8: Number of collisions increased to: 2629
+Pin 2: Starting transmission of: {165}
+Pin 9: Starting transmission of: {192}
+Pin 3: Starting transmission of: {165}
+Pin 2: Starting transmission of: {120, 62}
+Pin 9: Starting transmission of: {165}
+Pin 3: Starting transmission of: {120, 62}
+Pin 9: Starting transmission of: {120, 62}
+Pin 2: Starting transmission of: {193, 254, 28}
+Pin 3: Starting transmission of: {193, 254, 28}
+Pin 8: Starting transmission of: {23, 72, 243}
+Pin 9: Starting transmission of: {193, 254, 28}
+Pin 8: [ 66,  65]: 23 = 0001011 Error ratio (error = unexpected byte): 0.00 = 0 / 175
+Pin 8: Number of collisions increased to: 2644
+Pin 8: [ 74,  73]: 72 = 0100100 Error ratio (error = unexpected byte): 0.00 = 0 / 176
+Pin 8: Number of collisions increased to: 2661
+Pin 2: Starting transmission of: {178, 246, 45, 239, 232, 30, 241, 39}
+Pin 3: Starting transmission of: {178, 246, 45, 239, 232, 30, 241, 39}
+Pin 8: [ 80,  79]: 243 = 1111001 Error ratio (error = unexpected byte): 0.00 = 0 / 177
+Pin 8: Number of collisions increased to: 2674
+Pin 9: Starting transmission of: {178, 246, 45, 239, 232, 30, 241, 39}
+Pin 8: Starting transmission of: {118, 223, 35, 127, 174}
+Pin 8: [ 88,  87]: 118 = 0111011 Error ratio (error = unexpected byte): 0.00 = 0 / 178
+Pin 8: Number of collisions increased to: 2688
+Pin 8: [ 94,  93]: 223 = 1101111 Error ratio (error = unexpected byte): 0.00 = 0 / 179
+Pin 8: Number of collisions increased to: 2700
+Pin 8: [100,  99]: 35 = 0010001 Error ratio (error = unexpected byte): 0.00 = 0 / 180
+Pin 8: Number of collisions increased to: 2716
+Pin 2: Starting transmission of: {240, 154}
+Pin 8: [  0,   0]: 127 = 0111111 Error ratio (error = unexpected byte): 0.00 = 0 / 181
+Pin 8: Number of collisions increased to: 2733
+Pin 3: Starting transmission of: {240, 154}
+Pin 8: [ 10,   9]: 174 = 1010111 Error ratio (error = unexpected byte): 0.00 = 0 / 182
+Pin 8: Number of collisions increased to: 2742
+Pin 9: Starting transmission of: {240, 154}
+Pin 2: Starting transmission of: {41, 13, 29, 15, 209, 184, 14}
+Pin 3: Starting transmission of: {41, 13, 29, 15, 209, 184, 14}
+Pin 9: Starting transmission of: {41, 13, 29, 15, 209, 184, 14}
+Pin 8: Starting transmission of: {180}
+Pin 8: [ 20,  19]: 180 = 1011010 Error ratio (error = unexpected byte): 0.00 = 0 / 183
+Pin 8: Number of collisions increased to: 2757
+Pin 8: Starting transmission of: {58}
+Pin 2: Starting transmission of: {213, 218, 90, 99, 158, 171, 112, 247}
+Pin 3: Starting transmission of: {213, 218, 90, 99, 158, 171, 112, 247}
+Pin 8: [ 28,  27]: 58 = 0011101 Error ratio (error = unexpected byte): 0.00 = 0 / 184
+Pin 8: Number of collisions increased to: 2772
+Pin 9: Starting transmission of: {213, 218, 90, 99, 158, 171, 112, 247}
+Pin 8: Starting transmission of: {49, 253, 24, 52}
+Pin 8: [ 34,  33]: 49 = 0011000 Error ratio (error = unexpected byte): 0.00 = 0 / 185
+Pin 8: Number of collisions increased to: 2789
+Pin 8: [ 40,  39]: 253 = 1111110 Error ratio (error = unexpected byte): 0.00 = 0 / 186
+Pin 8: Number of collisions increased to: 2801
+Pin 8: [ 46,  45]: 24 = 0001100 Error ratio (error = unexpected byte): 0.00 = 0 / 187
+Pin 8: Number of collisions increased to: 2818
+Pin 8: [ 54,  53]: 52 = 0011010 Error ratio (error = unexpected byte): 0.00 = 0 / 188
+Pin 8: Number of collisions increased to: 2833
+Pin 2: Starting transmission of: {134, 222}
+Pin 3: Starting transmission of: {134, 222}
+Pin 9: Starting transmission of: {134, 222}
+Pin 2: Starting transmission of: {170, 102, 235, 186, 200}
+Pin 8: Starting transmission of: {36, 108}
+Pin 3: Starting transmission of: {170, 102, 235, 186, 200}
+Pin 8: [ 62,  61]: 36 = 0010010 Error ratio (error = unexpected byte): 0.00 = 0 / 189
+Pin 8: Number of collisions increased to: 2851
+Pin 9: Starting transmission of: {170, 102, 235, 186, 200}
+Pin 8: [ 70,  69]: 108 = 0110110 Error ratio (error = unexpected byte): 0.00 = 0 / 190
+Pin 8: Number of collisions increased to: 2865
+Pin 8: Starting transmission of: {91, 255, 103, 136, 168, 22}
+Pin 2: Starting transmission of: {75, 47, 81, 234, 252, 98, 44}
+Pin 3: Starting transmission of: {75, 47, 81, 234, 252, 98, 44}
+Pin 8: [ 78,  77]: 91 = 0101101 Error ratio (error = unexpected byte): 0.00 = 0 / 191
+Pin 8: Number of collisions increased to: 2880
+Pin 8: [ 82,  81]: 255 = 1111111 Error ratio (error = unexpected byte): 0.00 = 0 / 192
+Pin 8: Number of collisions increased to: 2891
+Pin 9: Starting transmission of: {75, 47, 81, 234, 252, 98, 44}
+Pin 8: [ 88,  87]: 103 = 0110011 Error ratio (error = unexpected byte): 0.00 = 0 / 193
+Pin 8: Number of collisions increased to: 2905
+Pin 8: [ 96,  95]: 136 = 1000100 Error ratio (error = unexpected byte): 0.00 = 0 / 194
+Pin 8: Number of collisions increased to: 2922
+Pin 8: [  2,   1]: 168 = 1010100 Error ratio (error = unexpected byte): 0.00 = 0 / 195
+Pin 8: Number of collisions increased to: 2938
+Pin 8: [ 10,   9]: 22 = 0001011 Error ratio (error = unexpected byte): 0.00 = 0 / 196
+Pin 8: Number of collisions increased to: 2953
+Pin 2: Starting transmission of: {237, 201, 212, 122}
+Pin 3: Starting transmission of: {237, 201, 212, 122}
+Pin 9: Starting transmission of: {237, 201, 212, 122}
+Pin 8: Starting transmission of: {104, 73, 203, 220, 169, 64}
+Pin 2: Starting transmission of: {149, 89, 183, 126}
+Pin 3: Starting transmission of: {149, 89, 183, 126}
+Pin 8: [ 18,  17]: 104 = 0110100 Error ratio (error = unexpected byte): 0.00 = 0 / 197
+Pin 8: Number of collisions increased to: 2970
+Pin 9: Starting transmission of: {149, 89, 183, 126}
+Pin 8: [ 26,  26]: 73 = 0100100 Error ratio (error = unexpected byte): 0.00 = 0 / 198
+Pin 8: Number of collisions increased to: 2993
+Pin 8: [ 34,  33]: 203 = 1100101 Error ratio (error = unexpected byte): 0.00 = 0 / 199
+Pin 8: Number of collisions increased to: 3000
+Pin 8: [ 42,  41]: 220 = 1101110 Error ratio (error = unexpected byte): 0.00 = 0 / 200
+Pin 8: Number of collisions increased to: 3014
+Pin 2: Starting transmission of: {54, 216}
+Pin 8: [ 52,  51]: 169 = 1010100 Error ratio (error = unexpected byte): 0.00 = 0 / 201
+Pin 8: Number of collisions increased to: 3031
+Pin 3: Starting transmission of: {54, 216}
+Pin 8: [ 58,  57]: 64 = 0100000 Error ratio (error = unexpected byte): 0.00 = 0 / 202
+Pin 8: Number of collisions increased to: 3046
+Pin 9: Starting transmission of: {54, 216}
+Pin 2: Starting transmission of: {16, 245}
+Pin 3: Starting transmission of: {16, 245}
+Pin 9: Starting transmission of: {16, 245}
+Pin 2: Starting transmission of: {107, 68, 153, 42, 26, 148, 65}
+Pin 3: Starting transmission of: {107, 68, 153, 42, 26, 148, 65}
+Pin 8: Starting transmission of: {141, 230, 71, 210, 181, 140, 163}
+Pin 9: Starting transmission of: {107, 68, 153, 42, 26, 148, 65}
+Pin 8: [ 66,  65]: 141 = 1000110 Error ratio (error = unexpected byte): 0.00 = 0 / 203
+Pin 8: Number of collisions increased to: 3061
+Pin 8: [ 74,  73]: 230 = 1110011 Error ratio (error = unexpected byte): 0.00 = 0 / 204
+Pin 8: Number of collisions increased to: 3075
+Pin 8: [ 80,  79]: 71 = 0100011 Error ratio (error = unexpected byte): 0.00 = 0 / 205
+Pin 8: Number of collisions increased to: 3090
+Pin 8: [ 90,  89]: 210 = 1101001 Error ratio (error = unexpected byte): 0.00 = 0 / 206
+Pin 8: Number of collisions increased to: 3105
+Pin 8: [100,  99]: 181 = 1011010 Error ratio (error = unexpected byte): 0.00 = 0 / 207
+Pin 8: Number of collisions increased to: 3119
+Pin 2: Starting transmission of: {121, 6, 221, 2, 12, 40, 117, 93}
+Pin 8: [  4,   3]: 140 = 1000110 Error ratio (error = unexpected byte): 0.00 = 0 / 208
+Pin 8: Number of collisions increased to: 3136
+Pin 3: Starting transmission of: {121, 6, 221, 2, 12, 40, 117, 93}
+Pin 8: [ 12,  11]: 163 = 1010001 Error ratio (error = unexpected byte): 0.00 = 0 / 209
+Pin 8: Number of collisions increased to: 3150
+Pin 9: Starting transmission of: {121, 6, 221, 2, 12, 40, 117, 93}
+Pin 2: Starting transmission of: {195, 50, 179, 83, 228, 187}
+Pin 8: Starting transmission of: {61, 5}
+Pin 3: Starting transmission of: {195, 50, 179, 83, 228, 187}
+Pin 8: [ 18,  17]: 61 = 0011110 Error ratio (error = unexpected byte): 0.00 = 0 / 210
+Pin 8: Number of collisions increased to: 3164
+Pin 9: Starting transmission of: {195, 50, 179, 83, 228, 187}
+Pin 8: [ 24,  23]: 5 = 0000010 Error ratio (error = unexpected byte): 0.00 = 0 / 211
+Pin 8: Number of collisions increased to: 3181
+Pin 8: Starting transmission of: {191, 248, 177, 84, 59}
+Pin 2: Starting transmission of: {97, 198, 4, 211, 88, 69}
+Pin 8: [ 30,  29]: 191 = 1011111 Error ratio (error = unexpected byte): 0.00 = 0 / 212
+Pin 8: Number of collisions increased to: 3197
+Pin 3: Starting transmission of: {97, 198, 4, 211, 88, 69}
+Pin 8: [ 36,  35]: 248 = 1111100 Error ratio (error = unexpected byte): 0.00 = 0 / 213
+Pin 8: Number of collisions increased to: 3207
+Pin 8: [ 44,  43]: 177 = 1011000 Error ratio (error = unexpected byte): 0.00 = 0 / 214
+Pin 8: Number of collisions increased to: 3222
+Pin 9: Starting transmission of: {97, 198, 4, 211, 88, 69}
+Pin 8: [ 54,  53]: 84 = 0101010 Error ratio (error = unexpected byte): 0.00 = 0 / 215
+Pin 8: Number of collisions increased to: 3238
+Pin 8: [ 60,  59]: 59 = 0011101 Error ratio (error = unexpected byte): 0.00 = 0 / 216
+Pin 8: Number of collisions increased to: 3252
+Pin 2: Starting transmission of: {101, 249, 128, 51, 55, 214, 124, 159}
+Pin 3: Starting transmission of: {101, 249, 128, 51, 55, 214, 124, 159}
+Pin 9: Starting transmission of: {101, 249, 128, 51, 55, 214, 124, 159}
+Pin 8: Starting transmission of: {135, 53, 215, 9, 116, 18, 105, 123}
+Pin 8: [ 66,  65]: 135 = 1000011 Error ratio (error = unexpected byte): 0.00 = 0 / 217
+Pin 8: Number of collisions increased to: 3267
+Pin 8: [ 74,  73]: 53 = 0011010 Error ratio (error = unexpected byte): 0.00 = 0 / 218
+Pin 8: Number of collisions increased to: 3282
+Pin 8: [ 82,  81]: 215 = 1101011 Error ratio (error = unexpected byte): 0.00 = 0 / 219
+Pin 8: Number of collisions increased to: 3295
+Pin 8: [ 88,  87]: 9 = 0000100 Error ratio (error = unexpected byte): 0.00 = 0 / 220
+Pin 8: Number of collisions increased to: 3312
+Pin 8: [ 96,  95]: 116 = 0111010 Error ratio (error = unexpected byte): 0.00 = 0 / 221
+Pin 8: Number of collisions increased to: 3327
+Pin 2: Starting transmission of: {82, 131, 19, 194, 85, 125, 202}
+Pin 8: [  0, 103]: 18 = 0001001 Error ratio (error = unexpected byte): 0.00 = 0 / 222
+Pin 8: Number of collisions increased to: 3344
+Pin 3: Starting transmission of: {82, 131, 19, 194, 85, 125, 202}
+Pin 8: [  8,   7]: 105 = 0110100 Error ratio (error = unexpected byte): 0.00 = 0 / 223
+Pin 8: Number of collisions increased to: 3359
+Pin 9: Starting transmission of: {82, 131, 19, 194, 85, 125, 202}
+Pin 8: [ 14,  13]: 123 = 0111101 Error ratio (error = unexpected byte): 0.00 = 0 / 224
+Pin 8: Number of collisions increased to: 3372
+Pin 2: Starting transmission of: {162, 109, 115, 11, 167, 205, 176}
+Pin 3: Starting transmission of: {162, 109, 115, 11, 167, 205, 176}
+Pin 9: Starting transmission of: {162, 109, 115, 11, 167, 205, 176}
+Pin 8: Starting transmission of: {144, 7, 208, 250, 96, 100}
+Pin 8: [ 22,  21]: 144 = 1001000 Error ratio (error = unexpected byte): 0.00 = 0 / 225
+Pin 8: Number of collisions increased to: 3390
+Pin 8: [ 26,  25]: 7 = 0000011 Error ratio (error = unexpected byte): 0.00 = 0 / 226
+Pin 8: Number of collisions increased to: 3405
+Pin 8: [ 34,  33]: 208 = 1101000 Error ratio (error = unexpected byte): 0.00 = 0 / 227
+Pin 8: Number of collisions increased to: 3422
+Pin 8: [ 42,  41]: 250 = 1111101 Error ratio (error = unexpected byte): 0.00 = 0 / 228
+Pin 8: Number of collisions increased to: 3435
+Pin 2: Starting transmission of: {137, 43, 74, 119, 77, 238, 229}
+Pin 3: Starting transmission of: {137, 43, 74, 119, 77, 238, 229}
+Pin 8: [ 48,  48]: 96 = 0110000 Error ratio (error = unexpected byte): 0.00 = 0 / 229
+Pin 8: Number of collisions increased to: 3460
+Pin 8: [ 56,  55]: 100 = 0110010 Error ratio (error = unexpected byte): 0.00 = 0 / 230
+Pin 8: Number of collisions increased to: 3467
+Pin 9: Starting transmission of: {137, 43, 74, 119, 77, 238, 229}
+Pin 2: Starting transmission of: {23, 72, 243}
+Pin 8: Starting transmission of: {207, 31, 226, 33}
+Pin 3: Starting transmission of: {23, 72, 243}
+Pin 8: [ 62,  61]: 207 = 1100111 Error ratio (error = unexpected byte): 0.00 = 0 / 231
+Pin 8: Number of collisions increased to: 3481
+Pin 9: Starting transmission of: {23, 72, 243}
+Pin 8: [ 66,  65]: 31 = 0001111 Error ratio (error = unexpected byte): 0.00 = 0 / 232
+Pin 8: Number of collisions increased to: 3495
+Pin 2: Starting transmission of: {118, 223, 35, 127, 174}
+Pin 8: [ 74,  74]: 226 = 1110001 Error ratio (error = unexpected byte): 0.00 = 0 / 233
+Pin 8: Number of collisions increased to: 3518
+Pin 3: Starting transmission of: {118, 223, 35, 127, 174}
+Pin 8: [ 80,  79]: 33 = 0010000 Error ratio (error = unexpected byte): 0.00 = 0 / 234
+Pin 8: Number of collisions increased to: 3526
+Pin 9: Starting transmission of: {118, 223, 35, 127, 174}
+Pin 8: Starting transmission of: {20, 150, 94, 152}
+Pin 2: Starting transmission of: {180}
+Pin 3: Starting transmission of: {180}
+Pin 8: [ 88,  87]: 20 = 0001010 Error ratio (error = unexpected byte): 0.00 = 0 / 235
+Pin 8: Number of collisions increased to: 3544
+Pin 2: Starting transmission of: {58}
+Pin 9: Starting transmission of: {180}
+Pin 8: [ 98,  98]: 150 = 1001011 Error ratio (error = unexpected byte): 0.00 = 0 / 236
+Pin 8: Number of collisions increased to: 3567
+Pin 3: Starting transmission of: {58}
+Pin 8: [  2,   1]: 94 = 0101111 Error ratio (error = unexpected byte): 0.00 = 0 / 237
+Pin 8: Number of collisions increased to: 3573
+Pin 2: Starting transmission of: {49, 253, 24, 52}
+Pin 9: Starting transmission of: {58}
+Pin 8: [ 10,   9]: 152 = 1001100 Error ratio (error = unexpected byte): 0.00 = 0 / 238
+Pin 8: Number of collisions increased to: 3588
+Pin 3: Starting transmission of: {49, 253, 24, 52}
+Pin 9: Starting transmission of: {49, 253, 24, 52}
+Pin 8: Starting transmission of: {156, 63, 130, 78, 173, 206, 8}
+Pin 2: Starting transmission of: {36, 108}
+Pin 3: Starting transmission of: {36, 108}
+Pin 8: [ 18,  17]: 156 = 1001110 Error ratio (error = unexpected byte): 0.00 = 0 / 239
+Pin 8: Number of collisions increased to: 3604
+Pin 9: Starting transmission of: {36, 108}
+Pin 8: [ 22,  22]: 63 = 0011111 Error ratio (error = unexpected byte): 0.00 = 0 / 240
+Pin 8: Number of collisions increased to: 3622
+Pin 2: Starting transmission of: {91, 255, 103, 136, 168, 22}
+Pin 8: [ 30,  29]: 130 = 1000001 Error ratio (error = unexpected byte): 0.00 = 0 / 241
+Pin 8: Number of collisions increased to: 3637
+Pin 3: Starting transmission of: {91, 255, 103, 136, 168, 22}
+Pin 8: [ 38,  37]: 78 = 0100111 Error ratio (error = unexpected byte): 0.00 = 0 / 242
+Pin 8: Number of collisions increased to: 3649
+Pin 9: Starting transmission of: {91, 255, 103, 136, 168, 22}
+Pin 8: [ 48,  48]: 173 = 1010110 Error ratio (error = unexpected byte): 0.00 = 0 / 243
+Pin 8: Number of collisions increased to: 3672
+Pin 8: [ 56,  55]: 206 = 1100111 Error ratio (error = unexpected byte): 0.00 = 0 / 244
+Pin 8: Number of collisions increased to: 3677
+Pin 8: [ 62,  61]: 8 = 0000100 Error ratio (error = unexpected byte): 0.00 = 0 / 245
+Pin 8: Number of collisions increased to: 3694
+Pin 2: Starting transmission of: {104, 73, 203, 220, 169, 64}
+Pin 3: Starting transmission of: {104, 73, 203, 220, 169, 64}
+Pin 9: Starting transmission of: {104, 73, 203, 220, 169, 64}
+Pin 8: Starting transmission of: {79, 143, 95}
+Pin 8: [ 68,  67]: 79 = 0100111 Error ratio (error = unexpected byte): 0.00 = 0 / 246
+Pin 8: Number of collisions increased to: 3708
+Pin 2: Starting transmission of: {141, 230, 71, 210, 181, 140, 163}
+Pin 8: [ 74,  73]: 143 = 1000111 Error ratio (error = unexpected byte): 0.00 = 0 / 247
+Pin 8: Number of collisions increased to: 3722
+Pin 3: Starting transmission of: {141, 230, 71, 210, 181, 140, 163}
+Pin 8: [ 80,  79]: 95 = 0101111 Error ratio (error = unexpected byte): 0.00 = 0 / 248
+Pin 8: Number of collisions increased to: 3735
+Pin 9: Starting transmission of: {141, 230, 71, 210, 181, 140, 163}
+Pin 8: Starting transmission of: {157, 129, 190, 185}
+Pin 8: [ 88,  87]: 157 = 1001110 Error ratio (error = unexpected byte): 0.00 = 0 / 249
+Pin 8: Number of collisions increased to: 3749
+Pin 2: Starting transmission of: {61, 5}
+Pin 8: [ 94,  94]: 129 = 1000000 Error ratio (error = unexpected byte): 0.00 = 0 / 250
+Pin 8: Number of collisions increased to: 3774
+Pin 3: Starting transmission of: {61, 5}
+Pin 8: [102, 102]: 190 = 1011111 Error ratio (error = unexpected byte): 0.00 = 0 / 251
+Pin 8: Number of collisions increased to: 3783
+Pin 8: [  6,   5]: 185 = 1011100 Error ratio (error = unexpected byte): 0.00 = 0 / 252
+Pin 8: Number of collisions increased to: 3793
+Pin 9: Starting transmission of: {61, 5}
+Pin 2: Starting transmission of: {191, 248, 177, 84, 59}
+Pin 3: Starting transmission of: {191, 248, 177, 84, 59}
+Pin 9: Starting transmission of: {191, 248, 177, 84, 59}
+Pin 8: Starting transmission of: {139, 38}
+Pin 8: [ 14,  13]: 139 = 1000101 Error ratio (error = unexpected byte): 0.00 = 0 / 253
+Pin 8: Number of collisions increased to: 3808
+Pin 2: Starting transmission of: {135, 53, 215, 9, 116, 18, 105, 123}
+Pin 8: [ 22,  21]: 38 = 0010011 Error ratio (error = unexpected byte): 0.00 = 0 / 254
+Pin 8: Number of collisions increased to: 3824
+Pin 3: Starting transmission of: {135, 53, 215, 9, 116, 18, 105, 123}
+Pin 9: Starting transmission of: {135, 53, 215, 9, 116, 18, 105, 123}
+Pin 8: Starting transmission of: {175, 233}
+Pin 8: [ 30,  29]: 175 = 1010111 Error ratio (error = unexpected byte): 0.00 = 0 / 255
+Pin 8: Number of collisions increased to: 3837
+Pin 8: [ 38,  37]: 233 = 1110100 Error ratio (error = unexpected byte): 0.00 = 0 / 256
+Pin 8: Number of collisions increased to: 3851
+Pin 8: Starting transmission of: {3, 188, 21, 225, 138, 251, 197}
+Pin 2: Starting transmission of: {144, 7, 208, 250, 96, 100}
+Pin 3: Starting transmission of: {144, 7, 208, 250, 96, 100}
+Pin 8: [ 42,  41]: 3 = 0000001 Error ratio (error = unexpected byte): 0.00 = 0 / 257
+Pin 8: Number of collisions increased to: 3868
+Pin 9: Starting transmission of: {144, 7, 208, 250, 96, 100}
+Pin 8: [ 50,  50]: 188 = 1011110 Error ratio (error = unexpected byte): 0.00 = 0 / 258
+Pin 8: Number of collisions increased to: 3891
+Pin 8: [ 58,  57]: 21 = 0001010 Error ratio (error = unexpected byte): 0.00 = 0 / 259
+Pin 8: Number of collisions increased to: 3898
+Pin 8: [ 64,  63]: 225 = 1110000 Error ratio (error = unexpected byte): 0.00 = 0 / 260
+Pin 8: Number of collisions increased to: 3913
+Pin 8: [ 74,  73]: 138 = 1000101 Error ratio (error = unexpected byte): 0.00 = 0 / 261
+Pin 8: Number of collisions increased to: 3929
+Pin 8: [ 80,  79]: 251 = 1111101 Error ratio (error = unexpected byte): 0.00 = 0 / 262
+Pin 8: Number of collisions increased to: 3941
+Pin 2: Starting transmission of: {207, 31, 226, 33}
+Pin 8: [ 88,  87]: 197 = 1100010 Error ratio (error = unexpected byte): 0.00 = 0 / 263
+Pin 8: Number of collisions increased to: 3956
+Pin 3: Starting transmission of: {207, 31, 226, 33}
+Pin 9: Starting transmission of: {207, 31, 226, 33}
+Pin 2: Starting transmission of: {20, 150, 94, 152}
+Pin 3: Starting transmission of: {20, 150, 94, 152}
+Pin 9: Starting transmission of: {20, 150, 94, 152}
+Pin 8: Starting transmission of: {236, 34, 106, 80}
+Pin 8: [ 96,  95]: 236 = 1110110 Error ratio (error = unexpected byte): 0.00 = 0 / 264
+Pin 8: Number of collisions increased to: 3970
+Pin 2: Starting transmission of: {156, 63, 130, 78, 173, 206, 8}
+Pin 8: [  0, 103]: 34 = 0010001 Error ratio (error = unexpected byte): 0.00 = 0 / 265
+Pin 8: Number of collisions increased to: 3987
+Pin 3: Starting transmission of: {156, 63, 130, 78, 173, 206, 8}
+Pin 8: [ 10,   9]: 106 = 0110101 Error ratio (error = unexpected byte): 0.00 = 0 / 266
+Pin 8: Number of collisions increased to: 4002
+Pin 9: Starting transmission of: {156, 63, 130, 78, 173, 206, 8}
+Pin 8: [ 18,  17]: 80 = 0101000 Error ratio (error = unexpected byte): 0.00 = 0 / 267
+Pin 8: Number of collisions increased to: 4019
+Pin 8: Starting transmission of: {56, 17, 244, 166}
+Pin 2: Starting transmission of: {79, 143, 95}
+Pin 3: Starting transmission of: {79, 143, 95}
+Pin 8: [ 24,  24]: 56 = 0011100 Error ratio (error = unexpected byte): 0.00 = 0 / 268
+Pin 8: Number of collisions increased to: 4042
+Pin 8: [ 30,  29]: 17 = 0001000 Error ratio (error = unexpected byte): 0.00 = 0 / 269
+Pin 8: Number of collisions increased to: 4052
+Pin 9: Starting transmission of: {79, 143, 95}
+Pin 8: [ 38,  37]: 244 = 1111010 Error ratio (error = unexpected byte): 0.00 = 0 / 270
+Pin 8: Number of collisions increased to: 4067
+Pin 8: [ 48,  47]: 166 = 1010011 Error ratio (error = unexpected byte): 0.00 = 0 / 271
+Pin 8: Number of collisions increased to: 4081
+Pin 2: Starting transmission of: {157, 129, 190, 185}
+Pin 3: Starting transmission of: {157, 129, 190, 185}
+Pin 9: Starting transmission of: {157, 129, 190, 185}
+Pin 8: Starting transmission of: {219, 145}
+Pin 2: Starting transmission of: {139, 38}
+Pin 3: Starting transmission of: {139, 38}
+Pin 8: [ 56,  55]: 219 = 1101101 Error ratio (error = unexpected byte): 0.00 = 0 / 272
+Pin 8: Number of collisions increased to: 4095
+Pin 8: [ 64,  63]: 145 = 1001000 Error ratio (error = unexpected byte): 0.00 = 0 / 273
+Pin 8: Number of collisions increased to: 4110
+Pin 9: Starting transmission of: {139, 38}
+Pin 2: Starting transmission of: {175, 233}
+Pin 3: Starting transmission of: {175, 233}
+Pin 8: Starting transmission of: {70, 57, 37, 231, 110}
+Pin 9: Starting transmission of: {175, 233}
+Pin 2: Starting transmission of: {3, 188, 21, 225, 138, 251, 197}
+Pin 8: [ 72,  71]: 70 = 0100011 Error ratio (error = unexpected byte): 0.00 = 0 / 274
+Pin 8: Number of collisions increased to: 4127
+Pin 3: Starting transmission of: {3, 188, 21, 225, 138, 251, 197}
+Pin 8: [ 78,  77]: 57 = 0011100 Error ratio (error = unexpected byte): 0.00 = 0 / 275
+Pin 8: Number of collisions increased to: 4142
+Pin 9: Starting transmission of: {3, 188, 21, 225, 138, 251, 197}
+Pin 8: [ 86,  86]: 37 = 0010010 Error ratio (error = unexpected byte): 0.00 = 0 / 276
+Pin 8: Number of collisions increased to: 4166
+Pin 8: [ 92,  91]: 231 = 1110011 Error ratio (error = unexpected byte): 0.00 = 0 / 277
+Pin 8: Number of collisions increased to: 4171
+Pin 8: [100,  99]: 110 = 0110111 Error ratio (error = unexpected byte): 0.00 = 0 / 278
+Pin 8: Number of collisions increased to: 4184
+Pin 2: Starting transmission of: {236, 34, 106, 80}
+Pin 3: Starting transmission of: {236, 34, 106, 80}
+Pin 8: Starting transmission of: {66, 160, 1, 46, 189, 32}
+Pin 9: Starting transmission of: {236, 34, 106, 80}
+Pin 8: [  4,   3]: 66 = 0100001 Error ratio (error = unexpected byte): 0.00 = 0 / 279
+Pin 8: Number of collisions increased to: 4202
+Pin 8: [ 12,  11]: 160 = 1010000 Error ratio (error = unexpected byte): 0.00 = 0 / 280
+Pin 8: Number of collisions increased to: 4219
+Pin 2: Starting transmission of: {56, 17, 244, 166}
+Pin 8: [ 16,  15]: 1 = 0000000 Error ratio (error = unexpected byte): 0.00 = 0 / 281
+Pin 8: Number of collisions increased to: 4237
+Pin 3: Starting transmission of: {56, 17, 244, 166}
+Pin 8: [ 24,  23]: 46 = 0010111 Error ratio (error = unexpected byte): 0.00 = 0 / 282
+Pin 8: Number of collisions increased to: 4252
+Pin 9: Starting transmission of: {56, 17, 244, 166}
+Pin 8: [ 32,  31]: 189 = 1011110 Error ratio (error = unexpected byte): 0.00 = 0 / 283
+Pin 8: Number of collisions increased to: 4267
+Pin 8: [ 38,  37]: 32 = 0010000 Error ratio (error = unexpected byte): 0.00 = 0 / 284
+Pin 8: Number of collisions increased to: 4282
+Pin 2: Starting transmission of: {219, 145}
+Pin 3: Starting transmission of: {219, 145}
+Pin 9: Starting transmission of: {219, 145}
+Pin 2: Starting transmission of: {70, 57, 37, 231, 110}
+Pin 3: Starting transmission of: {70, 57, 37, 231, 110}
+Pin 8: Starting transmission of: {146, 132, 67, 0, 0, 0, 0}
+Pin 9: Starting transmission of: {70, 57, 37, 231, 110}
+Pin 8: [ 48,  47]: 146 = 1001001 Error ratio (error = unexpected byte): 0.00 = 0 / 285
+Pin 8: Number of collisions increased to: 4299
+Pin 8: [ 56,  55]: 132 = 1000010 Error ratio (error = unexpected byte): 0.00 = 0 / 286
+Pin 8: Number of collisions increased to: 4316
+Pin 8: [ 62,  61]: 67 = 0100001 Error ratio (error = unexpected byte): 0.00 = 0 / 287
+Pin 8: Number of collisions increased to: 4332
+Pin 2: Starting transmission of: {66, 160, 1, 46, 189, 32}
+Pin 8: [ 66,  65]: 0 = 0000000 Error ratio (error = unexpected byte): 0.00 = 0 / 288
+Pin 8: Number of collisions increased to: 4351
+Pin 3: Starting transmission of: {66, 160, 1, 46, 189, 32}
+Pin 8: [ 70,  69]: 0 = 0000000 Error ratio (error = unexpected byte): 0.00 = 0 / 289
+Pin 8: Number of collisions increased to: 4370
+Pin 9: Starting transmission of: {66, 160, 1, 46, 189, 32}
+Pin 8: [ 74,  73]: 0 = 0000000 Error ratio (error = unexpected byte): 0.00 = 0 / 290
+Pin 8: Number of collisions increased to: 4392
+Pin 8: [ 78,  77]: 0 = 0000000 Error ratio (error = unexpected byte): 0.00 = 0 / 291
+Pin 8: Number of collisions increased to: 4407
+Pin 2: Starting transmission of: {146, 132, 67, 0, 0, 0, 0}
+Pin 3: Starting transmission of: {146, 132, 67, 0, 0, 0, 0}
+Pin 9: Starting transmission of: {146, 132, 67, 0, 0, 0, 0}
+Pin 8: Starting transmission of: {142, 151, 87, 113, 199}
+Pin 8: [ 86,  85]: 142 = 1000111 Error ratio (error = unexpected byte): 0.00 = 0 / 292
+Pin 8: Number of collisions increased to: 4422
+Pin 8: [ 94,  93]: 151 = 1001011 Error ratio (error = unexpected byte): 0.00 = 0 / 293
+Pin 8: Number of collisions increased to: 4436
+Pin 2: Starting transmission of: {142, 151, 87, 113, 199}
+Pin 8: [102, 102]: 87 = 0101011 Error ratio (error = unexpected byte): 0.00 = 0 / 294
+Pin 8: Number of collisions increased to: 4459
+Pin 3: Starting transmission of: {142, 151, 87, 113, 199}
+Pin 8: [  4,   4]: 113 = 0111000 Error ratio (error = unexpected byte): 0.00 = 0 / 295
+Pin 8: Number of collisions increased to: 4474
+Pin 8: [ 10,   9]: 199 = 1100011 Error ratio (error = unexpected byte): 0.00 = 0 / 296
+Pin 8: Number of collisions increased to: 4479
+Pin 9: Starting transmission of: {142, 151, 87, 113, 199}
+Pin 2: Starting transmission of: {111, 92, 182}
+Pin 3: Starting transmission of: {111, 92, 182}
+Pin 8: Starting transmission of: {111, 92, 182}
+Pin 9: Starting transmission of: {111, 92, 182}
+Pin 8: [ 16,  15]: 111 = 0110111 Error ratio (error = unexpected byte): 0.00 = 0 / 297
+Pin 8: Number of collisions increased to: 4492
+Pin 2: Starting transmission of: {204, 25}
+Pin 8: [ 24,  23]: 92 = 0101110 Error ratio (error = unexpected byte): 0.00 = 0 / 298
+Pin 8: Number of collisions increased to: 4509
+Pin 3: Starting transmission of: {204, 25}
+Pin 8: [ 34,  33]: 182 = 1011011 Error ratio (error = unexpected byte): 0.00 = 0 / 299
+Pin 8: Number of collisions increased to: 4521
+Pin 9: Starting transmission of: {204, 25}
+Pin 2: Starting transmission of: {217, 242, 147, 155, 161}
+Pin 3: Starting transmission of: {217, 242, 147, 155, 161}
+Pin 8: Starting transmission of: {204, 25}
+Pin 9: Starting transmission of: {217, 242, 147, 155, 161}
+Pin 8: [ 42,  41]: 204 = 1100110 Error ratio (error = unexpected byte): 0.00 = 0 / 300
+Pin 8: Number of collisions increased to: 4536
+Pin 8: [ 48,  47]: 25 = 0001100 Error ratio (error = unexpected byte): 0.00 = 0 / 301
+Pin 8: Number of collisions increased to: 4552
+Pin 2: Starting transmission of: {172, 10, 86}
+Pin 3: Starting transmission of: {172, 10, 86}
+Pin 8: Starting transmission of: {217, 242, 147, 155, 161}
+Pin 9: Starting transmission of: {172, 10, 86}
+Pin 8: [ 56,  55]: 217 = 1101100 Error ratio (error = unexpected byte): 0.00 = 0 / 302
+Pin 8: Number of collisions increased to: 4566
+Pin 2: Starting transmission of: {114, 133}
+Pin 8: [ 64,  64]: 242 = 1111001 Error ratio (error = unexpected byte): 0.00 = 0 / 303
+Pin 8: Number of collisions increased to: 4588
+Pin 3: Starting transmission of: {114, 133}
+Pin 8: [ 72,  72]: 147 = 1001001 Error ratio (error = unexpected byte): 0.00 = 0 / 304
+Pin 8: Number of collisions increased to: 4603
+Pin 8: [ 80,  79]: 155 = 1001101 Error ratio (error = unexpected byte): 0.00 = 0 / 305
+Pin 8: Number of collisions increased to: 4609
+Pin 9: Starting transmission of: {114, 133}
+Pin 8: [ 88,  87]: 161 = 1010000 Error ratio (error = unexpected byte): 0.00 = 0 / 306
+Pin 8: Number of collisions increased to: 4625
+Pin 2: Starting transmission of: {60, 164, 227, 224, 48}
+Pin 3: Starting transmission of: {60, 164, 227, 224, 48}
+Pin 9: Starting transmission of: {60, 164, 227, 224, 48}
+Pin 8: Starting transmission of: {172, 10, 86}
+Pin 2: Starting transmission of: {192}
+Pin 3: Starting transmission of: {192}
+Pin 8: [ 98,  97]: 172 = 1010110 Error ratio (error = unexpected byte): 0.00 = 0 / 307
+Pin 8: Number of collisions increased to: 4642
+Pin 2: Starting transmission of: {165}
+Pin 9: Starting transmission of: {192}
+Pin 8: [  2,   2]: 10 = 0000101 Error ratio (error = unexpected byte): 0.00 = 0 / 308
+Pin 8: Number of collisions increased to: 4668
+Pin 3: Starting transmission of: {165}
+Pin 8: [ 12,  11]: 86 = 0101011 Error ratio (error = unexpected byte): 0.00 = 0 / 309
+Pin 8: Number of collisions increased to: 4672
+Pin 2: Starting transmission of: {120, 62}
+Pin 9: Starting transmission of: {165}
+Pin 3: Starting transmission of: {120, 62}
+Pin 9: Starting transmission of: {120, 62}
+Pin 8: Starting transmission of: {114, 133}
+Pin 2: Starting transmission of: {193, 254, 28}
+Pin 3: Starting transmission of: {193, 254, 28}
+Pin 8: [ 20,  19]: 114 = 0111001 Error ratio (error = unexpected byte): 0.00 = 0 / 310
+Pin 8: Number of collisions increased to: 4687
+Pin 8: [ 28,  27]: 133 = 1000010 Error ratio (error = unexpected byte): 0.00 = 0 / 311
+Pin 8: Number of collisions increased to: 4703
+Pin 9: Starting transmission of: {193, 254, 28}
+Pin 2: Starting transmission of: {178, 246, 45, 239, 232, 30, 241, 39}
+Pin 3: Starting transmission of: {178, 246, 45, 239, 232, 30, 241, 39}
+Pin 8: Starting transmission of: {60, 164, 227, 224, 48}
+Pin 9: Starting transmission of: {178, 246, 45, 239, 232, 30, 241, 39}
+Pin 8: [ 34,  34]: 60 = 0011110 Error ratio (error = unexpected byte): 0.00 = 0 / 312
+Pin 8: Number of collisions increased to: 4725
+Pin 8: [ 44,  43]: 164 = 1010010 Error ratio (error = unexpected byte): 0.00 = 0 / 313
+Pin 8: Number of collisions increased to: 4735
+Pin 8: [ 50,  49]: 227 = 1110001 Error ratio (error = unexpected byte): 0.00 = 0 / 314
+Pin 8: Number of collisions increased to: 4749
+Pin 8: [ 56,  55]: 224 = 1110000 Error ratio (error = unexpected byte): 0.00 = 0 / 315
+Pin 8: Number of collisions increased to: 4765
+Pin 8: [ 62,  61]: 48 = 0011000 Error ratio (error = unexpected byte): 0.00 = 0 / 316
+Pin 8: Number of collisions increased to: 4781
+Pin 2: Starting transmission of: {240, 154}
+Pin 3: Starting transmission of: {240, 154}
+Pin 9: Starting transmission of: {240, 154}
+Pin 2: Starting transmission of: {41, 13, 29, 15, 209, 184, 14}
+Pin 8: Starting transmission of: {192}
+Pin 3: Starting transmission of: {41, 13, 29, 15, 209, 184, 14}
+Pin 8: [ 68,  67]: 192 = 1100000 Error ratio (error = unexpected byte): 0.00 = 0 / 317
+Pin 8: Number of collisions increased to: 4798
+Pin 9: Starting transmission of: {41, 13, 29, 15, 209, 184, 14}
+Pin 8: Starting transmission of: {165}
+Pin 8: [ 78,  77]: 165 = 1010010 Error ratio (error = unexpected byte): 0.00 = 0 / 318
+Pin 8: Number of collisions increased to: 4813
+Pin 8: Starting transmission of: {120, 62}
+Pin 2: Starting transmission of: {213, 218, 90, 99, 158, 171, 112, 247}
+Pin 3: Starting transmission of: {213, 218, 90, 99, 158, 171, 112, 247}
+Pin 8: [ 84,  84]: 120 = 0111100 Error ratio (error = unexpected byte): 0.00 = 0 / 319
+Pin 8: Number of collisions increased to: 4836
+Pin 8: [ 90,  89]: 62 = 0011111 Error ratio (error = unexpected byte): 0.00 = 0 / 320
+Pin 8: Number of collisions increased to: 4842
+Pin 9: Starting transmission of: {213, 218, 90, 99, 158, 171, 112, 247}
+Pin 8: Starting transmission of: {193, 254, 28}
+Pin 8: [ 96,  95]: 193 = 1100000 Error ratio (error = unexpected byte): 0.00 = 0 / 321
+Pin 8: Number of collisions increased to: 4859
+Pin 8: [102, 101]: 254 = 1111111 Error ratio (error = unexpected byte): 0.00 = 0 / 322
+Pin 8: Number of collisions increased to: 4871
+Pin 8: [  4,   3]: 28 = 0001110 Error ratio (error = unexpected byte): 0.00 = 0 / 323
+Pin 8: Number of collisions increased to: 4886
+Pin 2: Starting transmission of: {134, 222}
+Pin 3: Starting transmission of: {134, 222}
+Pin 9: Starting transmission of: {134, 222}
+Pin 2: Starting transmission of: {170, 102, 235, 186, 200}
+Pin 8: Starting transmission of: {178, 246, 45, 239, 232, 30, 241, 39}
+Pin 3: Starting transmission of: {170, 102, 235, 186, 200}
+Pin 8: [ 14,  13]: 178 = 1011001 Error ratio (error = unexpected byte): 0.00 = 0 / 324
+Pin 8: Number of collisions increased to: 4902
+Pin 9: Starting transmission of: {170, 102, 235, 186, 200}
+Pin 8: [ 22,  21]: 246 = 1111011 Error ratio (error = unexpected byte): 0.00 = 0 / 325
+Pin 8: Number of collisions increased to: 4917
+Pin 8: [ 30,  29]: 45 = 0010110 Error ratio (error = unexpected byte): 0.00 = 0 / 326
+Pin 8: Number of collisions increased to: 4930
+Pin 8: [ 36,  35]: 239 = 1110111 Error ratio (error = unexpected byte): 0.00 = 0 / 327
+Pin 8: Number of collisions increased to: 4942
+Pin 8: [ 44,  43]: 232 = 1110100 Error ratio (error = unexpected byte): 0.00 = 0 / 328
+Pin 8: Number of collisions increased to: 4957
+Pin 2: Starting transmission of: {75, 47, 81, 234, 252, 98, 44}
+Pin 8: [ 50,  49]: 30 = 0001111 Error ratio (error = unexpected byte): 0.00 = 0 / 329
+Pin 8: Number of collisions increased to: 4972
+Pin 3: Starting transmission of: {75, 47, 81, 234, 252, 98, 44}
+Pin 8: [ 56,  55]: 241 = 1111000 Error ratio (error = unexpected byte): 0.00 = 0 / 330
+Pin 8: Number of collisions increased to: 4986
+Pin 9: Starting transmission of: {75, 47, 81, 234, 252, 98, 44}
+Pin 8: [ 62,  61]: 39 = 0010011 Error ratio (error = unexpected byte): 0.00 = 0 / 331
+Pin 8: Number of collisions increased to: 5000
+Pin 2: Starting transmission of: {237, 201, 212, 122}
+Pin 3: Starting transmission of: {237, 201, 212, 122}
+Pin 9: Starting transmission of: {237, 201, 212, 122}
+Pin 8: Starting transmission of: {240, 154}
+Pin 2: Starting transmission of: {149, 89, 183, 126}
+Pin 8: [ 68,  68]: 240 = 1111000 Error ratio (error = unexpected byte): 0.00 = 0 / 332
+Pin 8: Number of collisions increased to: 5023
+Pin 3: Starting transmission of: {149, 89, 183, 126}
+Pin 8: [ 78,  77]: 154 = 1001101 Error ratio (error = unexpected byte): 0.00 = 0 / 333
+Pin 8: Number of collisions increased to: 5030
+Pin 9: Starting transmission of: {149, 89, 183, 126}
+Pin 8: Starting transmission of: {41, 13, 29, 15, 209, 184, 14}
+Pin 2: Starting transmission of: {54, 216}
+Pin 8: [ 86,  85]: 41 = 0010100 Error ratio (error = unexpected byte): 0.00 = 0 / 334
+Pin 8: Number of collisions increased to: 5046
+Pin 3: Starting transmission of: {54, 216}
+Pin 8: [ 92,  91]: 13 = 0000110 Error ratio (error = unexpected byte): 0.00 = 0 / 335
+Pin 8: Number of collisions increased to: 5062
+Pin 8: [ 98,  97]: 29 = 0001110 Error ratio (error = unexpected byte): 0.00 = 0 / 336
+Pin 8: Number of collisions increased to: 5077
+Pin 9: Starting transmission of: {54, 216}
+Pin 2: Starting transmission of: {16, 245}
+Pin 8: [102, 101]: 15 = 0000111 Error ratio (error = unexpected byte): 0.00 = 0 / 337
+Pin 8: Number of collisions increased to: 5094
+Pin 3: Starting transmission of: {16, 245}
+Pin 8: [  6,   5]: 209 = 1101000 Error ratio (error = unexpected byte): 0.00 = 0 / 338
+Pin 8: Number of collisions increased to: 5109
+Pin 8: [ 14,  13]: 184 = 1011100 Error ratio (error = unexpected byte): 0.00 = 0 / 339
+Pin 8: Number of collisions increased to: 5122
+Pin 9: Starting transmission of: {16, 245}
+Pin 2: Starting transmission of: {107, 68, 153, 42, 26, 148, 65}
+Pin 8: [ 20,  19]: 14 = 0000111 Error ratio (error = unexpected byte): 0.00 = 0 / 340
+Pin 8: Number of collisions increased to: 5138
+Pin 3: Starting transmission of: {107, 68, 153, 42, 26, 148, 65}
+Pin 9: Starting transmission of: {107, 68, 153, 42, 26, 148, 65}
+Pin 8: Starting transmission of: {213, 218, 90, 99, 158, 171, 112, 247}
+Pin 2: Starting transmission of: {121, 6, 221, 2, 12, 40, 117, 93}
+Pin 3: Starting transmission of: {121, 6, 221, 2, 12, 40, 117, 93}
+Pin 8: [ 30,  29]: 213 = 1101010 Error ratio (error = unexpected byte): 0.00 = 0 / 341
+Pin 8: Number of collisions increased to: 5152
+Pin 8: [ 40,  39]: 218 = 1101101 Error ratio (error = unexpected byte): 0.00 = 0 / 342
+Pin 8: Number of collisions increased to: 5166
+Pin 9: Starting transmission of: {121, 6, 221, 2, 12, 40, 117, 93}
+Pin 8: [ 50,  49]: 90 = 0101101 Error ratio (error = unexpected byte): 0.00 = 0 / 343
+Pin 8: Number of collisions increased to: 5181
+Pin 8: [ 56,  55]: 99 = 0110001 Error ratio (error = unexpected byte): 0.00 = 0 / 344
+Pin 8: Number of collisions increased to: 5196
+Pin 8: [ 64,  63]: 158 = 1001111 Error ratio (error = unexpected byte): 0.00 = 0 / 345
+Pin 8: Number of collisions increased to: 5210
+Pin 8: [ 74,  73]: 171 = 1010101 Error ratio (error = unexpected byte): 0.00 = 0 / 346
+Pin 8: Number of collisions increased to: 5224
+Pin 8: [ 80,  79]: 112 = 0111000 Error ratio (error = unexpected byte): 0.00 = 0 / 347
+Pin 8: Number of collisions increased to: 5240
+Pin 8: [ 86,  85]: 247 = 1111011 Error ratio (error = unexpected byte): 0.00 = 0 / 348
+Pin 8: Number of collisions increased to: 5252
+Pin 2: Starting transmission of: {195, 50, 179, 83, 228, 187}
+Pin 3: Starting transmission of: {195, 50, 179, 83, 228, 187}
+Pin 9: Starting transmission of: {195, 50, 179, 83, 228, 187}
+Pin 2: Starting transmission of: {97, 198, 4, 211, 88, 69}
+Pin 3: Starting transmission of: {97, 198, 4, 211, 88, 69}
+Pin 8: Starting transmission of: {134, 222}
+Pin 9: Starting transmission of: {97, 198, 4, 211, 88, 69}
+Pin 8: [ 94,  94]: 134 = 1000011 Error ratio (error = unexpected byte): 0.00 = 0 / 349
+Pin 8: Number of collisions increased to: 5277
+Pin 8: [102, 101]: 222 = 1101111 Error ratio (error = unexpected byte): 0.00 = 0 / 350
+Pin 8: Number of collisions increased to: 5281
+Pin 8: Starting transmission of: {170, 102, 235, 186, 200}
+Pin 2: Starting transmission of: {101, 249, 128, 51, 55, 214, 124, 159}
+Pin 3: Starting transmission of: {101, 249, 128, 51, 55, 214, 124, 159}
+Pin 8: [ 10,   9]: 170 = 1010101 Error ratio (error = unexpected byte): 0.00 = 0 / 351
+Pin 8: Number of collisions increased to: 5300
+Pin 8: [ 18,  17]: 102 = 0110011 Error ratio (error = unexpected byte): 0.00 = 0 / 352
+Pin 8: Number of collisions increased to: 5311
+Pin 9: Starting transmission of: {101, 249, 128, 51, 55, 214, 124, 159}
+Pin 8: [ 26,  25]: 235 = 1110101 Error ratio (error = unexpected byte): 0.00 = 0 / 353
+Pin 8: Number of collisions increased to: 5325
+Pin 8: [ 36,  35]: 186 = 1011101 Error ratio (error = unexpected byte): 0.00 = 0 / 354
+Pin 8: Number of collisions increased to: 5338
+Pin 8: [ 44,  43]: 200 = 1100100 Error ratio (error = unexpected byte): 0.00 = 0 / 355
+Pin 8: Number of collisions increased to: 5354
+Pin 2: Starting transmission of: {82, 131, 19, 194, 85, 125, 202}
+Pin 3: Starting transmission of: {82, 131, 19, 194, 85, 125, 202}
+Pin 8: Starting transmission of: {75, 47, 81, 234, 252, 98, 44}
+Pin 9: Starting transmission of: {82, 131, 19, 194, 85, 125, 202}
+Pin 8: [ 52,  51]: 75 = 0100101 Error ratio (error = unexpected byte): 0.00 = 0 / 356
+Pin 8: Number of collisions increased to: 5369
+Pin 8: [ 58,  57]: 47 = 0010111 Error ratio (error = unexpected byte): 0.00 = 0 / 357
+Pin 8: Number of collisions increased to: 5383
+Pin 8: [ 66,  65]: 81 = 0101000 Error ratio (error = unexpected byte): 0.00 = 0 / 358
+Pin 8: Number of collisions increased to: 5399
+Pin 8: [ 76,  75]: 234 = 1110101 Error ratio (error = unexpected byte): 0.00 = 0 / 359
+Pin 8: Number of collisions increased to: 5414
+Pin 8: [ 82,  81]: 252 = 1111110 Error ratio (error = unexpected byte): 0.00 = 0 / 360
+Pin 8: Number of collisions increased to: 5427
+Pin 2: Starting transmission of: {162, 109, 115, 11, 167, 205, 176}
+Pin 8: [ 90,  89]: 98 = 0110001 Error ratio (error = unexpected byte): 0.00 = 0 / 361
+Pin 8: Number of collisions increased to: 5443
+Pin 3: Starting transmission of: {162, 109, 115, 11, 167, 205, 176}
+Pin 8: [ 98,  97]: 44 = 0010110 Error ratio (error = unexpected byte): 0.00 = 0 / 362
+Pin 8: Number of collisions increased to: 5458
+Pin 9: Starting transmission of: {162, 109, 115, 11, 167, 205, 176}
+Pin 2: Starting transmission of: {137, 43, 74, 119, 77, 238, 229}
+Pin 3: Starting transmission of: {137, 43, 74, 119, 77, 238, 229}
+Pin 8: Starting transmission of: {237, 201, 212, 122}
+Pin 9: Starting transmission of: {137, 43, 74, 119, 77, 238, 229}
+Pin 8: [  2,   2]: 237 = 1110110 Error ratio (error = unexpected byte): 0.00 = 0 / 363
+Pin 8: Number of collisions increased to: 5477
+Pin 8: [ 10,   9]: 201 = 1100100 Error ratio (error = unexpected byte): 0.00 = 0 / 364
+Pin 8: Number of collisions increased to: 5487
+Pin 8: [ 20,  19]: 212 = 1101010 Error ratio (error = unexpected byte): 0.00 = 0 / 365
+Pin 8: Number of collisions increased to: 5502
+Pin 8: [ 28,  27]: 122 = 0111101 Error ratio (error = unexpected byte): 0.00 = 0 / 366
+Pin 8: Number of collisions increased to: 5515
+Pin 2: Starting transmission of: {23, 72, 243}
+Pin 3: Starting transmission of: {23, 72, 243}
+Pin 8: Starting transmission of: {149, 89, 183, 126}
+Pin 9: Starting transmission of: {23, 72, 243}
+Pin 2: Starting transmission of: {118, 223, 35, 127, 174}
+Pin 8: [ 38,  38]: 149 = 1001010 Error ratio (error = unexpected byte): 0.00 = 0 / 367
+Pin 8: Number of collisions increased to: 5537
+Pin 3: Starting transmission of: {118, 223, 35, 127, 174}
+Pin 8: [ 46,  45]: 89 = 0101100 Error ratio (error = unexpected byte): 0.00 = 0 / 368
+Pin 8: Number of collisions increased to: 5548
+Test has ended!
+Data rate / Effective data rate: 61.04 baud / 23.25 bit/s
+Bit duration exponent for transmitter: 10 + 8, for receiver: 8 + 10
+Free memory: 379
+Pin 2:
+  Error ratio (error = unexpected byte): 0.00 = 0 / 0
+  Number of received / transmitted bytes: 0 / 694
+  Number of bit collisions: 0
+  Number of receive buffer overflows: 0
+  Number of elements currently in receive buffer: 0
+  First / Last received byte: 0000000 / 0000000
+  Number of times noise was detected when reading a byte: 0
+  Measured data rate (downstream + upstream): 0.00 bit/s + 18.51 bit/s = 18.51 bit/s
+Pin 3:
+  Error ratio (error = unexpected byte): 0.00 = 0 / 0
+  Number of received / transmitted bytes: 0 / 694
+  Number of bit collisions: 0
+  Number of receive buffer overflows: 0
+  Number of elements currently in receive buffer: 0
+  First / Last received byte: 0000000 / 0000000
+  Number of times noise was detected when reading a byte: 0
+  Measured data rate (downstream + upstream): 0.00 bit/s + 18.51 bit/s = 18.51 bit/s
+Pin 8:
+  Error ratio (error = unexpected byte): 0.00 = 0 / 368
+  Number of received / transmitted bytes: 368 / 370
+  Number of bit collisions: 5571
+  Number of receive buffer overflows: 0
+  Number of elements currently in receive buffer: 13
+  First / Last received byte: 3 = 0000001 / 89 = 0101100
+  Number of times noise was detected when reading a byte: 0
+  Measured data rate (downstream + upstream): 9.81 bit/s + 9.87 bit/s = 19.68 bit/s
+Pin 9:
+  Error ratio (error = unexpected byte): 0.00 = 0 / 0
+  Number of received / transmitted bytes: 0 / 689
+  Number of bit collisions: 0
+  Number of receive buffer overflows: 0
+  Number of elements currently in receive buffer: 0
+  First / Last received byte: 0000000 / 0000000
+  Number of times noise was detected when reading a byte: 0
+  Measured data rate (downstream + upstream): 0.00 bit/s + 18.37 bit/s = 18.37 bit/s

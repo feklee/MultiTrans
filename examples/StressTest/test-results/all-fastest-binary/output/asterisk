@@ -1,0 +1,43 @@
+Free memory: 437
+Test duration after initial sync (indicated by tripple flash): 300000 ms
+Initiating sync...done
+Test has ended!
+Data rate / Effective data rate: 7812.50 baud / 2976.19 bit/s
+Bit duration exponent for transmitter: 10 + 1, for receiver: 0 + 11
+Free memory: 437
+Pin 2:
+  Error ratio (error = unexpected byte): 0.00 = 0 / 46791
+  Number of received / transmitted bytes: 46791 / 46980
+  Number of bit collisions: 0
+  Number of receive buffer overflows: 0
+  Number of elements currently in receive buffer: 0
+  First / Last received byte: 240 = 1111000 / 66 = 0100001
+  Number of times noise was detected when reading a byte: 0
+  Measured data rate (downstream + upstream): 1247.76 bit/s + 1252.80 bit/s = 2500.56 bit/s
+Pin 3:
+  Error ratio (error = unexpected byte): 0.00 = 0 / 46830
+  Number of received / transmitted bytes: 46830 / 46862
+  Number of bit collisions: 0
+  Number of receive buffer overflows: 0
+  Number of elements currently in receive buffer: 0
+  First / Last received byte: 240 = 1111000 / 15 = 0000111
+  Number of times noise was detected when reading a byte: 0
+  Measured data rate (downstream + upstream): 1248.80 bit/s + 1249.65 bit/s = 2498.45 bit/s
+Pin 8:
+  Error ratio (error = unexpected byte): 0.00 = 0 / 46833
+  Number of received / transmitted bytes: 46833 / 46833
+  Number of bit collisions: 0
+  Number of receive buffer overflows: 0
+  Number of elements currently in receive buffer: 0
+  First / Last received byte: 240 = 1111000 / 57 = 0011100
+  Number of times noise was detected when reading a byte: 0
+  Measured data rate (downstream + upstream): 1248.88 bit/s + 1248.88 bit/s = 2497.76 bit/s
+Pin 9:
+  Error ratio (error = unexpected byte): 0.00 = 0 / 46830
+  Number of received / transmitted bytes: 46830 / 46867
+  Number of bit collisions: 0
+  Number of receive buffer overflows: 0
+  Number of elements currently in receive buffer: 0
+  First / Last received byte: 240 = 1111000 / 15 = 0000111
+  Number of times noise was detected when reading a byte: 0
+  Measured data rate (downstream + upstream): 1248.80 bit/s + 1249.79 bit/s = 2498.59 bit/s
