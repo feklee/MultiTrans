@@ -238,7 +238,7 @@ char ReceiveBuffer<T>::shiftCharacter(bool * const characterWasFound) {
 
   // ReceiveBuffer overflows should be avoided or else there may be issues when
   // they happen during the loop.
-  character element = atomicShift();
+  byte element = atomicShift();
   while (!_bufferWasEmptyOnLastAtomicShift) {
     interpretElement(element);
     _shiftingCharacterIsFinished =
