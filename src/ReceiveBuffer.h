@@ -228,9 +228,9 @@ void ReceiveBuffer<T>::resetShiftingOfCharacter() {
 
 // Returns 0 if no character is found.
 template <typename T>
-char ReceiveBuffer<T>::shiftCharacter(bool * const byteWasFound) {
+char ReceiveBuffer<T>::shiftCharacter(bool * const characterWasFound) {
   bool startAgain = _shiftingCharacterIsFinished;
-  bool byteWasFoundNeedsToBeSet = byteWasFound != 0;
+  bool characterWasFoundNeedsToBeSet = characterWasFound != 0;
   if (startAgain) {
     resetShiftingOfCharacter();
     _shiftingCharacterIsFinished = false;
@@ -238,23 +238,23 @@ char ReceiveBuffer<T>::shiftCharacter(bool * const byteWasFound) {
 
   // ReceiveBuffer overflows should be avoided or else there may be issues when
   // they happen during the loop.
-  byte element = atomicShift();
+  character element = atomicShift();
   while (!_bufferWasEmptyOnLastAtomicShift) {
     interpretElement(element);
     _shiftingCharacterIsFinished =
       characterIsComplete() && _stopBitHasBeenPassed;
     if (_shiftingCharacterIsFinished) {
       _shiftingCharacterIsFinished = true;
-      if (byteWasFoundNeedsToBeSet) {
-        *byteWasFound = true;
+      if (characterWasFoundNeedsToBeSet) {
+        *characterWasFound = true;
       }
       return _character;
     }
     element = atomicShift();
   }
 
-  if (byteWasFoundNeedsToBeSet) {
-    *byteWasFound = false;
+  if (characterWasFoundNeedsToBeSet) {
+    *characterWasFound = false;
   }
   return 0;
 }
