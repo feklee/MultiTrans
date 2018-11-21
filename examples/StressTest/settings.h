@@ -12,8 +12,8 @@ const uint32_t durationOfTest = 300000; // ms
 const bool noiseShouldBeRandomlyInserted = false;
 
 // Enabling the following settings slows down max. possible communication speed:
-const bool recordDebugData = true;
 const bool verbose = true;
+const bool recordDebugData = true;
 
 // The duration for the transmission of one bit is (in CPU cycles):
 //
