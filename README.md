@@ -38,12 +38,6 @@ Limitations
         events.
 
       + Flushing the buffer on the receiving end takes some time.
-      
-      + The size of the buffers is calculated automatically, depending
-        on the chosen maximum number of characters per
-        transmission. Allowing the user to manually specify the size
-        of the buffers could be added as a feature in a future
-        *MultiTrans* version.
 
     The system is thus best used for short bursts of data with sufficient idle
     time in between.
