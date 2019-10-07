@@ -11,7 +11,7 @@ template <typename T>
 class Transmitter {
   using Transceiver = T;
 
-  static const uint8_t pinNumber = Transceiver::pinNumber;
+  static const uint8_t pinNumber = Transceiver::txPinNumber;
   volatile uint8_t _numberOfSuccessiveHighBits = 0;
   volatile bool _transmissionIsInProgress = false;
   volatile bool _isWaitingForFreeLine = false;

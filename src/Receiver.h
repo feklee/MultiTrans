@@ -8,7 +8,7 @@ template <typename T, uint8_t t>
 class Receiver {
   using Transceiver = T;
 
-  static const uint8_t pinNumber = Transceiver::pinNumber;
+  static const uint8_t pinNumber = Transceiver::rxPinNumber;
   static const uint8_t unscaledBitDurationExp = t;
   static const uint16_t unscaledBitDuration =
     1 << unscaledBitDurationExp; // in CPU cycles / prescale factor

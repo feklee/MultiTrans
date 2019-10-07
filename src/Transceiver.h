@@ -8,10 +8,11 @@
 #include "./DebugData.h"
 
 template <uint8_t t, uint8_t u, bool v, uint8_t w>
-template <uint8_t x>
+template <uint8_t x, uint8_t y = x>
 class MultiTrans<t, u, v, w>::Transceiver {
 public:
-  static const uint8_t pinNumber = x; // in [2, 13]
+  static const uint8_t txPinNumber = x; // in [2, 13]
+  static const uint8_t rxPinNumber = y; // in [2, 13]
   static const bool debugDataIsRecorded =
     MultiTrans<t, u, v, w>::debugDataIsRecorded;
   static const uint8_t maxNumberOfCharsPerTransmission = // < 13 (characters)
@@ -20,8 +21,8 @@ public:
     MultiTrans<t, u, v, w>::customReceiveBufferSize;
 
 private:
-  Transmitter<Transceiver<x>> _transmitter;
-  Receiver<Transceiver<x>, rUnscaledBitDurationExp> _receiver;
+  Transmitter<Transceiver<x, y>> _transmitter;
+  Receiver<Transceiver<x, y>, rUnscaledBitDurationExp> _receiver;
 
 public:
   static DebugData debugData;
@@ -59,18 +60,19 @@ public:
 
 template <uint8_t t, uint8_t u, bool v, uint8_t w>
 template <uint8_t x>
-DebugData MultiTrans<t, u, v, w>::Transceiver<x>::debugData = {0, 0, 0, 0, 0};
+DebugData MultiTrans<t, u, v, w>::Transceiver<x, y>::debugData =
+  {0, 0, 0, 0, 0};
 
 template <uint8_t t, uint8_t u, bool v, uint8_t w>
 template <uint8_t x>
-void MultiTrans<t, u, v, w>::Transceiver<x>::begin() {
+void MultiTrans<t, u, v, w>::Transceiver<x, y>::begin() {
   _transmitter.begin();
   _receiver.begin();
 }
 
 template <uint8_t t, uint8_t u, bool v, uint8_t w>
 template <uint8_t x>
-void MultiTrans<t, u, v, w>::Transceiver<x>::handleOwnPinChange(
+void MultiTrans<t, u, v, w>::Transceiver<x, y>::handleOwnPinChange(
   const uint16_t now, // in CPU cycles / prescale factor
   const bool valueAfterPinChange
 ) {
@@ -85,7 +87,7 @@ void MultiTrans<t, u, v, w>::Transceiver<x>::handleOwnPinChange(
 
 template <uint8_t t, uint8_t u, bool v, uint8_t w>
 template <uint8_t x>
-void MultiTrans<t, u, v, w>::Transceiver<x>::handlePinChangeInterrupt() {
+void MultiTrans<t, u, v, w>::Transceiver<x, y>::handlePinChangeInterrupt() {
   const uint16_t now = TCNT1; // Read is done with the help of the `TEMP`
                               // register, making it atomic (as long as no
                               // interrupt is using `TEMP` as well).
