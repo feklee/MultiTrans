@@ -8,11 +8,11 @@
 #include "./DebugData.h"
 
 template <uint8_t t, uint8_t u, bool v, uint8_t w>
-template <uint8_t x, uint8_t y = x>
+template <uint8_t x, uint8_t y> // TODO: add back default value of x for y: https://stackoverflow.com/questions/58292829/template-class-nested-in-template-class-default-parameter-not-accepted
 class MultiTrans<t, u, v, w>::Transceiver {
 public:
-  static const uint8_t txPinNumber = x; // in [2, 13]
-  static const uint8_t rxPinNumber = y; // in [2, 13]
+  static const uint8_t rxPinNumber = x; // in [2, 13]
+  static const uint8_t txPinNumber = y; // in [2, 13]
   static const bool debugDataIsRecorded =
     MultiTrans<t, u, v, w>::debugDataIsRecorded;
   static const uint8_t maxNumberOfCharsPerTransmission = // < 13 (characters)
@@ -59,19 +59,19 @@ public:
 };
 
 template <uint8_t t, uint8_t u, bool v, uint8_t w>
-template <uint8_t x>
+template <uint8_t x, uint8_t y>
 DebugData MultiTrans<t, u, v, w>::Transceiver<x, y>::debugData =
   {0, 0, 0, 0, 0};
 
 template <uint8_t t, uint8_t u, bool v, uint8_t w>
-template <uint8_t x>
+template <uint8_t x, uint8_t y>
 void MultiTrans<t, u, v, w>::Transceiver<x, y>::begin() {
   _transmitter.begin();
   _receiver.begin();
 }
 
 template <uint8_t t, uint8_t u, bool v, uint8_t w>
-template <uint8_t x>
+template <uint8_t x, uint8_t y>
 void MultiTrans<t, u, v, w>::Transceiver<x, y>::handleOwnPinChange(
   const uint16_t now, // in CPU cycles / prescale factor
   const bool valueAfterPinChange
@@ -86,7 +86,7 @@ void MultiTrans<t, u, v, w>::Transceiver<x, y>::handleOwnPinChange(
 }
 
 template <uint8_t t, uint8_t u, bool v, uint8_t w>
-template <uint8_t x>
+template <uint8_t x, uint8_t y>
 void MultiTrans<t, u, v, w>::Transceiver<x, y>::handlePinChangeInterrupt() {
   const uint16_t now = TCNT1; // Read is done with the help of the `TEMP`
                               // register, making it atomic (as long as no
@@ -96,7 +96,7 @@ void MultiTrans<t, u, v, w>::Transceiver<x, y>::handlePinChangeInterrupt() {
   // However, that's not necessarily more precise, as the change of the current
   // pin may have occured after the top level interrupt handler got called.
 
-  const bool valueAfterPinChange = CommunicationPin<pinNumber>::read();
+  const bool valueAfterPinChange = CommunicationPin<rxPinNumber>::read();
   static bool valueBeforePinChange = HIGH;
 
   const bool ownPinHasChanged = valueAfterPinChange != valueBeforePinChange;
