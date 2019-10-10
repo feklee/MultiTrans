@@ -8,7 +8,7 @@
 #include "./DebugData.h"
 
 template <uint8_t t, uint8_t u, bool v, uint8_t w>
-template <uint8_t x, uint8_t y> // TODO: add back default value of x for y: https://stackoverflow.com/questions/58292829/template-class-nested-in-template-class-default-parameter-not-accepted
+template <uint8_t x, uint8_t y>
 class MultiTrans<t, u, v, w>::Transceiver {
 public:
   static const uint8_t rxPinNumber = x; // in [2, 13]

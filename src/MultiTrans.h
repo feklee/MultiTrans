@@ -42,7 +42,7 @@ public:
   static const uint8_t rUnscaledBitDurationExp; // < 16
   static const uint8_t rPrescaleFactorExp; // 0, 3, 6, 8, or 10
 
-  template <uint8_t, uint8_t> class Transceiver;
+  template <uint8_t x, uint8_t y = x> class Transceiver;
 
   static void startTimer1();
   static void startTimer2();
