@@ -45,7 +45,7 @@ void Transmitter<T>::transmitBit() {
   if (cachedBitPosition >= _buffer.numberOfBits()) {
     stopTransmission();
   } else {
-    CommunicationPin<txPinNumber>::write(
+    CommunicationPin<T, txPinNumber>::write(
       _buffer.bitAtPosition(cachedBitPosition)
     );
     cachedBitPosition ++;
@@ -66,14 +66,14 @@ void Transmitter<T>::checkIfLineIsFree() {
 
 template <typename T>
 void Transmitter<T>::startWaitingForFreeLine() {
-  CommunicationPin<txPinNumber>::write(HIGH);
+  CommunicationPin<T, txPinNumber>::write(HIGH);
   _numberOfSuccessiveHighBits = 0;
   _isWaitingForFreeLine = true;
 }
 
 template <typename T>
 void Transmitter<T>::checkForCollision() {
-  const bool value = CommunicationPin<rxPinNumber>::read();
+  const bool value = CommunicationPin<T, rxPinNumber>::read();
   const bool collisionDetected = value == LOW; // because pin is input pull-up
                                                // when waiting for free line
 
@@ -127,11 +127,11 @@ void Transmitter<T>::stopTransmission() {
 
 template <typename T>
 void Transmitter<T>::startTransmissionOfCharacters(
-  const char * const s
+  const char * const characters
 ) {
   _buffer.clear();
 
-  const char *character = s;
+  const char *character = characters;
   while (*character) {
     _buffer.addCharacter(*character);
     character ++;
@@ -169,7 +169,7 @@ void Transmitter<T>::startTransmissionOfNoise() {
 
 template <typename T>
 void Transmitter<T>::startIdling() {
-  CommunicationPin<txPinNumber>::write(HIGH);
+  CommunicationPin<T, txPinNumber>::write(HIGH);
 }
 
 template <typename T>

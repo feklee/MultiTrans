@@ -14,8 +14,10 @@
 //     <http://ww1.microchip.com/downloads/en/DeviceDoc/ATmega328_P%20AVR%20MCU%
 //     20with%20picoPower%20Technology%20Data%20Sheet%2040001984A.pdf>
 
-template <uint8_t t>
+template <typename T, uint8_t t>
 class CommunicationPin {
+  using Transceiver = T;
+
   static const uint8_t pinNumber = t; // in [2, 13]
   static const uint8_t bitNumber;
   static const uint8_t bitMask;
@@ -33,48 +35,51 @@ public:
   static void activatePinChangeInterrupt();
 };
 
-template <uint8_t t>
-CommunicationPin<t>::CommunicationPin() {
+template <typename T, uint8_t t>
+CommunicationPin<T, t>::CommunicationPin() {
   assert(pinNumber >= 2 && pinNumber <= 13);
 }
 
-template <uint8_t t>
-const uint8_t CommunicationPin<t>::bitNumber =
+template <typename T, uint8_t t>
+const uint8_t CommunicationPin<T, t>::bitNumber =
   (pinNumber < 8) ? pinNumber : (pinNumber - 8);
 
-template <uint8_t t>
-const uint8_t CommunicationPin<t>::bitMask =
-  1 << CommunicationPin<t>::bitNumber;
+template <typename T, uint8_t t>
+const uint8_t CommunicationPin<T, t>::bitMask =
+  1 << CommunicationPin<T, t>::bitNumber;
 
-template <uint8_t t>
-const uint8_t CommunicationPin<t>::interruptBitMask =
-  CommunicationPin<t>::bitMask;
+template <typename T, uint8_t t>
+const uint8_t CommunicationPin<T, t>::interruptBitMask =
+  CommunicationPin<T, t>::bitMask;
 
-template <uint8_t t>
-volatile uint8_t * const CommunicationPin<t>::dataDirectionRegister =
+template <typename T, uint8_t t>
+volatile uint8_t * const CommunicationPin<T, t>::dataDirectionRegister =
   (pinNumber < 8) ? &DDRD : &DDRB;
 
-template <uint8_t t>
-volatile uint8_t * const CommunicationPin<t>::dataRegister =
+template <typename T, uint8_t t>
+volatile uint8_t * const CommunicationPin<T, t>::dataRegister =
   (pinNumber < 8) ? &PORTD : &PORTB;
 
-template <uint8_t t>
-volatile uint8_t * const CommunicationPin<t>::inputRegister =
+template <typename T, uint8_t t>
+volatile uint8_t * const CommunicationPin<T, t>::inputRegister =
   (pinNumber < 8) ? &PIND : &PINB;
 
-template <uint8_t t>
-volatile uint8_t * const CommunicationPin<t>::pinChangeMaskRegister =
+template <typename T, uint8_t t>
+volatile uint8_t * const CommunicationPin<T, t>::pinChangeMaskRegister =
   (pinNumber < 8) ? &PCMSK2 : &PCMSK0;
 
-template <uint8_t t>
-void CommunicationPin<t>::write(const bool value) {
-#if 1 // TODO
-  pinMode(pinNumber, OUTPUT); // TODO
-  digitalWrite(pinNumber, !value); // TODO
-  return;
-#endif
+template <typename T, uint8_t t>
+void CommunicationPin<T, t>::write(const bool value) {
+  const bool pinValue = T::invertTxPinValue ? !value : value;
 
-  if (value) {
+  if (T::dontUseInputPullupForTxPin) {
+    // TODO: directly manipulate registers for performance
+    pinMode(pinNumber, OUTPUT);
+    digitalWrite(pinNumber, pinValue);
+    return;
+  }
+
+  if (pinValue) {
     *dataDirectionRegister &= ~bitMask;
     *dataRegister |= bitMask; // input pullup
   } else {
@@ -87,18 +92,18 @@ void CommunicationPin<t>::write(const bool value) {
   }
 }
 
-template <uint8_t t>
-bool CommunicationPin<t>::read() {
+template <typename T, uint8_t t>
+bool CommunicationPin<T, t>::read() {
   return *inputRegister & bitMask;
 }
 
-template <uint8_t t>
-void CommunicationPin<t>::setToInputPullup() {
+template <typename T, uint8_t t>
+void CommunicationPin<T, t>::setToInputPullup() {
   *dataDirectionRegister &= ~bitMask;
   *dataRegister |= bitMask;
 }
 
-template <uint8_t t>
-void CommunicationPin<t>::activatePinChangeInterrupt() {
+template <typename T, uint8_t t>
+void CommunicationPin<T, t>::activatePinChangeInterrupt() {
   *pinChangeMaskRegister |= interruptBitMask;
 }

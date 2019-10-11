@@ -81,6 +81,6 @@ void Receiver<T, t>::handlePinChangeInterrupt(
 
 template <typename T, uint8_t t>
 void Receiver<T, t>::begin() {
-  CommunicationPin<pinNumber>::setToInputPullup();
-  CommunicationPin<pinNumber>::activatePinChangeInterrupt();
+  CommunicationPin<T, pinNumber>::setToInputPullup();
+  CommunicationPin<T, pinNumber>::activatePinChangeInterrupt();
 }

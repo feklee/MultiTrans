@@ -7,29 +7,33 @@
 #include "./Transmitter.h"
 #include "./DebugData.h"
 
-template <uint8_t t, uint8_t u, bool v, uint8_t w>
-template <uint8_t x, uint8_t y>
-class MultiTrans<t, u, v, w>::Transceiver {
+template <uint8_t s, uint8_t t, bool u, uint8_t v, bool w, bool x>
+template <uint8_t y, uint8_t z>
+class MultiTrans<s, t, u, v, w, x>::Transceiver {
 public:
-  static const uint8_t rxPinNumber = x; // in [2, 13]
-  static const uint8_t txPinNumber = y; // in [2, 13]
+  static const uint8_t rxPinNumber = y; // in [2, 13]
+  static const uint8_t txPinNumber = z; // in [2, 13]
   static const bool debugDataIsRecorded =
-    MultiTrans<t, u, v, w>::debugDataIsRecorded;
+    MultiTrans<s, t, u, v, w, x>::debugDataIsRecorded;
   static const uint8_t maxNumberOfCharsPerTransmission = // < 13 (characters)
-    MultiTrans<t, u, v, w>::maxNumberOfCharsPerTransmission;
+    MultiTrans<s, t, u, v, w, x>::maxNumberOfCharsPerTransmission;
   static const uint8_t customReceiveBufferSize =
-    MultiTrans<t, u, v, w>::customReceiveBufferSize;
+    MultiTrans<s, t, u, v, w, x>::customReceiveBufferSize;
+  static const bool dontUseInputPullupForTxPin =
+    MultiTrans<s, t, u, v, w, x>::dontUseInputPullupForTxPin;
+  static const bool invertTxPinValue =
+    MultiTrans<s, t, u, v, w, x>::invertTxPinValue;
 
 private:
-  Transmitter<Transceiver<x, y>> _transmitter;
-  Receiver<Transceiver<x, y>, rUnscaledBitDurationExp> _receiver;
+  Transmitter<Transceiver<y, z>> _transmitter;
+  Receiver<Transceiver<y, z>, rUnscaledBitDurationExp> _receiver;
 
 public:
   static DebugData debugData;
 
   void begin();
-  void startTransmissionOfCharacters(const char * const s) {
-    _transmitter.startTransmissionOfCharacters(s);
+  void startTransmissionOfCharacters(const char * const characters) {
+    _transmitter.startTransmissionOfCharacters(characters);
   }
   void startTransmissionOfBytes(const byte * const bytes,
                                 const uint8_t numberOfBytes) {
@@ -58,21 +62,21 @@ public:
   }
 };
 
-template <uint8_t t, uint8_t u, bool v, uint8_t w>
-template <uint8_t x, uint8_t y>
-DebugData MultiTrans<t, u, v, w>::Transceiver<x, y>::debugData =
+template <uint8_t s, uint8_t t, bool u, uint8_t v, bool w, bool x>
+template <uint8_t y, uint8_t z>
+DebugData MultiTrans<s, t, u, v, w, x>::Transceiver<y, z>::debugData =
   {0, 0, 0, 0, 0};
 
-template <uint8_t t, uint8_t u, bool v, uint8_t w>
-template <uint8_t x, uint8_t y>
-void MultiTrans<t, u, v, w>::Transceiver<x, y>::begin() {
+template <uint8_t s, uint8_t t, bool u, uint8_t v, bool w, bool x>
+template <uint8_t y, uint8_t z>
+void MultiTrans<s, t, u, v, w, x>::Transceiver<y, z>::begin() {
   _transmitter.begin();
   _receiver.begin();
 }
 
-template <uint8_t t, uint8_t u, bool v, uint8_t w>
-template <uint8_t x, uint8_t y>
-void MultiTrans<t, u, v, w>::Transceiver<x, y>::handleOwnPinChange(
+template <uint8_t s, uint8_t t, bool u, uint8_t v, bool w, bool x>
+template <uint8_t y, uint8_t z>
+void MultiTrans<s, t, u, v, w, x>::Transceiver<y, z>::handleOwnPinChange(
   const uint16_t now, // in CPU cycles / prescale factor
   const bool valueAfterPinChange
 ) {
@@ -85,9 +89,10 @@ void MultiTrans<t, u, v, w>::Transceiver<x, y>::handleOwnPinChange(
   }
 }
 
-template <uint8_t t, uint8_t u, bool v, uint8_t w>
-template <uint8_t x, uint8_t y>
-void MultiTrans<t, u, v, w>::Transceiver<x, y>::handlePinChangeInterrupt() {
+template <uint8_t s, uint8_t t, bool u, uint8_t v, bool w, bool x>
+template <uint8_t y, uint8_t z>
+void
+MultiTrans<s, t, u, v, w, x>::Transceiver<y, z>::handlePinChangeInterrupt() {
   const uint16_t now = TCNT1; // Read is done with the help of the `TEMP`
                               // register, making it atomic (as long as no
                               // interrupt is using `TEMP` as well).
@@ -96,7 +101,8 @@ void MultiTrans<t, u, v, w>::Transceiver<x, y>::handlePinChangeInterrupt() {
   // However, that's not necessarily more precise, as the change of the current
   // pin may have occured after the top level interrupt handler got called.
 
-  const bool valueAfterPinChange = CommunicationPin<rxPinNumber>::read();
+  const bool valueAfterPinChange =
+    CommunicationPin<Transceiver<y, z>, rxPinNumber>::read();
   static bool valueBeforePinChange = HIGH;
 
   const bool ownPinHasChanged = valueAfterPinChange != valueBeforePinChange;
