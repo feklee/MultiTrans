@@ -12,3 +12,6 @@ Pictured components:
 
 To run the example, power the Arduinos and monitor the serial console of one of
 them.
+
+For testing, it is recommended to let the Arduinos send different strings, to
+make sure that they’re not simply receiving what they’re sending.
