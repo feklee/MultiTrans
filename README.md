@@ -1,7 +1,8 @@
 Introduction
 ============
 
-*MultiTrans* is a multi channel transceiver, for AVR based Arduinos.
+*MultiTrans* is a multi channel transceiver, for AVR based Arduinos connected by
+wire or via IR.
 
 
 Features
@@ -15,6 +16,10 @@ Features
   * *Collision detection:* One pin can start sending without worrying if the
     other side is sending as well. Collisions are automatically detected and
     circumvented. No information is lost.
+
+  * *Infrared option:* Bi-directional communication through air, if needed.
+    Further communication channels may be possible as well but have been
+    untested.
 
   * Maximum uni-directional data rates on an Arduino Uno / Pro Mini:
   
