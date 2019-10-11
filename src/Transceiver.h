@@ -92,7 +92,7 @@ void MultiTrans<t, u, v, w>::Transceiver<x, y>::handlePinChangeInterrupt() {
                               // register, making it atomic (as long as no
                               // interrupt is using `TEMP` as well).
 
-  // Alternatively, `now` could be read from the top level interrupt handler.
+  // Alternatively, `now` could be read in the top level interrupt handler.
   // However, that's not necessarily more precise, as the change of the current
   // pin may have occured after the top level interrupt handler got called.
 
