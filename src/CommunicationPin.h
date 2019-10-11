@@ -68,6 +68,12 @@ volatile uint8_t * const CommunicationPin<t>::pinChangeMaskRegister =
 
 template <uint8_t t>
 void CommunicationPin<t>::write(const bool value) {
+#if 1 // TODO
+  pinMode(pinNumber, OUTPUT); // TODO
+  digitalWrite(pinNumber, !value); // TODO
+  return;
+#endif
+
   if (value) {
     *dataDirectionRegister &= ~bitMask;
     *dataRegister |= bitMask; // input pullup

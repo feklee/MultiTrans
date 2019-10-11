@@ -8,19 +8,19 @@
 #warning "This library has not been tested with your board."
 #endif
 
-template <uint8_t t, uint8_t u, bool v = false, uint8_t w = 0>
+template <uint8_t s, uint8_t t, bool u = false, uint8_t v = 0>
 class MultiTrans {
 private:
-  static_assert(t <= 18, "Bit duration is too long.");
-  static_assert(u <= 12,
+  static_assert(s <= 18, "Bit duration is too long.");
+  static_assert(t <= 12,
                 "Too high maximum number characters per transmission.");
 
   // Bit duration (in CPU cycles): 2^bitDurationExp
   //
   // Baud rate (in bits / time unit): CPU clock speed / bit duration
-  static const uint8_t bitDurationExp = t; // < 18
+  static const uint8_t bitDurationExp = s; // < 18
 
-  static const uint8_t maxNumberOfCharsPerTransmission = u;
+  static const uint8_t maxNumberOfCharsPerTransmission = t;
 
   static uint8_t rPrescaleBits();
   static uint8_t tPrescaleBits();
@@ -28,13 +28,13 @@ private:
   static void enableTimer2Interrupt();
 
 public:
-  static const bool debugDataIsRecorded = v;
+  static const bool debugDataIsRecorded = u;
   static const uint32_t bitDuration;
   static const float baudRate;
   static const float effectiveDataRate;
 
   // 0: compute receiver buffer size automatically based on number of characters
-  static const uint8_t customReceiveBufferSize = w;
+  static const uint8_t customReceiveBufferSize = v;
 
   // Prefixes: `t` = transmitter, `r` = receiver
   static const uint8_t tUnscaledBitDurationExp; // < 8
@@ -48,60 +48,60 @@ public:
   static void startTimer2();
 };
 
-template <uint8_t t, uint8_t u, bool v, uint8_t w>
+template <uint8_t s, uint8_t t, bool u, uint8_t v>
 // Transmit prescaling should be as large as possible (to maximize the maximum
 // possible duration):
-const uint8_t MultiTrans<t, u, v, w>::tPrescaleFactorExp =
-  (MultiTrans<t, u, v, w>::bitDurationExp >= 10) ? 10 :
-  (MultiTrans<t, u, v, w>::bitDurationExp >= 8) ? 8 :
-  (MultiTrans<t, u, v, w>::bitDurationExp >= 7) ? 7 :
-  (MultiTrans<t, u, v, w>::bitDurationExp >= 6) ? 6 :
-  (MultiTrans<t, u, v, w>::bitDurationExp >= 5) ? 5 :
-  (MultiTrans<t, u, v, w>::bitDurationExp >= 3) ? 3 : 0;
+const uint8_t MultiTrans<s, t, u, v>::tPrescaleFactorExp =
+  (MultiTrans<s, t, u, v>::bitDurationExp >= 10) ? 10 :
+  (MultiTrans<s, t, u, v>::bitDurationExp >= 8) ? 8 :
+  (MultiTrans<s, t, u, v>::bitDurationExp >= 7) ? 7 :
+  (MultiTrans<s, t, u, v>::bitDurationExp >= 6) ? 6 :
+  (MultiTrans<s, t, u, v>::bitDurationExp >= 5) ? 5 :
+  (MultiTrans<s, t, u, v>::bitDurationExp >= 3) ? 3 : 0;
 
-template <uint8_t t, uint8_t u, bool v, uint8_t w>
-const uint8_t MultiTrans<t, u, v, w>::tUnscaledBitDurationExp =
-  MultiTrans<t, u, v, w>::bitDurationExp -
-  MultiTrans<t, u, v, w>::tPrescaleFactorExp;
+template <uint8_t s, uint8_t t, bool u, uint8_t v>
+const uint8_t MultiTrans<s, t, u, v>::tUnscaledBitDurationExp =
+  MultiTrans<s, t, u, v>::bitDurationExp -
+  MultiTrans<s, t, u, v>::tPrescaleFactorExp;
 
 // Receive prescaling should be as small as possible (for maximum precision),
 // but long enough to count a break (see character encoding):
-template <uint8_t t, uint8_t u, bool v, uint8_t w>
-const uint8_t MultiTrans<t, u, v, w>::rPrescaleFactorExp =
-  (MultiTrans<t, u, v, w>::bitDurationExp >=
+template <uint8_t s, uint8_t t, bool u, uint8_t v>
+const uint8_t MultiTrans<s, t, u, v>::rPrescaleFactorExp =
+  (MultiTrans<s, t, u, v>::bitDurationExp >=
    8 // previous prescale factor, which may not be sufficient (see next section)
    + 16 // >= 2^16 would not fit in an `uint16_t`
    - CharacterEncoding::ceilOfBreakLengthExp // divides by number of character
                                              // bits needed to count break,
                                              // rounded up
   ) ? 10 :
-  (MultiTrans<t, u, v, w>::bitDurationExp >=
+  (MultiTrans<s, t, u, v>::bitDurationExp >=
    6 + 16 - CharacterEncoding::ceilOfBreakLengthExp) ? 8 :
-  (MultiTrans<t, u, v, w>::bitDurationExp >=
+  (MultiTrans<s, t, u, v>::bitDurationExp >=
    3 + 16 - CharacterEncoding::ceilOfBreakLengthExp) ? 6 :
-  (MultiTrans<t, u, v, w>::bitDurationExp >=
+  (MultiTrans<s, t, u, v>::bitDurationExp >=
    0 + 16 - CharacterEncoding::ceilOfBreakLengthExp) ? 3 :
   0;
 
-template <uint8_t t, uint8_t u, bool v, uint8_t w>
-const uint8_t MultiTrans<t, u, v, w>::rUnscaledBitDurationExp =
-  MultiTrans<t, u, v, w>::bitDurationExp -
-  MultiTrans<t, u, v, w>::rPrescaleFactorExp;
+template <uint8_t s, uint8_t t, bool u, uint8_t v>
+const uint8_t MultiTrans<s, t, u, v>::rUnscaledBitDurationExp =
+  MultiTrans<s, t, u, v>::bitDurationExp -
+  MultiTrans<s, t, u, v>::rPrescaleFactorExp;
 
-template <uint8_t t, uint8_t u, bool v, uint8_t w>
-const uint32_t MultiTrans<t, u, v, w>::bitDuration =
-  1ul << MultiTrans<t, u, v, w>::bitDurationExp;
+template <uint8_t s, uint8_t t, bool u, uint8_t v>
+const uint32_t MultiTrans<s, t, u, v>::bitDuration =
+  1ul << MultiTrans<s, t, u, v>::bitDurationExp;
 
-template <uint8_t t, uint8_t u, bool v, uint8_t w>
-const float MultiTrans<t, u, v, w>::baudRate =
-  float(F_CPU) / MultiTrans<t, u, v, w>::bitDuration;
+template <uint8_t s, uint8_t t, bool u, uint8_t v>
+const float MultiTrans<s, t, u, v>::baudRate =
+  float(F_CPU) / MultiTrans<s, t, u, v>::bitDuration;
 
-template <uint8_t t, uint8_t u, bool v, uint8_t w>
-const float MultiTrans<t, u, v, w>::effectiveDataRate =
+template <uint8_t s, uint8_t t, bool u, uint8_t v>
+const float MultiTrans<s, t, u, v>::effectiveDataRate =
   baudRate * CharacterEncoding::payloadLength / CharacterEncoding::totalLength;
 
-template <uint8_t t, uint8_t u, bool v, uint8_t w>
-byte MultiTrans<t, u, v, w>::rPrescaleBits() {
+template <uint8_t s, uint8_t t, bool u, uint8_t v>
+byte MultiTrans<s, t, u, v>::rPrescaleBits() {
   const uint16_t rPrescaleFactor = 1 << rPrescaleFactorExp;
 
   switch (rPrescaleFactor) {
@@ -120,8 +120,8 @@ byte MultiTrans<t, u, v, w>::rPrescaleBits() {
 }
 
 // for receiving
-template <uint8_t t, uint8_t u, bool v, uint8_t w>
-void MultiTrans<t, u, v, w>::startTimer1() {
+template <uint8_t s, uint8_t t, bool u, uint8_t v>
+void MultiTrans<s, t, u, v>::startTimer1() {
   TCCR1A = 0; // normal operation
   TCCR1B = rPrescaleBits();
   TCCR1C = 0;
@@ -130,8 +130,8 @@ void MultiTrans<t, u, v, w>::startTimer1() {
   TIMSK1 = 0; // no interrupts
 }
 
-template <uint8_t t, uint8_t u, bool v, uint8_t w>
-uint8_t MultiTrans<t, u, v, w>::tPrescaleBits() {
+template <uint8_t s, uint8_t t, bool u, uint8_t v>
+uint8_t MultiTrans<s, t, u, v>::tPrescaleBits() {
   const uint16_t prescaleFactor = 1 << tPrescaleFactorExp;
 
   switch (prescaleFactor) {
@@ -154,8 +154,8 @@ uint8_t MultiTrans<t, u, v, w>::tPrescaleBits() {
   return 0;
 }
 
-template <uint8_t t, uint8_t u, bool v, uint8_t w>
-void MultiTrans<t, u, v, w>::configureTimer2() {
+template <uint8_t s, uint8_t t, bool u, uint8_t v>
+void MultiTrans<s, t, u, v>::configureTimer2() {
   // Timer control registers:
   TCCR2A = 0;
   TCCR2B = tPrescaleBits();
@@ -169,14 +169,14 @@ void MultiTrans<t, u, v, w>::configureTimer2() {
   TCCR2A = bit(WGM21); // CTC - Clear Timer on Compare
 }
 
-template <uint8_t t, uint8_t u, bool v, uint8_t w>
-void MultiTrans<t, u, v, w>::enableTimer2Interrupt() {
+template <uint8_t s, uint8_t t, bool u, uint8_t v>
+void MultiTrans<s, t, u, v>::enableTimer2Interrupt() {
   TIMSK2 = bit(OCIE2A); // Output Compare A Match Interrupt Enable
 }
 
 // for transmitting
-template <uint8_t t, uint8_t u, bool v, uint8_t w>
-void MultiTrans<t, u, v, w>::startTimer2() {
+template <uint8_t s, uint8_t t, bool u, uint8_t v>
+void MultiTrans<s, t, u, v>::startTimer2() {
   configureTimer2();
   enableTimer2Interrupt();
 }

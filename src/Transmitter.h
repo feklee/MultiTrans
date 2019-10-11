@@ -11,7 +11,8 @@ template <typename T>
 class Transmitter {
   using Transceiver = T;
 
-  static const uint8_t pinNumber = Transceiver::txPinNumber;
+  static const uint8_t rxPinNumber = Transceiver::rxPinNumber;
+  static const uint8_t txPinNumber = Transceiver::txPinNumber;
   volatile uint8_t _numberOfSuccessiveHighBits = 0;
   volatile bool _transmissionIsInProgress = false;
   volatile bool _isWaitingForFreeLine = false;
@@ -44,7 +45,7 @@ void Transmitter<T>::transmitBit() {
   if (cachedBitPosition >= _buffer.numberOfBits()) {
     stopTransmission();
   } else {
-    CommunicationPin<pinNumber>::write(
+    CommunicationPin<txPinNumber>::write(
       _buffer.bitAtPosition(cachedBitPosition)
     );
     cachedBitPosition ++;
@@ -65,14 +66,14 @@ void Transmitter<T>::checkIfLineIsFree() {
 
 template <typename T>
 void Transmitter<T>::startWaitingForFreeLine() {
-  CommunicationPin<pinNumber>::write(HIGH);
+  CommunicationPin<txPinNumber>::write(HIGH);
   _numberOfSuccessiveHighBits = 0;
   _isWaitingForFreeLine = true;
 }
 
 template <typename T>
 void Transmitter<T>::checkForCollision() {
-  const bool value = CommunicationPin<pinNumber>::read();
+  const bool value = CommunicationPin<rxPinNumber>::read();
   const bool collisionDetected = value == LOW; // because pin is input pull-up
                                                // when waiting for free line
 
@@ -94,7 +95,6 @@ void Transmitter<T>::handleTimer2Interrupt() {
   if (!_transmissionIsInProgress) {
     return;
   }
-
   if (_isWaitingForFreeLine) {
     checkForCollision();
 
@@ -169,7 +169,7 @@ void Transmitter<T>::startTransmissionOfNoise() {
 
 template <typename T>
 void Transmitter<T>::startIdling() {
-  CommunicationPin<pinNumber>::write(HIGH);
+  CommunicationPin<txPinNumber>::write(HIGH);
 }
 
 template <typename T>
