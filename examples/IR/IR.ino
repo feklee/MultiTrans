@@ -30,8 +30,16 @@ const int bitDurationExp = 16;
 // consumption.
 const int maxNumberOfCharsPerTransmission = 12;
 
+const bool recordDebugData = false;
+const uint8_t customReceiveBufferSize = false;
+
+const bool dontUseInputPullupForTxPin = true;
+const bool invertTxPinValue = true;
+
 // Here the transceiver is created.
-using MT = MultiTrans<bitDurationExp, maxNumberOfCharsPerTransmission>;
+using MT = MultiTrans<bitDurationExp, maxNumberOfCharsPerTransmission,
+                      recordDebugData, customReceiveBufferSize,
+                      dontUseInputPullupForTxPin, invertTxPinValue>;
 MT multiTransceiver;
 MT::Transceiver<rxPinNumber, txPinNumber> transceiver;
 
