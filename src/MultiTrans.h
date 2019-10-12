@@ -40,7 +40,6 @@ public:
   static const uint8_t customReceiveBufferSize = v;
 
   // Prefixes: `t` = transmitter, `r` = receiver
-  // TODO: maybe replace `t` -> `tx`, `r` -> `rx`
   static const uint8_t tUnscaledBitDurationExp; // < 8
   static const uint8_t tPrescaleFactorExp; // 0, 3, 5, 6, 7, 8, or 10
   static const uint8_t rUnscaledBitDurationExp; // < 16
