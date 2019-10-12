@@ -13,6 +13,11 @@ class MultiTrans<s, t, u, v, w, x>::Transceiver {
 public:
   static const uint8_t rxPinNumber = y; // in [2, 13]
   static const uint8_t txPinNumber = z; // in [2, 13]
+
+  // for compatibility with previous version where there were no separate RX/TX
+  // pin numbers:
+  static const uint8_t pinNumber = rxPinNumber;
+
   static const bool debugDataIsRecorded =
     MultiTrans<s, t, u, v, w, x>::debugDataIsRecorded;
   static const uint8_t maxNumberOfCharsPerTransmission = // < 13 (characters)
