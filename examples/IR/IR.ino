@@ -30,6 +30,12 @@ const int bitDurationExp = 16;
 // consumption.
 const int maxNumberOfCharsPerTransmission = 12;
 
+// Connecting this pin to ground changes the test message:
+const int messageSelectPin = 10;
+
+// Message to send (may be shorter than the maximum length configured above):
+char *message;
+
 const bool recordDebugData = false;
 const uint8_t customReceiveBufferSize = false;
 
@@ -66,14 +72,18 @@ void setup() {
     bit(PCIE2) | // D0 to D7
     bit(PCIE0); // D8 to D15
 
+  pinMode(messageSelectPin, INPUT_PULLUP);
+  if (digitalRead(messageSelectPin) == HIGH) {
+    message = "Hello world!";
+  } else {
+    message = "What's up?";
+  }
+
   // Everything has been set up, now start transceiver:
   transceiver.begin();
 }
 
 void loop() {
-  // Message to send (may be shorter than the maximum length configured above):
-  const char message[] = "Hello world!";
-
   if (!transceiver.transmissionIsInProgress()) {
     transceiver.startTransmissionOfCharacters(message);
     Serial.print("Started sending: ");
