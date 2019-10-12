@@ -27,6 +27,13 @@ class CommunicationPin {
   static volatile uint8_t * const inputRegister;
   static volatile uint8_t * const pinChangeMaskRegister;
 
+  inline static void driveLow() __attribute__((always_inline));
+  inline static void driveHigh() __attribute__((always_inline));
+  inline static void configureForInput() __attribute__((always_inline));
+  inline static void configureForOutput() __attribute__((always_inline));
+  inline static void writeToOutput(const bool) __attribute__((always_inline));
+  inline static void writeSafely(const bool) __attribute__((always_inline));
+
 public:
   CommunicationPin();
   inline static void write(const bool) __attribute__((always_inline));
@@ -69,26 +76,60 @@ volatile uint8_t * const CommunicationPin<T, t>::pinChangeMaskRegister =
   (pinNumber < 8) ? &PCMSK2 : &PCMSK0;
 
 template <typename T, uint8_t t>
+void CommunicationPin<T, t>::driveLow() {
+  *dataRegister &= ~bitMask;
+}
+
+template <typename T, uint8_t t>
+void CommunicationPin<T, t>::driveHigh() {
+  *dataRegister |= bitMask;
+}
+
+template <typename T, uint8_t t>
+void CommunicationPin<T, t>::configureForInput() {
+  *dataDirectionRegister &= ~bitMask;
+}
+
+template <typename T, uint8_t t>
+void CommunicationPin<T, t>::configureForOutput() {
+  *dataDirectionRegister |= bitMask;
+}
+
+template <typename T, uint8_t t>
+void CommunicationPin<T, t>::writeToOutput(const bool pinValue) {
+  configureForOutput();
+  if (pinValue) {
+    // short, if pin on other board is ground
+    driveHigh();
+  } else {
+    driveLow();
+  }
+}
+
+template <typename T, uint8_t t>
+void CommunicationPin<T, t>::writeSafely(const bool pinValue) {
+  if (pinValue) {
+    // Input pullup: avoids short, if pin on other board is ground
+    configureForInput();
+    driveHigh();
+  } else {
+    // 1. Drive output low first:
+    driveLow();
+
+    // 2. Set up pin for output: (after driving output low, or else a short may
+    // be caused if the pin is connected to ground)
+    configureForOutput();
+  }
+}
+
+template <typename T, uint8_t t>
 void CommunicationPin<T, t>::write(const bool value) {
   const bool pinValue = T::invertTxPinValue ? !value : value;
 
   if (T::dontUseInputPullupForTxPin) {
-    // TODO: directly manipulate registers for performance
-    pinMode(pinNumber, OUTPUT);
-    digitalWrite(pinNumber, pinValue);
-    return;
-  }
-
-  if (pinValue) {
-    *dataDirectionRegister &= ~bitMask;
-    *dataRegister |= bitMask; // input pullup
+    writeToOutput(pinValue);
   } else {
-    // 1. Drive output low first:
-    *dataRegister &= ~bitMask;
-
-    // 2. Set up pin for output: (after driving output low, or else a short may
-    // be caused if the pin is connected to ground)
-    *dataDirectionRegister |= bitMask;
+    writeSafely(pinValue);
   }
 }
 
