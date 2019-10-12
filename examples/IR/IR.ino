@@ -1,6 +1,7 @@
-// Simple communication example
+// IR communication example
 //
-// Two Arduinos are connected. Both are sending and receiving simultaneously.
+// Two Arduinos are connected via IR. Both are sending and receiving
+// simultaneously over the air.
 //
 // See `README.md` in the current directory for a detailed explanation.
 //
