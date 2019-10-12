@@ -41,7 +41,8 @@ follows:
     console is started.
 
  3. Plug in the power connection. Eventually – possibly after step 4 – the LEDs
-    on all Arduinos should emit a fast triple-flash to indicate sync.
+    on all Arduinos should emit a fast triple-flash to indicate sync. Note that
+    not all tests include all Arduinos, some only use two.
 
  4. Quickly thereafter – in order not to miss any messages – plug the FTDI into
     the Arduino that should be monitored. (If the Arduino resets, then repeat
