@@ -85,6 +85,10 @@ Examples
     
     ![Photo of board for stress testing](examples/StressTest/board.jpg)
 
+  * [IR](examples/IR/README.md): bi directional communication through air
+    
+    ![Photo of setup for IR example](examples/IR/setup.jpg)
+
 
 Character encoding
 ==================
