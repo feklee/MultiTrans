@@ -11,8 +11,8 @@
 #include "MultiTrans.h"
 
 // Pin that connects the Arduinos:
-const int rxPinNumber = 2;
-const int txPinNumber = 3;
+const int rxPinNumber = 8;
+const int txPinNumber = A0;
 
 // The bit duration exponent determines communication speed. The lower it is,
 // the faster the communication is. The maximum value is 18 (slowest). Very fast
@@ -56,8 +56,8 @@ ISR(TIMER2_COMPA_vect) {
   transceiver.handleTimer2Interrupt();
 }
 
-// Interrupt handler for receiving data on pins 0-7.
-ISR(PCINT2_vect) {
+// Interrupt handler for receiving data on pins 8-13.
+ISR(PCINT0_vect) {
   transceiver.handlePinChangeInterrupt();
 }
 
