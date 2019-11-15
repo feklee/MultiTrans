@@ -1,6 +1,5 @@
 #pragma once
 
-#include <assert.h>
 #include <util/atomic.h>
 #include "Arduino.h"
 #include "./TransmitBuffer.h"

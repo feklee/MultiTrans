@@ -1,6 +1,5 @@
 #pragma once
 
-#include <assert.h>
 #include "Arduino.h"
 #include "./MultiTrans.h"
 #include "./Receiver.h"
