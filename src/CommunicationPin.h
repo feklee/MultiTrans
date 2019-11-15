@@ -43,7 +43,8 @@ public:
 
 template <typename T, uint8_t t>
 const uint8_t CommunicationPin<T, t>::bitNumber =
-  (pinNumber < 8) ? pinNumber : (pinNumber - 8);
+  (pinNumber < 8) ? pinNumber :
+  ((pinNumber < 14) ? (pinNumber - 8) : (pinNumber - 14));
 
 template <typename T, uint8_t t>
 const uint8_t CommunicationPin<T, t>::bitMask =
@@ -55,19 +56,22 @@ const uint8_t CommunicationPin<T, t>::interruptBitMask =
 
 template <typename T, uint8_t t>
 volatile uint8_t * const CommunicationPin<T, t>::dataDirectionRegister =
-  (pinNumber < 8) ? &DDRD : &DDRB;
+  (pinNumber < 8) ? &DDRD : ((pinNumber < 14) ? &DDRB : &DDRC);
 
 template <typename T, uint8_t t>
 volatile uint8_t * const CommunicationPin<T, t>::dataRegister =
-  (pinNumber < 8) ? &PORTD : &PORTB;
+  (pinNumber < 8) ? &PORTD : ((pinNumber < 14) ? &PORTB : &PORTC);
 
 template <typename T, uint8_t t>
 volatile uint8_t * const CommunicationPin<T, t>::inputRegister =
-  (pinNumber < 8) ? &PIND : &PINB;
+  (pinNumber < 8) ? &PIND : ((pinNumber < 14) ? &PINB : &PINC);
 
 template <typename T, uint8_t t>
 volatile uint8_t * const CommunicationPin<T, t>::pinChangeMaskRegister =
-  (pinNumber < 8) ? &PCMSK2 : &PCMSK0;
+  (pinNumber < 8) ? &PCMSK2 : &PCMSK0; // at the moment, receiving is only
+                                       // possible with digital pins only,
+                                       // receiving with analog pins is neither
+                                       // implemented nor has it been tried
 
 template <typename T, uint8_t t>
 void CommunicationPin<T, t>::driveLow() {
