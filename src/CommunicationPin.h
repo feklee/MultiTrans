@@ -35,17 +35,11 @@ class CommunicationPin {
   inline static void writeSafely(const bool) __attribute__((always_inline));
 
 public:
-  CommunicationPin();
   inline static void write(const bool) __attribute__((always_inline));
   inline static bool read() __attribute__((always_inline));
   static void setToInputPullup();
   static void activatePinChangeInterrupt();
 };
-
-template <typename T, uint8_t t>
-CommunicationPin<T, t>::CommunicationPin() {
-  assert(pinNumber >= 2 && pinNumber <= 13);
-}
 
 template <typename T, uint8_t t>
 const uint8_t CommunicationPin<T, t>::bitNumber =
